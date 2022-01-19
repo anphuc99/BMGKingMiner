@@ -1,13 +1,23 @@
 local class = require "script_server.lbr.Class"
 local BlackMarket = class()
 BlackMarket:create("BlackMarket",function ()
+    local o = {}
     -- properties
-	local o = {}
 	local idItem
 	local price
 	local quantily
 	local idPlayer
+
+    function o:__constructor(data)
+        -- constructor
+		idItem = data.idItem
+		price = data.price
+		quantily = data.quantily
+		idPlayer = data.idPlayer
+        
+    end
     -- method
+
     function o:getIdItem()
         return idItem
     end
@@ -35,7 +45,8 @@ BlackMarket:create("BlackMarket",function ()
     function o:setIdPlayer(_idPlayer)
         idPlayer = _idPlayer
     end
-	return o    
+
+    return o
 end)
 
 return BlackMarket

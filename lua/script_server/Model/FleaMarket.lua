@@ -1,13 +1,19 @@
 local class = require "script_server.lbr.Class"
 local FleaMarket = class()
 FleaMarket:create("FleaMarket",function ()
+    local o = {}
     -- properties
-	local o = {}
 	local idItem
 	local idNPC
 	local price
 
-
+    function o:__constructor(data)
+        -- constructor
+		idItem = data.idItem
+		idNPC = data.idNPC
+		price = data.price
+        
+    end
     -- method
 
     function o:getIdItem()
@@ -30,7 +36,8 @@ FleaMarket:create("FleaMarket",function ()
     function o:setPrice(_price)
         price = _price
     end
-	return o    
+
+    return o
 end)
 
 return FleaMarket

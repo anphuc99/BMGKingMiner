@@ -1,13 +1,20 @@
 local class = require "script_server.lbr.Class"
 local Item = class()
 Item:create("Item",function ()
+    local o = {}
     -- properties
-	local o = {}
 	local id
 	local name
 	local icon
+	local typeItem
 
-
+    function o:__constructor(data)
+        -- constructor       
+		id = data.id
+		name = data.name
+		icon = data.icon
+		typeItem = data.typeItem
+    end
     -- method
 
     function o:getId()
@@ -30,7 +37,15 @@ Item:create("Item",function ()
     function o:setIcon(_icon)
         icon = _icon
     end
-	return o    
+
+    function o:getTypeItem()
+        return typeItem
+    end
+    function o:setTypeItem(_typeItem)
+        typeItem = _typeItem
+    end
+
+    return o
 end)
 
 return Item

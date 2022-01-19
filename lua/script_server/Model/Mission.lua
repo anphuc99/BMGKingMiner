@@ -1,15 +1,23 @@
 local class = require "script_server.lbr.Class"
 local Mission = class()
 Mission:create("Mission",function ()
+    local o = {}
     -- properties
-	local o = {}
 	local id
 	local name
 	local level
 	local bonus
 	local MaterialNeeded
 
-
+    function o:__constructor(data)
+        -- constructor
+		id = data.id
+		name = data.name
+		level = data.level
+		bonus = data.bonus
+		MaterialNeeded = data.MaterialNeeded
+        
+    end
     -- method
 
     function o:getId()
@@ -46,7 +54,8 @@ Mission:create("Mission",function ()
     function o:setMaterialNeeded(_MaterialNeeded)
         MaterialNeeded = _MaterialNeeded
     end
-	return o    
+
+    return o
 end)
 
 return Mission
