@@ -1,0 +1,20 @@
+{
+  "data": {
+    "collisionBoxes": [],
+    "dropSelf": {
+      "canDropSelf": false
+    },
+    "isOpaqueFullCube": false,
+    "isQuad": true,
+    "name": {
+      "value": "block_reeds"
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "1171816e79b048412b6af9eafb60790a",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

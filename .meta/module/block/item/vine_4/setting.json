@@ -1,0 +1,19 @@
+{
+  "data": {
+    "dropSelf": {
+      "canDropSelf": false
+    },
+    "isOpaqueFullCube": false,
+    "isQuad": true,
+    "name": {
+      "value": "block_vine_4"
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "2bfe227a96c7ddd29ba9e0a0ef16ce46",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

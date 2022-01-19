@@ -1,0 +1,34 @@
+{
+  "data": {
+    "actorModel": {
+      "actorName": {
+        "asset": ""
+      },
+      "girlactor": {
+        "asset": ""
+      }
+    },
+    "boundingVolume": {
+      "height": 1.7,
+      "radius": 0.43,
+      "type": "Capsule"
+    },
+    "deadAction": {
+      "deathHideTime": {
+        "value": 60
+      },
+      "playDeadAction": "die_front"
+    },
+    "isPlayer": true,
+    "name": {
+      "value": "bbfbdc34-da2f-41ab-aaac-3b2e72f5ef6d"
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "6a07f8bdd454bf0b4b3f59956a1f3f4d",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

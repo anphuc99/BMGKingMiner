@@ -1,0 +1,19 @@
+{
+  "data": {
+    "dropSelf": {
+      "canDropSelf": false
+    },
+    "isOpaqueFullCube": false,
+    "isQuad": true,
+    "name": {
+      "value": "block_pine_stage_3"
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "247435fb9687d99b6d67c8e76da6e811",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "data": {
+    "collisionBoxes": [],
+    "dropSelf": {
+      "canDropSelf": false
+    },
+    "isOpaqueFullCube": false,
+    "isQuad": true,
+    "name": {
+      "value": "block_anvil_3"
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "b4c89f070d1fce77d957662dba9bd98b",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

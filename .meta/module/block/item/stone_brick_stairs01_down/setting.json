@@ -1,0 +1,32 @@
+{
+  "data": {
+    "collisionBoxes": [
+      {
+        "max": {
+          "y": 0.5
+        }
+      },
+      {
+        "min": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      }
+    ],
+    "dropSelf": {
+      "canDropSelf": false
+    },
+    "isOpaqueFullCube": false,
+    "isQuad": true,
+    "name": {
+      "value": "block_stone_brick_stairs01_down"
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "6f78ca37cae03fa1fac5654aac3062f3",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

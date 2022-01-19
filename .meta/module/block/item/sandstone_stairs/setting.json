@@ -1,0 +1,32 @@
+{
+  "data": {
+    "collisionBoxes": [
+      {
+        "max": {
+          "y": 0.5
+        }
+      },
+      {
+        "min": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      }
+    ],
+    "dropSelf": {
+      "canDropSelf": false
+    },
+    "isOpaqueFullCube": false,
+    "isQuad": true,
+    "name": {
+      "value": "block_sandstone_stairs"
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "6232e3b4899332cee5e9dfc414b7432f",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

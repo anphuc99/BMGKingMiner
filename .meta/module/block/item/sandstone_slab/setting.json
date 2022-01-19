@@ -1,0 +1,26 @@
+{
+  "data": {
+    "collisionBoxes": [
+      {
+        "max": {
+          "y": 0.5
+        }
+      }
+    ],
+    "dropSelf": {
+      "canDropSelf": false
+    },
+    "isOpaqueFullCube": false,
+    "isQuad": true,
+    "name": {
+      "value": "block_sandstone_slab"
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "b84d5651b5ed3254ddf92fe5792a2340",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "data": {
+    "collisionBoxes": [
+      {
+        "max": {
+          "y": 0.5
+        }
+      },
+      {
+        "min": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      }
+    ],
+    "dropSelf": {
+      "canDropSelf": false
+    },
+    "isOpaqueFullCube": false,
+    "isQuad": true,
+    "name": {
+      "value": "block_spruce_stairs_down"
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "b10946841ff797e39fcae59ab40044b4",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}
