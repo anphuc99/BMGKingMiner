@@ -1,4 +1,4 @@
-function Class()
+local function Class()
     local Class = {}
     function Class:create(nameClass, obj) 
         self.__className = nameClass
