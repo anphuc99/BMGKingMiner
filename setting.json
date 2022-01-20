@@ -49,9 +49,9 @@
       }
     ]
   },
-  "canJoinMidway": false,
+  "canJoinMidway": true,
   "defaultMap": "map001",
-  "defaultQualityLevel": 0,
+  "defaultQualityLevel": 2,
   "dragControlConfig": {
     "useDragControl": true
   },
@@ -59,8 +59,8 @@
   "engineDefUIEnable": {
     "actionControl": true,
     "actionControlMode": "flexibleDragControl",
-	"appMainRole": true,
-    "chat": true,
+    "appMainRole": false,
+    "chat": false,
     "playerinfo": true,
     "shortcutBar": true,
     "toolbar": true
@@ -103,15 +103,15 @@
     },
     "useGroup": "_imagesets_"
   },
-  "maxPlayers": 6,
+  "maxPlayers": 20,
   "minPlayers": 1,
   "moveStateConfig": {
     "isShow": false
   },
-  "needSave": false,
+  "needSave": true,
   "noLoadHp": true,
   "notReadUserSettingCfgAtEditor": true,
-  "nowTime": 18001.666666667,
+  "nowTime": 1666.6666666667,
   "oneDayTime": 600.0,
   "personalSettingUI": {
     "controlMode": true,
@@ -264,7 +264,7 @@
     "global": []
   },
   "waitAtInitPos": true,
-  "waitGoTime": 100,
-  "waitPlayerTime": 100,
-  "waitStartTime": 100
+  "waitGoTime": 0,
+  "waitPlayerTime": 0,
+  "waitStartTime": 0
 }

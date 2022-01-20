@@ -1,0 +1,33 @@
+{
+  "data": {
+    "actorName": {
+      "asset": "asset/Actor/Cedar Tree/bingxuejie_shu_bingxuejie_shu.actor",
+      "selector": "editor/King miner/asset/Actor/Cedar Tree/bingxuejie_shu_bingxuejie_shu.actor"
+    },
+    "boundingVolume": {
+      "type": "Capsule"
+    },
+    "canClick": true,
+    "canRevive": true,
+    "collision": true,
+    "girlactor": {
+      "asset": ""
+    },
+    "hideName": true,
+    "name": {
+      "value": "entity_1928738c-ec90-421c-8941-e13ea943d8e8"
+    },
+    "reviveTime": {
+      "value": 100
+    },
+    "unAssailable": true,
+    "unDamageable": true
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "70334ae54cfaa82877360038c8d73034",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

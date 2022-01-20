@@ -23,6 +23,50 @@
         }
       }
     },
+    "instances": [
+      {
+        "__OBJ_TYPE": "Instance_DropItem",
+        "config": "myplugin/bc498465-8619-4188-bc57-ff9a717a3787",
+        "id": "8466295484824469505",
+        "position": {
+          "x": 25.556838989258,
+          "y": 53,
+          "z": 24.191036224365
+        }
+      },
+      {
+        "__OBJ_TYPE": "Instance_Entity",
+        "config": "myplugin/1928738c-ec90-421c-8941-e13ea943d8e8",
+        "id": "8466478146804285441",
+        "name": "cay thong",
+        "position": {
+          "x": 20.952005386353,
+          "y": 52.999996185303,
+          "z": 28.270488739014
+        }
+      },
+      {
+        "__OBJ_TYPE": "Instance_Entity",
+        "config": "myplugin/1928738c-ec90-421c-8941-e13ea943d8e8",
+        "id": "8466480909096730625",
+        "name": "cay thong",
+        "position": {
+          "x": 30.025243759155,
+          "y": 53.000038146973,
+          "z": 29.790662765503
+        }
+      },
+      {
+        "__OBJ_TYPE": "Instance_DropItem",
+        "config": "myplugin/1aba122c-b1ad-491a-8ba3-0dfbd8cda0f6",
+        "id": "8466654608894492673",
+        "position": {
+          "x": 21.848358154297,
+          "y": 53.000003814697,
+          "z": 24.933282852173
+        }
+      }
+    ],
     "name": {
       "value": "map_map001"
     },
@@ -32,7 +76,7 @@
   },
   "meta": {
     "EXPORT": {
-      "setting.json": "a38363450f6250b3a4992e3bbd5f8f38"
+      "setting.json": "bc23858c5f2162f9948997f2d9c2a904"
     },
     "VERSION": "0.18"
   }

@@ -1,5 +1,9 @@
 {
   "data": {
+    "icon": {
+      "asset": "asset/Texture/Block/flower_oxeye_daisy.png",
+      "selector": "editor/King miner/asset/Texture/Block/flower_oxeye_daisy.png"
+    },
     "item": {
       "base": {
         "__OBJ_TYPE": "ItemEquip"
@@ -8,13 +12,17 @@
     "itemintroduction": {
       "value": "5abd1195-f68f-4c17-94dc-43cb30c9c8e2"
     },
+    "mesh": {
+      "asset": "asset/Mesh/Actor_mesh/01_hair_girl.mesh",
+      "selector": "editor/King miner/asset/Mesh/Actor_mesh/01_hair_girl.mesh"
+    },
     "name": {
       "value": "item_bc498465-8619-4188-bc57-ff9a717a3787"
     }
   },
   "meta": {
     "EXPORT": {
-      "setting.json": "df17a547e420b495726051859faa9c57",
+      "setting.json": "b23c672edc4a5af4f195fcfb1857d982",
       "triggers.bts": ""
     },
     "VERSION": "0.18"

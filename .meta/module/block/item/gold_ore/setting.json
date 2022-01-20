@@ -1,5 +1,8 @@
 {
   "data": {
+    "breakTime": {
+      "value": 4
+    },
     "dropSelf": {
       "canDropSelf": false
     },
@@ -30,7 +33,7 @@
   },
   "meta": {
     "EXPORT": {
-      "setting.json": "64b937306255d9f53508b26e530133f1",
+      "setting.json": "52fdd6c76c5775da4c91bb11d3b43df4",
       "triggers.bts": ""
     },
     "VERSION": "0.18"

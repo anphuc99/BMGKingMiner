@@ -5,35 +5,38 @@ local Context = class()
 Context:create("Context", function()
     local o = {}
     local data
-    local cls
     function o:__constructor(table)
-        local data2 = require("script_server.database." .. table.__className)
-        data = deepCopy(data2)
-        local function checkExtents(dt)
-            if dt.option.extents ~= nil then
-                local parent = deepCopy(require(
-                                            "script_server.database." ..
-                                                dt.option.extents))
-                for key, value in pairs(data) do
-                    if (key ~= "option") then
-                        for key2, value2 in pairs(parent) do
-                            if (key ~= "option") then
-                                if (value2[dt.option.primaryKey] ==
-                                    value[dt.option.primaryKey]) then
-                                    for key3, value3 in pairs(value2) do
-                                        data[key][key3] = value3
+        if type(table) == "string" then
+            local data2 = require("script_server.database." .. table)
+            data = deepCopy(data2)
+            local function checkExtents(dt)
+                if dt.option.extents ~= nil then
+                    local parent = deepCopy(require(
+                                                "script_server.database." ..
+                                                    dt.option.extents))
+                    for key, value in pairs(data) do
+                        if (key ~= "option") then
+                            for key2, value2 in pairs(parent) do
+                                if (key ~= "option") then
+                                    if (value2[dt.option.primaryKey] ==
+                                        value[dt.option.primaryKey]) then
+                                        for key3, value3 in pairs(value2) do
+                                            data[key][key3] = value3
+                                        end
                                     end
                                 end
-                            end
 
+                            end
                         end
                     end
+                    checkExtents(parent)
                 end
-                checkExtents(parent)
             end
+            checkExtents(data)
+        elseif type(table) == "table" then
+            data = table
         end
-        checkExtents(data)
-        cls = table
+
         return o
     end
 

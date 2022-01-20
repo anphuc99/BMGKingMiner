@@ -7,10 +7,10 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Texture/Block/flower_oxeye_daisy.png",
-  "itemintroduction": "5abd1195-f68f-4c17-94dc-43cb30c9c8e2",
-  "itemname": "item_bc498465-8619-4188-bc57-ff9a717a3787",
-  "mesh": "asset/Mesh/Actor_mesh/01_hair_girl.mesh",
+  "icon": "@asset/Texture/Block/100006_strawberry_stage_5.png",
+  "itemintroduction": "a18deb3d-0024-4374-8fe9-8f37d4f7175b",
+  "itemname": "item_1aba122c-b1ad-491a-8ba3-0dfbd8cda0f6",
+  "mesh": "asset/Mesh/Actor_mesh/bed_armor_helmet_blue.mesh",
   "needSave": false,
   "stack_count_max": 1,
   "syncGameData": {

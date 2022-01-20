@@ -1,7 +1,7 @@
 {
   "base": "cobblestone",
   "blockHp": 110,
-  "breakTime": 20,
+  "breakTime": 4,
   "canClick": false,
   "candrop": false,
   "canSwim": false,

@@ -7,9 +7,10 @@ Material:create("Material",function ()
 	local level
 	local Time_retrieval
 	local stiffness
-	local blockId
+	local entityId
+    local objID
 
-    function o:__constructor(data)
+    function o:__constructor(data,_objID)
         -- constructor
 		o:setId(data.id)
 		o:setName(data.name)
@@ -18,17 +19,11 @@ Material:create("Material",function ()
 		level = data.level
 		Time_retrieval = data.Time_retrieval
 		stiffness = data.stiffness
-		blockId = data.blockId
+		entityId = data.entityId
+        objID = _objID
         
     end
     -- method
-
-    function o:getId()
-        return id
-    end
-    function o:setId(_id)
-        id = _id
-    end
 
     function o:getLevel()
         return level
@@ -51,11 +46,22 @@ Material:create("Material",function ()
         stiffness = _stiffness
     end
 
-    function o:getBlockId()
-        return blockId
+    function o:getEntityId()
+        return entityId
     end
-    function o:setBlockId(_blockId)
-        blockId = _blockId
+    function o:setEntityId(_entityId)
+        entityId = _entityId
+    end
+
+    function o:getObjID()
+        return objID
+    end
+    function o:setObjID(_objID)
+        objID = _objID
+    end
+
+    function o:getObj()
+        return World.CurWorld:getObject(objID)
     end
 
     return o

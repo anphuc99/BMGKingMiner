@@ -1,0 +1,26 @@
+{
+  "data": {
+    "icon": {
+      "asset": "asset/Texture/Block/double_plant_sunflower_front.png",
+      "selector": "editor/King miner/asset/Texture/Block/double_plant_sunflower_front.png"
+    },
+    "item": {
+      "base": {
+        "__OBJ_TYPE": "ItemEquip"
+      }
+    },
+    "itemintroduction": {
+      "value": "183ff091-0bec-4a46-ad3f-94ded417af6e"
+    },
+    "name": {
+      "value": "item_f984e166-c74e-4bb4-b621-4eafb5372f30"
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "7931332402ca449c633e00ffde8d7bad",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}
