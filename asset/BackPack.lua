@@ -70,7 +70,7 @@ function self:onOpen(p)
     local function cellClick(i)
         -- tạo sự kiện dbClick
        dbClick[i] = (dbClick[i] or 0) + 1
-       World.Timer(20, function ()
+       World.Timer(5, function ()
            dbClick[i] = 0
            return false
        end)
@@ -84,7 +84,7 @@ function self:onOpen(p)
             self.BackPack.CellBP["cell"..ii]:setImage(unBlockImg)        
        end
        if i <= balo then
-            if curClick == nil then
+            if curClick == nil or not hasItem[curClick] then
                 self.BackPack.CellBP["cell"..i]:setImage(selectBlockImg)
                 curClick = i
             else
