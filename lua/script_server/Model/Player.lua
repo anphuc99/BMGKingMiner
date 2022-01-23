@@ -1,16 +1,31 @@
 local class = require "script_server.lbr.Class"
 local Context = require "script_server.lbr.Context"
 local Gol = require "script_server.Golde_Valiable"
+local positionItem = require "script_common.positionItem"
+local Item = require "script_server.Model.Item"
+local typeItem = require "script_common.typeItem"
+local messenger = require "script_server.Helper.SendMesseger"
+local Language = require "script_common.language"
+local addSlotItem = require "script_server.lbr.addSlotItem"
+local removeSlotItem = require "script_server.lbr.removeSlotItem"
+local TypeItem = require "script_common.typeItem"
+local lg = require "script_common.language"
 local PlayerClass = class()
 PlayerClass:create("Player",function ()
     local o = {}
     local id
     local isMining = false
-    local signal = 5
-    function o:__constructor(_id)
-        id = _id        
+    local language = "Vietnamese"
+    function o:getLanguage()
+        return language
     end
-    function o:getID() 
+    function o:setLanguage(_language)
+        language = _language
+    end
+    function o:__constructor(_id)
+        id = _id
+    end
+    function o:getID()
         return id
     end
     function o:setID(_id)
@@ -54,8 +69,9 @@ PlayerClass:create("Player",function ()
                         return false
                     end
                     if real_speed <= 0 then
-                        o:endMine(MaterialModel)
-                        MaObj:kill(obj, "hit")
+                        if o:endMine(MaterialModel) then
+                            MaObj:kill(obj, "hit")
+                        end                         
                         PackageHandlers.sendServerHandler(obj,"StopMine")
                         isMining = false
                         return false
@@ -69,7 +85,126 @@ PlayerClass:create("Player",function ()
         end        
     end
     function o:endMine(MaterialModel)
+        return MaterialModel:addToPlayer(o:getObj())
+    end
+    function o:removeItemInBalo(itemId,num)
+        num = num or 2^1023 
+        local player = o:getObj()
+        local playerItem = player:getValue("PlayerItem")
+        for key, value in pairs(playerItem) do
+            if value.idItem == itemId then
+                value.num = value.num - num
+                if value.num <= 0 then
+                    table.remove(playerItem,key)
+                end
+                break
+            end
+        end
+        player:setValue("PlayerItem", playerItem)
+    end
+    function o:removeCellNumItem(cellNum, position ,num)
+        num = num or 2^1023
+        position = position or positionItem.balo
+        local player = o:getObj()
+        local playerItem = player:getValue("PlayerItem")
+        for key, value in pairs(playerItem) do
+            if value.cellNum == cellNum and value.position == position then
+                value.num = value.num - num
+                if value.num <=0 then
+                    table.remove(playerItem,key)
+                end
+                break
+            end
+        end
+        player:setValue("PlayerItem", playerItem)
+    end
+    function o:addItemInBalo(itemId, num)
+        local context_item = Context:new("Item")
+        local itemData = context_item:where("id",itemId):getData()
+        local itemObj = Item:new(itemData)
+        itemObj:addToPlayer(o:getObj(),num)
+    end
+    function o:moveCellBalo(oldCellNum,NewCellNum)
+        if oldCellNum == NewCellNum then
+            return false
+        end
+        local player = o:getObj()
+        local playerItem = player:getValue("PlayerItem")
+        local context_player = Context:new(playerItem)
+        local playerOldCellItem = context_player:where("position",positionItem.balo):where("cellNum",oldCellNum):firstData()
+        local playerNewCellItem = context_player:where("position",positionItem.balo):where("cellNum",NewCellNum):firstData()
+        if playerNewCellItem == nil then
+            playerOldCellItem.cellNum = NewCellNum
+            player:setValue("PlayerItem", playerItem)
+        else
+            if playerOldCellItem.idItem == playerNewCellItem.idItem then
+                local context_item = Context:new("Item")             
+                local checkItem2 = context_item:where("id",playerOldCellItem.idItem):firstData()
+                if checkItem2.typeItem == typeItem.Equipment then
+                    messenger(player,{Text = Language.messeger.ItemNotMerge[language], Color = {r = 255, g = 0, b = 0}})
+                    return false
+                else
+                    playerNewCellItem.num = playerNewCellItem.num + playerOldCellItem.num 
+                    player:setValue("PlayerItem", playerItem)
+                    o:removeCellNumItem(playerOldCellItem.cellNum)
+                end
+            else
+                playerOldCellItem.cellNum = NewCellNum
+                playerNewCellItem.cellNum = oldCellNum 
+                player:setValue("PlayerItem", playerItem)
+            end            
+        end
         
+        return true
+    end
+    function o:baloToHand(cellNum)        
+        local player = o:getObj()
+        local playerItem = player:getValue("PlayerItem")
+        local context_player = Context:new(playerItem)
+        local playerItem2 = context_player:where("position",positionItem.balo):where("cellNum",cellNum):firstData()
+        
+        local context_player = Context:new(playerItem)
+        local checkItem = context_player:where("position",positionItem.hand):where("idItem", playerItem2.idItem):firstData()
+        local context_item = Context:new("Item")
+        local typeItem = context_item:where("id",playerItem2.idItem):firstData()        
+        if typeItem.typeItem ~= TypeItem.Equipment and checkItem ~= nil then            
+            checkItem.num = checkItem.num + playerItem2.num            
+            player:setValue("PlayerItem", playerItem)
+            o:removeCellNumItem(cellNum,positionItem.balo)
+            removeSlotItem(player,checkItem.cellNum)
+            addSlotItem(player,checkItem.idItem,checkItem.num,checkItem.cellNum)
+            return true
+        else            
+            local rs = false
+            for i = 1, 9, 1 do
+                local checkCellNum = context_player:where("position",positionItem.hand):where("cellNum", i):firstData()
+                if checkCellNum == nil then
+                    playerItem2.position = positionItem.hand
+                    playerItem2.cellNum = i
+                    player:setValue("PlayerItem", playerItem)
+                    addSlotItem(player,playerItem2.idItem,playerItem2.num,playerItem2.cellNum)
+                    rs = true
+                    break
+                end
+            end
+            if not rs then                
+                messenger(player,{Text = lg.messeger.FullBP[language], Color = {r = 255, g = 0, b = 0}})
+            end
+            return rs
+        end
+    end
+
+    function o:handToBalo(cellNum)
+        local player = o:getObj()
+        local playerItem = player:getValue("PlayerItem")
+        local context_player = Context:new(playerItem)
+        local slot = player:getHandItem():slot()        
+        local playerItem2 = context_player:where("position",positionItem.hand):where("cellNum",slot):firstData()
+        playerItem2.position = positionItem.balo
+        playerItem2.cellNum = cellNum
+        player:setValue("PlayerItem", playerItem)
+        removeSlotItem(player,slot)
+        return true
     end
     return o
 end)

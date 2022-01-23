@@ -65,6 +65,39 @@
           "y": 53.000003814697,
           "z": 24.933282852173
         }
+      },
+      {
+        "__OBJ_TYPE": "Instance_Entity",
+        "config": "myplugin/9d88ec66-60fe-46bf-8b90-bb5bd7c620ed",
+        "id": "8467931977599696897",
+        "name": "sat",
+        "position": {
+          "x": 18.122329711914,
+          "y": 53.0,
+          "z": 26.603420257568
+        }
+      },
+      {
+        "__OBJ_TYPE": "Instance_Entity",
+        "config": "myplugin/9d88ec66-60fe-46bf-8b90-bb5bd7c620ed",
+        "id": "8467931995790311425",
+        "name": "sat",
+        "position": {
+          "x": 17.486047744751,
+          "y": 53.001731872559,
+          "z": 30.569959640503
+        }
+      },
+      {
+        "__OBJ_TYPE": "Instance_Entity",
+        "config": "myplugin/9d88ec66-60fe-46bf-8b90-bb5bd7c620ed",
+        "id": "8467932013315145729",
+        "name": "sat",
+        "position": {
+          "x": 24.328285217285,
+          "y": 53.0,
+          "z": 30.703935623169
+        }
       }
     ],
     "name": {
@@ -76,7 +109,7 @@
   },
   "meta": {
     "EXPORT": {
-      "setting.json": "bc23858c5f2162f9948997f2d9c2a904"
+      "setting.json": "cca20407f834a5876e7fe36af5dc7e97"
     },
     "VERSION": "0.18"
   }
