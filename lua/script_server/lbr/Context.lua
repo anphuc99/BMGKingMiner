@@ -5,6 +5,7 @@ local Context = class()
 Context:create("Context", function()
     local o = {}
     local data
+    local dataSelect
     function o:__constructor(table)
         if type(table) == "string" then
             local data2 = require("script_server.database." .. table)
@@ -36,7 +37,7 @@ Context:create("Context", function()
         elseif type(table) == "table" then
             data = table
         end
-
+        dataSelect = data
         return o
     end
 
@@ -45,61 +46,72 @@ Context:create("Context", function()
             o:where(col, "=", operator)
         else
             local dt = {}
+            dt.Index = {}
             if operator == "=" then
-                for key, value2 in pairs(data) do
-                    if key ~= "option" then
+                for key, value2 in pairs(dataSelect) do
+                    if type(key) == "number" then
                         if value2[col] == value then
-                            dt[#dt + 1] = data[key]
+                            dt[#dt + 1] = dataSelect[key]
                         end
                     end
                 end
             elseif operator == ">" then
-                for key, value2 in pairs(data) do
-                    if key ~= "option" then
+                for key, value2 in pairs(dataSelect) do
+                    if type(key) > "number" then
                         if value2[col] > value then
-                            dt[#dt + 1] = data[key]
+                            dt[#dt + 1] = dataSelect[key]
                         end
                     end
                 end
             elseif operator == "<" then
-                for key, value2 in pairs(data) do
-                    if key ~= "option" then
+                for key, value2 in pairs(dataSelect) do
+                    if type(key) < "number" then
                         if value2[col] < value then
-                            dt[#dt + 1] = data[key]
+                            dt[#dt + 1] = dataSelect[key]
                         end
                     end
                 end
             elseif operator == ">=" then
-                for key, value2 in pairs(data) do
-                    if key ~= "option" then
+                for key, value2 in pairs(dataSelect) do
+                    if type(key) >= "number" then
                         if value2[col] >= value then
-                            dt[#dt + 1] = data[key]
+                            dt[#dt + 1] = dataSelect[key]
                         end
                     end
                 end
             elseif operator == "<=" then
-                for key, value2 in pairs(data) do
-                    if key ~= "option" then
+                for key, value2 in pairs(dataSelect) do
+                    if type(key) <= "number" then
                         if value2[col] <= value then
-                            dt[#dt + 1] = data[key]
+                            dt[#dt + 1] = dataSelect[key]
                         end
                     end
                 end
             elseif operator == "~=" then
-                for key, value2 in pairs(data) do
-                    if key ~= "option" then
+                for key, value2 in pairs(dataSelect) do
+                    if type(key) ~= "number" then
                         if value2[col] ~= value then
-                            dt[#dt + 1] = data[key]
+                            dt[#dt + 1] = dataSelect[key]
                         end
                     end
                 end
             end
-            dt.option = data.option
-            data = dt
+            dt.option = dataSelect.option            
+            dataSelect = dt
+            print(Lib.pv(dataSelect))
         end
         return o
     end
-    function o:getData() return data end
+    function o:getData() 
+        local dt = dataSelect
+        dataSelect = data
+        return dt 
+    end
+    function o:firstData()
+        local dt = dataSelect[1]
+        dataSelect = data
+        return dt
+    end
     return o
 end)
 
