@@ -8,12 +8,12 @@ Context:create("Context", function()
     local dataSelect
     function o:__constructor(table)
         if type(table) == "string" then
-            local data2 = require("script_server.database." .. table)
+            local data2 = require("script_common.database." .. table)
             data = deepCopy(data2)
             local function checkExtents(dt)
                 if dt.option.extents ~= nil then
                     local parent = deepCopy(require(
-                                                "script_server.database." ..
+                                                "script_common.database." ..
                                                     dt.option.extents))
                     for key, value in pairs(data) do
                         if (key ~= "option") then

@@ -1,5 +1,5 @@
 local class = require "script_server.lbr.Class"
-local Context = require "script_server.lbr.Context"
+local Context = require "script_common.lbr.Context"
 local Gol = require "script_server.Golde_Valiable"
 local positionItem = require "script_common.positionItem"
 local Item = require "script_server.Model.Item"
