@@ -6,6 +6,9 @@ local setIdPlayer = require "script_server.lbr.setIdPlayer"
 local Context = require "script_server.lbr.Context"
 local deepCopy = require "script_server.lbr.DeepCopyTable"
 local positionItem = require "script_common.positionItem"
+local SlotBalo = require "script_common.SlotBalo"
+local messeger = require "script_server.Helper.SendMesseger"
+local Language = require "script_common.language"
 
 Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
     local PlayerObj = PlayerModel:new(context.obj1.objID)
@@ -17,19 +20,23 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
         local idPlayer = setIdPlayer()
         local PlayerProperty = {
             id = idPlayer,
-            money = 0,
+            money = 1000,
             balo = 6,
             idCard = 1,
             Lv = 1,
             exp = 0,
+            language = "English",
             lastLogin = os.time()            
         }
         context.obj1.addValueDef("PlayerItem", {
             {idPlayer = idPlayer, idItem = cupLv1,cellNum = 1, num = 1, position = positionItem.hand, lv = 1},            
         }, true, true, true, true)
         context.obj1.addValueDef("Player", PlayerProperty, true, true, true, true)
-        
+        PackageHandlers.sendServerHandler(context.obj1, "UI", {UI = "Language"})
+        context.obj1:sendTip(1, "Welcome", 60)
     else
+        PlayerObj:setLastLogin(os.time())
+        context.obj1:setValue("Player", plpro)
         print("hoho")
     end
 end)
@@ -103,4 +110,17 @@ PackageHandlers.registerServerHandler("moveItem", function(player, packet)
         return data
     end
     return {rs = false}
+end)
+-- mở thêm ô balo
+PackageHandlers.registerServerHandler("OpenCellNum", function(player, packet)    
+    local objPlayer = Gol.Player[player.objID]
+    local rs = objPlayer:spendMoney(SlotBalo[objPlayer:getBalo()+1].money)
+    if rs then
+        objPlayer:setBalo(objPlayer:getBalo() + 1)
+    end
+    return rs
+end)
+-- cài đặt ngôn ngữ
+PackageHandlers.registerServerHandler("setLanguage", function(player, packet)
+    Gol.Player[player.objID]:setLanguage(Language.language[packet.i].name)
 end)

@@ -15,13 +15,77 @@ PlayerClass:create("Player",function ()
     local o = {}
     local id
     local isMining = false
-    local language = "Vietnamese"
-    function o:getLanguage()
-        return language
+
+    function o:getLanguage()        
+        return o:getObj():getValue("Player").language
     end
     function o:setLanguage(_language)
-        language = _language
+        local player = o:getObj()
+        local proPlayer = player:getValue("Player")
+        proPlayer.language = _language
+        player:setValue("Player", proPlayer)
     end
+
+    function o:getMoney()
+        return o:getObj():getValue("Player").money
+    end
+    function o:setMoney(_Money)
+        local player = o:getObj()
+        local proPlayer = player:getValue("Player")
+        proPlayer.money = _Money
+        player:setValue("Player", proPlayer)
+    end
+
+    function o:getBalo()
+        return o:getObj():getValue("Player").balo
+    end
+    function o:setBalo(_balo)
+        local player = o:getObj()
+        local proPlayer = player:getValue("Player")
+        proPlayer.balo = _balo
+        player:setValue("Player", proPlayer)
+    end
+
+    function o:getIdCard()
+        return o:getObj():getValue("Player").idCard
+    end
+    function o:setIdCard(_idCard)
+        local player = o:getObj()
+        local proPlayer = player:getValue("Player")
+        proPlayer.idCard = _idCard
+        player:setValue("Player", proPlayer)
+    end
+
+    function o:getLv()
+        return o:getObj():getValue("Player").Lv
+    end
+    function o:setLv(_Lv)
+        local player = o:getObj()
+        local proPlayer = player:getValue("Player")
+        proPlayer.Lv = _Lv
+        player:setValue("Player", proPlayer)
+    end
+
+    function o:getExp()
+        return o:getObj():getValue("Player").exp
+    end
+    function o:setExp(_Money)
+        local player = o:getObj()
+        local proPlayer = player:getValue("Player")
+        proPlayer.exp = _Money
+        player:setValue("Player", proPlayer)
+    end
+
+    function o:getLastLogin()
+        return o:getObj():getValue("Player").lastLogin
+    end
+    function o:setLastLogin(_lastLogin)
+        local player = o:getObj()
+        local proPlayer = player:getValue("Player")
+        proPlayer.lastLogin = _lastLogin
+        player:setValue("Player", proPlayer)
+    end    
+
     function o:__constructor(_id)
         id = _id
     end
@@ -141,7 +205,7 @@ PlayerClass:create("Player",function ()
                 local context_item = Context:new("Item")             
                 local checkItem2 = context_item:where("id",playerOldCellItem.idItem):firstData()
                 if checkItem2.typeItem == typeItem.Equipment then
-                    messenger(player,{Text = Language.messeger.ItemNotMerge[language], Color = {r = 255, g = 0, b = 0}})
+                    messenger(player,{Text = Language.messeger.ItemNotMerge[o:getLanguage()], Color = {r = 255, g = 0, b = 0}})
                     return false
                 else
                     playerNewCellItem.num = playerNewCellItem.num + playerOldCellItem.num 
@@ -188,7 +252,7 @@ PlayerClass:create("Player",function ()
                 end
             end
             if not rs then                
-                messenger(player,{Text = lg.messeger.FullBP[language], Color = {r = 255, g = 0, b = 0}})
+                messenger(player,{Text = lg.messeger.FullBP[o:getLanguage()], Color = {r = 255, g = 0, b = 0}})
             end
             return rs
         end
@@ -205,6 +269,17 @@ PlayerClass:create("Player",function ()
         player:setValue("PlayerItem", playerItem)
         removeSlotItem(player,slot)
         return true
+    end
+
+    function o:spendMoney(money)
+        local plMoney = o:getMoney()
+        if plMoney < money then
+            messenger(o:getObj(),{Text = lg.messeger.NotEnoughMoney[o:getLanguage()], Color = {r = 255, g = 0, b = 0}})
+            return false
+        else
+            o:setMoney(plMoney - money)
+            return true
+        end
     end
     return o
 end)
