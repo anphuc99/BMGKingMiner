@@ -6,4 +6,7 @@ function self:onOpen(p)
     self.Forge.onMouseClick = function() 
         UI:openWindow("crafting")
     end
+    PackageHandlers.registerClientHandler("setMoney", function(player, packet)
+        self.Money:setText(packet.money)
+    end)       
 end

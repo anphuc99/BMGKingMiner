@@ -36,7 +36,7 @@
   },
   "collision": true,
   "damage": 0,
-  "deathHideTime": 20,
+  "deathHideTime": 0,
   "destroyTime": 0,
   "disableShadow": true,
   "disableShadowAtFirstPRV": true,

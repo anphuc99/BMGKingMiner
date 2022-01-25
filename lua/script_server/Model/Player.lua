@@ -34,6 +34,7 @@ PlayerClass:create("Player",function ()
         local proPlayer = player:getValue("Player")
         proPlayer.money = _Money
         player:setValue("Player", proPlayer)
+        PackageHandlers.sendServerHandler(o:getObj(), "setMoney", {money = _Money})
     end
 
     function o:getBalo()

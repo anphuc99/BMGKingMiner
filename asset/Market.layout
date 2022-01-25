@@ -1,0 +1,1520 @@
+    <GUILayout version="4">
+        <Window type="DefaultWindow" name="Root">
+            <Window type="WindowsLook/StaticImage" name="Image">
+                <Window type="WindowsLook/StaticImage" name="item1">
+                    <Property name="Area" value="{{0,93.56},{0,155.95},{0,216.38},{0,273.59}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="ImageColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="Image" value="gameres|asset/Texture/Block/100006_strawberry_stage_5.png">
+
+                    </Property>
+                    <Property name="ImageDstBlend" value="4">
+
+                    </Property>
+                    <Property name="horzFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="ImageBlendMode" value="0">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="ImageBlendOperation" value="0">
+
+                    </Property>
+                    <Property name="StaticImageStretch" value="0 0 0 0">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="vertFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="StaticImageCutStretch" value="0 0 0 0">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="ImageSrcBlend" value="2">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticImage" name="item2">
+                    <Property name="Area" value="{{0,545.77227254618},{0,155.94999999999},{0,668.59227254618},{0,273.58999999999}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="ImageColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="Image" value="gameres|asset/Texture/Block/100006_strawberry_stage_5.png">
+
+                    </Property>
+                    <Property name="ImageDstBlend" value="4">
+
+                    </Property>
+                    <Property name="horzFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="ImageBlendMode" value="0">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="ImageBlendOperation" value="0">
+
+                    </Property>
+                    <Property name="StaticImageStretch" value="0 0 0 0">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="vertFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="StaticImageCutStretch" value="0 0 0 0">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="ImageSrcBlend" value="2">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticImage" name="item3">
+                    <Property name="Area" value="{{0,93.559990691365},{0,335.30019833881},{0,216.37999069137},{0,452.94019833881}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="ImageColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="Image" value="gameres|asset/Texture/Block/100006_strawberry_stage_5.png">
+
+                    </Property>
+                    <Property name="ImageDstBlend" value="4">
+
+                    </Property>
+                    <Property name="horzFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="ImageBlendMode" value="0">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="ImageBlendOperation" value="0">
+
+                    </Property>
+                    <Property name="StaticImageStretch" value="0 0 0 0">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="vertFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="StaticImageCutStretch" value="0 0 0 0">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="ImageSrcBlend" value="2">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticImage" name="item4">
+                    <Property name="Area" value="{{0,545.77},{0,335.3},{0,668.59},{0,452.94}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="ImageColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="Image" value="gameres|asset/Texture/Block/100006_strawberry_stage_5.png">
+
+                    </Property>
+                    <Property name="ImageDstBlend" value="4">
+
+                    </Property>
+                    <Property name="horzFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="ImageBlendMode" value="0">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="ImageBlendOperation" value="0">
+
+                    </Property>
+                    <Property name="StaticImageStretch" value="0 0 0 0">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="vertFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="StaticImageCutStretch" value="0 0 0 0">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="ImageSrcBlend" value="2">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticText" name="name1">
+                    <Property name="Area" value="{{0,244.46},{0,173.54},{0,424.65},{0,200.33}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="MinAutoTextScale" value="8">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="BorderWidth" value="0">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="TextBoldWeight" value="1">
+
+                    </Property>
+                    <Property name="AutoTextScale" value="false">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="HorzFormatting" value="WordWrapLeftAligned">
+
+                    </Property>
+                    <Property name="VertFormatting" value="TopAligned">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="TextWordBreak" value="false">
+
+                    </Property>
+                    <Property name="TextColours" value="ff000000">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="BorderColor" value="ffffffff">
+
+                    </Property>
+                    <Property name="word_warpped" value="true">
+
+                    </Property>
+                    <Property name="Text" value="Here is text">
+
+                    </Property>
+                    <Property name="AutoScale" value="0">
+
+                    </Property>
+                    <Property name="Font_size" value="15">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="BorderEnable" value="false">
+
+                    </Property>
+                    <Property name="Font" value="DroidSans-15">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticText" name="name2">
+                    <Property name="Area" value="{{0,693.63},{0,173.54},{0,873.82},{0,200.33}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="MinAutoTextScale" value="8">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="BorderWidth" value="0">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="TextBoldWeight" value="1">
+
+                    </Property>
+                    <Property name="AutoTextScale" value="false">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="HorzFormatting" value="WordWrapLeftAligned">
+
+                    </Property>
+                    <Property name="VertFormatting" value="TopAligned">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="TextWordBreak" value="false">
+
+                    </Property>
+                    <Property name="TextColours" value="ff000000">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="BorderColor" value="ffffffff">
+
+                    </Property>
+                    <Property name="word_warpped" value="true">
+
+                    </Property>
+                    <Property name="Text" value="Here is text">
+
+                    </Property>
+                    <Property name="AutoScale" value="0">
+
+                    </Property>
+                    <Property name="Font_size" value="15">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="BorderEnable" value="false">
+
+                    </Property>
+                    <Property name="Font" value="DroidSans-15">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticText" name="name3">
+                    <Property name="Area" value="{{0,244.46},{0,350.95},{0,424.65},{0,377.74}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="MinAutoTextScale" value="8">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="BorderWidth" value="0">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="TextBoldWeight" value="1">
+
+                    </Property>
+                    <Property name="AutoTextScale" value="false">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="HorzFormatting" value="WordWrapLeftAligned">
+
+                    </Property>
+                    <Property name="VertFormatting" value="TopAligned">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="TextWordBreak" value="false">
+
+                    </Property>
+                    <Property name="TextColours" value="ff000000">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="BorderColor" value="ffffffff">
+
+                    </Property>
+                    <Property name="word_warpped" value="true">
+
+                    </Property>
+                    <Property name="Text" value="Here is text">
+
+                    </Property>
+                    <Property name="AutoScale" value="0">
+
+                    </Property>
+                    <Property name="Font_size" value="15">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="BorderEnable" value="false">
+
+                    </Property>
+                    <Property name="Font" value="DroidSans-15">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticText" name="name4">
+                    <Property name="Area" value="{{0,693.63},{0,350.95},{0,873.82},{0,377.74}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="MinAutoTextScale" value="8">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="BorderWidth" value="0">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="TextBoldWeight" value="1">
+
+                    </Property>
+                    <Property name="AutoTextScale" value="false">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="HorzFormatting" value="WordWrapLeftAligned">
+
+                    </Property>
+                    <Property name="VertFormatting" value="TopAligned">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="TextWordBreak" value="false">
+
+                    </Property>
+                    <Property name="TextColours" value="ff000000">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="BorderColor" value="ffffffff">
+
+                    </Property>
+                    <Property name="word_warpped" value="true">
+
+                    </Property>
+                    <Property name="Text" value="Here is text">
+
+                    </Property>
+                    <Property name="AutoScale" value="0">
+
+                    </Property>
+                    <Property name="Font_size" value="15">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="BorderEnable" value="false">
+
+                    </Property>
+                    <Property name="Font" value="DroidSans-15">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticText" name="num1">
+                    <Property name="Area" value="{{0,291.06},{0,247.89},{0,436.2},{0,274.68}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="MinAutoTextScale" value="8">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="BorderWidth" value="0">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="TextBoldWeight" value="0">
+
+                    </Property>
+                    <Property name="AutoTextScale" value="false">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="HorzFormatting" value="WordWrapLeftAligned">
+
+                    </Property>
+                    <Property name="VertFormatting" value="TopAligned">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="TextWordBreak" value="false">
+
+                    </Property>
+                    <Property name="TextColours" value="ff000000">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="BorderColor" value="ffffffff">
+
+                    </Property>
+                    <Property name="word_warpped" value="true">
+
+                    </Property>
+                    <Property name="Text" value="Here is text">
+
+                    </Property>
+                    <Property name="AutoScale" value="0">
+
+                    </Property>
+                    <Property name="Font_size" value="12">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="BorderEnable" value="false">
+
+                    </Property>
+                    <Property name="Font" value="DroidSans-12">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticText" name="num2">
+                    <Property name="Area" value="{{0,737.63992687085},{0,247.89250882043},{0,882.77992687085},{0,274.68250882043}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="MinAutoTextScale" value="8">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="BorderWidth" value="0">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="TextBoldWeight" value="0">
+
+                    </Property>
+                    <Property name="AutoTextScale" value="false">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="HorzFormatting" value="WordWrapLeftAligned">
+
+                    </Property>
+                    <Property name="VertFormatting" value="TopAligned">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="TextWordBreak" value="false">
+
+                    </Property>
+                    <Property name="TextColours" value="ff000000">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="BorderColor" value="ffffffff">
+
+                    </Property>
+                    <Property name="word_warpped" value="true">
+
+                    </Property>
+                    <Property name="Text" value="Here is text">
+
+                    </Property>
+                    <Property name="AutoScale" value="0">
+
+                    </Property>
+                    <Property name="Font_size" value="12">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="BorderEnable" value="false">
+
+                    </Property>
+                    <Property name="Font" value="DroidSans-12">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticText" name="num3">
+                    <Property name="Area" value="{{0,291.0599796972},{0,427.24244113082},{0,436.1999796972},{0,454.03244113082}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="MinAutoTextScale" value="8">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="BorderWidth" value="0">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="TextBoldWeight" value="0">
+
+                    </Property>
+                    <Property name="AutoTextScale" value="false">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="HorzFormatting" value="WordWrapLeftAligned">
+
+                    </Property>
+                    <Property name="VertFormatting" value="TopAligned">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="TextWordBreak" value="false">
+
+                    </Property>
+                    <Property name="TextColours" value="ff000000">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="BorderColor" value="ffffffff">
+
+                    </Property>
+                    <Property name="word_warpped" value="true">
+
+                    </Property>
+                    <Property name="Text" value="Here is text">
+
+                    </Property>
+                    <Property name="AutoScale" value="0">
+
+                    </Property>
+                    <Property name="Font_size" value="12">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="BorderEnable" value="false">
+
+                    </Property>
+                    <Property name="Font" value="DroidSans-12">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticText" name="num4">
+                    <Property name="Area" value="{{0,737.64003041157},{0,427.24243654252},{0,882.78003041157},{0,454.03243654252}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="MinAutoTextScale" value="8">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="BorderWidth" value="0">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="TextBoldWeight" value="0">
+
+                    </Property>
+                    <Property name="AutoTextScale" value="false">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="HorzFormatting" value="WordWrapLeftAligned">
+
+                    </Property>
+                    <Property name="VertFormatting" value="TopAligned">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="TextWordBreak" value="false">
+
+                    </Property>
+                    <Property name="TextColours" value="ff000000">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="BorderColor" value="ffffffff">
+
+                    </Property>
+                    <Property name="word_warpped" value="true">
+
+                    </Property>
+                    <Property name="Text" value="Here is text">
+
+                    </Property>
+                    <Property name="AutoScale" value="0">
+
+                    </Property>
+                    <Property name="Font_size" value="12">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="BorderEnable" value="false">
+
+                    </Property>
+                    <Property name="Font" value="DroidSans-12">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticImage" name="Product1">
+                    <Property name="Area" value="{{0,84.14},{0,144.94},{0,456.25},{0,285.64}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="ImageColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="Image" value="gameres|asset/Texture/Gui/coin_.png">
+
+                    </Property>
+                    <Property name="ImageDstBlend" value="4">
+
+                    </Property>
+                    <Property name="horzFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="ImageBlendMode" value="0">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="ImageBlendOperation" value="0">
+
+                    </Property>
+                    <Property name="StaticImageStretch" value="0 0 0 0">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="vertFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="StaticImageCutStretch" value="0 0 231 264">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="ImageSrcBlend" value="2">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticImage" name="Product2">
+                    <Property name="Area" value="{{0,531.29},{0,144.7},{0,903.4},{0,285.4}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="ImageColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="Image" value="gameres|asset/Texture/Gui/coin_.png">
+
+                    </Property>
+                    <Property name="ImageDstBlend" value="4">
+
+                    </Property>
+                    <Property name="horzFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="ImageBlendMode" value="0">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="ImageBlendOperation" value="0">
+
+                    </Property>
+                    <Property name="StaticImageStretch" value="0 0 0 0">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="vertFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="StaticImageCutStretch" value="0 0 231 264">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="ImageSrcBlend" value="2">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticImage" name="Product3">
+                    <Property name="Area" value="{{0,84.135901226995},{0,324.04993655825},{0,456.245901227},{0,464.74993655825}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="ImageColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="Image" value="gameres|asset/Texture/Gui/coin_.png">
+
+                    </Property>
+                    <Property name="ImageDstBlend" value="4">
+
+                    </Property>
+                    <Property name="horzFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="ImageBlendMode" value="0">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="ImageBlendOperation" value="0">
+
+                    </Property>
+                    <Property name="StaticImageStretch" value="0 0 0 0">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="vertFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="StaticImageCutStretch" value="0 0 231 264">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="ImageSrcBlend" value="2">
+
+                    </Property>
+                </Window>
+                <Window type="WindowsLook/StaticImage" name="Product4">
+                    <Property name="Area" value="{{0,531.29},{0,324.05},{0,903.4},{0,464.75}}">
+
+                    </Property>
+                    <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                    </Property>
+                    <Property name="ImageColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="Image" value="gameres|asset/Texture/Gui/coin_.png">
+
+                    </Property>
+                    <Property name="ImageDstBlend" value="4">
+
+                    </Property>
+                    <Property name="horzFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="PivotX" value="0.5">
+
+                    </Property>
+                    <Property name="Visible" value="true">
+
+                    </Property>
+                    <Property name="ClippedByParent" value="false">
+
+                    </Property>
+                    <Property name="ImageBlendMode" value="0">
+
+                    </Property>
+                    <Property name="BackgroundColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="ImageBlendOperation" value="0">
+
+                    </Property>
+                    <Property name="StaticImageStretch" value="0 0 0 0">
+
+                    </Property>
+                    <Property name="FrameColours" value="ffffffff">
+
+                    </Property>
+                    <Property name="PivotY" value="0.5">
+
+                    </Property>
+                    <Property name="BackgroundEnabled" value="false">
+
+                    </Property>
+                    <Property name="HorizontalAlignment" value="Left">
+
+                    </Property>
+                    <Property name="VerticalAlignment" value="Top">
+
+                    </Property>
+                    <Property name="MousePassThroughEnabled" value="false">
+
+                    </Property>
+                    <Property name="vertFormatting" value="Stretched">
+
+                    </Property>
+                    <Property name="Alpha" value="1">
+
+                    </Property>
+                    <Property name="FrameEnabled" value="false">
+
+                    </Property>
+                    <Property name="StaticImageCutStretch" value="0 0 231 264">
+
+                    </Property>
+                    <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                    </Property>
+                    <Property name="Disabled" value="false">
+
+                    </Property>
+                    <Property name="ImageSrcBlend" value="2">
+
+                    </Property>
+                </Window>
+                  <Property name="Area" value="{{0,199.08},{0,61.07},{0,1362.68},{0,672.11}}">
+
+                  </Property>
+                  <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                  </Property>
+                  <Property name="ImageColours" value="ffffffff">
+
+                  </Property>
+                  <Property name="Image" value="gameres|asset/Texture/Gui/Shop chợ trời(C).png">
+
+                  </Property>
+                  <Property name="ImageDstBlend" value="4">
+
+                  </Property>
+                  <Property name="horzFormatting" value="Stretched">
+
+                  </Property>
+                  <Property name="PivotX" value="0.5">
+
+                  </Property>
+                  <Property name="Visible" value="true">
+
+                  </Property>
+                  <Property name="ClippedByParent" value="false">
+
+                  </Property>
+                  <Property name="ImageBlendMode" value="0">
+
+                  </Property>
+                  <Property name="BackgroundColours" value="ffffffff">
+
+                  </Property>
+                  <Property name="ImageBlendOperation" value="0">
+
+                  </Property>
+                  <Property name="StaticImageStretch" value="0 0 0 0">
+
+                  </Property>
+                  <Property name="FrameColours" value="ffffffff">
+
+                  </Property>
+                  <Property name="PivotY" value="0.5">
+
+                  </Property>
+                  <Property name="BackgroundEnabled" value="false">
+
+                  </Property>
+                  <Property name="HorizontalAlignment" value="Left">
+
+                  </Property>
+                  <Property name="VerticalAlignment" value="Top">
+
+                  </Property>
+                  <Property name="MousePassThroughEnabled" value="false">
+
+                  </Property>
+                  <Property name="vertFormatting" value="Stretched">
+
+                  </Property>
+                  <Property name="Alpha" value="1">
+
+                  </Property>
+                  <Property name="FrameEnabled" value="false">
+
+                  </Property>
+                  <Property name="StaticImageCutStretch" value="0 0 0 0">
+
+                  </Property>
+                  <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                  </Property>
+                  <Property name="Disabled" value="false">
+
+                  </Property>
+                  <Property name="ImageSrcBlend" value="2">
+
+                  </Property>
+            </Window>
+              <Property name="Area" value="{{0,0},{0,0},{1,400},{1,300}}">
+
+              </Property>
+              <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+              </Property>
+              <Property name="HorizontalAlignment" value="Left">
+
+              </Property>
+              <Property name="Alpha" value="1">
+
+              </Property>
+              <Property name="PivotX" value="0.5">
+
+              </Property>
+              <Property name="Visible" value="true">
+
+              </Property>
+              <Property name="ClippedByParent" value="false">
+
+              </Property>
+              <Property name="MousePassThroughEnabled" value="false">
+
+              </Property>
+              <Property name="Disabled" value="false">
+
+              </Property>
+              <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+              </Property>
+              <Property name="PivotY" value="0.5">
+
+              </Property>
+              <Property name="VerticalAlignment" value="Top">
+
+              </Property>
+        </Window>
+    </GUILayout>

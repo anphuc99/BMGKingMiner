@@ -10,6 +10,11 @@
     "canClick": true,
     "canRevive": true,
     "collision": true,
+    "deadAction": {
+      "deathHideTime": {
+        "value": 0
+      }
+    },
     "girlactor": {
       "asset": ""
     },
@@ -25,7 +30,7 @@
   },
   "meta": {
     "EXPORT": {
-      "setting.json": "70334ae54cfaa82877360038c8d73034",
+      "setting.json": "57bb0e4c0cef9712d8ecbaf90f7b93b8",
       "triggers.bts": ""
     },
     "VERSION": "0.18"

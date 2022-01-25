@@ -33,7 +33,7 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
         }, true, true, true, true)
         context.obj1.addValueDef("Player", PlayerProperty, true, true, true, true)
         --PackageHandlers.sendServerHandler(context.obj1, "UI", {UI = "Language"})
-        context.obj1:sendTip(1, "Welcome", 60)
+        PackageHandlers.sendServerHandler(context.obj1, "setMoney", { money = 1000})
     else
         PlayerObj:setLastLogin(os.time())
         context.obj1:setValue("Player", plpro)

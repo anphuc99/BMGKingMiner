@@ -1,12 +1,16 @@
 {
   "data": {
+    "canClick": true,
+    "canRevive": true,
     "name": {
       "value": "entity_022c7741-ccd7-40ff-8dd2-79b4528f9f04"
-    }
+    },
+    "unAssailable": true,
+    "unDamageable": true
   },
   "meta": {
     "EXPORT": {
-      "setting.json": "cd4749ad5a60d919ef8379ed0f177245",
+      "setting.json": "f8e6b1a2f02890142f72a98e527a7e24",
       "triggers.bts": ""
     },
     "VERSION": "0.18"

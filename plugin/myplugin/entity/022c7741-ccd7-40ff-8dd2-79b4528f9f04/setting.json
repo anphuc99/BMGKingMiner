@@ -7,7 +7,7 @@
   "autoRotateColliderBox": true,
   "avoidCliff": true,
   "avoidCliffHight": 5,
-  "canClick": false,
+  "canClick": true,
   "canHurtMove": true,
   "canJump": true,
   "canMove": true,
@@ -72,12 +72,13 @@
     ""
   ],
   "reachDistance": 6.5,
+  "reviveTime": 0,
   "setFollowWhenCreate": true,
   "skills": [],
   "stepHeight": 0.6,
   "swimSpeed": 0.2,
   "textHeight": 2.3,
-  "unassailable": 0,
-  "undamageable": 0,
+  "unassailable": 1,
+  "undamageable": 1,
   "waterline": 0
 }
