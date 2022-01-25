@@ -54,7 +54,7 @@
       "properties": {
         "id": "8467931977599696897",
         "name": "sat",
-        "position": "x:18.122329711914 y:53.0 z:26.603420257568",
+        "position": "x:18.122329711914 y:53 z:26.603420257568",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -76,7 +76,18 @@
       "properties": {
         "id": "8467932013315145729",
         "name": "sat",
-        "position": "x:24.328285217285 y:53.0 z:30.703935623169",
+        "position": "x:24.328285217285 y:53 z:30.703935623169",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/022c7741-ccd7-40ff-8dd2-79b4528f9f04",
+      "properties": {
+        "id": "8473469965040746497",
+        "name": "NPC ban hang",
+        "position": "x:27.327472686768 y:53.0 z:33.477920532227",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }

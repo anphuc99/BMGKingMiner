@@ -73,7 +73,7 @@
         "name": "sat",
         "position": {
           "x": 18.122329711914,
-          "y": 53.0,
+          "y": 53,
           "z": 26.603420257568
         }
       },
@@ -95,8 +95,19 @@
         "name": "sat",
         "position": {
           "x": 24.328285217285,
-          "y": 53.0,
+          "y": 53,
           "z": 30.703935623169
+        }
+      },
+      {
+        "__OBJ_TYPE": "Instance_Entity",
+        "config": "myplugin/022c7741-ccd7-40ff-8dd2-79b4528f9f04",
+        "id": "8473469965040746497",
+        "name": "NPC ban hang",
+        "position": {
+          "x": 27.327472686768,
+          "y": 53.0,
+          "z": 33.477920532227
         }
       }
     ],
@@ -109,7 +120,7 @@
   },
   "meta": {
     "EXPORT": {
-      "setting.json": "cca20407f834a5876e7fe36af5dc7e97"
+      "setting.json": "17539286fed91a24fa74fd62524c1554"
     },
     "VERSION": "0.18"
   }
