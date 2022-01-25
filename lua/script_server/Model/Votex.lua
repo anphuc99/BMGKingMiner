@@ -1,4 +1,4 @@
-local class = require "script_server.lbr.Class"
+local class = require "script_common.lbr.Class"
 local Item = require "script_server.Model.Item"
 local Votex = class()
 Votex:create("Votex",function ()

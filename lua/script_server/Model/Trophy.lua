@@ -1,4 +1,4 @@
-local class = require "script_server.lbr.Class"
+local class = require "script_common.lbr.Class"
 local Equiment = require "script_server.Model.Equipment"
 local Trophy = class()
 Trophy:create("Trophy",function ()

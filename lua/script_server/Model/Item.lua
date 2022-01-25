@@ -1,5 +1,5 @@
-local class = require "script_server.lbr.Class"
-local Context = require "script_server.lbr.Context"
+local class = require "script_common.lbr.Class"
+local Context = require "script_common.lbr.Context"
 local positionItem = require "script_common.positionItem"
 local TypeItem = require "script_common.typeItem"
 local messenger = require "script_server.Helper.SendMesseger"

@@ -1,4 +1,4 @@
-local class = require "script_server.lbr.Class"
+local class = require "script_common.lbr.Class"
 local Context = require "script_common.lbr.Context"
 local Gol = require "script_server.Golde_Valiable"
 local positionItem = require "script_common.positionItem"
@@ -159,9 +159,9 @@ PlayerClass:create("Player",function ()
             if value.idItem == itemId then
                 value.num = value.num - num
                 if value.num <= 0 then
+                    num = math.abs(value.num)
                     table.remove(playerItem,key)
-                end
-                break
+                end                
             end
         end
         player:setValue("PlayerItem", playerItem)
@@ -184,9 +184,15 @@ PlayerClass:create("Player",function ()
     end
     function o:addItemInBalo(itemId, num)
         local context_item = Context:new("Item")
-        local itemData = context_item:where("id",itemId):getData()
+        local itemData = context_item:where("id",itemId):firstData()
         local itemObj = Item:new(itemData)
         itemObj:addToPlayer(o:getObj(),num)
+    end
+    function o:freeBalo()
+        local playerItem = o:getObj():getValue("PlayerItem")
+        local context_plaeyerItem = Context:new(playerItem)
+        local count = context_plaeyerItem:where("position",positionItem.balo):getData()
+        return o:getBalo() - #count
     end
     function o:moveCellBalo(oldCellNum,NewCellNum)
         if oldCellNum == NewCellNum then

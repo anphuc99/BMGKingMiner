@@ -1,5 +1,5 @@
-local class = require "script_server.lbr.Class"
-local deepCopy = require("script_server.lbr.DeepCopyTable")
+local class = require "script_common.lbr.Class"
+local deepCopy = require("script_common.lbr.DeepCopyTable")
 local Context = class()
 
 Context:create("Context", function()
@@ -101,6 +101,16 @@ Context:create("Context", function()
             print(Lib.pv(dataSelect))
         end
         return o
+    end
+    function o:sum(prop)
+        local sum = 0
+        for key, value in pairs(dataSelect) do
+            if type(key) == "number" then
+                sum = sum + value[prop]
+            end            
+        end
+        dataSelect = data
+        return sum
     end
     function o:getData() 
         local dt = dataSelect

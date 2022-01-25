@@ -1,5 +1,5 @@
-local Material = require "script_server.database.Material"
-local Context = require "script_server.lbr.Context"
+local Material = require "script_common.database.Material"
+local Context = require "script_common.lbr.Context"
 local Gol = require "script_server.Golde_Valiable"
 local MaterialModel = require "script_server.Model.Material"
 

@@ -15,7 +15,7 @@ return {
     {
         id = "myplugin/1aba122c-b1ad-491a-8ba3-0dfbd8cda0f6",
         name ="Cúp lv2",
-        icon = "asset/Texture/Block/double_plant_sunflower_front.png",
+        icon = "asset/Texture/Block/100006_strawberry_stage_5.png",
         typeItem = typeItem.Equipment
     },    
     {

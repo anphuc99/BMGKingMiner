@@ -1,11 +1,15 @@
 {
   "data": {
     "actorName": {
-      "selector": "editor/King miner/asset/Actor/charactor/charactor_boy/character_boy.actor"
+      "asset": "asset/Actor/Green Yellow Box/bingxuejie_liwuhe01_bingxuejie_liwuhe01.actor",
+      "selector": "editor/King miner/asset/Actor/Green Yellow Box/bingxuejie_liwuhe01_bingxuejie_liwuhe01.actor"
     },
     "canClick": true,
     "canRevive": true,
     "collision": true,
+    "girlactor": {
+      "asset": ""
+    },
     "hideName": true,
     "name": {
       "value": "entity_9d88ec66-60fe-46bf-8b90-bb5bd7c620ed"
@@ -18,7 +22,7 @@
   },
   "meta": {
     "EXPORT": {
-      "setting.json": "e4666c4d003a4376cb616261a9154b61",
+      "setting.json": "8a14f424d555f819dc1a917d035cc8b8",
       "triggers.bts": ""
     },
     "VERSION": "0.18"

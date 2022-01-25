@@ -1,4 +1,4 @@
-local class = require "script_server.lbr.Class"
+local class = require "script_common.lbr.Class"
 local FleaMarket = class()
 FleaMarket:create("FleaMarket",function ()
     local o = {}

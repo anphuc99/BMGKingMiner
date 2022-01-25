@@ -3,8 +3,8 @@ local this = Entity.GetCfg("myplugin/player1")
 local PlayerModel = require "script_server.Model.Player"
 local cupLv1 = "myplugin/bc498465-8619-4188-bc57-ff9a717a3787"
 local setIdPlayer = require "script_server.lbr.setIdPlayer"
-local Context = require "script_server.lbr.Context"
-local deepCopy = require "script_server.lbr.DeepCopyTable"
+local Context = require "script_common.lbr.Context"
+local deepCopy = require "script_common.lbr.DeepCopyTable"
 local positionItem = require "script_common.positionItem"
 local SlotBalo = require "script_common.SlotBalo"
 local messeger = require "script_server.Helper.SendMesseger"
@@ -32,7 +32,7 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
             {idPlayer = idPlayer, idItem = cupLv1,cellNum = 1, num = 1, position = positionItem.hand, lv = 1},            
         }, true, true, true, true)
         context.obj1.addValueDef("Player", PlayerProperty, true, true, true, true)
-        PackageHandlers.sendServerHandler(context.obj1, "UI", {UI = "Language"})
+        --PackageHandlers.sendServerHandler(context.obj1, "UI", {UI = "Language"})
         context.obj1:sendTip(1, "Welcome", 60)
     else
         PlayerObj:setLastLogin(os.time())
@@ -123,4 +123,47 @@ end)
 -- cài đặt ngôn ngữ
 PackageHandlers.registerServerHandler("setLanguage", function(player, packet)
     Gol.Player[player.objID]:setLanguage(Language.language[packet.i].name)
+end)
+-- chế tạo trang bị
+PackageHandlers.registerServerHandler("crafting", function(player, packet)
+    local objPlayer = Gol.Player[player.objID]
+    if objPlayer:freeBalo() < 1 then
+        
+        return {rs = false}
+    end
+    local context_recipe = Context:new("Recipe")
+    local recipe = context_recipe:where("id",packet.recId):firstData()
+    local playerItem = player:getValue("PlayerItem")    
+    local context_playerItem = Context:new(playerItem)
+    local rs = true
+    for key, value in pairs(recipe.Material) do
+        local plNumItem = context_playerItem:where("idItem",value.id):sum("num")
+        if value.num > plNumItem then
+            rs = false
+            break
+        end
+    end
+    if rs then
+        local context_equipment = Context:new("Equipment")
+        local equipment = context_equipment:where("recipe",packet.recId):getData()
+        local rd = math.random(1,100)
+        local winPrizes
+        for key, value in pairs(equipment) do
+            if type(key) == "number" then
+                if rd < value.percentage then
+                    winPrizes = value.id
+                    break
+                else
+                    rd = rd - value.percentage
+                end
+            end
+        end
+        objPlayer:addItemInBalo(winPrizes,1)
+        for key, value in pairs(recipe.Material) do
+            objPlayer:removeItemInBalo(value.id,value.num)
+        end
+        return {rs = true, item = winPrizes}
+    else
+        return {rs = false}
+    end
 end)
