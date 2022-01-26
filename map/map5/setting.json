@@ -1,6 +1,19 @@
 {
   "canBreak": true,
   "hideCloud": true,
+  "scene": [
+    {
+      "class": "Entity",
+      "config": "myplugin/crystal",
+      "properties": {
+        "id": "8475972043575033857",
+        "name": "crystal",
+        "position": "x:30.306772232056 y:53.009281158447 z:8.0720062255859",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    }
+  ],
   "skyBox": [
     {
       "texture": [
