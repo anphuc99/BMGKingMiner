@@ -56,6 +56,17 @@
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
+    },
+    {
+      "class": "RegionPart",
+      "properties": {
+        "cfgName": "myplugin/13599e39-8efa-492d-bcc2-25308d9c1f79",
+        "id": "8475453975892180993",
+        "name": "Region",
+        "position": "x:21.52091217041 y:56.012313842773 z:2.1856691837311",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:3.08536 y:4.01814 z:2.06695"
+      }
     }
   ],
   "skyBox": [
