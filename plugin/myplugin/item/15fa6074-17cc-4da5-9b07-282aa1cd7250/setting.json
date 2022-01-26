@@ -7,10 +7,9 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Texture/Block/100006_strawberry_stage_5.png",
-  "itemintroduction": "a18deb3d-0024-4374-8fe9-8f37d4f7175b",
-  "itemname": "item_1aba122c-b1ad-491a-8ba3-0dfbd8cda0f6",
-  "mesh": "asset/Mesh/Actor_mesh/bed_armor_helmet_blue.mesh",
+  "icon": "@asset/Actor/Aqua Blue Egg/egg_8.png",
+  "itemintroduction": "e2a38c57-e2b4-41bb-a285-230ddcef275f",
+  "itemname": "item_15fa6074-17cc-4da5-9b07-282aa1cd7250",
   "needSave": false,
   "stack_count_max": 1,
   "syncGameData": {

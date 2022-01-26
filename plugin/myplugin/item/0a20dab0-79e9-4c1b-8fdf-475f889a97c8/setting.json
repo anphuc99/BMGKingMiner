@@ -1,0 +1,22 @@
+{
+  "canAbandon": false,
+  "candrop": false,
+  "canEquipPlural": true,
+  "canUse": false,
+  "equip_skill": [],
+  "equip_skin": {
+    "": ""
+  },
+  "icon": "@asset/Actor/Agricultural Rake/gun_2004.tga",
+  "itemintroduction": "6a21b8fb-cfc2-4488-90ac-51a2bda1dbf6",
+  "itemname": "item_0a20dab0-79e9-4c1b-8fdf-475f889a97c8",
+  "mesh": "asset/Actor/Agricultural Rake/gun_2004.mesh",
+  "needSave": false,
+  "stack_count_max": 1,
+  "syncGameData": {
+    "currentCapacity": true,
+    "extCapacity": true
+  },
+  "trap": false,
+  "tray": []
+}

@@ -3,11 +3,11 @@ return {
         id = 1,
         Material = {
             {
-                id = "myplugin/f984e166-c74e-4bb4-b621-4eafb5372f30",
+                id = "myplugin/8f002461-4122-42c7-a06f-9e52c2414488",
                 num = 4
             },
             {
-                id = "myplugin/a55fe9e9-8a01-4a54-ab5b-af6fa6cc26b2",
+                id = "myplugin/791b1362-ec30-4f73-8918-a52f727cd40f",
                 num = 2
             },
         }

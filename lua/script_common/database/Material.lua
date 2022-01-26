@@ -1,15 +1,15 @@
 return {
     {
-        id = "myplugin/f984e166-c74e-4bb4-b621-4eafb5372f30",
-        level = 2,
-	    stiffness = 5*20,
-	    entityId = "myplugin/1928738c-ec90-421c-8941-e13ea943d8e8",
+        id = "myplugin/8f002461-4122-42c7-a06f-9e52c2414488",
+        level = 1,
+	    stiffness = 10*20,
+	    entityId = "myplugin/b14b4c3b-370e-4a84-86cd-66e79db57ade",
     },
     {
-        id = "myplugin/a55fe9e9-8a01-4a54-ab5b-af6fa6cc26b2",
-        level = 2,
-	    stiffness = 10*20,
-	    entityId = "myplugin/9d88ec66-60fe-46bf-8b90-bb5bd7c620ed",
+        id = "myplugin/791b1362-ec30-4f73-8918-a52f727cd40f",
+        level = 1,
+	    stiffness = 5*20,
+	    entityId = "myplugin/8c64738f-ceb8-4c64-9e7d-b8bc31d56f87",
     },
     option = {
         primaryKey= "id",

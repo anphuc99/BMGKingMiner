@@ -1,7 +1,7 @@
 local Gol = require "script_server.Golde_Valiable"
 local this = Entity.GetCfg("myplugin/player1")
 local PlayerModel = require "script_server.Model.Player"
-local cupLv1 = "myplugin/bc498465-8619-4188-bc57-ff9a717a3787"
+local cupLv1 = "myplugin/48abf8e7-0fd1-48c8-af62-f81753f25fcf"
 local setIdPlayer = require "script_server.lbr.setIdPlayer"
 local Context = require "script_common.lbr.Context"
 local deepCopy = require "script_common.lbr.DeepCopyTable"

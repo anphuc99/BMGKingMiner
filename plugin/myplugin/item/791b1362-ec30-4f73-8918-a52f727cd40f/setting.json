@@ -7,10 +7,9 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Texture/Block/flower_oxeye_daisy.png",
-  "itemintroduction": "5abd1195-f68f-4c17-94dc-43cb30c9c8e2",
-  "itemname": "item_bc498465-8619-4188-bc57-ff9a717a3787",
-  "mesh": "asset/Mesh/Actor_mesh/01_hair_girl.mesh",
+  "icon": "@asset/Texture/Block/acacia_back_acacia_wood_slab.png",
+  "itemintroduction": "eb5f88c9-9143-4f1b-b31c-ce18a4638713",
+  "itemname": "item_791b1362-ec30-4f73-8918-a52f727cd40f",
   "needSave": false,
   "stack_count_max": 1,
   "syncGameData": {

@@ -10,6 +10,7 @@ local addSlotItem = require "script_server.lbr.addSlotItem"
 local removeSlotItem = require "script_server.lbr.removeSlotItem"
 local TypeItem = require "script_common.typeItem"
 local lg = require "script_common.language"
+local Vortex = require "script_common.database.Vortex"
 local PlayerClass = class()
 PlayerClass:create("Player",function ()
     local o = {}
@@ -150,7 +151,19 @@ PlayerClass:create("Player",function ()
         end        
     end
     function o:endMine(MaterialModel)
-        return MaterialModel:addToPlayer(o:getObj())
+        local rs = MaterialModel:addToPlayer(o:getObj())
+        local rd = math.random(1,100) 
+        for key, value in pairs(Vortex) do
+            if type(key) == "number" then
+                if rd <= value.percentage then
+                    o:addItemInBalo(value.id,1)
+                    break
+                else
+                    rd = rd - value.percentage
+                end  
+            end
+        end        
+        return rs
     end
     function o:removeItemInBalo(itemId,num)
         num = num or 2^1023 
@@ -187,7 +200,7 @@ PlayerClass:create("Player",function ()
         local context_item = Context:new("Item")
         local itemData = context_item:where("id",itemId):firstData()
         local itemObj = Item:new(itemData)
-        itemObj:addToPlayer(o:getObj(),num)
+        return itemObj:addToPlayer(o:getObj(),num)
     end
     function o:freeBalo()
         local playerItem = o:getObj():getValue("PlayerItem")

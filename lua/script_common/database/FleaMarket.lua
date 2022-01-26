@@ -1,23 +1,23 @@
 return {
     {
-        idItem = "myplugin/f984e166-c74e-4bb4-b621-4eafb5372f30",
+        idItem = "myplugin/791b1362-ec30-4f73-8918-a52f727cd40f",
 	    idNPC = 1,
 	    price = 100
     },
     {
-        idItem = "myplugin/bc498465-8619-4188-bc57-ff9a717a3787",
+        idItem = "myplugin/8f002461-4122-42c7-a06f-9e52c2414488",
 	    idNPC = 1,
 	    price = 200
     },
     {
-        idItem = "myplugin/1aba122c-b1ad-491a-8ba3-0dfbd8cda0f6",
+        idItem = "myplugin/48abf8e7-0fd1-48c8-af62-f81753f25fcf",
 	    idNPC = 1,
-	    price = 300
+	    price = 1000
     },
     {
-        idItem = "myplugin/a55fe9e9-8a01-4a54-ab5b-af6fa6cc26b2",
+        idItem = "myplugin/0a20dab0-79e9-4c1b-8fdf-475f889a97c8",
 	    idNPC = 1,
-	    price = 400
+	    price = 1200
     },
     option = {
         primaryKey = {"idItem","idNPC"}

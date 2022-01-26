@@ -1,6 +1,85 @@
 {
   "canBreak": true,
   "hideCloud": true,
+  "scene": [
+    {
+      "class": "Entity",
+      "config": "myplugin/782b9283-4692-4deb-8bcd-dfe426dc6b7d",
+      "properties": {
+        "id": "8475334063576563713",
+        "name": "NPC",
+        "position": "x:24.690731048584 y:52.999996185303 z:32.721302032471",
+        "rotation": "x:0 y:90.99951171875 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/8c64738f-ceb8-4c64-9e7d-b8bc31d56f87",
+      "properties": {
+        "id": "8475336291642048513",
+        "name": "cay thong",
+        "position": "x:69.263221740723 y:51.00008392334 z:19.656642913818",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/8c64738f-ceb8-4c64-9e7d-b8bc31d56f87",
+      "properties": {
+        "id": "8475336315065303041",
+        "name": "cay thong",
+        "position": "x:76.873893737793 y:51.003879547119 z:18.43204498291",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/8c64738f-ceb8-4c64-9e7d-b8bc31d56f87",
+      "properties": {
+        "id": "8475336332347572225",
+        "name": "cay thong",
+        "position": "x:83.538177490234 y:51.0 z:17.866357803345",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/8c64738f-ceb8-4c64-9e7d-b8bc31d56f87",
+      "properties": {
+        "id": "8475336359584972801",
+        "name": "cay thong",
+        "position": "x:70.156845092773 y:51.000003814697 z:28.504426956177",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/b14b4c3b-370e-4a84-86cd-66e79db57ade",
+      "properties": {
+        "id": "8475344874350215169",
+        "name": "sat",
+        "position": "x:75.936500549316 y:51.004585266113 z:26.010166168213",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/b14b4c3b-370e-4a84-86cd-66e79db57ade",
+      "properties": {
+        "id": "8475344892473786369",
+        "name": "sat",
+        "position": "x:76.802947998047 y:51.000759124756 z:29.061082839966",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    }
+  ],
   "skyBox": [
     {
       "texture": [

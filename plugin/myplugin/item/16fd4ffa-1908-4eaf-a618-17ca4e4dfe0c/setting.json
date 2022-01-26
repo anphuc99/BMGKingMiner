@@ -7,12 +7,12 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Texture/Block/double_plant_sunflower_front.png",
-  "itemintroduction": "183ff091-0bec-4a46-ad3f-94ded417af6e",
-  "itemname": "item_f984e166-c74e-4bb4-b621-4eafb5372f30",
-  "mesh": "asset/Mesh/Actor_mesh/01_face_girl.mesh",
+  "icon": "@asset/Actor/Aqua Blue Egg/egg_8.png",
+  "itemintroduction": "2f304e8b-b3de-4f45-8c29-0a6cc30069ee",
+  "itemname": "item_16fd4ffa-1908-4eaf-a618-17ca4e4dfe0c",
+  "mesh": "asset/Actor/Aqua Blue Egg/egg_8.mesh",
   "needSave": false,
-  "stack_count_max": 10000,
+  "stack_count_max": 1,
   "syncGameData": {
     "currentCapacity": true,
     "extCapacity": true

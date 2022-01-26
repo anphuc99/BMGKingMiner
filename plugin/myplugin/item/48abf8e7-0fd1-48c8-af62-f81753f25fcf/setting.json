@@ -1,0 +1,22 @@
+{
+  "canAbandon": false,
+  "candrop": false,
+  "canEquipPlural": true,
+  "canUse": false,
+  "equip_skill": [],
+  "equip_skin": {
+    "": ""
+  },
+  "icon": "@asset/Texture/Block/100008_pine_stage_3.png",
+  "itemintroduction": "83ec4a2e-b5a0-4c30-b20e-002c97d4f750",
+  "itemname": "item_48abf8e7-0fd1-48c8-af62-f81753f25fcf",
+  "mesh": "asset/Mesh/Actor_mesh/01_hair_girl.mesh",
+  "needSave": false,
+  "stack_count_max": 1,
+  "syncGameData": {
+    "currentCapacity": true,
+    "extCapacity": true
+  },
+  "trap": false,
+  "tray": []
+}

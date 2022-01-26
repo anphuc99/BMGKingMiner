@@ -1,10 +1,10 @@
 return {
     {
-        id = "myplugin/bc498465-8619-4188-bc57-ff9a717a3787",
+        id = "myplugin/48abf8e7-0fd1-48c8-af62-f81753f25fcf",
         mineSpeed = 1*20
     },
     {
-        id = "myplugin/1aba122c-b1ad-491a-8ba3-0dfbd8cda0f6",
+        id = "myplugin/f984e166-c74e-4bb4-b621-4eafb5372f30",
         mineSpeed = 3*20
     },
     option = {
