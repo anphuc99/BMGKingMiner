@@ -15,7 +15,7 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
     Gol.Player[context.obj1.objID] = PlayerObj
     local newPlayer = context.obj1:getValue("new") -- kiểm tra có phải là người mới hay không
     if(newPlayer == nil) then
-        context.obj1.addValueDef("new", true, true, true, true, true)
+        context.obj1.addValueDef("new", true, true, true, true, false)
         context.obj1:addItem(cupLv1, 1)
         local idPlayer = setIdPlayer()
         local PlayerProperty = {
@@ -30,8 +30,8 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
         }
         context.obj1.addValueDef("PlayerItem", {
             {idPlayer = idPlayer, idItem = cupLv1,cellNum = 1, num = 1, position = positionItem.hand, lv = 1},            
-        }, true, true, true, true)
-        context.obj1.addValueDef("Player", PlayerProperty, true, true, true, true)
+        }, true, true, true, false)
+        context.obj1.addValueDef("Player", PlayerProperty, true, true, true, false)
         --PackageHandlers.sendServerHandler(context.obj1, "UI", {UI = "Language"})
         PackageHandlers.sendServerHandler(context.obj1, "setMoney", { money = 1000})
     else

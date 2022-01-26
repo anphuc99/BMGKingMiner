@@ -46,7 +46,7 @@ Item:create("Item", function()
         if playerItem == nil then
             Player.addValueDef("PlayerItem", {
                 {idPlayer = idPlayer.id, idItem = id, num = num, cellNum = 1, position = positionItem.balo, lv = lv}
-            }, true, true, true, true)
+            }, true, true, true, false)
         else
             local context_player = Context:new(playerItem)
             local checkItem = context_player:where("position",positionItem.balo):where("idItem", id):firstData()
