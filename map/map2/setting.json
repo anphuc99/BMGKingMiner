@@ -1,6 +1,52 @@
 {
   "canBreak": true,
   "hideCloud": true,
+  "scene": [
+    {
+      "class": "Entity",
+      "config": "myplugin/b14b4c3b-370e-4a84-86cd-66e79db57ade",
+      "properties": {
+        "id": "8475444918898081793",
+        "name": "sat",
+        "position": "x:24.614797592163 y:53.001735687256 z:16.588090896606",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/b14b4c3b-370e-4a84-86cd-66e79db57ade",
+      "properties": {
+        "id": "8475444949519433729",
+        "name": "sat",
+        "position": "x:37.749198913574 y:53.002857208252 z:18.606615066528",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/b14b4c3b-370e-4a84-86cd-66e79db57ade",
+      "properties": {
+        "id": "8475445033979985921",
+        "name": "sat",
+        "position": "x:42.412574768066 y:53.007446289062 z:8.4417486190796",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/b14b4c3b-370e-4a84-86cd-66e79db57ade",
+      "properties": {
+        "id": "8475445073759322113",
+        "name": "sat",
+        "position": "x:21.551010131836 y:53.001194000244 z:5.7072834968567",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    }
+  ],
   "skyBox": [
     {
       "texture": [

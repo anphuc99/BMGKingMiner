@@ -41,7 +41,7 @@
       "properties": {
         "id": "8475336332347572225",
         "name": "cay thong",
-        "position": "x:83.538177490234 y:51.0 z:17.866357803345",
+        "position": "x:83.538177490234 y:51 z:17.866357803345",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -53,28 +53,6 @@
         "id": "8475336359584972801",
         "name": "cay thong",
         "position": "x:70.156845092773 y:51.000003814697 z:28.504426956177",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/b14b4c3b-370e-4a84-86cd-66e79db57ade",
-      "properties": {
-        "id": "8475344874350215169",
-        "name": "sat",
-        "position": "x:75.936500549316 y:51.004585266113 z:26.010166168213",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/b14b4c3b-370e-4a84-86cd-66e79db57ade",
-      "properties": {
-        "id": "8475344892473786369",
-        "name": "sat",
-        "position": "x:76.802947998047 y:51.000759124756 z:29.061082839966",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
