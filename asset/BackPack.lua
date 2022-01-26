@@ -77,7 +77,7 @@ function self:onOpen(p)
             -- mở thêm ô balo
             print("eeeeeee")
             UI:openWindow("MessagerBox",nil,nil,{
-                Text = language.notify.OpenBP[lg[1]]:gsub("%{price}",SlotBalo[i].money),
+                Text = {"notify_OpenBP",SlotBalo[i].money},
                 Yes = function (e)
                     PackageHandlers.sendClientHandler("OpenCellNum", nil, function (rs)
                         if rs then

@@ -157,7 +157,7 @@ PlayerClass:create("Player",function ()
         local player = o:getObj()
         local playerItem = player:getValue("PlayerItem")
         for key, value in pairs(playerItem) do
-            if value.idItem == itemId then
+            if value.idItem == itemId and value.position == positionItem.balo then
                 value.num = value.num - num
                 if value.num <= 0 then
                     num = math.abs(value.num)
@@ -212,7 +212,7 @@ PlayerClass:create("Player",function ()
                 local context_item = Context:new("Item")             
                 local checkItem2 = context_item:where("id",playerOldCellItem.idItem):firstData()
                 if checkItem2.typeItem == typeItem.Equipment then
-                    messenger(player,{Text = Language.messeger.ItemNotMerge[o:getLanguage()], Color = {r = 255, g = 0, b = 0}})
+                    messenger(player,{Text = {"messeger_ItemNotMerge",1}, Color = {r = 255, g = 0, b = 0}})
                     return false
                 else
                     playerNewCellItem.num = playerNewCellItem.num + playerOldCellItem.num 
@@ -259,7 +259,7 @@ PlayerClass:create("Player",function ()
                 end
             end
             if not rs then                
-                messenger(player,{Text = lg.messeger.FullBP[o:getLanguage()], Color = {r = 255, g = 0, b = 0}})
+                messenger(player,{Text = {"messeger_FullBP",1}, Color = {r = 255, g = 0, b = 0}})
             end
             return rs
         end
@@ -281,12 +281,18 @@ PlayerClass:create("Player",function ()
     function o:spendMoney(money)
         local plMoney = o:getMoney()
         if plMoney < money then
-            messenger(o:getObj(),{Text = lg.messeger.NotEnoughMoney[o:getLanguage()], Color = {r = 255, g = 0, b = 0}})
+            messenger(o:getObj(),{Text = {"messeger_NotEnoughMoney",1}, Color = {r = 255, g = 0, b = 0}})
             return false
         else
             o:setMoney(plMoney - money)
             return true
         end
+    end
+
+    function o:countItem(itemid)
+        local playerItem = o:getObj():getValue("PlayerItem")
+        local context_playerItem = Context:new(playerItem)
+        return context_playerItem:where("idItem",itemid):where("position",positionItem.balo):sum("num")
     end
     return o
 end)

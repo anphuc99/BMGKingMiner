@@ -1,1 +1,1 @@
-print('script_common:hello world')
+require "script_common.Event.Region"

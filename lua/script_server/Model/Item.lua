@@ -74,7 +74,7 @@ Item:create("Item", function()
                 if not rs then
                     local language = Gol.Player[Player.objID]:getLanguage()
                     print(language)
-                    messenger(Player,{Text = lg.messeger.FullBP[language], Color = {r = 255, g = 0, b = 0}})
+                    messenger(Player,{Text = {"messeger_FullBP",1}, Color = {r = 255, g = 0, b = 0}})
                 end
                 return rs
             end

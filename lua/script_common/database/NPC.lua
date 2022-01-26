@@ -1,6 +1,6 @@
 return {
     {
-        id = "022c7741-ccd7-40ff-8dd2-79b4528f9f04",
+        id = 1,
         name = "abc"
     },
     option = {

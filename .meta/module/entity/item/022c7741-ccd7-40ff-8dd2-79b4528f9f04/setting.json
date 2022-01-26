@@ -1,5 +1,10 @@
 {
   "data": {
+    "_serverScript": [
+      {
+        "path": "server/server_script"
+      }
+    ],
     "canClick": true,
     "canRevive": true,
     "name": {
@@ -10,7 +15,7 @@
   },
   "meta": {
     "EXPORT": {
-      "setting.json": "f8e6b1a2f02890142f72a98e527a7e24",
+      "setting.json": "c849dbaafbea8166f674b7a7fec2056b",
       "triggers.bts": ""
     },
     "VERSION": "0.18"

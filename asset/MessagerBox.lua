@@ -1,5 +1,5 @@
 function self:onOpen(p)
-    self.info.Text:setText(p.Text)
+    self.info.Text:setText(Lang:toText(p.Text))
     self.info.btnYes.onMouseClick = function() 
         if p.Yes ~= nil then
             p.Yes(self)

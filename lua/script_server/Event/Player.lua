@@ -167,3 +167,17 @@ PackageHandlers.registerServerHandler("crafting", function(player, packet)
         return {rs = false}
     end
 end)
+-- bán hàng chợ trời
+PackageHandlers.registerServerHandler("sellFleaMarket", function(player, packet)
+    local objPlayer = Gol.Player[player.objID]
+    if objPlayer:countItem(packet.id) >= 1 then
+        local context_flea = Context:new("FleaMarket")
+        local flea = context_flea:where("idItem",packet.id):where("idNPC",packet.NPC):firstData()    
+        local moneyPlayer = objPlayer:getMoney()
+        objPlayer:setMoney(moneyPlayer + flea.price)
+        objPlayer:removeItemInBalo(flea.idItem,1)
+    else
+        messeger(player, {Text = {"messeger_NotEnoughItem",packet.name}, Color = {r = 255, g = 0, b = 0}})
+    end
+    
+end)

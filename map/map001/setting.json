@@ -87,9 +87,20 @@
       "properties": {
         "id": "8473469965040746497",
         "name": "NPC ban hang",
-        "position": "x:27.327472686768 y:53.0 z:33.477920532227",
+        "position": "x:27.327472686768 y:53 z:33.477920532227",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "RegionPart",
+      "properties": {
+        "cfgName": "myplugin/ff999ecf-699a-4108-ac04-9669d2496262",
+        "id": "8474938941433888769",
+        "name": "Region",
+        "position": "x:17.207355499268 y:54.570323944092 z:33.764724731445",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:9.52692 y:5.3448 z:16.5906"
       }
     }
   ],
