@@ -51,7 +51,7 @@
   },
   "canJoinMidway": false,
   "defaultMap": "map001",
-  "defaultQualityLevel": 0,
+  "defaultQualityLevel": 2,
   "dragControlConfig": {
     "useDragControl": true
   },
@@ -59,7 +59,7 @@
   "engineDefUIEnable": {
     "actionControl": true,
     "actionControlMode": "flexibleDragControl",
-	"appMainRole": true,
+    "appMainRole": true,
     "chat": true,
     "playerinfo": true,
     "shortcutBar": true,
@@ -111,7 +111,7 @@
   "needSave": false,
   "noLoadHp": true,
   "notReadUserSettingCfgAtEditor": true,
-  "nowTime": 18001.666666667,
+  "nowTime": 1666.6666666667,
   "oneDayTime": 600.0,
   "personalSettingUI": {
     "controlMode": true,
@@ -207,10 +207,10 @@
   },
   "startPos": [
     {
-      "map": "map001",
-      "x": 28,
-      "y": 54,
-      "z": 34
+      "map": "map3",
+      "x": 31.0,
+      "y": 53.0,
+      "z": 40.0
     }
   ],
   "team": [],
