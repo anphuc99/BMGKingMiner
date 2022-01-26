@@ -16,6 +16,26 @@
     "isQuad": true,
     "name": {
       "value": "block_oxeye_daisy"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/oxeye_daisy"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/oxeye_daisy"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/oxeye_daisy"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/oxeye_daisy"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/oxeye_daisy"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/oxeye_daisy"
+      }
     }
   },
   "meta": {

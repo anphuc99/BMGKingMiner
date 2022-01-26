@@ -8,6 +8,26 @@
     "isQuad": true,
     "name": {
       "value": "block_blue_orchid"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/blue_orchid"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/blue_orchid"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/blue_orchid"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/blue_orchid"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/blue_orchid"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/blue_orchid"
+      }
     }
   },
   "meta": {

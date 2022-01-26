@@ -7,6 +7,26 @@
     "isQuad": true,
     "name": {
       "value": "block_waterlily"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/waterlily"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/waterlily"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/waterlily"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/waterlily"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/waterlily"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/waterlily"
+      }
     }
   },
   "meta": {

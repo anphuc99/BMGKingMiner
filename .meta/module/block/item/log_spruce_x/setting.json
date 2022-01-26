@@ -7,6 +7,26 @@
     "isQuad": true,
     "name": {
       "value": "block_log_spruce_x"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/log_spruce_x"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/log_spruce_x"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/log_spruce_x"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/log_spruce_x"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/log_spruce_x"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/log_spruce_x"
+      }
     }
   },
   "meta": {

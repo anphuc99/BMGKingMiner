@@ -8,6 +8,26 @@
     "isQuad": true,
     "name": {
       "value": "block_beetroots_stage_1"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/beetroots_stage_1"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/beetroots_stage_1"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/beetroots_stage_1"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/beetroots_stage_1"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/beetroots_stage_1"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/beetroots_stage_1"
+      }
     }
   },
   "meta": {

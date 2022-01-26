@@ -8,6 +8,26 @@
     "isQuad": true,
     "name": {
       "value": "block_double_plant_paeonia_bottom"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/double_plant_paeonia_bottom"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/double_plant_paeonia_bottom"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/double_plant_paeonia_bottom"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/double_plant_paeonia_bottom"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/double_plant_paeonia_bottom"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/double_plant_paeonia_bottom"
+      }
     }
   },
   "meta": {

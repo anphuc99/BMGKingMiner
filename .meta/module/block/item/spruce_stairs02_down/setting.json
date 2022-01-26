@@ -20,6 +20,26 @@
     "isQuad": true,
     "name": {
       "value": "block_spruce_stairs02_down"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/spruce_stairs02_down"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/spruce_stairs02_down"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/spruce_stairs02_down"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/spruce_stairs02_down"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/spruce_stairs02_down"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/spruce_stairs02_down"
+      }
     }
   },
   "meta": {

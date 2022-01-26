@@ -20,6 +20,26 @@
     "isQuad": true,
     "name": {
       "value": "block_stone_brick_stairs"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/stone_brick_stairs"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/stone_brick_stairs"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/stone_brick_stairs"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/stone_brick_stairs"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/stone_brick_stairs"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/stone_brick_stairs"
+      }
     }
   },
   "meta": {

@@ -20,6 +20,26 @@
     "isQuad": true,
     "name": {
       "value": "block_bone_block_8"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/bone_block_8"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/bone_block_8"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/bone_block_8"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/bone_block_8"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/bone_block_8"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/bone_block_8"
+      }
     }
   },
   "meta": {

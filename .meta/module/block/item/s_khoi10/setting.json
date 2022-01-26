@@ -1,0 +1,35 @@
+{
+  "data": {
+    "canBreak": false,
+    "name": {
+      "value": "80e5d1c7-d811-4bb1-a9eb-bd93e965f84b"
+    },
+    "textures": {
+      "back": {
+        "asset": "asset/lobby/khoixanhnhanh.png"
+      },
+      "down": {
+        "asset": "asset/lobby/khoixanhnhanh.png"
+      },
+      "front": {
+        "asset": "asset/lobby/khoixanhnhanh.png"
+      },
+      "left": {
+        "asset": "asset/lobby/khoixanhnhanh.png"
+      },
+      "right": {
+        "asset": "asset/lobby/khoixanhnhanh.png"
+      },
+      "up": {
+        "asset": "asset/lobby/khoixanhnhanh.png"
+      }
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "82e754ebe29feb3a16787714ef80538c",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

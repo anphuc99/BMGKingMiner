@@ -1,0 +1,40 @@
+{
+  "data": {
+    "canBreak": false,
+    "dropSelf": {
+      "canDropSelf": false
+    },
+    "isOpaqueFullCube": false,
+    "isQuad": true,
+    "name": {
+      "value": "ec4bcdae-4de1-4d48-9ba5-7cb47b9990c8"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/s_den"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/s_den"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/s_den"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/s_den"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/s_den"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/s_den"
+      }
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "ecea76928e68482de33f1efbf6fe69b9",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

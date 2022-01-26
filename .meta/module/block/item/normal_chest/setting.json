@@ -7,6 +7,26 @@
     "isQuad": true,
     "name": {
       "value": "block_normal_chest"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/normal_chest"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/normal_chest"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/normal_chest"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/normal_chest"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/normal_chest"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/normal_chest"
+      }
     }
   },
   "meta": {

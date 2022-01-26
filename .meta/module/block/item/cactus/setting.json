@@ -19,6 +19,26 @@
     "isQuad": true,
     "name": {
       "value": "block_cactus"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/cactus"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/cactus"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/cactus"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/cactus"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/cactus"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/cactus"
+      }
     }
   },
   "meta": {

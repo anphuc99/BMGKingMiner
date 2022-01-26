@@ -1,10 +1,5 @@
 {
   "data": {
-    "_serverScript": [
-      {
-        "path": "server/server_script"
-      }
-    ],
     "actorModel": {
       "actorName": {
         "asset": ""
@@ -31,7 +26,7 @@
   },
   "meta": {
     "EXPORT": {
-      "setting.json": "39bce3ab2b0634696c00a38575372c3a",
+      "setting.json": "6a07f8bdd454bf0b4b3f59956a1f3f4d",
       "triggers.bts": ""
     },
     "VERSION": "0.18"

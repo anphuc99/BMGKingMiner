@@ -8,6 +8,26 @@
     "isQuad": true,
     "name": {
       "value": "block_sapling_oak"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/sapling_oak"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/sapling_oak"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/sapling_oak"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/sapling_oak"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/sapling_oak"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/sapling_oak"
+      }
     }
   },
   "meta": {

@@ -1,5 +1,6 @@
 {
   "data": {
+    "canJoinMidway": false,
     "fixed_viewPos": {
       "pos": {
         "__OBJ_TYPE": "Vector3i"
@@ -13,13 +14,12 @@
         "z": 34
       }
     },
-    "needSave": true,
     "nowTime": {
       "h": 7,
       "m": 40
     },
     "player_range": {
-      "max": 20,
+      "max": 6,
       "min": 1
     },
     "startPos": {
@@ -29,15 +29,20 @@
         "z": 34
       }
     },
-    "ui_enable": {
-      "appMainRole": false,
-      "chat": false
+    "unlimitedPlayTime": true,
+    "waitGoTime": {
+      "value": 100
     },
-    "unlimitedPlayTime": true
+    "waitPlayerTime": {
+      "value": 100
+    },
+    "waitStartTime": {
+      "value": 100
+    }
   },
   "meta": {
     "EXPORT": {
-      "setting.json": "9e89a41bbc28328b988a8dd723175dea",
+      "setting.json": "9c84c27969dbe7fa332100438c8b2b35",
       "shop.csv": "393e9a440b900b5690986ec2b0e57be5",
       "triggers.bts": ""
     },

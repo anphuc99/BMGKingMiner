@@ -1,0 +1,35 @@
+{
+  "data": {
+    "canBreak": false,
+    "name": {
+      "value": "22b42f33-9b50-4e74-9697-0fea979de5b7"
+    },
+    "textures": {
+      "back": {
+        "asset": "asset/lobby/khoixanh.png"
+      },
+      "down": {
+        "asset": "asset/lobby/khoixanh.png"
+      },
+      "front": {
+        "asset": "asset/lobby/khoixanh.png"
+      },
+      "left": {
+        "asset": "asset/lobby/khoixanh.png"
+      },
+      "right": {
+        "asset": "asset/lobby/khoixanh.png"
+      },
+      "up": {
+        "asset": "asset/lobby/khoixanh.png"
+      }
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "7fe1e0b4283e2b0e58199f6f569af9d7",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

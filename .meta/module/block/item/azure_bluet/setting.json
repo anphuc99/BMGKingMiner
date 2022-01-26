@@ -16,6 +16,26 @@
     "isQuad": true,
     "name": {
       "value": "block_azure_bluet"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/azure_bluet"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/azure_bluet"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/azure_bluet"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/azure_bluet"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/azure_bluet"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/azure_bluet"
+      }
     }
   },
   "meta": {

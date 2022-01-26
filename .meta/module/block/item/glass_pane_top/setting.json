@@ -19,6 +19,26 @@
     "isQuad": true,
     "name": {
       "value": "block_glass_pane_top"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/glass_pane_top"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/glass_pane_top"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/glass_pane_top"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/glass_pane_top"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/glass_pane_top"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/glass_pane_top"
+      }
     }
   },
   "meta": {

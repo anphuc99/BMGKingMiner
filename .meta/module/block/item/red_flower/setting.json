@@ -16,6 +16,26 @@
     "isQuad": true,
     "name": {
       "value": "block_red_flower"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/red_flower"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/red_flower"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/red_flower"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/red_flower"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/red_flower"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/red_flower"
+      }
     }
   },
   "meta": {

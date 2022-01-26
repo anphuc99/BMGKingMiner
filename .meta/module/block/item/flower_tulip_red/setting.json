@@ -16,6 +16,26 @@
     "isQuad": true,
     "name": {
       "value": "block_flower_tulip_red"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/flower_tulip_red"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/flower_tulip_red"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/flower_tulip_red"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/flower_tulip_red"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/flower_tulip_red"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/flower_tulip_red"
+      }
     }
   },
   "meta": {

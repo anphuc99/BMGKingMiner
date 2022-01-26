@@ -14,6 +14,26 @@
     "isQuad": true,
     "name": {
       "value": "block_stone_slab"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/stone_slab"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/stone_slab"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/stone_slab"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/stone_slab"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/stone_slab"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/stone_slab"
+      }
     }
   },
   "meta": {

@@ -16,6 +16,26 @@
     "isQuad": true,
     "name": {
       "value": "block_deadbush"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/deadbush"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/deadbush"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/deadbush"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/deadbush"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/deadbush"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/deadbush"
+      }
     }
   },
   "meta": {

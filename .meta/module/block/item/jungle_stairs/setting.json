@@ -20,6 +20,26 @@
     "isQuad": true,
     "name": {
       "value": "block_jungle_stairs"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/jungle_stairs"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/jungle_stairs"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/jungle_stairs"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/jungle_stairs"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/jungle_stairs"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/jungle_stairs"
+      }
     }
   },
   "meta": {

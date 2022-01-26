@@ -19,6 +19,26 @@
     "isQuad": true,
     "name": {
       "value": "block_fence"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/fence"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/fence"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/fence"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/fence"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/fence"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/fence"
+      }
     }
   },
   "meta": {

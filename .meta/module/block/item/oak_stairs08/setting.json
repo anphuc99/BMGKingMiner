@@ -23,6 +23,26 @@
     "isQuad": true,
     "name": {
       "value": "block_oak_stairs08"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/oak_stairs08"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/oak_stairs08"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/oak_stairs08"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/oak_stairs08"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/oak_stairs08"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/oak_stairs08"
+      }
     }
   },
   "meta": {

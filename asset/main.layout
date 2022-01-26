@@ -526,7 +526,7 @@
                 <Property value="2" name="ImageSrcBlend">
 
                 </Property>
-                <Property value="w:0.46174861323503 x:0.0 y:0.0 z:0.88701083317822" name="Rotation">
+                <Property value="w:-1.0 x:-0.0 y:0.0 z:1.2246467991474e-16" name="Rotation">
 
                 </Property>
                 <Property value="true" name="Visible">

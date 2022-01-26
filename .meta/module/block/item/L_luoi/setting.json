@@ -1,0 +1,36 @@
+{
+  "data": {
+    "canBreak": false,
+    "isOpaqueFullCube": false,
+    "name": {
+      "value": "block_L_luoi"
+    },
+    "textures": {
+      "back": {
+        "asset": "asset/lobby/luoiThep.png"
+      },
+      "down": {
+        "asset": "asset/lobby/luoiThep.png"
+      },
+      "front": {
+        "asset": "asset/lobby/luoiThep.png"
+      },
+      "left": {
+        "asset": "asset/lobby/luoiThep.png"
+      },
+      "right": {
+        "asset": "asset/lobby/luoiThep.png"
+      },
+      "up": {
+        "asset": "asset/lobby/luoiThep.png"
+      }
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "a79fe0014f48b4900b1fd592a6f642d3",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

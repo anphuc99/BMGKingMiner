@@ -8,6 +8,26 @@
     "isQuad": true,
     "name": {
       "value": "block_flower_pot"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/flower_pot"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/flower_pot"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/flower_pot"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/flower_pot"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/flower_pot"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/flower_pot"
+      }
     }
   },
   "meta": {

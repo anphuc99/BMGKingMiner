@@ -7,6 +7,26 @@
     "isQuad": true,
     "name": {
       "value": "block_fence_gate_1"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/fence_gate_1"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/fence_gate_1"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/fence_gate_1"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/fence_gate_1"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/fence_gate_1"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/fence_gate_1"
+      }
     }
   },
   "meta": {

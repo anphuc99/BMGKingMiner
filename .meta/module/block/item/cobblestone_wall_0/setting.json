@@ -19,6 +19,26 @@
     "isQuad": true,
     "name": {
       "value": "block_cobblestone_wall_0"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/cobblestone_wall_0"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/cobblestone_wall_0"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/cobblestone_wall_0"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/cobblestone_wall_0"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/cobblestone_wall_0"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/cobblestone_wall_0"
+      }
     }
   },
   "meta": {

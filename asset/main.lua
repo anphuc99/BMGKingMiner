@@ -15,16 +15,20 @@ function self:onOpen(p)
     end
     self.openOption.onMouseClick = function() 
         local i = 0
+        local up = 620/50
         World.Timer(1, function ()
-            if i <= 360 then
-                i = i + 1
-                self.openOption:setProperty("Rotation","w:1.0 x:0.0 y:0.0 z:"..i)
+            if i <= 0.5 then
+                i = i + 0.01
+                self.openOption:setProperty("Rotation","w:1 x:0 y:0 z:"..i)
+                local size = self.openOption:getProperty("Size")
+                print(size)
+                -- self.Option.Upgrate:setProperty("Position","{{0,298.66},{0,1.90735e-06}}")
                 return 0.5
             end
             return false
         end)
 
-        self.Option.Upgrate:setProperty("Position","{{0,298.66},{0,1.90735e-06}}")
-        print(Lib.pv(self.Option.Upgrate:getProperty("Position")))
+        -- self.Option.Upgrate:setProperty("Position","{{0,298.66},{0,1.90735e-06}}")
+
     end
 end

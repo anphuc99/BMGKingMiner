@@ -7,6 +7,26 @@
     "isQuad": true,
     "name": {
       "value": "block_strawb_erry_stage_5"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/strawb_erry_stage_5"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/strawb_erry_stage_5"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/strawb_erry_stage_5"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/strawb_erry_stage_5"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/strawb_erry_stage_5"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/strawb_erry_stage_5"
+      }
     }
   },
   "meta": {

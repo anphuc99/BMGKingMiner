@@ -6,6 +6,26 @@
     "isOpaqueFullCube": false,
     "name": {
       "value": "block_air_wall"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/air_wall"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/air_wall"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/air_wall"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/air_wall"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/air_wall"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/air_wall"
+      }
     }
   },
   "meta": {

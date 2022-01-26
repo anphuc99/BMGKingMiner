@@ -20,6 +20,26 @@
     "isQuad": true,
     "name": {
       "value": "block_sandstone_stairs"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/sandstone_stairs"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/sandstone_stairs"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/sandstone_stairs"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/sandstone_stairs"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/sandstone_stairs"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/sandstone_stairs"
+      }
     }
   },
   "meta": {

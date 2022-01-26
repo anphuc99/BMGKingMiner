@@ -1,0 +1,36 @@
+{
+  "data": {
+    "canBreak": false,
+    "isOpaqueFullCube": false,
+    "name": {
+      "value": "block_s_den2"
+    },
+    "textures": {
+      "back": {
+        "asset": "asset/lobby/den2.png"
+      },
+      "down": {
+        "asset": "asset/lobby/den2.png"
+      },
+      "front": {
+        "asset": "asset/lobby/den2.png"
+      },
+      "left": {
+        "asset": "asset/lobby/den2.png"
+      },
+      "right": {
+        "asset": "asset/lobby/den2.png"
+      },
+      "up": {
+        "asset": "asset/lobby/den2.png"
+      }
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "f13c24de22c401fdbb28eb491aceca47",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

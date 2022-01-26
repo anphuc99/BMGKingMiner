@@ -8,6 +8,26 @@
     "isQuad": true,
     "name": {
       "value": "block_double_plant_rose_top"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/double_plant_rose_top"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/double_plant_rose_top"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/double_plant_rose_top"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/double_plant_rose_top"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/double_plant_rose_top"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/double_plant_rose_top"
+      }
     }
   },
   "meta": {

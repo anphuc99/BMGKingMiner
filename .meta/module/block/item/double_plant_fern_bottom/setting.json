@@ -16,6 +16,26 @@
     "isQuad": true,
     "name": {
       "value": "block_double_plant_fern_bottom"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/double_plant_fern_bottom"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/double_plant_fern_bottom"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/double_plant_fern_bottom"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/double_plant_fern_bottom"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/double_plant_fern_bottom"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/double_plant_fern_bottom"
+      }
     }
   },
   "meta": {

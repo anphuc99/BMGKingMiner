@@ -16,6 +16,26 @@
     "isQuad": true,
     "name": {
       "value": "block_yellow_flower"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/yellow_flower"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/yellow_flower"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/yellow_flower"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/yellow_flower"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/yellow_flower"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/yellow_flower"
+      }
     }
   },
   "meta": {

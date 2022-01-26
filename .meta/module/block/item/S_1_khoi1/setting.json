@@ -1,0 +1,46 @@
+{
+  "data": {
+    "collisionBoxes": [
+      {
+        "max": {
+          "y": 0.5
+        }
+      }
+    ],
+    "dropSelf": {
+      "canDropSelf": false
+    },
+    "isOpaqueFullCube": false,
+    "isQuad": true,
+    "name": {
+      "value": "11478ab3-8fbb-405a-b601-c3a25466158b"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/S_1_khoi1"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/S_1_khoi1"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/S_1_khoi1"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/S_1_khoi1"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/S_1_khoi1"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/S_1_khoi1"
+      }
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "b84d5651b5ed3254ddf92fe5792a2340",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

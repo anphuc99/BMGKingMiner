@@ -16,6 +16,26 @@
     "isQuad": true,
     "name": {
       "value": "block_double_plant_grass_bottom"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/double_plant_grass_bottom"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/double_plant_grass_bottom"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/double_plant_grass_bottom"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/double_plant_grass_bottom"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/double_plant_grass_bottom"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/double_plant_grass_bottom"
+      }
     }
   },
   "meta": {

@@ -9,6 +9,26 @@
     "isQuad": true,
     "name": {
       "value": "block_water_4"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/water_4"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/water_4"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/water_4"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/water_4"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/water_4"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/water_4"
+      }
     }
   },
   "meta": {

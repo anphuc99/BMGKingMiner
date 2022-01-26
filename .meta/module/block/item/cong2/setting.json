@@ -1,0 +1,35 @@
+{
+  "data": {
+    "canBreak": false,
+    "name": {
+      "value": "block_cong2"
+    },
+    "textures": {
+      "back": {
+        "asset": "asset/cong/DP3d6D5XUAATfYT.png"
+      },
+      "down": {
+        "asset": "asset/cong/DP3d6D5XUAATfYT.png"
+      },
+      "front": {
+        "asset": "asset/cong/DP3d6D5XUAATfYT.png"
+      },
+      "left": {
+        "asset": "asset/cong/DP3d6D5XUAATfYT.png"
+      },
+      "right": {
+        "asset": "asset/cong/DP3d6D5XUAATfYT.png"
+      },
+      "up": {
+        "asset": "asset/cong/DP3d6D5XUAATfYT.png"
+      }
+    }
+  },
+  "meta": {
+    "EXPORT": {
+      "setting.json": "61652ce2ff76a73a2483d038cfb7cf71",
+      "triggers.bts": ""
+    },
+    "VERSION": "0.18"
+  }
+}

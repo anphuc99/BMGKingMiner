@@ -22,6 +22,26 @@
     "isQuad": true,
     "name": {
       "value": "block_bone_block_4"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/bone_block_4"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/bone_block_4"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/bone_block_4"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/bone_block_4"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/bone_block_4"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/bone_block_4"
+      }
     }
   },
   "meta": {

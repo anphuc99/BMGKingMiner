@@ -23,114 +23,6 @@
         }
       }
     },
-    "instances": [
-      {
-        "__OBJ_TYPE": "Instance_DropItem",
-        "config": "myplugin/bc498465-8619-4188-bc57-ff9a717a3787",
-        "id": "8466295484824469505",
-        "position": {
-          "x": 25.556838989258,
-          "y": 53,
-          "z": 24.191036224365
-        }
-      },
-      {
-        "__OBJ_TYPE": "Instance_Entity",
-        "config": "myplugin/1928738c-ec90-421c-8941-e13ea943d8e8",
-        "id": "8466478146804285441",
-        "name": "cay thong",
-        "position": {
-          "x": 20.952005386353,
-          "y": 52.999996185303,
-          "z": 28.270488739014
-        }
-      },
-      {
-        "__OBJ_TYPE": "Instance_Entity",
-        "config": "myplugin/1928738c-ec90-421c-8941-e13ea943d8e8",
-        "id": "8466480909096730625",
-        "name": "cay thong",
-        "position": {
-          "x": 30.025243759155,
-          "y": 53.000038146973,
-          "z": 29.790662765503
-        }
-      },
-      {
-        "__OBJ_TYPE": "Instance_DropItem",
-        "config": "myplugin/1aba122c-b1ad-491a-8ba3-0dfbd8cda0f6",
-        "id": "8466654608894492673",
-        "position": {
-          "x": 21.848358154297,
-          "y": 53.000003814697,
-          "z": 24.933282852173
-        }
-      },
-      {
-        "__OBJ_TYPE": "Instance_Entity",
-        "config": "myplugin/9d88ec66-60fe-46bf-8b90-bb5bd7c620ed",
-        "id": "8467931977599696897",
-        "name": "sat",
-        "position": {
-          "x": 18.122329711914,
-          "y": 53,
-          "z": 26.603420257568
-        }
-      },
-      {
-        "__OBJ_TYPE": "Instance_Entity",
-        "config": "myplugin/9d88ec66-60fe-46bf-8b90-bb5bd7c620ed",
-        "id": "8467931995790311425",
-        "name": "sat",
-        "position": {
-          "x": 17.486047744751,
-          "y": 53.001731872559,
-          "z": 30.569959640503
-        }
-      },
-      {
-        "__OBJ_TYPE": "Instance_Entity",
-        "config": "myplugin/9d88ec66-60fe-46bf-8b90-bb5bd7c620ed",
-        "id": "8467932013315145729",
-        "name": "sat",
-        "position": {
-          "x": 24.328285217285,
-          "y": 53,
-          "z": 30.703935623169
-        }
-      },
-      {
-        "__OBJ_TYPE": "Instance_Entity",
-        "config": "myplugin/022c7741-ccd7-40ff-8dd2-79b4528f9f04",
-        "id": "8473469965040746497",
-        "name": "NPC ban hang",
-        "position": {
-          "x": 27.327472686768,
-          "y": 53,
-          "z": 33.477920532227
-        }
-      },
-      {
-        "__OBJ_TYPE": "Instance_RegionPart",
-        "cfgName": "myplugin/ff999ecf-699a-4108-ac04-9669d2496262",
-        "id": "8474938941433888769",
-        "position": {
-          "x": 17.207355499268,
-          "y": 54.570323944092,
-          "z": 33.764724731445
-        },
-        "scale": {
-          "x": 9.52692,
-          "y": 5.3448,
-          "z": 16.5906
-        },
-        "size": {
-          "x": 9.5269174575806,
-          "y": 5.3447999954224,
-          "z": 16.590581893921
-        }
-      }
-    ],
     "name": {
       "value": "map_map001"
     },
@@ -140,7 +32,7 @@
   },
   "meta": {
     "EXPORT": {
-      "setting.json": "ee578cc846694902bd5391bede2f7f74"
+      "setting.json": "a38363450f6250b3a4992e3bbd5f8f38"
     },
     "VERSION": "0.18"
   }

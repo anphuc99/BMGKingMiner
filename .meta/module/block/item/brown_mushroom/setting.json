@@ -8,6 +8,26 @@
     "isQuad": true,
     "name": {
       "value": "block_brown_mushroom"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/brown_mushroom"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/brown_mushroom"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/brown_mushroom"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/brown_mushroom"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/brown_mushroom"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/brown_mushroom"
+      }
     }
   },
   "meta": {

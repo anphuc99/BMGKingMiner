@@ -8,6 +8,26 @@
     "isQuad": true,
     "name": {
       "value": "block_reeds"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/reeds"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/reeds"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/reeds"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/reeds"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/reeds"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/reeds"
+      }
     }
   },
   "meta": {

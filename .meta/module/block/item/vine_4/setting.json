@@ -7,6 +7,26 @@
     "isQuad": true,
     "name": {
       "value": "block_vine_4"
+    },
+    "textures": {
+      "back": {
+        "asset": "plugin/myplugin/block/vine_4"
+      },
+      "down": {
+        "asset": "plugin/myplugin/block/vine_4"
+      },
+      "front": {
+        "asset": "plugin/myplugin/block/vine_4"
+      },
+      "left": {
+        "asset": "plugin/myplugin/block/vine_4"
+      },
+      "right": {
+        "asset": "plugin/myplugin/block/vine_4"
+      },
+      "up": {
+        "asset": "plugin/myplugin/block/vine_4"
+      }
     }
   },
   "meta": {
