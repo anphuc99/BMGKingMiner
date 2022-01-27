@@ -7,10 +7,9 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Actor/Aqua Blue Egg/egg_8.png",
-  "itemintroduction": "2f304e8b-b3de-4f45-8c29-0a6cc30069ee",
-  "itemname": "item_16fd4ffa-1908-4eaf-a618-17ca4e4dfe0c",
-  "mesh": "asset/Actor/Aqua Blue Egg/egg_8.mesh",
+  "icon": "@asset/Texture/Block/cactus_side.png",
+  "itemintroduction": "ec99a647-e2da-4939-8f36-005754b505f9",
+  "itemname": "item_M_Tree",
   "needSave": false,
   "stack_count_max": 1,
   "syncGameData": {

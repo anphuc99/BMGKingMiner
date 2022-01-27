@@ -38,7 +38,7 @@
     },
     "type": "Box"
   },
-  "collision": false,
+  "collision": true,
   "damage": 0,
   "deathHideTime": 0,
   "destroyTime": 0,

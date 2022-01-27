@@ -264,7 +264,7 @@
     "global": []
   },
   "waitAtInitPos": true,
-  "waitGoTime": 100,
-  "waitPlayerTime": 100,
-  "waitStartTime": 100
+  "waitGoTime": 0,
+  "waitPlayerTime": 0,
+  "waitStartTime": 0
 }

@@ -7,10 +7,10 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Texture/Block/iron_ore.png",
-  "itemintroduction": "f152cbb5-7210-4964-a0e2-82df88a8a234",
-  "itemname": "item_8f002461-4122-42c7-a06f-9e52c2414488",
-  "mesh": "asset/Actor/copper/copper.mesh",
+  "icon": "@asset/Actor/Cedar Tree/bingxuejie_shu.tga",
+  "itemintroduction": "c9432144-9760-4917-99d3-87fb56d6c632",
+  "itemname": "item_Tr_cupLv1_1",
+  "mesh": "asset/Mesh/Actor_mesh/01_hair_girl.mesh",
   "needSave": false,
   "stack_count_max": 1,
   "syncGameData": {

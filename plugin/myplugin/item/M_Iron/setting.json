@@ -7,9 +7,9 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Texture/Block/acacia_back_acacia_wood_slab.png",
-  "itemintroduction": "eb5f88c9-9143-4f1b-b31c-ce18a4638713",
-  "itemname": "item_791b1362-ec30-4f73-8918-a52f727cd40f",
+  "icon": "@asset/Texture/Block/iron_ore.png",
+  "itemintroduction": "59d78a68-a493-40a2-8982-100bf5ca7c6f",
+  "itemname": "item_M_Iron",
   "needSave": false,
   "stack_count_max": 1,
   "syncGameData": {

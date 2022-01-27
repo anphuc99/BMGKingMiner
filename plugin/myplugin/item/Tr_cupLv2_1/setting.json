@@ -8,9 +8,8 @@
     "": ""
   },
   "icon": "@asset/Actor/Agricultural Rake/gun_2004.tga",
-  "itemintroduction": "6a21b8fb-cfc2-4488-90ac-51a2bda1dbf6",
-  "itemname": "item_0a20dab0-79e9-4c1b-8fdf-475f889a97c8",
-  "mesh": "asset/Actor/Agricultural Rake/gun_2004.mesh",
+  "itemintroduction": "faf884de-b0bd-4fda-83f7-185087615b0f",
+  "itemname": "item_Tr_cupLv2_1",
   "needSave": false,
   "stack_count_max": 1,
   "syncGameData": {

@@ -3,17 +3,6 @@
   "hideCloud": true,
   "scene": [
     {
-      "class": "RegionPart",
-      "properties": {
-        "cfgName": "myplugin/9ff165b9-c36e-458f-a6f0-f7d1494f7b9d",
-        "id": "8475470400378142721",
-        "name": "Region",
-        "position": "x:29.42440032959 y:54.696483612061 z:1.3017871379852",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:3.23429 y:3.39294 z:3.247"
-      }
-    },
-    {
       "class": "Entity",
       "config": "myplugin/iron",
       "properties": {
@@ -30,7 +19,7 @@
       "properties": {
         "id": "8476280862770757633",
         "name": "iron",
-        "position": "x:22.557624816895 y:53.0 z:16.593589782715",
+        "position": "x:22.557624816895 y:53 z:16.593589782715",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -41,7 +30,7 @@
       "properties": {
         "id": "8476280931020062721",
         "name": "iron",
-        "position": "x:25.657987594604 y:53.0 z:18.231288909912",
+        "position": "x:25.657987594604 y:53 z:18.231288909912",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -110,6 +99,17 @@
         "position": "x:45.447940826416 y:53.000049591064 z:20.133251190186",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "RegionPart",
+      "properties": {
+        "cfgName": "myplugin/cee3e013-eb38-4ae8-af77-7b9a2da3e0af",
+        "id": "8476495393343488001",
+        "name": "Region",
+        "position": "x:29.42981338501 y:54.981140136719 z:1.945775270462",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:3.28811 y:3.96125 z:2.01824"
       }
     }
   ],

@@ -8,8 +8,9 @@
     "": ""
   },
   "icon": "@asset/Actor/Aqua Blue Egg/egg_8.png",
-  "itemintroduction": "e2a38c57-e2b4-41bb-a285-230ddcef275f",
-  "itemname": "item_15fa6074-17cc-4da5-9b07-282aa1cd7250",
+  "itemintroduction": "c28d2b4d-e9b3-4f12-b0fd-58142fd30aa8",
+  "itemname": "item_V_Vortex",
+  "mesh": "asset/Actor/Aqua Blue Egg/egg_8.mesh",
   "needSave": false,
   "stack_count_max": 1,
   "syncGameData": {
