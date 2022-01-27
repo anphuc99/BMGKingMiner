@@ -55,7 +55,7 @@
   "headPic": "",
   "hideHolder": false,
   "hideHp": 1,
-  "hideName": false,
+  "hideName": true,
   "homeSize": 10,
   "hpBarColor": 4294967551.0,
   "hpBarHeight": 0.2,

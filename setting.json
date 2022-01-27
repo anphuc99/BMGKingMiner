@@ -111,7 +111,7 @@
   "needSave": false,
   "noLoadHp": true,
   "notReadUserSettingCfgAtEditor": true,
-  "nowTime": 1666.6666666667,
+  "nowTime": 10666.666666667,
   "oneDayTime": 600.0,
   "personalSettingUI": {
     "controlMode": true,
@@ -207,10 +207,10 @@
   },
   "startPos": [
     {
-      "map": "map3",
-      "x": 31.0,
-      "y": 53.0,
-      "z": 40.0
+      "map": "map001",
+      "x": 31,
+      "y": 53,
+      "z": 40
     }
   ],
   "team": [],
