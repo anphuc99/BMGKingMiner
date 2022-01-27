@@ -1,19 +1,6 @@
 {
   "canBreak": true,
   "hideCloud": true,
-  "scene": [
-    {
-      "class": "Entity",
-      "config": "myplugin/platium",
-      "properties": {
-        "id": "8475975499702566913",
-        "name": "platium",
-        "position": "x:28.66268157959 y:53 z:7.066780090332",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1.06182"
-      }
-    }
-  ],
   "skyBox": [
     {
       "texture": [

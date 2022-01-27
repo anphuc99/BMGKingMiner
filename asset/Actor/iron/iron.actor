@@ -1,33 +1,33 @@
 <ActorTemplates>
-	<ActorTemplate SoundFileNum="0" SoundName1="" IsShowShadow="true" SoundName3="" Skeleton="8_weapon.skel" SoundName2="" MaxDistance="16" SoundName5="" SelectedRingSize="1" name="111.actor" Alpha="1" WoundBone="" Originalscale="1 1 1" WoundAngle="25" IntervalTime="2" Volume="0.8" AttackScale="1" TextHeight="0" MinDistance="1" SoundName4="">
+	<ActorTemplate IntervalTime="2" MaxDistance="16" WoundAngle="25" name="111.actor" SelectedRingSize="1" Volume="0.8" SoundName5="" IsShowShadow="true" SoundName2="" SoundFileNum="0" WoundBone="" Skeleton="8_weapon.skel" TextHeight="0" MinDistance="1" SoundName1="" SoundName3="" SoundName4="" AttackScale="1" Alpha="1" Originalscale="1 1 1">
+		<Anims/>
+		<Skills/>
 		<BodyParts>
-			<BodyPart MasterName="mutex_name_0" DefaultUse="true" EdgeColor="1 1 1 1" SlaveName="group0" ColorParams="1 1 1 1">
+			<BodyPart SlaveName="group0" EdgeColor="1 1 1 1" DefaultUse="true" MasterName="mutex_name_0" ColorParams="1 1 1 1">
 				<StaticMesh DiscardAlpha="0" LocalAlpha="1" type_name="iron">
-					<SpecularCoef value="0.15"/>
-					<SocketName value="Origin197011"/>
-					<Position_X value="0"/>
-					<UseEdge value="false"/>
+					<UseReflect value="false"/>
 					<UseTransparentNearestSlice value="false"/>
+					<UseOriginalcolor value="false"/>
+					<Position_Y value="0"/>
+					<Position_X value="0"/>
+					<yaw value="0"/>
+					<UseOverlayColorReplaceMode value="false"/>
+					<SpecularCoef value="0.15"/>
+					<Position_Z value="0"/>
+					<SocketName value="Origin197011"/>
+					<EdgeColor value="1.0 0 0 1.0"/>
 					<roll value="0"/>
 					<FileName value="asset/Actor/iron/iron.mesh"/>
-					<OverlayColor value="1.0 1.0 1.0 1.0"/>
 					<UseBloom value="false"/>
-					<scale value="1"/>
-					<SpecularColor value="1.0 1.0 1.0 1.0"/>
-					<LocalBrightnessScale value="1.0"/>
-					<EdgeColor value="1.0 0 0 1.0"/>
-					<pitch value="0"/>
+					<OverlayColor value="1.0 1.0 1.0 1.0"/>
 					<SpecularStrength value="1.0"/>
-					<UseOverlayColorReplaceMode value="false"/>
-					<Position_Z value="0"/>
-					<UseReflect value="false"/>
-					<UseOriginalcolor value="false"/>
-					<yaw value="0"/>
-					<Position_Y value="0"/>
+					<scale value="1"/>
+					<pitch value="0"/>
+					<UseEdge value="false"/>
+					<LocalBrightnessScale value="1.0"/>
+					<SpecularColor value="1.0 1.0 1.0 1.0"/>
 				</StaticMesh>
 			</BodyPart>
 		</BodyParts>
-		<Skills/>
-		<Anims/>
 	</ActorTemplate>
 </ActorTemplates>

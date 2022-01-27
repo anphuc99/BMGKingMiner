@@ -1,19 +1,6 @@
 {
   "canBreak": true,
   "hideCloud": true,
-  "scene": [
-    {
-      "class": "Entity",
-      "config": "myplugin/gold",
-      "properties": {
-        "id": "8475969492518993921",
-        "name": "gold",
-        "position": "x:28.776865005493 y:53.001041412354 z:6.7986941337585",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    }
-  ],
   "skyBox": [
     {
       "texture": [

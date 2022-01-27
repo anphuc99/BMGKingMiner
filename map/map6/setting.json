@@ -1,19 +1,6 @@
 {
   "canBreak": true,
   "hideCloud": true,
-  "scene": [
-    {
-      "class": "Entity",
-      "config": "myplugin/titanium",
-      "properties": {
-        "id": "8475973777006215169",
-        "name": "titanium",
-        "position": "x:29.930944442749 y:53.005191802979 z:7.5137667655945",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    }
-  ],
   "skyBox": [
     {
       "texture": [
