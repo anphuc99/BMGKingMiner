@@ -1,19 +1,6 @@
 {
   "canBreak": true,
   "hideCloud": true,
-  "scene": [
-    {
-      "class": "Entity",
-      "config": "myplugin/copper",
-      "properties": {
-        "id": "8475967986569101313",
-        "name": "copper",
-        "position": "x:28.654531478882 y:53.001472473145 z:8.1668319702148",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    }
-  ],
   "skyBox": [
     {
       "texture": [

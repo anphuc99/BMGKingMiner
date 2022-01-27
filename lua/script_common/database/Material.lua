@@ -9,7 +9,7 @@ return {
         id = "myplugin/791b1362-ec30-4f73-8918-a52f727cd40f",
         level = 1,
 	    stiffness = 5*20,
-	    entityId = "myplugin/8c64738f-ceb8-4c64-9e7d-b8bc31d56f87",
+	    entityId = "myplugin/iron",
     },
     option = {
         primaryKey= "id",

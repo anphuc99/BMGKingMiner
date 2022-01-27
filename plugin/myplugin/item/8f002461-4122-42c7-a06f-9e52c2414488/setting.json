@@ -10,6 +10,7 @@
   "icon": "@asset/Texture/Block/iron_ore.png",
   "itemintroduction": "f152cbb5-7210-4964-a0e2-82df88a8a234",
   "itemname": "item_8f002461-4122-42c7-a06f-9e52c2414488",
+  "mesh": "asset/Actor/copper/copper.mesh",
   "needSave": false,
   "stack_count_max": 1,
   "syncGameData": {
