@@ -10,12 +10,12 @@ return {
 	    price = 200
     },
     {
-        idItem = "myplugin/Tr_cupLv1_1",
+        idItem = "myplugin/P_cup-go_1",
 	    idNPC = 1,
 	    price = 800
     },
     {
-        idItem = "myplugin/Tr_cupLv2_1",
+        idItem = "myplugin/P_cup-sat_1",
 	    idNPC = 1,
 	    price = 1000
     },
