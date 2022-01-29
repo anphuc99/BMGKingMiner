@@ -1,0 +1,33 @@
+<ActorTemplates>
+	<ActorTemplate AttackScale="1" WoundBone="" IsShowShadow="true" name="111.actor" Originalscale="1 1 1" Volume="0.8" Skeleton="firstPrvActor.skel" SoundName4="" SoundName3="" SelectedRingSize="1" TextHeight="0" Alpha="1" SoundName2="" MaxDistance="16" IntervalTime="2" SoundName1="" SoundName5="" SoundFileNum="0" MinDistance="1" WoundAngle="25">
+		<Skills/>
+		<Anims/>
+		<BodyParts>
+			<BodyPart DefaultUse="true" SlaveName="group0" EdgeColor="1 1 1 1" MasterName="mutex_name_0" ColorParams="1 1 1 1">
+				<StaticMesh type_name="smalltree" DiscardAlpha="0" LocalAlpha="1">
+					<SocketName value="Origin197011"/>
+					<scale value="1"/>
+					<SpecularCoef value="0.15"/>
+					<FileName value="asset/Actor/smalltree/smalltree.mesh"/>
+					<roll value="0"/>
+					<UseReflect value="false"/>
+					<Position_Y value="0"/>
+					<LocalBrightnessScale value="1.0"/>
+					<Position_Z value="0"/>
+					<UseOriginalcolor value="false"/>
+					<OverlayColor value="1.0 1.0 1.0 1.0"/>
+					<UseOverlayColorReplaceMode value="false"/>
+					<pitch value="0"/>
+					<EdgeColor value="1.0 0 0 1.0"/>
+					<SpecularStrength value="1.0"/>
+					<Position_X value="0"/>
+					<UseEdge value="false"/>
+					<SpecularColor value="1.0 1.0 1.0 1.0"/>
+					<UseBloom value="false"/>
+					<UseTransparentNearestSlice value="false"/>
+					<yaw value="0"/>
+				</StaticMesh>
+			</BodyPart>
+		</BodyParts>
+	</ActorTemplate>
+</ActorTemplates>
