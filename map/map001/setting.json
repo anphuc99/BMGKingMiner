@@ -14,50 +14,6 @@
       }
     },
     {
-      "class": "Entity",
-      "config": "myplugin/8c64738f-ceb8-4c64-9e7d-b8bc31d56f87",
-      "properties": {
-        "id": "8475336291642048513",
-        "name": "cay thong",
-        "position": "x:69.263221740723 y:51.00008392334 z:19.656642913818",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/8c64738f-ceb8-4c64-9e7d-b8bc31d56f87",
-      "properties": {
-        "id": "8475336315065303041",
-        "name": "cay thong",
-        "position": "x:76.873893737793 y:51.003879547119 z:18.43204498291",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/8c64738f-ceb8-4c64-9e7d-b8bc31d56f87",
-      "properties": {
-        "id": "8475336332347572225",
-        "name": "cay thong",
-        "position": "x:83.538177490234 y:51 z:17.866357803345",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/8c64738f-ceb8-4c64-9e7d-b8bc31d56f87",
-      "properties": {
-        "id": "8475336359584972801",
-        "name": "cay thong",
-        "position": "x:70.156845092773 y:51.000003814697 z:28.504426956177",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
       "class": "RegionPart",
       "properties": {
         "cfgName": "myplugin/13599e39-8efa-492d-bcc2-25308d9c1f79",
