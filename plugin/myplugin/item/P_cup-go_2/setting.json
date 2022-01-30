@@ -7,9 +7,10 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Actor/iron/iron.png",
-  "itemintroduction": "59d78a68-a493-40a2-8982-100bf5ca7c6f",
-  "itemname": "item_M_Iron",
+  "icon": "@asset/Mesh/Claw Pickaxe/g1008_pickaxe_13_14.tga",
+  "itemintroduction": "452da5b4-dcea-447e-8595-387c10959fa6",
+  "itemname": "item_P_cup-go_2",
+  "mesh": "asset/Mesh/Claw Pickaxe/g1008_pickaxe_13.mesh",
   "needSave": false,
   "stack_count_max": 1,
   "syncGameData": {

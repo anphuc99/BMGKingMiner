@@ -7,10 +7,10 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Actor/Cedar Tree/bingxuejie_shu.tga",
-  "itemintroduction": "c9432144-9760-4917-99d3-87fb56d6c632",
-  "itemname": "item_Tr_cupLv1_1",
-  "mesh": "asset/Mesh/Actor_mesh/01_hair_girl.mesh",
+  "icon": "@asset/Mesh/Iron Pickaxe1/g1008_steel_weapon_04.tga",
+  "itemintroduction": "4c246cd8-774e-485a-b7e2-82dafce2cb10",
+  "itemname": "item_P_cup-sat_2",
+  "mesh": "asset/Mesh/Iron Pickaxe1/g1008_pickaxe_04.mesh",
   "needSave": false,
   "stack_count_max": 1,
   "syncGameData": {

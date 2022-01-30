@@ -6,17 +6,6 @@
       "class": "Entity",
       "config": "myplugin/iron",
       "properties": {
-        "id": "8475967103455674369",
-        "name": "iron",
-        "position": "x:31.243370056152 y:53.000038146973 z:9.5794429779053",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/iron",
-      "properties": {
         "id": "8476280862770757633",
         "name": "iron",
         "position": "x:22.557624816895 y:53 z:16.593589782715",

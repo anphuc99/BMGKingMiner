@@ -7,9 +7,10 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Actor/Agricultural Rake/gun_2004.tga",
-  "itemintroduction": "faf884de-b0bd-4fda-83f7-185087615b0f",
-  "itemname": "item_Tr_cupLv2_1",
+  "icon": "@asset/Mesh/Iron Pickaxe2/g1008_steel_weapon_04.tga",
+  "itemintroduction": "a52077ce-1cf5-4ce5-8007-16b7c2488692",
+  "itemname": "item_P_cup-sat_3",
+  "mesh": "asset/Mesh/Iron Pickaxe2/g1008_pickaxe_05.mesh",
   "needSave": false,
   "stack_count_max": 1,
   "syncGameData": {

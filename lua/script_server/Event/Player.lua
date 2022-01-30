@@ -1,7 +1,7 @@
 local Gol = require "script_server.Golde_Valiable"
 local this = Entity.GetCfg("myplugin/player1")
 local PlayerModel = require "script_server.Model.Player"
-local cupLv1 = "myplugin/Tr_cupLv1_1"
+local cupLv1 = "myplugin/P_cup-go_1"
 local setIdPlayer = require "script_server.lbr.setIdPlayer"
 local Context = require "script_common.lbr.Context"
 local deepCopy = require "script_common.lbr.DeepCopyTable"
@@ -12,32 +12,20 @@ local Language = require "script_common.language"
 
 Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
     local PlayerObj = PlayerModel:new(context.obj1.objID)
-    Gol.Player[context.obj1.objID] = PlayerObj
+    Gol.Player[context.obj1.objID] = PlayerObj    
+    -- context.obj1.addValueDef("new", false, false, false, true, false)
     local newPlayer = context.obj1:getValue("new") -- kiểm tra có phải là người mới hay không
-    if(newPlayer == nil) then
-        context.obj1.addValueDef("new", true, true, true, true, false)
-        context.obj1:addItem(cupLv1, 1)
-        local idPlayer = setIdPlayer()
-        local PlayerProperty = {
-            id = idPlayer,
-            money = 1000,
-            balo = 6,
-            idCard = 1,
-            Lv = 1,
-            exp = 0,
-            language = "English",
-            lastLogin = os.time()            
-        }
-        context.obj1.addValueDef("PlayerItem", {
-            {idPlayer = idPlayer, idItem = cupLv1,cellNum = 1, num = 1, position = positionItem.hand, lv = 1},            
-        }, true, true, true, false)
-        context.obj1.addValueDef("Player", PlayerProperty, true, true, true, false)
+    if(not newPlayer) then
+        context.obj1:setValue("new", true)
+        local proPlayer = context.obj1:getValue("Player")
+        proPlayer.id = setIdPlayer()
+        context.obj1:setValue("Player", proPlayer)
+        context.obj1:addItem(cupLv1, 1)        
         --PackageHandlers.sendServerHandler(context.obj1, "UI", {UI = "Language"})
         PackageHandlers.sendServerHandler(context.obj1, "setMoney", { money = 1000})
     else
         PlayerObj:setLastLogin(os.time())
         context.obj1:setValue("Player", plpro)
-        print("hoho")
     end
 end)
 -- lấy balo người chơi

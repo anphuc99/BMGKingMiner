@@ -4,7 +4,7 @@ return {
     {
         id = "myplugin/M_Iron",
         name ="item_M_Iron",
-        icon = "asset/Texture/Block/iron_ore.png",
+        icon = "asset/Actor/iron/iron.png",
         typeItem = typeItem.Material
     },
 
@@ -16,16 +16,44 @@ return {
     },
 
     {
-        id = "myplugin/Tr_cupLv1_1",
-        name ="item_Tr_cupLv1_1",
-        icon = "asset/Actor/Cedar Tree/bingxuejie_shu.tga",
+        id = "myplugin/P_cup-go_1",
+        name ="item_P_cup-go_1",
+        icon = "asset/Mesh/Claw Pickaxe/g1008_pickaxe_13_14.tga",
         typeItem = typeItem.Trophy
     },
 
     {
-        id = "myplugin/Tr_cupLv2_1",
-        name ="item_Tr_cupLv2_1",
-        icon = "asset/Actor/Agricultural Rake/gun_2004.tga",
+        id = "myplugin/P_cup-go_2",
+        name ="item_P_cup-go_2",
+        icon = "asset/Mesh/Claw Pickaxe/g1008_pickaxe_13_14.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup-go_3",
+        name ="item_P_cup-go_3",
+        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup-sat_1",
+        name ="item_P_cup-sat_1",
+        icon = "asset/Mesh/Iron Pickaxe1/g1008_steel_weapon_04.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup-sat_2",
+        name ="item_P_cup-sat_2",
+        icon = "asset/Mesh/Iron Pickaxe1/g1008_steel_weapon_04.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup-sat_3",
+        name ="item_P_cup-sat_3",
+        icon = "asset/Mesh/Iron Pickaxe2/g1008_steel_weapon_04.tga",
         typeItem = typeItem.Trophy
     },
 
