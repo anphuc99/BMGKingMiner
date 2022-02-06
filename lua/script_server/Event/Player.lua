@@ -9,6 +9,9 @@ local positionItem = require "script_common.positionItem"
 local SlotBalo = require "script_common.SlotBalo"
 local messeger = require "script_server.Helper.SendMesseger"
 local Language = require "script_common.language"
+local split = require "script_common.lbr.split"
+local Upgrate = require "script_common.database.Upgrate"
+local Vortex = require "script_common.database.Vortex"
 
 Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
     local PlayerObj = PlayerModel:new(context.obj1.objID)
@@ -166,6 +169,41 @@ PackageHandlers.registerServerHandler("sellFleaMarket", function(player, packet)
         objPlayer:removeItemInBalo(flea.idItem,1)
     else
         messeger(player, {Text = {"messeger_NotEnoughItem",packet.name}, Color = {r = 255, g = 0, b = 0}})
+    end
+    
+end)
+-- Nâng cấp trang bị
+PackageHandlers.registerServerHandler("Upgrate", function(player, packet)
+    local objPlsyer = Gol.Player[player.objID]
+    local playerItem = player:getValue("PlayerItem")
+    local sumVor = context_playerItem:where("idItem",Vortex[1].id):sum("num")
+    if objPlsyer:getMoney() < Upgrate[equipment.level].money then
+        messeger(player,{Text = {"messeger_NotEnoughMoney",1}, Color = {r = 255, g = 0, b = 0}})
+        return false
+    end
+    if sumVor < 5 then
+        local name = Context:new("Item"):where("id",Vortex[1].id):firstData().name
+        messeger(player,{Text = {"messeger_NotEnoughItem",name}, Color = {r = 255, g = 0, b = 0}})
+        return false
+    end
+
+    local context_playerItem = Context:new(playerItem)
+    local itemUpgrate = context_playerItem:where("idItem",packet.item)
+    local context_equipment = Context:new("Equipment")
+    local equipment = context_equipment:where("id",packet.item):firstData()
+    
+    if Upgrate[equipment.level] then
+        local rd = math.random(1,100)
+        if rd < Upgrate[equipment.level].percentage then
+            local lv = split(itemUpgrate.idItem,"_") 
+            lv[3] = lv[3] + 1            
+            itemUpgrate.idItem = table.concat(lv,"_")
+        else
+            local lv = split(itemUpgrate.idItem,"_") 
+            lv[3] = lv[3] + Upgrate[equipment.level].lowLv[math.random(1,2)]            
+            itemUpgrate.idItem = table.concat(lv,"_")
+        end
+        player:setValue("PlayerItem", playerItem)
     end
     
 end)
