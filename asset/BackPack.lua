@@ -1,6 +1,4 @@
 function self:onOpen(p)
-    local language = require "script_common.language"
-    local lg = require "script_client.languagePlayer"
     local SlotBalo = require "script_common.SlotBalo"
     local BlockImg = "gameres|asset/Texture/Gui/UI LOCK(C).png"
     local unBlockImg = "gameres|asset/Texture/Gui/Ô Item(C).png"
@@ -40,7 +38,6 @@ function self:onOpen(p)
         function(data)
             print(Lib.pv(data))
             for k, v in pairs(data) do
-                print(v.cellNum)
                 setItem(v, v.cellNum)
             end
         end)
@@ -49,12 +46,15 @@ function self:onOpen(p)
 
     -- sự kiện dbClick
     local function cellDbClick(i)
+        if p and p.onCellDbClick then
+            p.onCellDbClick(self,i,lisItem)
+        end        
         -- chuyển từ balo xuống tay
         if  i <= balo then
             if hasItem[i] then
                 lisItem[i].cellNum = i
                 PackageHandlers.sendClientHandler("baloToHand", lisItem[i],
-                                                function(rs)
+                function(rs)
                     print(rs)
                     if rs then
                         self.BackPack.CellBP["cell" .. i].Item:setVisible(false)
@@ -92,6 +92,9 @@ function self:onOpen(p)
     end
     -- sự kiện ô click
     local function cellClick(i)
+        if p and p.onCellClick then
+            p.onCellClick(self,i,lisItem)
+        end        
         -- tạo sự kiện dbClick
         dbClick[i] = (dbClick[i] or 0) + 1
         World.Timer(10, function()

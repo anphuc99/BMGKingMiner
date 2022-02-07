@@ -100,6 +100,28 @@
         "rotation": "x:0 y:0 z:0",
         "scale": "x:3.28811 y:3.96125 z:2.01824"
       }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Iron",
+      "properties": {
+        "id": "8491961302178217985",
+        "name": "entity_Enti_M_Iron",
+        "position": "x:35.116992950439 y:53.0 z:22.608274459839",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Iron",
+      "properties": {
+        "id": "8491961321757114369",
+        "name": "entity_Enti_M_Iron",
+        "position": "x:33.582008361816 y:53.000144958496 z:23.036832809448",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
     }
   ],
   "skyBox": [

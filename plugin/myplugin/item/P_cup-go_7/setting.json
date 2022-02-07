@@ -1,0 +1,22 @@
+{
+  "canAbandon": false,
+  "candrop": false,
+  "canEquipPlural": true,
+  "canUse": false,
+  "equip_skill": [],
+  "equip_skin": {
+    "": ""
+  },
+  "icon": "@asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
+  "itemintroduction": "8e0ca556-9339-4a8d-8834-410ace2dcfa5",
+  "itemname": "bf82d727-5a0d-4368-9e77-28a9450e3929",
+  "mesh": "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_14.mesh",
+  "needSave": false,
+  "stack_count_max": 1,
+  "syncGameData": {
+    "currentCapacity": true,
+    "extCapacity": true
+  },
+  "trap": false,
+  "tray": []
+}

@@ -21,7 +21,7 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
     if(not newPlayer) then
         context.obj1:setValue("new", true)
         local proPlayer = context.obj1:getValue("Player")
-        proPlayer.id = setIdPlayer()
+        -- proPlayer.id = setIdPlayer()
         context.obj1:setValue("Player", proPlayer)
         context.obj1:addItem(cupLv1, 1)        
         --PackageHandlers.sendServerHandler(context.obj1, "UI", {UI = "Language"})
@@ -176,8 +176,14 @@ end)
 PackageHandlers.registerServerHandler("Upgrate", function(player, packet)
     local objPlsyer = Gol.Player[player.objID]
     local playerItem = player:getValue("PlayerItem")
+    local context_playerItem = Context:new(playerItem)
     local sumVor = context_playerItem:where("idItem",Vortex[1].id):sum("num")
-    if objPlsyer:getMoney() < Upgrate[equipment.level].money then
+    local context_equipment = Context:new("Equipment")
+    local context_playerItem = Context:new(playerItem)
+    local itemUpgrate = context_playerItem:where("cellNum",packet.cellNum):firstData() 
+    local equipment = context_equipment:where("id",itemUpgrate.idItem):firstData()
+    local money = Upgrate[equipment.level].money
+    if objPlsyer:getMoney() < money then
         messeger(player,{Text = {"messeger_NotEnoughMoney",1}, Color = {r = 255, g = 0, b = 0}})
         return false
     end
@@ -185,25 +191,25 @@ PackageHandlers.registerServerHandler("Upgrate", function(player, packet)
         local name = Context:new("Item"):where("id",Vortex[1].id):firstData().name
         messeger(player,{Text = {"messeger_NotEnoughItem",name}, Color = {r = 255, g = 0, b = 0}})
         return false
-    end
-
-    local context_playerItem = Context:new(playerItem)
-    local itemUpgrate = context_playerItem:where("idItem",packet.item)
-    local context_equipment = Context:new("Equipment")
-    local equipment = context_equipment:where("id",packet.item):firstData()
+    end 
     
     if Upgrate[equipment.level] then
         local rd = math.random(1,100)
         if rd < Upgrate[equipment.level].percentage then
             local lv = split(itemUpgrate.idItem,"_") 
-            lv[3] = lv[3] + 1            
+            lv[3] = math.ceil(lv[3] + 1)
             itemUpgrate.idItem = table.concat(lv,"_")
+            player:sendTip(1,"Nâng cấp thành công cấp"..lv[3])
         else
             local lv = split(itemUpgrate.idItem,"_") 
-            lv[3] = lv[3] + Upgrate[equipment.level].lowLv[math.random(1,2)]            
+            lv[3] = math.ceil(lv[3] - Upgrate[equipment.level].lowLv[math.random(1,2)])
             itemUpgrate.idItem = table.concat(lv,"_")
-        end
+            player:sendTip(1,"Nâng cấp thất bại đã giảm xuống cấp"..lv[3])
+        end        
+        print(Lib.pv(playerItem))
         player:setValue("PlayerItem", playerItem)
+        objPlsyer:spendMoney(money)
+        objPlsyer:removeItemInBalo(Vortex[1].id,5)
     end
-    
+    return true,itemUpgrate
 end)

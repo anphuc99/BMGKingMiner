@@ -23,6 +23,13 @@ return {
     },
 
     {
+        id = "myplugin/P_cup-go_10",
+        name ="item_P_cup-go_10",
+        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
         id = "myplugin/P_cup-go_2",
         name ="item_P_cup-go_2",
         icon = "asset/Mesh/Claw Pickaxe/g1008_pickaxe_13_14.tga",
@@ -32,6 +39,48 @@ return {
     {
         id = "myplugin/P_cup-go_3",
         name ="item_P_cup-go_3",
+        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup-go_4",
+        name ="item_P_cup-go_4",
+        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup-go_5",
+        name ="item_P_cup-go_5",
+        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup-go_6",
+        name ="item_P_cup-go_6",
+        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup-go_7",
+        name ="item_P_cup-go_7",
+        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup-go_8",
+        name ="item_P_cup-go_8",
+        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup-go_9",
+        name ="item_P_cup-go_9",
         icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
         typeItem = typeItem.Trophy
     },

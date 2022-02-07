@@ -8,9 +8,9 @@ return {
     },
 
     {
-        id = "myplugin/M_Tree",
+        id = "myplugin/M_Tree1",
         level = 1,
-	    stiffness = 5*20,
+	    stiffness = 10*20,
 	    entityId = "myplugin/Enti_M_Tree1",
     },
     
