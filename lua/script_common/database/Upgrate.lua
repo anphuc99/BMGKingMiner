@@ -3,25 +3,25 @@ return {
         lv =2,
         money = 700,
         percentage = 100,
-        lowLv = {0}
+        lowLv = {0,0}
     },
     {
         lv =3,
         money = 800,
         percentage = 90,
-        lowLv = {0}
+        lowLv = {0,0}
     },
     {
         lv =4,
         money = 900,
         percentage = 80,
-        lowLv = {0}
+        lowLv = {0,0}
     },
     {
         lv =5,
         money = 1000,
         percentage = 70,
-        lowLv = {0}
+        lowLv = {0,0}
     },
     {
         lv =6,
