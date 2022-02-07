@@ -3,7 +3,7 @@ local positionItem = require "script_common.positionItem"
 this.addValueDef("new", false, false, false, true, false)
 local PlayerProperty = {
     id = -1,
-    money = 1000000,
+    money = 1000000000,
     balo = 6,
     idCard = 1,
     Lv = 1,

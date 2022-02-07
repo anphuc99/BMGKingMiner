@@ -59,7 +59,7 @@
   "engineDefUIEnable": {
     "actionControl": true,
     "actionControlMode": "flexibleDragControl",
-    "appMainRole": true,
+    "appMainRole": false,
     "chat": true,
     "playerinfo": true,
     "shortcutBar": true,
