@@ -2,7 +2,6 @@ local Gol = require "script_server.Golde_Valiable"
 local this = Entity.GetCfg("myplugin/player1")
 local PlayerModel = require "script_server.Model.Player"
 local cupLv1 = "myplugin/P_cup-go_1"
-local setIdPlayer = require "script_server.lbr.setIdPlayer"
 local Context = require "script_common.lbr.Context"
 local deepCopy = require "script_common.lbr.DeepCopyTable"
 local positionItem = require "script_common.positionItem"
@@ -21,7 +20,8 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
     if(not newPlayer) then
         context.obj1:setValue("new", true)
         local proPlayer = context.obj1:getValue("Player")
-        -- proPlayer.id = setIdPlayer()
+        print("ooooooooooooooooooo")
+        print(proPlayer.id)
         context.obj1:setValue("Player", proPlayer)
         context.obj1:addItem(cupLv1, 1)        
         --PackageHandlers.sendServerHandler(context.obj1, "UI", {UI = "Language"})
@@ -30,6 +30,9 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
         PlayerObj:setLastLogin(os.time())
         context.obj1:setValue("Player", plpro)
     end
+end)
+Trigger.RegisterHandler(this, "ENTITY_LEAVE", function(context)
+    Gol.Player[context.objID] = nil
 end)
 -- lấy balo người chơi
 PackageHandlers.registerServerHandler("getBackPackPlayer", function(player, packet)
@@ -212,4 +215,64 @@ PackageHandlers.registerServerHandler("Upgrate", function(player, packet)
         objPlsyer:removeItemInBalo(Vortex[1].id,5)
     end
     return true,itemUpgrate
+end)
+-- đăng bán sản phẩm lên chợ đen
+PackageHandlers.registerServerHandler("publishBlackMarket", function(player, packet)
+    local playerItem = player:getValue("PlayerItem")
+    local context_playerItem = Context:new(playerItem)
+    local count = context_playerItem:where("idItem",packet.idItem):sum("num")
+    if count <=0 and count < packet.num then
+        return false
+    end
+    packet.playerId = player.platformUserId
+    packet.created_at = os.time()
+    local blackMarket = player:getValue("blackMarket")
+    blackMarket[#blackMarket+1] = packet
+    player:setValue("blackMarket", blackMarket)
+    Gol.Player[player.objID]:removeItemInBalo(packet.idItem,packet.num)
+    player:sendTip(1, "Đăng sản phẩm thành công")
+    return true
+end)
+-- xem sản phẩm ở chợ đen
+PackageHandlers.registerServerHandler("seenBlackMarket", function(player, packet)
+    local blackMarket = {}
+    for key, value in pairs(Gol.Player) do
+        local Market = value:getMarket()
+        for key2, value2 in pairs(Market) do
+            value2.playerName = value:getObj().name
+            value2.objId = key
+            blackMarket[#blackMarket+1] = value2
+        end      
+    end
+    local context_blackMarket = Context:new(blackMarket)    
+    return context_blackMarket:orderByDesc("created_at"):getData()
+end)
+-- xem sản phẩm của mình
+PackageHandlers.registerServerHandler("seenMyMarket", function(player, packet)
+    local blackMarket = player:getValue("blackMarket")
+    local context_blackMarket = Context:new(blackMarket)    
+    return context_blackMarket:orderByDesc("created_at"):getData()
+end)
+-- xóa sản phẩm
+PackageHandlers.registerServerHandler("deleteProduct", function(player, packet)
+    local blackMarket = player:getValue("blackMarket")
+    local context_blackMarket = Context:new(blackMarket)   
+    local item = context_blackMarket:where("created_at",packet.created_at):firstData()
+    Gol.Player[player.objID]:addItemInBalo(item.idItem,item.num)
+end)
+-- mua sản phẩm chợ đen
+PackageHandlers.registerServerHandler("sellBlackMarket", function(player, packet)
+    if Gol.Player[packet.objId] then
+        local playerObj = Gol.Player[packet.objId]
+        local blackMarket = playerObj:getMarket()
+        local context_blackMarket = Context:new(blackMarket)
+        local item = context_blackMarket:where("created_at",packet.created_at):firstData()
+        playerObj:spendMoney(item.money)
+        local sellerObj = Gol.Player[player.objID]
+        sellerObj:addItemInBalo(item.idItem,item.num) 
+        return true
+    else
+        player:sendTip(1,"Người này đã offline không thể giao dịch")
+        return false
+    end
 end)

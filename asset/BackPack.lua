@@ -1,34 +1,36 @@
 function self:onOpen(p)
     local SlotBalo = require "script_common.SlotBalo"
-    local BlockImg = "gameres|asset/Texture/Gui/UI LOCK(C).png"
-    local unBlockImg = "gameres|asset/Texture/Gui/Ô Item(C).png"
-    local selectBlockImg = "gameres|asset/Texture/Gui/Khungneon3(C).png"
+    local BlockImg = "gameres|asset/Texture/Gui/Slot Item-2 Nút.png"
+    local unBlockImg = "gameres|asset/Texture/Gui/Slot Item-1 Nút.png"
+    local selectBlockImg = "gameres|asset/Texture/Gui/Slot Item-3 Nút.png"
     local dbClick = {} -- biến đệm cho sự kiện dbClick
     local hasItem = {} -- lưu những ô có vật phẩm
     local lisItem = {} -- danh sách sản phẩm
     local curClick = nil
     local balo
+    local player =Blockman.Instance().player
+    -- phần balo
     self.BackPack.exit.onMouseClick = function() self:close() end
     local function setItem(v, cellNum)
-        self.BackPack.CellBP["cell" .. cellNum].Item:setVisible(true)
-        self.BackPack.CellBP["cell" .. cellNum].Image1:setVisible(true)
-        self.BackPack.CellBP["cell" .. cellNum].Item:setImage("gameres|" ..
+        self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Item:setVisible(true)
+        self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Image1:setVisible(true)
+        self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Item:setImage("gameres|" ..
                                                                   v.icon)
-        self.BackPack.CellBP["cell" .. cellNum].Image1.num:setText(v.num)
+        self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Image1.num:setText(v.num)
         hasItem[cellNum] = true
         lisItem[cellNum] = v
     end
     local function reloadBackPack()
-        for i = 1, 24, 1 do
-            self.BackPack.CellBP["cell" .. i].Item:setVisible(false)
-            self.BackPack.CellBP["cell" .. i].Image1:setVisible(false)
-            self.BackPack.CellBP["cell" .. i]:setImage(BlockImg)
+        for i = 1, 30, 1 do
+            self.BackPack.ScrollableView.CellBP["cell" .. i].Item:setVisible(false)
+            self.BackPack.ScrollableView.CellBP["cell" .. i].Image1:setVisible(false)
+            self.BackPack.ScrollableView.CellBP["cell" .. i]:setImage(BlockImg)
         end
 
         PackageHandlers.sendClientHandler("getValuePlayer", nil, function(data)
             balo = data.balo
             for i = 1, data.balo, 1 do
-                self.BackPack.CellBP["cell" .. i]:setImage(unBlockImg)
+                self.BackPack.ScrollableView.CellBP["cell" .. i]:setImage(unBlockImg)
             end
         end)
         -- tải balo lên
@@ -57,8 +59,8 @@ function self:onOpen(p)
                 function(rs)
                     print(rs)
                     if rs then
-                        self.BackPack.CellBP["cell" .. i].Item:setVisible(false)
-                        self.BackPack.CellBP["cell" .. i].Image1:setVisible(false)
+                        self.BackPack.ScrollableView.CellBP["cell" .. i].Item:setVisible(false)
+                        self.BackPack.ScrollableView.CellBP["cell" .. i].Image1:setVisible(false)
                         hasItem[i] = nil
                         lisItem[i] = nil
                     end
@@ -81,7 +83,7 @@ function self:onOpen(p)
                 Yes = function (e)
                     PackageHandlers.sendClientHandler("OpenCellNum", nil, function (rs)
                         if rs then
-                            self.BackPack.CellBP["cell" .. (balo + 1)]:setImage(unBlockImg)  
+                            self.BackPack.ScrollableView.CellBP["cell" .. (balo + 1)]:setImage(unBlockImg)  
                             balo = balo + 1
                         end
                     end)
@@ -104,19 +106,19 @@ function self:onOpen(p)
         if dbClick[i] == 2 then
             cellDbClick(i)
             if i <= balo then                
-                self.BackPack.CellBP["cell" .. i]:setImage(unBlockImg)  
+                self.BackPack.ScrollableView.CellBP["cell" .. i]:setImage(unBlockImg)  
             else
-                self.BackPack.CellBP["cell" .. i]:setImage(BlockImg)  
+                self.BackPack.ScrollableView.CellBP["cell" .. i]:setImage(BlockImg)  
             end            
             curClick = nil
             return
         end
         for ii = 1, balo, 1 do
-            self.BackPack.CellBP["cell" .. ii]:setImage(unBlockImg)
+            self.BackPack.ScrollableView.CellBP["cell" .. ii]:setImage(unBlockImg)
         end
         if i <= balo then
             if curClick == nil or not hasItem[curClick] then
-                self.BackPack.CellBP["cell" .. i]:setImage(selectBlockImg)
+                self.BackPack.ScrollableView.CellBP["cell" .. i]:setImage(selectBlockImg)
                 curClick = i
             else
                 PackageHandlers.sendClientHandler("moveItem", {
@@ -127,12 +129,12 @@ function self:onOpen(p)
                         if rep.oldCell ~= nil then
                             setItem(rep.oldCell, curClick)
                         else
-                            self.BackPack.CellBP["cell" .. curClick].Item:setVisible(
+                            self.BackPack.ScrollableView.CellBP["cell" .. curClick].Item:setVisible(
                                 false)
-                            self.BackPack.CellBP["cell" .. curClick].Image1:setVisible(
+                            self.BackPack.ScrollableView.CellBP["cell" .. curClick].Image1:setVisible(
                                 false)
-                            hasItem[i] = nil
-                            lisItem[i] = nil
+                            hasItem[curClick] = nil
+                            lisItem[curClick] = nil
                         end
                         setItem(rep.newCell, i)
                     end
@@ -141,18 +143,26 @@ function self:onOpen(p)
             end
         end
     end
-    for i = 1, 24, 1 do
-        self.BackPack.CellBP["cell" .. i].onMouseClick = function()
+    for i = 1, 30, 1 do
+        self.BackPack.ScrollableView.CellBP["cell" .. i].onMouseClick = function()
             cellClick(i)
         end
-        self.BackPack.CellBP["cell" .. i].Item.onMouseClick = function()
+        self.BackPack.ScrollableView.CellBP["cell" .. i].Item.onMouseClick = function()
             cellClick(i)
         end
-        self.BackPack.CellBP["cell" .. i].Image1.onMouseClick = function()
+        self.BackPack.ScrollableView.CellBP["cell" .. i].Image1.onMouseClick = function()
             cellClick(i)
         end
-        self.BackPack.CellBP["cell" .. i].Image1.num.onMouseClick = function()
+        self.BackPack.ScrollableView.CellBP["cell" .. i].Image1.num.onMouseClick = function()
             cellClick(i)
         end
     end
+    -- phần trang bị
+    self.BackPack.playerName:setText(player.name)
+    PackageHandlers.sendClientHandler("getValuePlayer", nil, function (propPlayer)
+        self.BackPack.Lv:setText(propPlayer.Lv)
+        self.BackPack.Id_card:setText(propPlayer.idCard)
+        self.BackPack.Exp:setText(propPlayer.exp)
+    end)
+    
 end
