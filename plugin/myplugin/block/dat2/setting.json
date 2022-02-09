@@ -30,11 +30,11 @@
   "recycleTime": 20,
   "spring": 0,
   "texture": [
-    "@asset/lobby/grass04.png",
-    "@asset/lobby/grass04.png",
-    "@asset/lobby/grass04-2.png",
-    "@asset/lobby/grass04-2.png",
-    "@asset/lobby/grass04-2.png",
-    "@asset/lobby/grass04-2.png"
+    "@asset/lobby/grass5.png",
+    "@asset/lobby/grass5.png",
+    "@asset/lobby/grass5-2.png",
+    "@asset/lobby/grass5-2.png",
+    "@asset/lobby/grass5-2.png",
+    "@asset/lobby/grass5-2.png"
   ]
 }
