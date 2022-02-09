@@ -57,7 +57,7 @@ Context:create("Context", function()
                 end
             elseif operator == ">" then
                 for key, value2 in pairs(dataSelect) do
-                    if type(key) > "number" then
+                    if type(key) == "number" then
                         if value2[col] > value then
                             dt[#dt + 1] = dataSelect[key]
                         end
@@ -65,7 +65,7 @@ Context:create("Context", function()
                 end
             elseif operator == "<" then
                 for key, value2 in pairs(dataSelect) do
-                    if type(key) < "number" then
+                    if type(key) == "number" then
                         if value2[col] < value then
                             dt[#dt + 1] = dataSelect[key]
                         end
@@ -73,7 +73,7 @@ Context:create("Context", function()
                 end
             elseif operator == ">=" then
                 for key, value2 in pairs(dataSelect) do
-                    if type(key) >= "number" then
+                    if type(key) == "number" then
                         if value2[col] >= value then
                             dt[#dt + 1] = dataSelect[key]
                         end
@@ -81,7 +81,7 @@ Context:create("Context", function()
                 end
             elseif operator == "<=" then
                 for key, value2 in pairs(dataSelect) do
-                    if type(key) <= "number" then
+                    if type(key) == "number" then
                         if value2[col] <= value then
                             dt[#dt + 1] = dataSelect[key]
                         end
@@ -89,7 +89,7 @@ Context:create("Context", function()
                 end
             elseif operator == "~=" then
                 for key, value2 in pairs(dataSelect) do
-                    if type(key) ~= "number" then
+                    if type(key) == "number" then
                         if value2[col] ~= value then
                             dt[#dt + 1] = dataSelect[key]
                         end
@@ -122,6 +122,69 @@ Context:create("Context", function()
         dataSelect = data
         return dt
     end
+
+    function o:orderBy(prop)        
+        local function quickSort(array, le, ri)
+            if ri-le < 1 then 
+                return array
+            end
+        
+            local left = le
+            local right =  ri
+            local pivot = math.ceil((le+ri)/2)
+        
+            array[pivot], array[right] = array[right], array[pivot]
+        
+            for i = le, ri do
+                if array[i][prop] < array[right][prop] then
+                    array[left], array[i] = array[i], array[left]
+        
+                    left = left + 1
+                end
+            end
+        
+            array[left], array[right] = array[right], array[left]
+        
+            quickSort(array, 1, left-1)
+            quickSort(array, left +1, ri)
+        
+            return array
+        end
+        quickSort(dataSelect,1,#dataSelect)
+        return o
+    end
+
+    function o:orderByDesc(prop)        
+        local function quickSort(array, le, ri)
+            if ri-le < 1 then 
+                return array
+            end
+        
+            local left = le
+            local right =  ri
+            local pivot = math.ceil((le+ri)/2)
+        
+            array[pivot], array[right] = array[right], array[pivot]
+        
+            for i = le, ri do
+                if array[i][prop] > array[right][prop] then
+                    array[left], array[i] = array[i], array[left]
+        
+                    left = left + 1
+                end
+            end
+        
+            array[left], array[right] = array[right], array[left]
+        
+            quickSort(array, 1, left-1)
+            quickSort(array, left +1, ri)
+        
+            return array
+        end
+        quickSort(dataSelect,1,#dataSelect)
+        return o
+    end
+
     return o
 end)
 

@@ -1,3 +1,12 @@
-local a = {1,2,3,4,5,6,"item"}
-
-print(#a)
+local function e()
+    return false
+end
+local rs,msg = pcall(function ()
+    local a = e()
+    if a == nil then
+        a = true
+    end
+    print(a)
+end)
+local a = 2/0
+print(rs)

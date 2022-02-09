@@ -307,6 +307,10 @@ PlayerClass:create("Player",function ()
         local context_playerItem = Context:new(playerItem)
         return context_playerItem:where("idItem",itemid):where("position",positionItem.balo):sum("num")
     end
+
+    function o:getMarket()
+        return o:getObj():getValue("blackMarket")
+    end
     return o
 end)
 

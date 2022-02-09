@@ -95,4 +95,28 @@ return {
         slot = 24,
         money = 4000,
     },    
+    {
+        slot = 25,
+        money = 8000,
+    },    
+    {
+        slot = 26,
+        money = 8000,
+    },    
+    {
+        slot = 27,
+        money = 8000,
+    },    
+    {
+        slot = 28,
+        money = 8000,
+    },    
+    {
+        slot = 29,
+        money = 8000,
+    },    
+    {
+        slot = 30,
+        money = 8000,
+    },    
 }

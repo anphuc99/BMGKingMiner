@@ -3,94 +3,6 @@
   "hideCloud": true,
   "scene": [
     {
-      "class": "Entity",
-      "config": "myplugin/iron",
-      "properties": {
-        "id": "8476280862770757633",
-        "name": "iron",
-        "position": "x:22.557624816895 y:53 z:16.593589782715",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/iron",
-      "properties": {
-        "id": "8476280931020062721",
-        "name": "iron",
-        "position": "x:25.657987594604 y:53 z:18.231288909912",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/iron",
-      "properties": {
-        "id": "8476280996963516417",
-        "name": "iron",
-        "position": "x:21.373489379883 y:53.000003814697 z:3.7011966705322",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/iron",
-      "properties": {
-        "id": "8476281023044993025",
-        "name": "iron",
-        "position": "x:19.276468276978 y:53.001140594482 z:15.774711608887",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/iron",
-      "properties": {
-        "id": "8476281084324937729",
-        "name": "iron",
-        "position": "x:37.646240234375 y:53.00602722168 z:20.564819335938",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/iron",
-      "properties": {
-        "id": "8476281103627862017",
-        "name": "iron",
-        "position": "x:38.610076904297 y:53.002956390381 z:19.132331848145",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/iron",
-      "properties": {
-        "id": "8476281140290125825",
-        "name": "iron",
-        "position": "x:35.26277923584 y:53.001190185547 z:23.261083602905",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/iron",
-      "properties": {
-        "id": "8476281199638708225",
-        "name": "iron",
-        "position": "x:45.447940826416 y:53.000049591064 z:20.133251190186",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
       "class": "RegionPart",
       "properties": {
         "cfgName": "myplugin/cee3e013-eb38-4ae8-af77-7b9a2da3e0af",
@@ -107,7 +19,7 @@
       "properties": {
         "id": "8491961302178217985",
         "name": "entity_Enti_M_Iron",
-        "position": "x:35.116992950439 y:53.0 z:22.608274459839",
+        "position": "x:35.116992950439 y:53 z:22.608274459839",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -119,6 +31,50 @@
         "id": "8491961321757114369",
         "name": "entity_Enti_M_Iron",
         "position": "x:33.582008361816 y:53.000144958496 z:23.036832809448",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Iron",
+      "properties": {
+        "id": "8494852615418281985",
+        "name": "entity_Enti_M_Iron",
+        "position": "x:30.076131820679 y:53.004856109619 z:24.259836196899",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Iron",
+      "properties": {
+        "id": "8494852625669701633",
+        "name": "entity_Enti_M_Iron",
+        "position": "x:29.241895675659 y:53.008697509766 z:22.485282897949",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Iron",
+      "properties": {
+        "id": "8494852636476325889",
+        "name": "entity_Enti_M_Iron",
+        "position": "x:32.47790145874 y:52.999996185303 z:20.398746490479",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Iron",
+      "properties": {
+        "id": "8494852677419270145",
+        "name": "entity_Enti_M_Iron",
+        "position": "x:31.440824508667 y:53.0 z:27.474199295044",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
