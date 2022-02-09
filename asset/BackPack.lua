@@ -3,6 +3,7 @@ function self:onOpen(p)
     local BlockImg = "gameres|asset/Texture/Gui/Slot Item-2 Nút.png"
     local unBlockImg = "gameres|asset/Texture/Gui/Slot Item-1 Nút.png"
     local selectBlockImg = "gameres|asset/Texture/Gui/Slot Item-3 Nút.png"
+    local typeItem = require "script_common.typeItem"
     local dbClick = {} -- biến đệm cho sự kiện dbClick
     local hasItem = {} -- lưu những ô có vật phẩm
     local lisItem = {} -- danh sách sản phẩm
@@ -10,6 +11,9 @@ function self:onOpen(p)
     local balo
     local player =Blockman.Instance().player
     -- phần balo
+    self.BackPack.InfoBox.Close.onMouseClick = function() 
+        self.BackPack.InfoBox:setVisible(false)
+    end
     self.BackPack.exit.onMouseClick = function() self:close() end
     local function setItem(v, cellNum)
         self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Item:setVisible(true)
@@ -156,6 +160,26 @@ function self:onOpen(p)
         self.BackPack.ScrollableView.CellBP["cell" .. i].Image1.num.onMouseClick = function()
             cellClick(i)
         end
+    end
+    self.BackPack.Info.onMouseClick = function() 
+        if lisItem[curClick] then
+            self.BackPack.InfoBox:setVisible(true)
+            self.BackPack.InfoBox.name:setText(Lang:toText({lisItem[curClick].name}))
+            self.BackPack.InfoBox.amount:setText(lisItem[curClick].num)
+            self.BackPack.InfoBox.Icon:setImage("gameres|"..lisItem[curClick].icon)
+            self.BackPack.InfoBox.description:setText(lisItem[curClick].description)
+            if lisItem[curClick].typeItem == typeItem.Equipment then
+                self.BackPack.InfoBox.type:setText(Lang:toText({"typeItem_Equi"})) 
+            elseif lisItem[curClick].typeItem == typeItem.Material then
+                self.BackPack.InfoBox.type:setText(Lang:toText({"typeItem_Mar"})) 
+            elseif lisItem[curClick].typeItem == typeItem.Trophy then
+                self.BackPack.InfoBox.type:setText(Lang:toText({"typeItem_Tro"})) 
+            elseif lisItem[curClick].typeItem == typeItem.Vortex then
+                self.BackPack.InfoBox.type:setText(Lang:toText({"typeItem_Vor"})) 
+            end  
+        else
+            self.BackPack.InfoBox:setVisible(false)
+        end                      
     end
     -- phần trang bị
     self.BackPack.playerName:setText(player.name)

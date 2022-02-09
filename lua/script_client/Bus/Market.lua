@@ -17,4 +17,34 @@ function Maket:getFleaMaket(NPC)
     return data
 end
 
+function Maket:getSaleMarket()
+    local context_sale = Context:new("Equipment")
+    local data = {}
+    local ctData = context_sale:where("rarity",">=",2):getData()
+    for key, value in pairs(ctData) do
+        if type(key) == "number" then
+            data[#data+1] = value
+        end
+    end
+    return data
+end
+
+function Maket:getBlackMarket(bMk)    
+    local context_item = Context:new("Item")    
+    local data = {}
+    for key, value in pairs(bMk) do
+        if type(key) == "number" then
+            local item = context_item:where("id",value.idItem):firstData()
+            item.playerId = value.playerId
+            item.created_at = value.created_at
+            item.objId = value.objId
+            item.playerName = value.playerName
+            item.price = value.price
+            item.count = value.count
+            data[#data+1] = item
+        end
+    end
+    return data
+end
+
 return Maket

@@ -115,9 +115,9 @@ PackageHandlers.registerServerHandler("OpenCellNum", function(player, packet)
     return rs
 end)
 -- cài đặt ngôn ngữ
-PackageHandlers.registerServerHandler("setLanguage", function(player, packet)
-    Gol.Player[player.objID]:setLanguage(Language.language[packet.i].name)
-end)
+-- PackageHandlers.registerServerHandler("setLanguage", function(player, packet)
+--     Gol.Player[player.objID]:setLanguage(Language.language[packet.i].name)
+-- end)
 -- chế tạo trang bị
 PackageHandlers.registerServerHandler("crafting", function(player, packet)
     local objPlayer = Gol.Player[player.objID]
@@ -164,12 +164,11 @@ end)
 -- bán hàng chợ trời
 PackageHandlers.registerServerHandler("sellFleaMarket", function(player, packet)
     local objPlayer = Gol.Player[player.objID]
-    if objPlayer:countItem(packet.id) >= 1 then
+    if objPlayer:countItem(packet.id) >= packet.num then
         local context_flea = Context:new("FleaMarket")
-        local flea = context_flea:where("idItem",packet.id):where("idNPC",packet.NPC):firstData()    
-        local moneyPlayer = objPlayer:getMoney()
-        objPlayer:setMoney(moneyPlayer + flea.price)
-        objPlayer:removeItemInBalo(flea.idItem,1)
+        local flea = context_flea:where("idItem",packet.id):where("idNPC",packet.NPC):firstData()        
+        objPlayer:spendMoney(flea.price * packet.num)
+        objPlayer:removeItemInBalo(flea.idItem,packet.num)
     else
         messeger(player, {Text = {"messeger_NotEnoughItem",packet.name}, Color = {r = 255, g = 0, b = 0}})
     end
@@ -221,7 +220,8 @@ PackageHandlers.registerServerHandler("publishBlackMarket", function(player, pac
     local playerItem = player:getValue("PlayerItem")
     local context_playerItem = Context:new(playerItem)
     local count = context_playerItem:where("idItem",packet.idItem):sum("num")
-    if count <=0 and count < packet.num then
+    if count <=0 or count < packet.count then
+        messeger(player,{Text = {"messeger_NotEnoughItem",""}})
         return false
     end
     packet.playerId = player.platformUserId
@@ -229,7 +229,7 @@ PackageHandlers.registerServerHandler("publishBlackMarket", function(player, pac
     local blackMarket = player:getValue("blackMarket")
     blackMarket[#blackMarket+1] = packet
     player:setValue("blackMarket", blackMarket)
-    Gol.Player[player.objID]:removeItemInBalo(packet.idItem,packet.num)
+    Gol.Player[player.objID]:removeItemInBalo(packet.idItem,packet.count)
     player:sendTip(1, "Đăng sản phẩm thành công")
     return true
 end)
@@ -245,7 +245,9 @@ PackageHandlers.registerServerHandler("seenBlackMarket", function(player, packet
         end      
     end
     local context_blackMarket = Context:new(blackMarket)    
-    return context_blackMarket:orderByDesc("created_at"):getData()
+    local data = context_blackMarket:orderByDesc("created_at"):getData()
+    print(Lib.pv(data))
+    return data
 end)
 -- xem sản phẩm của mình
 PackageHandlers.registerServerHandler("seenMyMarket", function(player, packet)
