@@ -4,8 +4,5 @@ require "script_client.languagePlayer"
 --     --local guiMgr = GUIManager:Instance()
 -- 	--local window = UI:openWindow("")
 -- end)
-PackageHandlers.sendClientHandler("getValuePlayer", nil, function (player)
-    print("eeeeeeeeesssssssssssss")
-    print(Lib.pv(player))
-    UI:openWindow("main",nil,nil,player)
-end)
+
+UI:openWindow("main")

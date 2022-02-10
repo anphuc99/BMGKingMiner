@@ -11,7 +11,7 @@
   "itemintroduction": "fa41f87e-7892-4d7b-8c20-c15669810e6c",
   "itemname": "item_P_cup-go_1",
   "mesh": "asset/Mesh/Claw Pickaxe/g1008_pickaxe_13.mesh",
-  "needSave": false,
+  "needSave": true,
   "stack_count_max": 1,
   "syncGameData": {
     "currentCapacity": true,

@@ -27,8 +27,7 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
         --PackageHandlers.sendServerHandler(context.obj1, "UI", {UI = "Language"})
         PackageHandlers.sendServerHandler(context.obj1, "setMoney", { money = PlayerObj:getMoney()})
     else
-        PlayerObj:setLastLogin(os.time())
-        context.obj1:setValue("Player", plpro)
+        PlayerObj:setLastLogin(os.time())        
         PackageHandlers.sendServerHandler(context.obj1, "setMoney", { money = PlayerObj:getMoney()})
     end
 end)

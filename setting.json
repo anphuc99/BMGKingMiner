@@ -67,7 +67,7 @@
   },
   "forcePickBlock": true,
   "hideCloud": false,
-  "hideTeamStatusBar": false,
+  "hideTeamStatusBar": true,
   "ignoreEmptyStartPos": false,
   "initPos": {
     "map": "map001",
@@ -103,7 +103,7 @@
     },
     "useGroup": "_imagesets_"
   },
-  "maxPlayers": 6,
+  "maxPlayers": 5,
   "minPlayers": 1,
   "moveStateConfig": {
     "isShow": false
@@ -208,9 +208,9 @@
   "startPos": [
     {
       "map": "map001",
-      "x": 33.0,
+      "x": 28,
       "y": 53,
-      "z": 18
+      "z": 34
     }
   ],
   "team": [],

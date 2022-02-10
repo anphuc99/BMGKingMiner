@@ -11,7 +11,7 @@
   "itemintroduction": "74ef86fa-d654-4927-9062-6f66c60b6603",
   "itemname": "6729d34d-04db-483f-9f6e-829d094c5675",
   "mesh": "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_14.mesh",
-  "needSave": false,
+  "needSave": true,
   "stack_count_max": 1,
   "syncGameData": {
     "currentCapacity": true,

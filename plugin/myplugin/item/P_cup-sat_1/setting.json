@@ -11,7 +11,7 @@
   "itemintroduction": "4f104847-fc92-46fa-a74e-9133293b27dc",
   "itemname": "item_P_cup-sat_1",
   "mesh": "asset/Mesh/Iron Pickaxe1/g1008_pickaxe_04.mesh",
-  "needSave": false,
+  "needSave": true,
   "stack_count_max": 1,
   "syncGameData": {
     "currentCapacity": true,

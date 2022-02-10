@@ -11,7 +11,7 @@
   "itemintroduction": "5a7849a6-4ab5-4dea-99d7-2da9ed9ec14c",
   "itemname": "item_P_cup-go_3",
   "mesh": "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_14.mesh",
-  "needSave": false,
+  "needSave": true,
   "stack_count_max": 1,
   "syncGameData": {
     "currentCapacity": true,
