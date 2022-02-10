@@ -1,6 +1,30 @@
 {
   "canBreak": true,
   "hideCloud": true,
+  "scene": [
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_Effect",
+      "properties": {
+        "id": "8496449824360824833",
+        "name": "Effect",
+        "position": "x:29.622617721558 y:53.000827789307 z:1.3244700431824",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "RegionPart",
+      "properties": {
+        "cfgName": "myplugin/c1be7e5c-c2da-4eb3-b964-aee2b5767f3b",
+        "id": "8496449943525867521",
+        "name": "Region",
+        "position": "x:29.635877609253 y:55.072593688965 z:1.5007531642914",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:3.2569 y:4.19057 z:3.07868"
+      }
+    }
+  ],
   "skyBox": [
     {
       "texture": [

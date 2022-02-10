@@ -25,10 +25,11 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
         context.obj1:setValue("Player", proPlayer)
         context.obj1:addItem(cupLv1, 1)        
         --PackageHandlers.sendServerHandler(context.obj1, "UI", {UI = "Language"})
-        PackageHandlers.sendServerHandler(context.obj1, "setMoney", { money = 1000})
+        PackageHandlers.sendServerHandler(context.obj1, "setMoney", { money = PlayerObj:getMoney()})
     else
         PlayerObj:setLastLogin(os.time())
         context.obj1:setValue("Player", plpro)
+        PackageHandlers.sendServerHandler(context.obj1, "setMoney", { money = PlayerObj:getMoney()})
     end
 end)
 Trigger.RegisterHandler(this, "ENTITY_LEAVE", function(context)
@@ -167,7 +168,7 @@ PackageHandlers.registerServerHandler("sellFleaMarket", function(player, packet)
     if objPlayer:countItem(packet.id) >= packet.num then
         local context_flea = Context:new("FleaMarket")
         local flea = context_flea:where("idItem",packet.id):where("idNPC",packet.NPC):firstData()        
-        objPlayer:spendMoney(flea.price * packet.num)
+        objPlayer:increaseMoney(flea.price * packet.num)
         objPlayer:removeItemInBalo(flea.idItem,packet.num)
     else
         messeger(player, {Text = {"messeger_NotEnoughItem",packet.name}, Color = {r = 255, g = 0, b = 0}})
@@ -264,17 +265,39 @@ PackageHandlers.registerServerHandler("deleteProduct", function(player, packet)
 end)
 -- mua sản phẩm chợ đen
 PackageHandlers.registerServerHandler("sellBlackMarket", function(player, packet)
-    if Gol.Player[packet.objId] then
-        local playerObj = Gol.Player[packet.objId]
-        local blackMarket = playerObj:getMarket()
-        local context_blackMarket = Context:new(blackMarket)
-        local item = context_blackMarket:where("created_at",packet.created_at):firstData()
-        playerObj:spendMoney(item.money)
-        local sellerObj = Gol.Player[player.objID]
-        sellerObj:addItemInBalo(item.idItem,item.num) 
-        return true
-    else
-        player:sendTip(1,"Người này đã offline không thể giao dịch")
+    local rs,rer = pcall(function ()
+        if Gol.Player[packet.objId] then
+            local playerObj = Gol.Player[packet.objId]
+            local blackMarket = playerObj:getMarket()
+            local context_blackMarket = Context:new(blackMarket)
+            local item = context_blackMarket:where("created_at",packet.created_at):firstData()
+            if item == nil then
+                messeger(player, {Text ={"messeger_productsSold"}})
+                return false
+            end
+            local sellerObj = Gol.Player[player.objID]        
+            if not sellerObj:spendMoney(item.price) then
+                return false
+            end
+            sellerObj:addItemInBalo(item.idItem,item.count) 
+            playerObj:increaseMoney(item.price)   
+            for key, value in pairs(blackMarket) do
+                if value.created_at == packet.created_at then
+                    table.remove(blackMarket,key)
+                    break
+                end
+            end     
+            playerObj:getObj():setValue("blackMarket", blackMarket)
+            return true
+        else
+            messeger(player, {Text ={"messeger_offlinePlayer"}})
+            return false
+        end
+    end)
+    if not rs then
+        messeger(player, {Text ={"messeger_offlinePlayer"}})
         return false
+    else
+        return rer
     end
 end)

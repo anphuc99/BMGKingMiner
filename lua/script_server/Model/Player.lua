@@ -302,6 +302,11 @@ PlayerClass:create("Player",function ()
         end
     end
 
+    function o:increaseMoney(money)
+        local plMoney = o:getMoney()
+        o:setMoney(plMoney + money)
+    end
+
     function o:countItem(itemid)
         local playerItem = o:getObj():getValue("PlayerItem")
         local context_playerItem = Context:new(playerItem)

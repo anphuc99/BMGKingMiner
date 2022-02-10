@@ -14,14 +14,135 @@
       }
     },
     {
+      "class": "Entity",
+      "config": "myplugin/Enti_Effect",
+      "properties": {
+        "id": "8496333773157564417",
+        "name": "Effect",
+        "position": "x:21.55 y:54.195072174072 z:1.5",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_Effect",
+      "properties": {
+        "id": "8496369387809783809",
+        "name": "Effect",
+        "position": "x:14.453340530396 y:53.99 z:1.7",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_Effect",
+      "properties": {
+        "id": "8496370637919043585",
+        "name": "Effect",
+        "position": "x:7.5298490524292 y:54.001956939697 z:1.1582500934601",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_Effect",
+      "properties": {
+        "id": "8496370732509167617",
+        "name": "Effect",
+        "position": "x:0.47453391551971 y:53.999996185303 z:1.7355117797852",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_Effect",
+      "properties": {
+        "id": "8496370810431143937",
+        "name": "Effect",
+        "position": "x:-6.4766430854797 y:54.00106048584 z:1.2265548706055",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_Effect",
+      "properties": {
+        "id": "8496370941242228737",
+        "name": "Effect",
+        "position": "x:-13.529997825623 y:54.005981445312 z:1.2269821166992",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
       "class": "RegionPart",
       "properties": {
-        "cfgName": "myplugin/13599e39-8efa-492d-bcc2-25308d9c1f79",
-        "id": "8475453975892180993",
-        "name": "Region",
-        "position": "x:21.52091217041 y:56.012313842773 z:2.1856691837311",
+        "cfgName": "myplugin/eb9c52ef-43da-403f-a932-deeebdf57ec1",
+        "id": "8496385931250843649",
+        "name": "Region1",
+        "position": "x:21.607322692871 y:56.075336456299 z:2.5633807182312",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:3.08536 y:4.01814 z:2.06695"
+        "scale": "x:3.28116 y:4.23627 z:3.10183"
+      }
+    },
+    {
+      "class": "RegionPart",
+      "properties": {
+        "cfgName": "myplugin/fa9da184-28e0-4213-9c07-150be5ee9d90",
+        "id": "8496434855359332353",
+        "name": "Region2",
+        "position": "x:14.408302307129 y:55.704948425293 z:2.0175733566284",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:3.40262 y:4.68991 z:1.96474"
+      }
+    },
+    {
+      "class": "RegionPart",
+      "properties": {
+        "cfgName": "myplugin/1d2c44a4-fa1a-4997-baf2-fd2141c14298",
+        "id": "8496435546932969473",
+        "name": "Region3",
+        "position": "x:7.5158643722534 y:55.926273345947 z:1.9105980396271",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:3.56254 y:4.19811 z:2.17877"
+      }
+    },
+    {
+      "class": "RegionPart",
+      "properties": {
+        "cfgName": "myplugin/cff3d917-daa7-4248-b142-c5f52680df48",
+        "id": "8496435859224756225",
+        "name": "Region4",
+        "position": "x:0.48841089010239 y:55.961971282959 z:1.9505655765533",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:3.45832 y:4.25477 z:2.09886"
+      }
+    },
+    {
+      "class": "RegionPart",
+      "properties": {
+        "cfgName": "myplugin/067b633f-3b1c-4866-8c0f-dfe624b6f0b3",
+        "id": "8496436207629697025",
+        "name": "Region5",
+        "position": "x:-6.4712705612183 y:56.029567718506 z:1.9300718307495",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:3.45192 y:4.18467 z:2.13982"
+      }
+    },
+    {
+      "class": "RegionPart",
+      "properties": {
+        "cfgName": "myplugin/4a40e82f-de41-467e-89b4-23b7b6830ed4",
+        "id": "8496436612999217153",
+        "name": "Region6",
+        "position": "x:-13.575824737549 y:56.058662414551 z:1.9139318466187",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:3.32294 y:4.14105 z:2.17212"
       }
     }
   ],

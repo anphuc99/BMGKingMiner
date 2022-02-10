@@ -7,6 +7,8 @@ local rs,msg = pcall(function ()
         a = true
     end
     print(a)
+    return "babababa"
 end)
 local a = 2/0
 print(rs)
+print(msg)

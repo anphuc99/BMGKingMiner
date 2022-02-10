@@ -3,17 +3,6 @@
   "hideCloud": true,
   "scene": [
     {
-      "class": "RegionPart",
-      "properties": {
-        "cfgName": "myplugin/cee3e013-eb38-4ae8-af77-7b9a2da3e0af",
-        "id": "8476495393343488001",
-        "name": "Region",
-        "position": "x:29.42981338501 y:54.981140136719 z:1.945775270462",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:3.28811 y:3.96125 z:2.01824"
-      }
-    },
-    {
       "class": "Entity",
       "config": "myplugin/Enti_M_Iron",
       "properties": {
@@ -74,7 +63,29 @@
       "properties": {
         "id": "8494852677419270145",
         "name": "entity_Enti_M_Iron",
-        "position": "x:31.440824508667 y:53.0 z:27.474199295044",
+        "position": "x:31.440824508667 y:53 z:27.474199295044",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "RegionPart",
+      "properties": {
+        "cfgName": "myplugin/dc9a6450-224d-4fab-b040-f0ebb05ef6de",
+        "id": "8496427128307548161",
+        "name": "Region",
+        "position": "x:29.570518493652 y:55.100044250488 z:1.3802019357681",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:3.39994 y:4.20007 z:3.16636"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_Effect",
+      "properties": {
+        "id": "8496430481090183169",
+        "name": "Effect",
+        "position": "x:29.43 y:52.9658203125 z:2.26",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }

@@ -6,6 +6,7 @@ function self:onOpen(p)
     local Context = require "script_common.lbr.Context"
     local market = {}
     local typeMk = 1
+    local setMarket
     local function ProductClick(i)
         if typeMk == 1 then
             PackageHandlers.sendClientHandler("getBackPackPlayer", nil, function (bp)
@@ -32,6 +33,24 @@ function self:onOpen(p)
                     end
                 })
             end)  
+        elseif typeMk == 2 then
+            UI:openWindow("MessagerBox",nil,nil,{
+                Text = {"notify_buy",market[i].name},
+                Yes = function (s)
+                    PackageHandlers.sendClientHandler("sellBlackMarket", market[i],function ()
+                        local i = 1
+                        while true do
+                            if self.Image.ScrollableView.GridView["Product" .. i] then
+                                self.Image.ScrollableView.GridView:removeChild(self.Image.ScrollableView.GridView["Product" ..i])
+                                i = i + 1
+                            else
+                                break
+                            end
+                        end
+                        setMarket(2)
+                    end)
+                end
+            })
         elseif typeMk == 4 then
             UI:openWindow("formSale",nil,nil,{
                 onOpen = function (s)
@@ -105,9 +124,10 @@ function self:onOpen(p)
         product.onMouseClick = function() ProductClick(key) end
         self.Image.ScrollableView.GridView:addChild(product)
     end
-    local function setMarket(mk)
+    setMarket = function(mk)
         local mar
         typeMk = mk
+        market = {}
         if mk == 1 then
             mar = BUS_Market:getFleaMaket(p.NPC)
         elseif mk == 4 then
@@ -139,8 +159,7 @@ function self:onOpen(p)
                 end)
             end)
         end        
-        if mk == 1 or mk == 4 then    
-            market = {}        
+        if mk == 1 or mk == 4 then          
             PackageHandlers.sendClientHandler("getBackPackPlayer", nil,
                                               function(BP)
                 local context_BP = Context:new(BP)

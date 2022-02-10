@@ -1,16 +1,26 @@
-local Mines = require "script_common.database.Mines"
+-- local Mines = require "script_common.database.Mines"
+-- local loopy = "map001"
 
 -- Trigger.RegisterHandler(World.cfg, "GAME_START", function(context)
 --     for key, value in pairs(Mines) do
 --         if type(key) == "number" then
---             local map = World.CurWorld:createDynamicMap(value.curMap)
---             local this = map:getRegion(value.gate)
---             print("eeeeeeeeeeeeeeeeeee")            
---             print(Lib.pv(this))
+--             local map = World.CurWorld:createDynamicMap(loopy)            
+--             local this = map:addRegion(Lib.v3(0, 0, 0), Lib.v3(0, 0, 0), "myplugin/"..value.InPosition)
+--             print("hohohohohoohohooo222222222222")
 --             Trigger.RegisterHandler(this.cfg, "REGION_ENTER", function(context)
+--                 print("hohohohohoohohooo")
 --                 local dynamicMap = World.CurWorld:createDynamicMap(value.map, true) 
---                 context.obj1:setMapPos(dynamicMap, Lib.pv(value.x, value.y, value.z))
+--                 context.obj1:setMapPos(dynamicMap, Lib.pv(value.InPosition.x, value.InPosition.y, value.InPosition.z))
 --             end)
 --         end
 --     end
+-- end)
+
+-- Trigger.RegisterHandler(World.cfg, "GAME_START", function()
+--     local map = World.CurWorld.defaultMap
+--     local newRegion = map:addRegion(Lib.v3(0, 0, 0), Lib.v3(0, 0, 0), "myplugin/eb9c52ef-43da-403f-a932-deeebdf57ec1") -- Here " newRegion" is the name of the region cfg fullName
+--     Trigger.RegisterHandler(newRegion.cfg, "REGION_ENTER", function(context) --Register to enter the region callback function
+--         local entity = context.obj1
+--         print("entity enter region !", entity.name)
+--    end)
 -- end)
