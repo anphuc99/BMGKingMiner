@@ -12,6 +12,15 @@ return {
             },
         }
     },
+    {
+        id = 2,
+        Material = {
+            {
+                id = "myplugin/M_Iron",
+                num = 5
+            },
+        }
+    },
     option = {
         primaryKey= "id",
     }

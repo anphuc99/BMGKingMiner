@@ -36,5 +36,5 @@ function self:onOpen(p)
             p.Close(self)
         end
         self:close()
-    end
+    end    
 end

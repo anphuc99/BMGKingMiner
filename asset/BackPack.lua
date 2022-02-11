@@ -11,9 +11,6 @@ function self:onOpen(p)
     local balo
     local player =Blockman.Instance().player
     -- phần balo
-    self.BackPack.InfoBox.Close.onMouseClick = function() 
-        self.BackPack.InfoBox:setVisible(false)
-    end
     self.BackPack.exit.onMouseClick = function() self:close() end
     local function setItem(v, cellNum)
         self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Item:setVisible(true)
@@ -163,6 +160,7 @@ function self:onOpen(p)
     end
     self.BackPack.Info.onMouseClick = function() 
         if lisItem[curClick] then
+            self.BackPack.Blur:setVisible(true)
             self.BackPack.InfoBox:setVisible(true)
             self.BackPack.InfoBox.name:setText(Lang:toText({lisItem[curClick].name}))
             self.BackPack.InfoBox.amount:setText(lisItem[curClick].num)
@@ -178,8 +176,13 @@ function self:onOpen(p)
                 self.BackPack.InfoBox.type:setText(Lang:toText({"typeItem_Vor"})) 
             end  
         else
+            self.BackPack.Blur:setVisible(false)
             self.BackPack.InfoBox:setVisible(false)
         end                      
+    end
+    self.BackPack.Blur.onMouseClick = function ()
+        self.BackPack.InfoBox:setVisible(false)
+        self.BackPack.Blur:setVisible(false)
     end
     -- phần trang bị
     self.BackPack.playerName:setText(player.name)

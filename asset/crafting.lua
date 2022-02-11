@@ -6,8 +6,28 @@ function self:onOpen(p)
   local btnCrafEn = "gameres|asset/Texture/Gui/NutCraft2(C).png"
   local btnCrafdis = "gameres|asset/Texture/Gui/NutCraft1(C.png"
   local postion = 0
+  local createItem
+  local selectClick
   self.select.btnClose.onMouseClick = function ()
       self:close()
+  end
+  createItem = function (key)
+    local item = UI:createStaticImage("item" .. key)
+    item:setImage("gameres|asset/Texture/Gui/Bảng Item craft1.png")
+    item:setSize(UDim2.new(0, 183.56, 0, 183.56))
+    local icon = UI:createStaticImage("icon")
+    icon:setPosition(UDim2.new(0, 48.95, 0, 57.39))
+    icon:setProperty("MousePassThroughEnabled", "true")
+    icon:setSize(UDim2.new(0, 86.01, 0, 86.01))    
+    item:addChild(icon)
+    local blur = UI:createStaticImage("blur")
+    blur:setImage("gameres|asset/Texture/Gui/Làm mờ(C).png")
+    blur:setPosition(UDim2.new(0, 45.91, 0, 53.48))
+    blur:setSize(UDim2.new(0, 91.73, 0, 96.17))
+    blur:setProperty("MousePassThroughEnabled", "true")
+    item:addChild(blur)
+    item.onMouseClick = function() selectClick(key) end
+    self.select.ScrollableView.GridView:addChild(item)
   end
   self.crafting.btnClose.onMouseClick = function ()
       self.crafting.item1:setVisible(false)
@@ -21,12 +41,15 @@ function self:onOpen(p)
       self.crafting.Text4:setVisible(false)
       self.crafting.Text5:setVisible(false)
       self.crafting:setVisible(false)
+      self.select:setVisible(true)
   end
-  local function selectClick(i)
+  selectClick = function(i)
+    self.select:setVisible(false)
     self.crafting:setVisible(true)
-    print(Lib.pv(recId))
+    print("eeeeeeeeeeeeeeeeee")
+    print(Lib.pv(recId[i]))
     local deCraf = BUS_crafting:getDetailCraft(recId[i].recId,Backpack)
-    local img = self.select["item"..i]:getProperty("Image")
+    local img = self.select.ScrollableView.GridView["item"..i].icon:getProperty("Image")
     self.crafting.ItemCf:setImage(img)
     local btnEn = true
     for key, value in pairs(deCraf) do
@@ -44,7 +67,7 @@ function self:onOpen(p)
     else
       self.crafting.btnCraft:setImage(btnCrafdis)      
     end
-    self.select["blur"..i]:setVisible(not btnEn)
+    self.select.ScrollableView.GridView["item"..i].blur:setVisible(not btnEn)
     postion = i
   end
   self.crafting.btnCraft.onMouseClick = function() 
@@ -69,26 +92,39 @@ function self:onOpen(p)
     end
   end
 
-  for i = 1, 6, 1 do
-    self.select["item"..i]:setVisible(false)
-    self.select["item"..i].onMouseClick = function() 
-      selectClick(i)
-    end
-    self.select["blur"..i].onMouseClick = function() 
-      selectClick(i)
-    end
-  end
+  -- for i = 1, 6, 1 do
+  --   self.select["item"..i]:setVisible(false)
+  --   self.select["item"..i].onMouseClick = function() 
+  --     selectClick(i)
+  --   end
+  --   self.select["blur"..i].onMouseClick = function() 
+  --     selectClick(i)
+  --   end
+  -- end
 
   PackageHandlers.sendClientHandler("getBackPackPlayer", nil, function (BP)
     Backpack = BP
     local item = BUS_crafting:getItemCraft(BP)
     for key, value in pairs(item) do      
-      recId[key] = {}
-      recId[key].recId = value.rarity
-      recId[key].show = value.show
-      self.select["item"..key]:setVisible(true)
-      self.select["item"..key]:setImage("gameres|"..value.icon)
-      self.select["blur"..key]:setVisible(not value.show)
+      if value.show then
+        recId[key] = {}
+        recId[key].recId = value.recipe
+        recId[key].show = value.show      
+        createItem(key)
+        self.select.ScrollableView.GridView["item"..key].icon:setImage("gameres|"..value.icon)
+        self.select.ScrollableView.GridView["item"..key].blur:setVisible(not value.show)
+      end
     end
+    for key, value in pairs(item) do      
+      if not value.show then
+        recId[key] = {}
+        recId[key].recId = value.recipe
+        recId[key].show = value.show      
+        createItem(key)
+        self.select.ScrollableView.GridView["item"..key].icon:setImage("gameres|"..value.icon)
+        self.select.ScrollableView.GridView["item"..key].blur:setVisible(not value.show)
+      end
+    end
+    print(Lib.pv(recId))
   end)
 end

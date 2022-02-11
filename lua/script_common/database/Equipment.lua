@@ -14,7 +14,7 @@ return {
         level = 10,
 	    percentage = 70,
 	    rarity = 1,
-	    recipe = 1,
+	    recipe = 0,
         typeEquipment = 1,
     },
 
@@ -23,7 +23,7 @@ return {
         level = 2,
 	    percentage = 70,
 	    rarity = 1,
-	    recipe = 1,
+	    recipe = 0,
         typeEquipment = 1,
     },
 
@@ -32,7 +32,7 @@ return {
         level = 3,
 	    percentage = 70,
 	    rarity = 1,
-	    recipe = 1,
+	    recipe = 0,
         typeEquipment = 1,
     },
 
@@ -41,7 +41,7 @@ return {
         level = 4,
 	    percentage = 70,
 	    rarity = 1,
-	    recipe = 1,
+	    recipe = 0,
         typeEquipment = 1,
     },
 
@@ -50,7 +50,7 @@ return {
         level = 5,
 	    percentage = 70,
 	    rarity = 1,
-	    recipe = 1,
+	    recipe = 0,
         typeEquipment = 1,
     },
 
@@ -59,7 +59,7 @@ return {
         level = 6,
 	    percentage = 70,
 	    rarity = 1,
-	    recipe = 1,
+	    recipe = 0,
         typeEquipment = 1,
     },
 
@@ -68,7 +68,7 @@ return {
         level = 7,
 	    percentage = 70,
 	    rarity = 1,
-	    recipe = 1,
+	    recipe = 0,
         typeEquipment = 1,
     },
 
@@ -77,7 +77,7 @@ return {
         level = 8,
 	    percentage = 70,
 	    rarity = 1,
-	    recipe = 1,
+	    recipe = 0,
         typeEquipment = 1,
     },
 
@@ -86,7 +86,7 @@ return {
         level = 9,
 	    percentage = 70,
 	    rarity = 1,
-	    recipe = 1,
+	    recipe = 0,
         typeEquipment = 1,
     },
 
@@ -94,26 +94,26 @@ return {
         id = "myplugin/P_cup-sat_1",
         level = 1,
 	    percentage = 70,
-	    rarity = 2,
-	    recipe = 1,
+	    rarity = 1,
+	    recipe = 2,
         typeEquipment = 1,
     },
 
     {
         id = "myplugin/P_cup-sat_2",
         level = 2,
-	    percentage = 70,
+	    percentage = 29,
 	    rarity = 2,
-	    recipe = 1,
+	    recipe = 2,
         typeEquipment = 1,
     },
 
     {
         id = "myplugin/P_cup-sat_3",
         level = 3,
-	    percentage = 70,
+	    percentage = 1,
 	    rarity = 3,
-	    recipe = 1,
+	    recipe = 2,
         typeEquipment = 1,
     },
 

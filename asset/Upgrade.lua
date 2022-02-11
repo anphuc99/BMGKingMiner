@@ -6,11 +6,13 @@ function self:onOpen(p)
         self:close()
     end
     self.Image.info.onMouseClick = function() 
-        self.InfoUpgrade:setVisible(true)
+        self.Info:setVisible(true)
+        self.Blur:setVisible(true)
     end
 
-    self.onMouseClick = function() 
-        self.InfoUpgrade:setVisible(false)
+    self.Blur.onMouseClick = function() 
+        self.Info:setVisible(false)
+        self.Blur:setVisible(false)
     end    
 
     self.Image.Item:setImage("gameres|"..p.item.icon)
@@ -47,5 +49,5 @@ function self:onOpen(p)
                
             end)
         end        
-    end
+    end    
 end
