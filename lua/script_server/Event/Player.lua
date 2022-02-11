@@ -243,6 +243,7 @@ PackageHandlers.registerServerHandler("seenBlackMarket", function(player, packet
             blackMarket[#blackMarket+1] = value2
         end      
     end
+    print(Lib.pv(blackMarket))
     local context_blackMarket = Context:new(blackMarket)    
     local data = context_blackMarket:orderByDesc("created_at"):getData()
     print(Lib.pv(data))
@@ -260,14 +261,16 @@ PackageHandlers.registerServerHandler("deleteProduct", function(player, packet)
         local blackMarket = player:getValue("blackMarket")
         local context_blackMarket = Context:new(blackMarket)   
         local item = context_blackMarket:where("created_at",packet.created_at):firstData()
-        Gol.Player[player.objID]:addItemInBalo(item.idItem,item.num)
-        local deleteMK = context_blackMarket:where("created_at","~=",packet.created_at):getData()
-        for key, value in pairs(deleteMK) do
-            if type(key) ~= "number" then
-                value = nil
+        Gol.Player[player.objID]:addItemInBalo(item.idItem,item.num)        
+        for key, value in pairs(blackMarket) do
+            if type(key) == "number" then
+                if value.created_at == packet.created_at then
+                    table.remove( blackMarket, key )         
+                    break
+                end
             end
         end
-        player:setValue("blackMarket", deleteMK)
+        player:setValue("blackMarket", blackMarket)
     else
         messeger(player,{Text = {"messeger_FullBP"}})
     end    
