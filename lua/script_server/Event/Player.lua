@@ -20,7 +20,6 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
     if(not newPlayer) then
         context.obj1:setValue("new", true)
         local proPlayer = context.obj1:getValue("Player")
-        print("ooooooooooooooooooo")
         print(proPlayer.id)
         context.obj1:setValue("Player", proPlayer)
         context.obj1:addItem(cupLv1, 1)        
@@ -257,10 +256,21 @@ PackageHandlers.registerServerHandler("seenMyMarket", function(player, packet)
 end)
 -- xóa sản phẩm
 PackageHandlers.registerServerHandler("deleteProduct", function(player, packet)
-    local blackMarket = player:getValue("blackMarket")
-    local context_blackMarket = Context:new(blackMarket)   
-    local item = context_blackMarket:where("created_at",packet.created_at):firstData()
-    Gol.Player[player.objID]:addItemInBalo(item.idItem,item.num)
+    if Gol.Player[player.objID]:freeBalo() >= 1 then
+        local blackMarket = player:getValue("blackMarket")
+        local context_blackMarket = Context:new(blackMarket)   
+        local item = context_blackMarket:where("created_at",packet.created_at):firstData()
+        Gol.Player[player.objID]:addItemInBalo(item.idItem,item.num)
+        local deleteMK = context_blackMarket:where("created_at","~=",packet.created_at):getData()
+        for key, value in pairs(deleteMK) do
+            if type(key) ~= "number" then
+                value = nil
+            end
+        end
+        player:setValue("blackMarket", deleteMK)
+    else
+        messeger(player,{Text = {"messeger_FullBP"}})
+    end    
 end)
 -- mua sản phẩm chợ đen
 PackageHandlers.registerServerHandler("sellBlackMarket", function(player, packet)

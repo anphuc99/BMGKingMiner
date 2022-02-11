@@ -169,13 +169,19 @@ PlayerClass:create("Player",function ()
         num = num or 2^1023 
         local player = o:getObj()
         local playerItem = player:getValue("PlayerItem")
-        for key, value in pairs(playerItem) do
+        local i = 1
+        while i <= #playerItem do
+            local value = playerItem[i]
             if value.idItem == itemId and value.position == positionItem.balo then
                 value.num = value.num - num
                 if value.num <= 0 then
                     num = math.abs(value.num)
-                    table.remove(playerItem,key)
-                end                
+                    table.remove(playerItem,i)
+                else
+                    i = i + 1
+                end   
+            else
+                i=i+1             
             end
         end
         player:setValue("PlayerItem", playerItem)

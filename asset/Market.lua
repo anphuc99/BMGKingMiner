@@ -51,6 +51,24 @@ function self:onOpen(p)
                     end)
                 end
             })
+        elseif typeMk == 3 then
+            UI:openWindow("MessagerBox",nil,nil,{
+                Text = {"notify_deleteProduct"},
+                Yes = function (s)
+                    PackageHandlers.sendClientHandler("deleteProduct", market[i], function ()
+                        local i = 1
+                        while true do
+                            if self.Image.ScrollableView.GridView["Product" .. i] then
+                                self.Image.ScrollableView.GridView:removeChild(self.Image.ScrollableView.GridView["Product" ..i])
+                                i = i + 1
+                            else
+                                break
+                            end
+                        end
+                        setMarket(3)
+                    end)
+                end
+            })
         elseif typeMk == 4 then
             UI:openWindow("formSale",nil,nil,{
                 onOpen = function (s)

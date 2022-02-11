@@ -43,59 +43,18 @@ Context:create("Context", function()
 
     function o:where(col, operator, value)
         if value == nil then
-            o:where(col, "=", operator)
+            o:where(col, "==", operator)
         else
             local dt = {}
             dt.Index = {}
-            if operator == "=" then
-                for key, value2 in pairs(dataSelect) do
-                    if type(key) == "number" then
-                        if value2[col] == value then
-                            dt[#dt + 1] = dataSelect[key]
-                        end
+            local check = load("return function (val1,val2) return val1 "..operator.." val2 end")()
+            for key, value2 in pairs(dataSelect) do
+                if type(key) == "number" then
+                    if check(value2[col],value) then
+                        dt[#dt + 1] = dataSelect[key]
                     end
                 end
-            elseif operator == ">" then
-                for key, value2 in pairs(dataSelect) do
-                    if type(key) == "number" then
-                        if value2[col] > value then
-                            dt[#dt + 1] = dataSelect[key]
-                        end
-                    end
-                end
-            elseif operator == "<" then
-                for key, value2 in pairs(dataSelect) do
-                    if type(key) == "number" then
-                        if value2[col] < value then
-                            dt[#dt + 1] = dataSelect[key]
-                        end
-                    end
-                end
-            elseif operator == ">=" then
-                for key, value2 in pairs(dataSelect) do
-                    if type(key) == "number" then
-                        if value2[col] >= value then
-                            dt[#dt + 1] = dataSelect[key]
-                        end
-                    end
-                end
-            elseif operator == "<=" then
-                for key, value2 in pairs(dataSelect) do
-                    if type(key) == "number" then
-                        if value2[col] <= value then
-                            dt[#dt + 1] = dataSelect[key]
-                        end
-                    end
-                end
-            elseif operator == "~=" then
-                for key, value2 in pairs(dataSelect) do
-                    if type(key) == "number" then
-                        if value2[col] ~= value then
-                            dt[#dt + 1] = dataSelect[key]
-                        end
-                    end
-                end
-            end
+            end            
             dt.option = dataSelect.option            
             dataSelect = dt
             print(Lib.pv(dataSelect))
