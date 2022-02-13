@@ -1,7 +1,8 @@
 local Gol = require "script_server.Golde_Valiable"
 local this = Entity.GetCfg("myplugin/player1")
 local PlayerModel = require "script_server.Model.Player"
-local cupLv1 = "myplugin/P_cup-go_1"
+local cupLv1 = "myplugin/P_cup_1"
+local cup = "myplugin/P_cup"
 local Context = require "script_common.lbr.Context"
 local deepCopy = require "script_common.lbr.DeepCopyTable"
 local positionItem = require "script_common.positionItem"
@@ -180,8 +181,7 @@ PackageHandlers.registerServerHandler("Upgrate", function(player, packet)
     local context_playerItem = Context:new(playerItem)
     local sumVor = context_playerItem:where("idItem",Vortex[1].id):sum("num")
     local context_equipment = Context:new("Equipment")
-    local context_playerItem = Context:new(playerItem)
-    local itemUpgrate = context_playerItem:where("cellNum",packet.cellNum):firstData() 
+    local itemUpgrate = context_playerItem:where("idItem","find",packet.cup):firstData() 
     local equipment = context_equipment:where("id",itemUpgrate.idItem):firstData()
     local money = Upgrate[equipment.level].money
     if objPlsyer:getMoney() < money then
@@ -211,6 +211,9 @@ PackageHandlers.registerServerHandler("Upgrate", function(player, packet)
         player:setValue("PlayerItem", playerItem)
         objPlsyer:spendMoney(money)
         objPlsyer:removeItemInBalo(Vortex[1].id,5)
+    end
+    if itemUpgrate.position == positionItem.hand then
+        objPlsyer:refreshHand(itemUpgrate.cellNum)
     end
     return true,itemUpgrate
 end)
@@ -312,4 +315,13 @@ PackageHandlers.registerServerHandler("sellBlackMarket", function(player, packet
     else
         return rer
     end
+end)
+
+-- lấy cúp đào người chơi
+PackageHandlers.registerServerHandler("getCup", function(player, packet)
+    local playerItem = player:getValue("PlayerItem")
+    local context_playerItem = Context:new(playerItem)
+    local getCup = context_playerItem:where("idItem","find",cup):firstData()
+    local context_item = Context:new("Item")
+    return context_item:where("id",getCup.idItem):firstData()
 end)

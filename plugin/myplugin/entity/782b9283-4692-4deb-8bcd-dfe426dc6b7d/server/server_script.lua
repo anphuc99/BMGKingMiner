@@ -1,6 +1,4 @@
 Trigger.RegisterHandler(this:cfg(), "ENTITY_CLICK", function(context)
-    PackageHandlers.sendServerHandler(context.obj2, "UI", {UI = "Market", NPC = context.obj1:data("id")})
+    PackageHandlers.sendServerHandler(context.obj2, "UI", {UI = "Market", NPC = 1})
 
 end)
-
-this:setData("id", 1)

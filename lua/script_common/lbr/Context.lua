@@ -47,12 +47,17 @@ Context:create("Context", function()
         else
             local dt = {}
             dt.Index = {}
-            local check = load("return function (val1,val2) return val1 "..operator.." val2 end")()
-            for key, value2 in pairs(dataSelect) do
-                if type(key) == "number" then
-                    if check(value2[col],value) then
-                        dt[#dt + 1] = dataSelect[key]
-                    end
+            local check
+            if operator == "find" then
+                print("eeeeeeeeeee")
+                check = function (val1,val2) local a = string.find( val1,val2,1,true ) return a~= nil end
+            else
+                check = load("return function (val1,val2) return val1 "..operator.." val2 end")()    
+            end
+            
+            for key, value2 in ipairs(dataSelect) do
+                if check(value2[col],value) then
+                    dt[#dt + 1] = dataSelect[key]
                 end
             end            
             dt.option = dataSelect.option            

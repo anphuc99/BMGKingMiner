@@ -46,13 +46,11 @@ function self:onOpen(p)
   selectClick = function(i)
     self.select:setVisible(false)
     self.crafting:setVisible(true)
-    print("eeeeeeeeeeeeeeeeee")
-    print(Lib.pv(recId[i]))
-    local deCraf = BUS_crafting:getDetailCraft(recId[i].recId,Backpack)
+    local deCraf,item = BUS_crafting:getDetailCraft(recId[i].recId,Backpack)
     local img = self.select.ScrollableView.GridView["item"..i].icon:getProperty("Image")
     self.crafting.ItemCf:setImage(img)
     local btnEn = true
-    for key, value in pairs(deCraf) do
+    for key, value in ipairs(deCraf) do
       self.crafting["item"..key]:setVisible(true)
       self.crafting["item"..key]:setImage(value.icon)
       local text = value.BPnum.."/"..value.recNum 
@@ -62,6 +60,13 @@ function self:onOpen(p)
         btnEn = false
       end
     end
+    local text = {}
+    print("oooooooooooooo")
+    print(Lib.pv(item))
+    for index, value in ipairs(item) do      
+      text[#text+1] = value.percentage.."% "..Lang:toText(value.name)
+    end
+    self.crafting.txtpercent:setText(table.concat(text,", "))
     if btnEn then
       self.crafting.btnCraft:setImage(btnCrafEn)
     else
@@ -73,7 +78,7 @@ function self:onOpen(p)
   self.crafting.btnCraft.onMouseClick = function() 
     if recId[postion] and recId[postion].show then
       UI:openWindow("MessagerBox",nil,nil,{
-        Text = "Are you ready crafting?",
+        Text = {"messager_crafting"},
         Yes = function ()
           PackageHandlers.sendClientHandler("crafting", {recId = recId[postion].recId}, function (res)
             if res.rs then

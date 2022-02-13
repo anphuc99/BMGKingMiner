@@ -116,14 +116,17 @@ PlayerClass:create("Player",function ()
             isMining = true
             -- truyền đến UI          
             PackageHandlers.sendServerHandler(obj, "UI", {real_speed = real_speed, UI="thanh dao"})
+            obj:addBuff("myplugin/Buff_DaoKhoan",real_speed)
             -- chạy thời gian thực
             World.Timer(2, function ()
                 if Gol.Material[MaObjID] == nil then
                     isMining = false
                     PackageHandlers.sendServerHandler(obj,"StopMine")
+                    obj:removeBuff("myplugin/Buff_DaoKhoan")
                     return false
                 elseif not isMining then
                     PackageHandlers.sendServerHandler(obj,"StopMine")
+                    obj:removeBuff("myplugin/Buff_DaoKhoan")
                     return false
                 else
                     local plaPos = obj:curBlockPos()
@@ -321,6 +324,35 @@ PlayerClass:create("Player",function ()
 
     function o:getMarket()
         return o:getObj():getValue("blackMarket")
+    end
+
+    function o:refreshHand(...)
+        local slot = {...}
+        local player = o:getObj()
+        local playerItem = player:getValue("PlayerItem")
+        local context_plaeyerItem = Context:new(playerItem)     
+        
+        if #slot == 0 then
+            for i = 1, 9, 1 do
+               pcall(function ()
+                   removeSlotItem(player,i)
+               end)
+            end            
+            local handItem = context_plaeyerItem:where("position",positionItem.hand):getData()
+            for index, value in ipairs(handItem) do
+                addSlotItem(player,value.idItem,value.num,value.cellNum)
+            end
+        else
+            for key, value in pairs(slot) do
+                pcall(function ()
+                    removeSlotItem(player,value)
+                end)
+                print(Lib.pv(playerItem))
+                local item = context_plaeyerItem:where("cellNum",value):where("position",positionItem.hand):firstData()                
+                print(Lib.pv(item))
+                addSlotItem(player,item.idItem,item.num,item.cellNum)
+            end
+        end
     end
     return o
 end)

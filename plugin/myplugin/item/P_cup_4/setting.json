@@ -1,0 +1,22 @@
+{
+  "canAbandon": false,
+  "candrop": false,
+  "canEquipPlural": true,
+  "canUse": false,
+  "equip_skill": [],
+  "equip_skin": {
+    "": ""
+  },
+  "icon": "@asset/Mesh/Green Tailed Pickaxe/g1008_pickaxe_17_18.tga",
+  "itemintroduction": "24a43257-62a9-4d37-990d-5c888260c382",
+  "itemname": "319e174e-525a-4cb3-a448-f6fd64d0dfab",
+  "mesh": "asset/Mesh/Green Tailed Pickaxe/g1008_pickaxe_17.mesh",
+  "needSave": false,
+  "stack_count_max": 1,
+  "syncGameData": {
+    "currentCapacity": true,
+    "extCapacity": true
+  },
+  "trap": false,
+  "tray": []
+}

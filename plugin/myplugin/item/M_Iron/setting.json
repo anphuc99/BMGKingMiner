@@ -7,8 +7,8 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Actor/iron/iron.png",
-  "itemintroduction": "59d78a68-a493-40a2-8982-100bf5ca7c6f",
+  "icon": "@asset/TaiNguyen/Sắt.png",
+  "itemintroduction": "6ad8edf0-624c-4bf0-ad48-a41bb1e4bc37",
   "itemname": "item_M_Iron",
   "needSave": false,
   "stack_count_max": 1,

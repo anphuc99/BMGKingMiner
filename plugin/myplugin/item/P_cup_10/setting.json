@@ -1,0 +1,22 @@
+{
+  "canAbandon": false,
+  "candrop": false,
+  "canEquipPlural": true,
+  "canUse": false,
+  "equip_skill": [],
+  "equip_skin": {
+    "": ""
+  },
+  "icon": "@asset/Mesh/Diamond Pickaxe3/g1008_diamond_weapon_3.tga",
+  "itemintroduction": "3309db78-c536-4202-9211-6c8ccf5eb50b",
+  "itemname": "item_P_cup_10",
+  "mesh": "asset/Mesh/Diamond Pickaxe3/g1008_pickaxe_09.mesh",
+  "needSave": false,
+  "stack_count_max": 1,
+  "syncGameData": {
+    "currentCapacity": true,
+    "extCapacity": true
+  },
+  "trap": false,
+  "tray": []
+}

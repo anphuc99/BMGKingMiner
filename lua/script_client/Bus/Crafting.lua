@@ -34,14 +34,15 @@ function crafting:getDetailCraft(recipeId,BP)
             local context_BP = Context:new(BP)
             local cBP = context_BP:where("id",value.id):sum("num")
             local context_item = Context:new("Item")
-            local item = context_item:where("id",value.id):firstData()
-           
+            local item = context_item:where("id",value.id):firstData()           
             item.BPnum = cBP 
             item.recNum = value.num
             data[#data+1] = item
         end        
     end
-    return data
+    local context_equipment = Context:new("Equipment")
+    local Equipment = context_equipment:where("recipe",recipeId):orderBy("rarity"):getData()
+    return data,Equipment
 end
 
 return crafting

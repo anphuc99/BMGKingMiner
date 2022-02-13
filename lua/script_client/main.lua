@@ -6,3 +6,4 @@ require "script_client.languagePlayer"
 -- end)
 
 UI:openWindow("main")
+

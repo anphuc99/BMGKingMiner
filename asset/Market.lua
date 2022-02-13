@@ -1,4 +1,18 @@
 function self:onOpen(p)
+    -- local AdHelper = Game.GetService("AdHelper")
+    -- print("Eeeeeeeeeeeewwwwwwww")
+    -- AdHelper:defineAdPlace('place1')
+    -- AdHelper:reportAdPlace('place1')
+    -- print(Lib.pv(AdHelper))
+    -- local cancelfunc = AdHelper:videoAd('place1',9,function(videoAdResult,place,index)
+    --     if videoAdResult == AdHelper.VideoAdResult.FINISHED then --Watched successfully
+    --         print('Watch out')
+    --     elseif videoAdResult == AdHelper.VideoAdResult.FAILED then --Watch failed
+    --         print('Watch the failure')
+    --     elseif videoAdResult == AdHelper.VideoAdResult.CLOSE then -- Exit without reading
+    --         print('Exit while watching')
+    --     end
+    -- end)
     local BUS_Market = require "script_client.Bus.Market"
     local tableFeal = "gameres|asset/Texture/Gui/Bảng trống1(2000).png"
     local tableBlack = "gameres|asset/Texture/Gui/Bảng trống2(2000).png"
@@ -146,6 +160,7 @@ function self:onOpen(p)
         local mar
         typeMk = mk
         market = {}
+        self.Image.NoProduct:setVisible(false)
         if mk == 1 then
             mar = BUS_Market:getFleaMaket(p.NPC)
         elseif mk == 4 then
@@ -158,7 +173,16 @@ function self:onOpen(p)
                 requet = "seenMyMarket"
             end
             PackageHandlers.sendClientHandler(requet, nil, function (bMk)
-                PackageHandlers.sendClientHandler("getValuePlayer", nil, function (player)
+                if #bMk == 0 then
+                    self.Image.NoProduct:setVisible(true)
+                    if mk == 2 then
+                        self.Image.NoProduct:setText(Lang:toText({"NoProductBlack"}))
+                    else
+                        self.Image.NoProduct:setText(Lang:toText({"NoProduct"}))
+                    end
+                    return
+                end
+                PackageHandlers.sendClientHandler("getValuePlayer", nil, function (player)                    
                     mar = BUS_Market:getBlackMarket(bMk)
                     print(Lib.pv(player))  
                     for key, value in pairs(mar) do
@@ -179,7 +203,10 @@ function self:onOpen(p)
         end        
         if mk == 1 or mk == 4 then          
             PackageHandlers.sendClientHandler("getBackPackPlayer", nil,
-                                              function(BP)
+            function(BP)
+                if mk ~= 1 and mk ~= 4 then
+                    return
+                end
                 local context_BP = Context:new(BP)
                 local hide = {}
                 local show = {}

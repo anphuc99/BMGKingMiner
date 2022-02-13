@@ -4,17 +4,6 @@
   "scene": [
     {
       "class": "Entity",
-      "config": "myplugin/782b9283-4692-4deb-8bcd-dfe426dc6b7d",
-      "properties": {
-        "id": "8475334063576563713",
-        "name": "NPC",
-        "position": "x:24.690731048584 y:52.999996185303 z:32.721302032471",
-        "rotation": "x:0 y:90.99951171875 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
       "config": "myplugin/Enti_Effect",
       "properties": {
         "id": "8496333773157564417",
@@ -143,6 +132,17 @@
         "position": "x:-13.575824737549 y:56.058662414551 z:1.9139318466187",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:3.32294 y:4.14105 z:2.17212"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/782b9283-4692-4deb-8bcd-dfe426dc6b7d",
+      "properties": {
+        "id": "8499348554944675841",
+        "name": "Shop bán nguyên liệu",
+        "position": "x:25.311000823975 y:53.000022888184 z:32.621318817139",
+        "rotation": "x:0 y:91.996253967285 z:0",
+        "scale": "x:1 y:1 z:1"
       }
     }
   ],

@@ -7,10 +7,9 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Actor/Aqua Blue Egg/egg_8.png",
+  "icon": "@asset/TaiNguyen/Vortex.png",
   "itemintroduction": "c28d2b4d-e9b3-4f12-b0fd-58142fd30aa8",
   "itemname": "item_V_Vortex",
-  "mesh": "asset/Actor/Aqua Blue Egg/egg_8.mesh",
   "needSave": false,
   "stack_count_max": 1,
   "syncGameData": {

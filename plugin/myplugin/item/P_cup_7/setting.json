@@ -1,0 +1,22 @@
+{
+  "canAbandon": false,
+  "candrop": false,
+  "canEquipPlural": true,
+  "canUse": false,
+  "equip_skill": [],
+  "equip_skin": {
+    "": ""
+  },
+  "icon": "@asset/Mesh/Golden Pickaxe3/g1008_golden_weapon_6.tga",
+  "itemintroduction": "2e174b88-bffa-4712-bd90-bb7c78a2252d",
+  "itemname": "item_P_cup_7",
+  "mesh": "asset/Mesh/Golden Pickaxe3/g1008_pickaxe_12.mesh",
+  "needSave": false,
+  "stack_count_max": 1,
+  "syncGameData": {
+    "currentCapacity": true,
+    "extCapacity": true
+  },
+  "trap": false,
+  "tray": []
+}

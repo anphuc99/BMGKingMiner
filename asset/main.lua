@@ -13,20 +13,20 @@ function self:onOpen(p)
         self.Coin.Money:setText(packet.money)
     end)       
     self.Option.Upgrate.onMouseClick = function() 
-        UI:openWindow("BackPack",nil,nil,{
-            onCellClick = function (bp,i,listItem)
-                if listItem[i] == nil then
-                    UI:openWindow("messenger",nil,nil,{Text = "messenger_selectItem"})
-                    return
-                end
-                if listItem[i].typeItem ~= typeItem.Trophy then
-                    UI:openWindow("messenger",nil,nil,{Text = "messenger_selectItem"})
-                    return
-                end
-                UI:openWindow("Upgrade",nil,nil,{item = listItem[i]})                
-                bp:close()
-            end
-        })
+        UI:openWindow("Upgrade")                
+        -- UI:openWindow("BackPack",nil,nil,{
+        --     onCellClick = function (bp,i,listItem)
+        --         if listItem[i] == nil then
+        --             UI:openWindow("messenger",nil,nil,{Text = "messenger_selectItem"})
+        --             return
+        --         end
+        --         if listItem[i].typeItem ~= typeItem.Trophy then
+        --             UI:openWindow("messenger",nil,nil,{Text = "messenger_selectItem"})
+        --             return
+        --         end
+        --         bp:close()
+        --     end
+        -- })
     end
     self.Coin.Money:setText(p.money)
 

@@ -2,126 +2,142 @@ local typeItem = require "script_common.typeItem"
 return {
 
     {
+        id = "myplugin/M_Copper",
+        name ="item_M_Copper",
+        icon = "asset/TaiNguyen/Đồng.png",
+        typeItem = typeItem.Material
+    },
+
+    {
+        id = "myplugin/M_Crystal",
+        name ="item_M_Crystal",
+        icon = "asset/TaiNguyen/Pha lê trắng.png",
+        typeItem = typeItem.Material
+    },
+
+    {
+        id = "myplugin/M_Gold",
+        name ="item_M_Gold",
+        icon = "asset/TaiNguyen/Vàng.png",
+        typeItem = typeItem.Material
+    },
+
+    {
         id = "myplugin/M_Iron",
         name ="item_M_Iron",
-        icon = "asset/Actor/iron/iron.png",
-        typeItem = typeItem.Material,
-        description = "Khoán sắt",
+        icon = "asset/TaiNguyen/Sắt.png",
+        typeItem = typeItem.Material
     },
 
     {
-        id = "myplugin/M_Tree",
-        name ="item_M_Tree",
-        icon = "asset/Texture/Block/cactus_side.png",
-        typeItem = typeItem.Material,
-        description = "Gỗ cây con",
+        id = "myplugin/M_Platium",
+        name ="item_M_Platium",
+        icon = "asset/TaiNguyen/Platin.png",
+        typeItem = typeItem.Material
     },
 
     {
-        id = "myplugin/P_cup-go_1",
-        name ="item_P_cup-go_1",
-        icon = "asset/Mesh/Claw Pickaxe/g1008_pickaxe_13_14.tga",
-        typeItem = typeItem.Trophy,
-        description = "Cúp gỗ lv1",
+        id = "myplugin/M_Titanium",
+        name ="item_M_Titanium",
+        icon = "asset/TaiNguyen/Titan.png",
+        typeItem = typeItem.Material
     },
 
     {
-        id = "myplugin/P_cup-go_10",
-        name ="item_P_cup-go_10",
+        id = "myplugin/M_Tree1",
+        name ="item_M_Tree1",
+        icon = "asset/TaiNguyen/Cây LV1.png",
+        typeItem = typeItem.Material
+    },
+
+    {
+        id = "myplugin/M_Tree2",
+        name ="item_M_Tree2",
+        icon = "asset/TaiNguyen/Cây LV2.png",
+        typeItem = typeItem.Material
+    },
+
+    {
+        id = "myplugin/M_Tree3",
+        name ="item_M_Tree3",
+        icon = "asset/TaiNguyen/Cây LV3.png",
+        typeItem = typeItem.Material
+    },
+
+    {
+        id = "myplugin/P_cup_1",
+        name ="item_P_cup_1",
         icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
-        typeItem = typeItem.Trophy,
-        description = "Cúp kim cương lv10",
+        typeItem = typeItem.Trophy
     },
 
     {
-        id = "myplugin/P_cup-go_2",
-        name ="item_P_cup-go_2",
-        icon = "asset/Mesh/Claw Pickaxe/g1008_pickaxe_13_14.tga",
-        typeItem = typeItem.Trophy,
-        description = "Cúp gỗ lv2",
+        id = "myplugin/P_cup_10",
+        name ="item_P_cup_10",
+        icon = "asset/Mesh/Diamond Pickaxe3/g1008_diamond_weapon_3.tga",
+        typeItem = typeItem.Trophy
     },
 
     {
-        id = "myplugin/P_cup-go_3",
-        name ="item_P_cup-go_3",
+        id = "myplugin/P_cup_2",
+        name ="item_P_cup_2",
         icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
-        typeItem = typeItem.Trophy,
-        description = "Cúp gỗ lv3",
+        typeItem = typeItem.Trophy
     },
 
     {
-        id = "myplugin/P_cup-go_4",
-        name ="item_P_cup-go_4",
-        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
-        typeItem = typeItem.Trophy,
-        description = "Cúp sắt lv4",
-    },
-
-    {
-        id = "myplugin/P_cup-go_5",
-        name ="item_P_cup-go_5",
-        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
-        typeItem = typeItem.Trophy,
-        description = "Cúp sắt lv5",
-    },
-
-    {
-        id = "myplugin/P_cup-go_6",
-        name ="item_P_cup-go_6",
-        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
-        typeItem = typeItem.Trophy,
-        description = "Cúp sắt lv6",
-    },
-
-    {
-        id = "myplugin/P_cup-go_7",
-        name ="item_P_cup-go_7",
-        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
-        typeItem = typeItem.Trophy,
-        description = "Cúp vàng lv7",
-    },
-
-    {
-        id = "myplugin/P_cup-go_8",
-        name ="item_P_cup-go_8",
-        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
-        typeItem = typeItem.Trophy,
-        description = "Cúp vàng lv8",
-    },
-
-    {
-        id = "myplugin/P_cup-go_9",
-        name ="item_P_cup-go_9",
-        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
-        typeItem = typeItem.Trophy,
-        description = "Cúp kim cương lv1",
-    },
-
-    {
-        id = "myplugin/P_cup-sat_1",
-        name ="item_P_cup-sat_1",
+        id = "myplugin/P_cup_3",
+        name ="item_P_cup_3",
         icon = "asset/Mesh/Iron Pickaxe1/g1008_steel_weapon_04.tga",
         typeItem = typeItem.Trophy
     },
 
     {
-        id = "myplugin/P_cup-sat_2",
-        name ="item_P_cup-sat_2",
-        icon = "asset/Mesh/Iron Pickaxe1/g1008_steel_weapon_04.tga",
+        id = "myplugin/P_cup_4",
+        name ="item_P_cup_4",
+        icon = "asset/Mesh/Green Tailed Pickaxe/g1008_pickaxe_17_18.tga",
         typeItem = typeItem.Trophy
     },
 
     {
-        id = "myplugin/P_cup-sat_3",
-        name ="item_P_cup-sat_3",
-        icon = "asset/Mesh/Iron Pickaxe2/g1008_steel_weapon_04.tga",
+        id = "myplugin/P_cup_5",
+        name ="item_P_cup_5",
+        icon = "asset/Mesh/Golden Pickaxe1/g1008_golden_weapon_3.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup_6",
+        name ="item_P_cup_6",
+        icon = "asset/Mesh/Golden Pickaxe2/g1008_golden_weapon_3.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup_7",
+        name ="item_P_cup_7",
+        icon = "asset/Mesh/Golden Pickaxe3/g1008_golden_weapon_6.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup_8",
+        name ="item_P_cup_8",
+        icon = "asset/Mesh/Diamond Pickaxe1/g1008_diamond_weapon_2.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup_9",
+        name ="item_P_cup_9",
+        icon = "asset/Mesh/Diamond Pickaxe2/g1008_diamond_weapon_3.tga",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/V_Vortex",
         name ="item_V_Vortex",
-        icon = "asset/Actor/Aqua Blue Egg/egg_8.png",
+        icon = "asset/TaiNguyen/Vortex.png",
         typeItem = typeItem.Vortex
     },
 

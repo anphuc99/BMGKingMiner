@@ -7,8 +7,8 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "",
-  "itemintroduction": "f87cd6ed-47a8-4371-a26f-41f46471fbb2",
+  "icon": "@asset/TaiNguyen/Cây LV1.png",
+  "itemintroduction": "459b1838-5c20-4276-b554-c836cf27ce78",
   "itemname": "item_M_Tree1",
   "needSave": false,
   "stack_count_max": 1,
