@@ -22,6 +22,7 @@ function self:onOpen(p)
     local typeMk = 1
     local setMarket
     local function ProductClick(i)
+    -- chợ trời
         if typeMk == 1 then
             PackageHandlers.sendClientHandler("getBackPackPlayer", nil, function (bp)
                 local context_bp = Context:new(bp)
@@ -47,6 +48,7 @@ function self:onOpen(p)
                     end
                 })
             end)  
+        -- chợ đen
         elseif typeMk == 2 then
             UI:openWindow("MessagerBox",nil,nil,{
                 Text = {"notify_buy",market[i].name},
@@ -65,6 +67,7 @@ function self:onOpen(p)
                     end)
                 end
             })
+        -- kiểm tra gian hàng chợ đen
         elseif typeMk == 3 then
             UI:openWindow("MessagerBox",nil,nil,{
                 Text = {"notify_deleteProduct"},
@@ -83,6 +86,7 @@ function self:onOpen(p)
                     end)
                 end
             })
+        -- đăng bán hàng chợ đen
         elseif typeMk == 4 then
             UI:openWindow("formSale",nil,nil,{
                 onOpen = function (s)
@@ -189,7 +193,7 @@ function self:onOpen(p)
                         createProduct(key)
                         self.Image.ScrollableView.GridView["Product" .. key]:setVisible(true)
                         self.Image.ScrollableView.GridView["Product" .. key].item:setImage("gameres|" .. value.icon)
-                        self.Image.ScrollableView.GridView["Product" .. key].name:setText(value.name)
+                        self.Image.ScrollableView.GridView["Product" .. key].name:setText(Lang:toText(value.name))
                         self.Image.ScrollableView.GridView["Product" .. key].num:setText(value.price)
                         self.Image.ScrollableView.GridView["Product" .. key].count:setText(value.count)
                         self.Image.ScrollableView.GridView["Product" .. key].block:setVisible(false)
@@ -211,8 +215,7 @@ function self:onOpen(p)
                 local hide = {}
                 local show = {}
                 for key, value in pairs(mar) do
-                    local countitem = context_BP:where("id", value.id)
-                                          :sum("num")
+                    local countitem = context_BP:where("id", value.id):sum("num")
                     if countitem >= 1 then
                         value.count = countitem
                         show[#show+1] = value
@@ -224,7 +227,7 @@ function self:onOpen(p)
                     createProduct(key)
                     self.Image.ScrollableView.GridView["Product" .. key]:setVisible(true)
                     self.Image.ScrollableView.GridView["Product" .. key].item:setImage("gameres|" .. value.icon)
-                    self.Image.ScrollableView.GridView["Product" .. key].name:setText(value.name)
+                    self.Image.ScrollableView.GridView["Product" .. key].name:setText(Lang:toText(value.name))
                     self.Image.ScrollableView.GridView["Product" .. key].num:setText(value.price)
                     self.Image.ScrollableView.GridView["Product" .. key].count:setText(value.count)
                     self.Image.ScrollableView.GridView["Product" .. key].block:setVisible(false)
@@ -235,7 +238,7 @@ function self:onOpen(p)
                     createProduct(key+#show)
                     self.Image.ScrollableView.GridView["Product" ..(key + #show)]:setVisible(true)
                     self.Image.ScrollableView.GridView["Product" ..(key + #show)].item:setImage("gameres|" .. value.icon)
-                    self.Image.ScrollableView.GridView["Product" ..(key + #show)].name:setText(value.name)
+                    self.Image.ScrollableView.GridView["Product" ..(key + #show)].name:setText(Lang:toText(value.name))
                     self.Image.ScrollableView.GridView["Product" ..(key + #show)].num:setText(value.price)
                     self.Image.ScrollableView.GridView["Product" ..(key + #show)].count:setText(0)
                     self.Image.ScrollableView.GridView["Product" ..(key + #show)].block:setVisible(true)

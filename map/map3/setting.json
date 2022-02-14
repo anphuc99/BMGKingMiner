@@ -23,6 +23,94 @@
         "rotation": "x:0 y:0 z:0",
         "scale": "x:3.16083 y:4.11001 z:2.78542"
       }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Copper",
+      "properties": {
+        "id": "8502138717356851201",
+        "name": "entity_Enti_M_Copper",
+        "position": "x:32.292873382568 y:53.000579833984 z:18.4997215271",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Copper",
+      "properties": {
+        "id": "8502138748508684289",
+        "name": "entity_Enti_M_Copper",
+        "position": "x:28.722652435303 y:53 z:24.163053512573",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Copper",
+      "properties": {
+        "id": "8502138793234546689",
+        "name": "entity_Enti_M_Copper",
+        "position": "x:30.832609176636 y:53.000007629395 z:36.95719909668",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Copper",
+      "properties": {
+        "id": "8502138905682542593",
+        "name": "entity_Enti_M_Copper",
+        "position": "x:24.539346694946 y:53.000022888184 z:42.271587371826",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Copper",
+      "properties": {
+        "id": "8502139082542366721",
+        "name": "entity_Enti_M_Copper",
+        "position": "x:32.674049377441 y:58 z:34.624683380127",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Copper",
+      "properties": {
+        "id": "8502139124468383745",
+        "name": "entity_Enti_M_Copper",
+        "position": "x:25.51983833313 y:58.000774383545 z:37.598541259766",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Copper",
+      "properties": {
+        "id": "8502139237899993089",
+        "name": "entity_Enti_M_Copper",
+        "position": "x:35.333446502686 y:53.003242492676 z:39.94832611084",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Copper",
+      "properties": {
+        "id": "8502139297883979777",
+        "name": "entity_Enti_M_Copper",
+        "position": "x:33.501533508301 y:52.999996185303 z:58.622695922852",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
     }
   ],
   "skyBox": [

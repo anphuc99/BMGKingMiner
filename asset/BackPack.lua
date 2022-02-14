@@ -15,8 +15,7 @@ function self:onOpen(p)
     local function setItem(v, cellNum)
         self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Item:setVisible(true)
         self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Image1:setVisible(true)
-        self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Item:setImage("gameres|" ..
-                                                                  v.icon)
+        self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Item:setImage("gameres|" ..v.icon)
         self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Image1.num:setText(v.num)
         hasItem[cellNum] = true
         lisItem[cellNum] = v

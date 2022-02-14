@@ -3,14 +3,14 @@ return {
     {
         id = "myplugin/M_Copper",
         level = 1,
-	    stiffness = 25*20,
+	    stiffness = 15*20,
 	    entityId = "myplugin/Enti_M_Copper",
     },
 
     {
         id = "myplugin/M_Crystal",
         level = 1,
-	    stiffness = 15*20,
+	    stiffness = 25*20,
 	    entityId = "myplugin/Enti_M_Crystal",
     },
 

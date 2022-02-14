@@ -23,6 +23,83 @@
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8502139793435885569",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:23.73247718811 y:53.002117156982 z:17.456560134888",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8502139841305395201",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:39.338356018066 y:53.000003814697 z:21.459878921509",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8502139868545105921",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:38.427761077881 y:53.000007629395 z:24.631187438965",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8502139887027683329",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:36.221786499023 y:53 z:28.888492584229",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8502139926563913729",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:24.146640777588 y:52.999996185303 z:22.373401641846",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8502140070096912385",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:41.957538604736 y:55.008205413818 z:23.454961776733",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8502140212613365761",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:54.46004486084 y:54 z:30.751728057861",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
     }
   ],
   "skyBox": [

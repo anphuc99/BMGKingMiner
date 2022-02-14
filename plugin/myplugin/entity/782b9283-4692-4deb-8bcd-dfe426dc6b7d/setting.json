@@ -1,5 +1,7 @@
 {
-  "_clientScript": [],
+  "_clientScript": [
+    "client/client_script"
+  ],
   "_serverScript": [
     "server/server_script"
   ],

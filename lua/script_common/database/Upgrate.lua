@@ -33,7 +33,7 @@ return {
         lv =7,
         money = 1800,
         percentage = 50,
-        lowLv = {0,2}
+        lowLv = {1,2}
     },
     {
         lv =8,

@@ -23,6 +23,116 @@
         "rotation": "x:0 y:0 z:0",
         "scale": "x:3.2569 y:4.19057 z:3.07868"
       }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8502143697318461441",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:41.585433959961 y:56.726741790771 z:28.699993133545",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8502143921923244033",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:33.415348052979 y:52.999996185303 z:37.703247070312",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8502143981800456193",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:19.002948760986 y:52.999996185303 z:36.063404083252",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8502144000556744705",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:21.275556564331 y:53.00008392334 z:29.905567169189",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8502144079856123905",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:51.566017150879 y:53.003143310547 z:21.423974990845",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8502144188829827073",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:56.189975738525 y:53.000022888184 z:37.700653076172",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8502144301037109249",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:48.811336517334 y:52.999996185303 z:46.670608520508",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8502144356726145025",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:45.773445129395 y:53.000003814697 z:63.080646514893",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8502144465568497665",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:33.539806365967 y:63.999992370605 z:78.780570983887",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8502144622654832641",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:26.58514213562 y:64.999992370605 z:68.227172851562",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
     }
   ],
   "skyBox": [

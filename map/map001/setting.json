@@ -139,9 +139,317 @@
       "config": "myplugin/782b9283-4692-4deb-8bcd-dfe426dc6b7d",
       "properties": {
         "id": "8499348554944675841",
-        "name": "Shop bán nguyên liệu",
+        "name": "entity_782b9283-4692-4deb-8bcd-dfe426dc6b7d",
         "position": "x:25.311000823975 y:53.000022888184 z:32.621318817139",
         "rotation": "x:0 y:91.996253967285 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8502063212526878721",
+        "name": "entity_Enti_M_Tree1",
+        "position": "x:82.240379333496 y:51 z:38.483573913574",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8502063242640261121",
+        "name": "entity_Enti_M_Tree1",
+        "position": "x:73.843315124512 y:50.999996185303 z:38.156997680664",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8502063263539806209",
+        "name": "entity_Enti_M_Tree1",
+        "position": "x:82.488967895508 y:51.000015258789 z:30.321582794189",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8502063288072437761",
+        "name": "entity_Enti_M_Tree1",
+        "position": "x:95.672889709473 y:51.000003814697 z:31.290966033936",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8502063362296791041",
+        "name": "entity_Enti_M_Tree1",
+        "position": "x:95.682968139648 y:51 z:50.452724456787",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8502114985460039681",
+        "name": "entity_Enti_M_Tree2",
+        "position": "x:115.87477111816 y:54 z:-38.602237701416",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8502115021849919489",
+        "name": "entity_Enti_M_Tree2",
+        "position": "x:128.04788208008 y:54.000003814697 z:-19.504161834717",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8502115116030509057",
+        "name": "entity_Enti_M_Tree2",
+        "position": "x:138.78009033203 y:51.000221252441 z:31.027574539185",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8502115132037316609",
+        "name": "entity_Enti_M_Tree2",
+        "position": "x:144.02479553223 y:49.000331878662 z:29.769231796265",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8502115210978115585",
+        "name": "entity_Enti_M_Tree2",
+        "position": "x:147.10334777832 y:51 z:54.479610443115",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8502115295022432257",
+        "name": "entity_Enti_M_Tree2",
+        "position": "x:148.68414306641 y:51.00186920166 z:9.5664911270142",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8502115394198061057",
+        "name": "entity_Enti_M_Tree2",
+        "position": "x:139.49896240234 y:51 z:21.169860839844",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8502117843272564737",
+        "name": "entity_Enti_M_Tree2",
+        "position": "x:144.59515380859 y:53.566974639893 z:70.699996948242",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8502117871821307905",
+        "name": "entity_Enti_M_Tree2",
+        "position": "x:153.29644775391 y:54.000026702881 z:73.139930725098",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8502117999904653313",
+        "name": "entity_Enti_M_Tree2",
+        "position": "x:144.0940246582 y:54 z:-7.5666179656982",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8502118203851800577",
+        "name": "entity_Enti_M_Tree2",
+        "position": "x:128.2417755127 y:54.001201629639 z:78.598342895508",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8502118422473539585",
+        "name": "entity_Enti_M_Tree2",
+        "position": "x:167.57971191406 y:51 z:59.790267944336",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8502118579926827009",
+        "name": "entity_Enti_M_Tree1",
+        "position": "x:100.39817047119 y:51.000061035156 z:37.300258636475",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8502118600023179265",
+        "name": "entity_Enti_M_Tree1",
+        "position": "x:98.647842407227 y:51.000015258789 z:48.500183105469",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8502118687482576897",
+        "name": "entity_Enti_M_Tree1",
+        "position": "x:89.445335388184 y:51.000164031982 z:24.347576141357",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8502118719484755969",
+        "name": "entity_Enti_M_Tree1",
+        "position": "x:88.475570678711 y:50.999996185303 z:21.256832122803",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8502118776235376641",
+        "name": "entity_Enti_M_Tree1",
+        "position": "x:79.371597290039 y:51.000896453857 z:25.337627410889",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8502118795144806401",
+        "name": "entity_Enti_M_Tree1",
+        "position": "x:77.238975524902 y:51.000015258789 z:25.463861465454",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree3",
+      "properties": {
+        "id": "8502121957182095361",
+        "name": "entity_Enti_M_Tree3",
+        "position": "x:106.53078460693 y:54 z:102.17906188965",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree3",
+      "properties": {
+        "id": "8502121996151848961",
+        "name": "entity_Enti_M_Tree3",
+        "position": "x:120.9806137085 y:53.988891601562 z:91.575706481934",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree3",
+      "properties": {
+        "id": "8502122140794388481",
+        "name": "entity_Enti_M_Tree3",
+        "position": "x:135.66201782227 y:54 z:-1.4442944526672",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree3",
+      "properties": {
+        "id": "8502122293896495105",
+        "name": "entity_Enti_M_Tree3",
+        "position": "x:95.586227416992 y:54.000022888184 z:-41.704372406006",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree3",
+      "properties": {
+        "id": "8502122454349053953",
+        "name": "entity_Enti_M_Tree3",
+        "position": "x:172.84544372559 y:54.000003814697 z:70.869888305664",
+        "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     }
