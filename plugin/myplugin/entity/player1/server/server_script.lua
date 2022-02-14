@@ -13,8 +13,9 @@ local PlayerProperty = {
 this.addValueDef("PlayerItem", {
     {idPlayer = this.platformUserId, idItem = cupLv1,cellNum = 1, num = 1, position = positionItem.hand, lv = 1},
     {idPlayer = this.platformUserId, idItem = "myplugin/V_Vortex",cellNum = 1, num = 10000, position = positionItem.balo},
-    -- {idPlayer = this.platformUserId, idItem = "myplugin/P_cup-sat_1",cellNum = 1, num = 1, position = positionItem.balo},
-    -- {idPlayer = this.platformUserId, idItem = "myplugin/P_cup-sat_2",cellNum = 2, num = 1, position = positionItem.balo},
+    {idPlayer = this.platformUserId, idItem = "myplugin/H_non_1_2",cellNum = 1, num = 1, position = positionItem.balo},
+    {idPlayer = this.platformUserId, idItem = "myplugin/S_ao_1_2",cellNum = 2, num = 1, position = positionItem.balo},
+    {idPlayer = this.platformUserId, idItem = "myplugin/T_quan_1_2",cellNum = 3, num = 1, position = positionItem.balo},
 }, false, false, true, false)
 this.addValueDef("Player", PlayerProperty, false, false, true, false)
 this.addValueDef("blackMarket", {}, false, false, true, false)

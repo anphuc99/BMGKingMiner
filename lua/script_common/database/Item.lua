@@ -140,6 +140,42 @@ return {
         icon = "asset/TaiNguyen/Vortex.png",
         typeItem = typeItem.Vortex
     },
+    {
+        id = "myplugin/H_non_1_1",
+        name ="item_H_non_1_1",
+        icon = "asset/TrangBi/Nón1.png",
+        typeItem = typeItem.Vortex
+    },
+    {
+        id = "myplugin/H_non_1_2",
+        name ="item_H_non_1_2",
+        icon = "asset/TrangBi/Nón1.png",
+        typeItem = typeItem.Vortex
+    },
+    {
+        id = "myplugin/S_ao_1_1",
+        name ="item_S_ao_1_1",
+        icon = "asset/TrangBi/Giáp1.png",
+        typeItem = typeItem.Vortex
+    },
+    {
+        id = "myplugin/S_ao_1_2",
+        name ="item_S_ao_1_2",
+        icon = "asset/TrangBi/Giáp1.png",
+        typeItem = typeItem.Vortex
+    },
+    {
+        id = "myplugin/T_quan_1_1",
+        name ="item_T_quan_1_1",
+        icon = "asset/TrangBi/Quần1.png",
+        typeItem = typeItem.Vortex
+    },
+    {
+        id = "myplugin/T_quan_1_2",
+        name ="item_T_quan_1_1",
+        icon = "asset/TrangBi/Quần1.png",
+        typeItem = typeItem.Vortex
+    },
 
     option = {
         primaryKey = "id",        

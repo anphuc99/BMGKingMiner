@@ -28,8 +28,6 @@ function self:onOpen(p)
         --     end
         -- })
     end
-    self.Coin.Money:setText(p.money)
-
     -- self.openOption.onMouseClick = function() 
     --     local i = 0
     --     local up = 620/50
