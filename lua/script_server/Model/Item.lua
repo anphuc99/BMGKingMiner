@@ -4,7 +4,7 @@ local positionItem = require "script_common.positionItem"
 local TypeItem = require "script_common.typeItem"
 local messenger = require "script_server.Helper.SendMesseger"
 local Gol = require "script_server.Golde_Valiable"
-local lg = require "script_common.language"
+local lang = require "script_server.lbr.lang"
 local Item = class()
 Item:create("Item", function()
     local o = {}
@@ -52,7 +52,7 @@ Item:create("Item", function()
             local checkItem = context_player:where("position",positionItem.balo):where("idItem", id):firstData()
             if typeItem ~= TypeItem.Equipment and checkItem ~= nil then
                 checkItem.num = checkItem.num + num
-                Player:setValue("PlayerItem", playerItem)
+                Player:setValue("PlayerItem", playerItem)                
             else
                 local rs = false
                 for i = 1, idPlayer.balo, 1 do
@@ -74,7 +74,7 @@ Item:create("Item", function()
                 if not rs then
                     local language = Gol.Player[Player.objID]:getLanguage()
                     print(language)
-                    messenger(Player,{Text = {"messeger_FullBP",1}, Color = {r = 255, g = 0, b = 0}})
+                    messenger(Player,{Text = {"messeger_FullBP",1}, Color = {r = 255, g = 0, b = 0}})                                    
                 end
                 return rs
             end

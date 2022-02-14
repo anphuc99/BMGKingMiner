@@ -5,5 +5,3 @@ end)
 PackageHandlers.registerClientHandler("Player_enter", function(player, packet)
     PackageHandlers.sendClientHandler("setLanguage", {lang = Lang:toText("lang")})
 end)
-
-

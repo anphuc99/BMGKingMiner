@@ -1,5 +1,4 @@
 function self:onOpen(p)
-    print(Lib.pv(p))
     local typeItem = require "script_common.typeItem"
     -- local Option = true
     self.Option.OpenBP.onMouseClick = function() 

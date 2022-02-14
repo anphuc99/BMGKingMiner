@@ -31,6 +31,7 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
         PlayerObj:setLastLogin(os.time())        
         PackageHandlers.sendServerHandler(context.obj1, "setMoney", { money = PlayerObj:getMoney()})
     end
+    PackageHandlers.sendServerHandler(context.obj1, "Player_enter", nil)
 end)
 Trigger.RegisterHandler(this, "ENTITY_LEAVE", function(context)
     Gol.Player[context.objID] = nil
@@ -208,7 +209,7 @@ PackageHandlers.registerServerHandler("Upgrate", function(player, packet)
             lv[3] = math.ceil(lv[3] - Upgrate[equipment.level].lowLv[math.random(1,2)])
             itemUpgrate.idItem = table.concat(lv,"_")
             local cache = UserInfoCache.GetCache(player.platformUserId)
-            player:sendTip(1,"Nâng cấp thất bại đã giảm xuống cấp"..lv[3])
+            player:sendTip(1,lang(player,{"messager_failUpgrate",lv[3]}))
         end        
         print(Lib.pv(playerItem))
         player:setValue("PlayerItem", playerItem)
@@ -235,7 +236,7 @@ PackageHandlers.registerServerHandler("publishBlackMarket", function(player, pac
     blackMarket[#blackMarket+1] = packet
     player:setValue("blackMarket", blackMarket)
     Gol.Player[player.objID]:removeItemInBalo(packet.idItem,packet.count)
-    player:sendTip(1, "Đăng sản phẩm thành công")
+    player:sendTip(1, lang(player,{"messager_publishProduct"}))
     return true
 end)
 -- xem sản phẩm ở chợ đen

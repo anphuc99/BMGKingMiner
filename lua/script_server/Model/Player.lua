@@ -11,6 +11,7 @@ local removeSlotItem = require "script_server.lbr.removeSlotItem"
 local TypeItem = require "script_common.typeItem"
 local lg = require "script_common.language"
 local Vortex = require "script_common.database.Vortex"
+local lang = require "script_server.lbr.lang"
 local PlayerClass = class()
 PlayerClass:create("Player",function ()
     local o = {}
@@ -138,7 +139,7 @@ PlayerClass:create("Player",function ()
                         return false
                     end
                     if real_speed <= 0 then
-                        if o:endMine(MaterialModel) then
+                        if o:endMine(MaterialModel:getId()) then
                             MaObj:kill(obj, "hit")
                         end                         
                         PackageHandlers.sendServerHandler(obj,"StopMine")
@@ -153,8 +154,8 @@ PlayerClass:create("Player",function ()
             isMining = false 
         end        
     end
-    function o:endMine(MaterialModel)
-        local rs = MaterialModel:addToPlayer(o:getObj())
+    function o:endMine(itemid)
+        local rs = o:addItemInBalo(itemid,1)
         local rd = math.random(1,100) 
         for key, value in pairs(Vortex) do
             if type(key) == "number" then
@@ -209,7 +210,11 @@ PlayerClass:create("Player",function ()
         local context_item = Context:new("Item")
         local itemData = context_item:where("id",itemId):firstData()
         local itemObj = Item:new(itemData)
-        return itemObj:addToPlayer(o:getObj(),num)
+        if itemObj:addToPlayer(o:getObj(),num) then
+            messenger(o:getObj(), {Text = {"messager_addItem",num,itemData.name}, Color = {r=0,g=0,b=0}})
+            return true
+        end
+        return false
     end
     function o:freeBalo()
         local playerItem = o:getObj():getValue("PlayerItem")
