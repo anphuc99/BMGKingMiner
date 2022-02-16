@@ -5,28 +5,26 @@ local positionItem = require "script_common.positionItem"
 local Item = require "script_server.Model.Item"
 local typeItem = require "script_common.typeItem"
 local messenger = require "script_server.Helper.SendMesseger"
-local Language = require "script_common.language"
 local addSlotItem = require "script_server.lbr.addSlotItem"
 local removeSlotItem = require "script_server.lbr.removeSlotItem"
 local TypeItem = require "script_common.typeItem"
-local lg = require "script_common.language"
 local Vortex = require "script_common.database.Vortex"
-local lang = require "script_server.lbr.lang"
+-- local lang = require "script_server.lbr.lang"
 local PlayerClass = class()
 PlayerClass:create("Player",function ()
     local o = {}
     local id
     local isMining = false
 
-    function o:getLanguage()        
-        return o:getObj():getValue("Player").language
-    end
-    function o:setLanguage(_language)
-        local player = o:getObj()
-        local proPlayer = player:getValue("Player")
-        proPlayer.language = _language
-        player:setValue("Player", proPlayer)
-    end
+    -- function o:getLanguage()        
+    --     return o:getObj():getValue("Player").language
+    -- end
+    -- function o:setLanguage(_language)
+    --     local player = o:getObj()
+    --     local proPlayer = player:getValue("Player")
+    --     proPlayer.language = _language
+    --     player:setValue("Player", proPlayer)
+    -- end
 
     function o:getMoney()
         return o:getObj():getValue("Player").money

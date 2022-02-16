@@ -4,7 +4,7 @@ local positionItem = require "script_common.positionItem"
 local TypeItem = require "script_common.typeItem"
 local messenger = require "script_server.Helper.SendMesseger"
 local Gol = require "script_server.Golde_Valiable"
-local lang = require "script_server.lbr.lang"
+-- local lang = require "script_server.lbr.lang"
 local Item = class()
 Item:create("Item", function()
     local o = {}

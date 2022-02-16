@@ -1,133 +1,133 @@
     <GUILayout version="4">
-        <Window type="DefaultWindow" name="Root">
-            <Property value="{{0,0},{0,0},{1,0},{1,0}}" name="Area">
+        <Window name="Root" type="DefaultWindow">
+            <Property name="Area" value="{{0,0},{0,0},{1,0},{1,0}}">
 
             </Property>
-            <Property value="{{999,0},{999,0}}" name="MaxSize">
+            <Property name="MaxSize" value="{{999,0},{999,0}}">
 
             </Property>
-            <Property value="1" name="Alpha">
+            <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
 
             </Property>
-            <Property value="Top" name="VerticalAlignment">
+            <Property name="MousePassThroughEnabled" value="true">
 
             </Property>
-            <Property value="0.5" name="PivotX">
+            <Property name="Alpha" value="1">
 
             </Property>
-            <Property value="w:1.0 x:0.0 y:0.0 z:0.0" name="Rotation">
+            <Property name="Disabled" value="false">
 
             </Property>
-            <Property value="false" name="Disabled">
+            <Property name="HorizontalAlignment" value="Centre">
 
             </Property>
-            <Property value="Centre" name="HorizontalAlignment">
+            <Property name="ClippedByParent" value="false">
 
             </Property>
-            <Property value="true" name="Visible">
+            <Property name="PivotX" value="0.5">
 
             </Property>
-            <Property value="true" name="MousePassThroughEnabled">
+            <Property name="VerticalAlignment" value="Top">
 
             </Property>
-            <Property value="0.5" name="PivotY">
+            <Property name="Visible" value="true">
 
             </Property>
-            <Property value="false" name="ClippedByParent">
+            <Property name="PivotY" value="0.5">
 
             </Property>
-              <Window type="WindowsLook/StaticText" name="Text">
-                  <Property value="{{0,0},{0,110.35},{0,883.48},{0,136.91}}" name="Area">
+              <Window name="Text" type="WindowsLook/StaticText">
+                  <Property name="Area" value="{{0,0},{0,110.35},{0.5,0},{0,134.78390655518}}">
 
                   </Property>
-                  <Property value="{{999,0},{999,0}}" name="MaxSize">
+                  <Property name="MaxSize" value="{{999,0},{999,0}}">
 
                   </Property>
-                  <Property value="14" name="Font_size">
+                  <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
 
                   </Property>
-                  <Property value="true" name="word_warpped">
+                  <Property name="word_warpped" value="false">
 
                   </Property>
-                  <Property value="ffffffff" name="BorderColor">
+                  <Property name="Alpha" value="1">
 
                   </Property>
-                  <Property value="Centre" name="HorizontalAlignment">
+                  <Property name="Disabled" value="false">
 
                   </Property>
-                  <Property value="1" name="Alpha">
+                  <Property name="VertFormatting" value="TopAligned">
 
                   </Property>
-                  <Property value="true" name="BackgroundEnabled">
+                  <Property name="Text" value="Here is text">
 
                   </Property>
-                  <Property value="Top" name="VerticalAlignment">
+                  <Property name="MinAutoTextScale" value="8">
 
                   </Property>
-                  <Property value="0.5" name="PivotX">
+                  <Property name="AutoTextScale" value="false">
 
                   </Property>
-                  <Property value="0" name="AutoScale">
+                  <Property name="PivotX" value="0.5">
 
                   </Property>
-                  <Property value="true" name="MousePassThroughEnabled">
+                  <Property name="Font" value="DroidSans-14">
 
                   </Property>
-                  <Property value="false" name="Disabled">
+                  <Property name="VerticalAlignment" value="Top">
 
                   </Property>
-                  <Property value="ffff0000" name="TextColours">
+                  <Property name="TextBoldWeight" value="0">
 
                   </Property>
-                  <Property value="TopAligned" name="VertFormatting">
+                  <Property name="PivotY" value="0.5">
 
                   </Property>
-                  <Property value="false" name="ClippedByParent">
+                  <Property name="BackgroundEnabled" value="true">
 
                   </Property>
-                  <Property value="DroidSans-14" name="Font">
+                  <Property name="BorderWidth" value="0">
 
                   </Property>
-                  <Property value="ffffffff" name="BackgroundColours">
+                  <Property name="BorderEnable" value="false">
 
                   </Property>
-                  <Property value="WordWrapCentreAligned" name="HorzFormatting">
+                  <Property name="ClippedByParent" value="false">
 
                   </Property>
-                  <Property value="0" name="TextBoldWeight">
+                  <Property name="BackgroundColours" value="ffffffff">
 
                   </Property>
-                  <Property value="false" name="BorderEnable">
+                  <Property name="TextWordBreak" value="false">
 
                   </Property>
-                  <Property value="0" name="BorderWidth">
+                  <Property name="HorzFormatting" value="CentreAligned">
 
                   </Property>
-                  <Property value="w:1.0 x:0.0 y:0.0 z:0.0" name="Rotation">
+                  <Property name="AutoScale" value="0">
 
                   </Property>
-                  <Property value="false" name="TextWordBreak">
+                  <Property name="FrameEnabled" value="true">
 
                   </Property>
-                  <Property value="8" name="MinAutoTextScale">
+                  <Property name="TextColours" value="ffff0000">
 
                   </Property>
-                  <Property value="true" name="Visible">
+                  <Property name="MousePassThroughEnabled" value="true">
 
                   </Property>
-                  <Property value="ffffffff" name="FrameColours">
+                  <Property name="FrameColours" value="ffffffff">
 
                   </Property>
-                  <Property value="0.5" name="PivotY">
+                  <Property name="BorderColor" value="ffffffff">
 
                   </Property>
-                  <Property value="Here is text" name="Text">
+                  <Property name="Visible" value="true">
 
                   </Property>
-                  <Property value="true" name="FrameEnabled">
+                  <Property name="HorizontalAlignment" value="Centre">
 
                   </Property>
-                  <Property value="false" name="AutoTextScale">
+                  <Property name="Font_size" value="14">
 
                   </Property>
               </Window>

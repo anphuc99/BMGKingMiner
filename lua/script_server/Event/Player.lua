@@ -8,11 +8,10 @@ local deepCopy = require "script_common.lbr.DeepCopyTable"
 local positionItem = require "script_common.positionItem"
 local SlotBalo = require "script_common.SlotBalo"
 local messeger = require "script_server.Helper.SendMesseger"
-local Language = require "script_common.language"
 local split = require "script_common.lbr.split"
 local Upgrate = require "script_common.database.Upgrate"
 local Vortex = require "script_common.database.Vortex"
-local lang = require "script_server.lbr.lang"
+-- local lang = require "script_server.lbr.lang"
 
 Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
     local PlayerObj = PlayerModel:new(context.obj1.objID)
@@ -117,10 +116,10 @@ PackageHandlers.registerServerHandler("OpenCellNum", function(player, packet)
     return rs
 end)
 -- cài đặt ngôn ngữ
-PackageHandlers.registerServerHandler("setLanguage", function(player, packet)
-    print("eeeeeeeeeeewwwwwwwwwwwwwwwwwwwwwww")
-    player:setData("lang", packet.lang)
-end)
+-- PackageHandlers.registerServerHandler("setLanguage", function(player, packet)
+--     print("eeeeeeeeeeewwwwwwwwwwwwwwwwwwwwwww")
+--     player:setData("lang", packet.lang)
+-- end)
 -- chế tạo trang bị
 PackageHandlers.registerServerHandler("crafting", function(player, packet)
     local objPlayer = Gol.Player[player.objID]
@@ -203,13 +202,15 @@ PackageHandlers.registerServerHandler("Upgrate", function(player, packet)
             local lv = split(itemUpgrate.idItem,"_") 
             lv[3] = math.ceil(lv[3] + 1)
             itemUpgrate.idItem = table.concat(lv,"_")
-            player:sendTip(1,lang(player,{"messager_upgrate",lv[3]}))
+            messeger(player,{Text = {"messager_upgrate",lv[3]}, Color = {r=0,b=0,g=0}})
+            -- player:sendTip(1,lang(player,{"messager_upgrate",lv[3]}))
         else
             local lv = split(itemUpgrate.idItem,"_") 
             lv[3] = math.ceil(lv[3] - Upgrate[equipment.level].lowLv[math.random(1,2)])
             itemUpgrate.idItem = table.concat(lv,"_")
             local cache = UserInfoCache.GetCache(player.platformUserId)
-            player:sendTip(1,lang(player,{"messager_failUpgrate",lv[3]}))
+            messeger(player,{Text = {"messager_failUpgrate",lv[3]}, Color = {r=0,b=0,g=0}})
+            -- player:sendTip(1,lang(player,{"messager_failUpgrate",lv[3]}))
         end        
         print(Lib.pv(playerItem))
         player:setValue("PlayerItem", playerItem)
@@ -236,7 +237,8 @@ PackageHandlers.registerServerHandler("publishBlackMarket", function(player, pac
     blackMarket[#blackMarket+1] = packet
     player:setValue("blackMarket", blackMarket)
     Gol.Player[player.objID]:removeItemInBalo(packet.idItem,packet.count)
-    player:sendTip(1, lang(player,{"messager_publishProduct"}))
+    messeger(player,{Text = {"messager_publishProduct"}, Color = {r=0,b=0,g=0}})
+    -- player:sendTip(1, lang(player,{"messager_publishProduct"}))
     return true
 end)
 -- xem sản phẩm ở chợ đen

@@ -103,7 +103,7 @@
     },
     "useGroup": "_imagesets_"
   },
-  "maxPlayers": 5,
+  "maxPlayers": 20,
   "minPlayers": 1,
   "moveStateConfig": {
     "isShow": false

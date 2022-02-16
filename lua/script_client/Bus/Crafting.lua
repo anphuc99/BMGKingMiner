@@ -1,5 +1,5 @@
 local Context = require "script_common.lbr.Context"
-local Recipe = require "script_common.database.Recipe"
+local Recipe = require "script_common.database.recipe"
 local crafting = {}
 -- lấy các vật phẩm hiển thị công thức
 function crafting:getItemCraft(BP)
