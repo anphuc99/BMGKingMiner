@@ -1,5 +1,5 @@
 {
-  "canBreak": true,
+  "canBreak": false,
   "hideCloud": true,
   "skyBox": [
     {

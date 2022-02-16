@@ -151,7 +151,7 @@
       "properties": {
         "id": "8502063212526878721",
         "name": "entity_Enti_M_Tree1",
-        "position": "x:82.240379333496 y:51 z:38.483573913574",
+        "position": "x:82.240379333496 y:50.999938964844 z:45.80358505249",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -162,7 +162,7 @@
       "properties": {
         "id": "8502063242640261121",
         "name": "entity_Enti_M_Tree1",
-        "position": "x:73.843315124512 y:50.999996185303 z:38.156997680664",
+        "position": "x:73.843315124512 y:50.999961853027 z:42.907001495361",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -173,18 +173,7 @@
       "properties": {
         "id": "8502063263539806209",
         "name": "entity_Enti_M_Tree1",
-        "position": "x:82.488967895508 y:51.000015258789 z:30.321582794189",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/Enti_M_Tree1",
-      "properties": {
-        "id": "8502063288072437761",
-        "name": "entity_Enti_M_Tree1",
-        "position": "x:95.672889709473 y:51.000003814697 z:31.290966033936",
+        "position": "x:82.488967895508 y:50.999954223633 z:36.681579589844",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -195,7 +184,7 @@
       "properties": {
         "id": "8502063362296791041",
         "name": "entity_Enti_M_Tree1",
-        "position": "x:95.682968139648 y:51 z:50.452724456787",
+        "position": "x:95.682968139648 y:50.999961853027 z:59.362731933594",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -218,28 +207,6 @@
         "id": "8502115021849919489",
         "name": "entity_Enti_M_Tree2",
         "position": "x:128.04788208008 y:54.000003814697 z:-19.504161834717",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/Enti_M_Tree2",
-      "properties": {
-        "id": "8502115116030509057",
-        "name": "entity_Enti_M_Tree2",
-        "position": "x:138.78009033203 y:51.000221252441 z:31.027574539185",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/Enti_M_Tree2",
-      "properties": {
-        "id": "8502115132037316609",
-        "name": "entity_Enti_M_Tree2",
-        "position": "x:144.02479553223 y:49.000331878662 z:29.769231796265",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -371,7 +338,7 @@
       "properties": {
         "id": "8502118719484755969",
         "name": "entity_Enti_M_Tree1",
-        "position": "x:88.475570678711 y:50.999996185303 z:21.256832122803",
+        "position": "x:88.475570678711 y:50.999908447266 z:3.0568332672119",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -393,7 +360,7 @@
       "properties": {
         "id": "8502118795144806401",
         "name": "entity_Enti_M_Tree1",
-        "position": "x:77.238975524902 y:51.000015258789 z:25.463861465454",
+        "position": "x:80.768981933594 y:50.999942779541 z:18.333862304688",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -449,6 +416,281 @@
         "id": "8502122454349053953",
         "name": "entity_Enti_M_Tree3",
         "position": "x:172.84544372559 y:54.000003814697 z:70.869888305664",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8503778781494968321",
+        "name": "Small Tree (LV1)",
+        "position": "x:95.56810760498 y:51.000049591064 z:-11.981578826904",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8503778957056016385",
+        "name": "Small Tree (LV1)",
+        "position": "x:85.861778259277 y:51.009803771973 z:-16.303686141968",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8503778994454790145",
+        "name": "Small Tree (LV1)",
+        "position": "x:72.044692993164 y:51.000648498535 z:-18.862684249878",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8503779043679191041",
+        "name": "Small Tree (LV1)",
+        "position": "x:72.279861450195 y:51.005802154541 z:75.882369995117",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8503779060781662209",
+        "name": "Small Tree (LV1)",
+        "position": "x:86.021362304688 y:50.994892120361 z:79.79515838623",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8503779073844838401",
+        "name": "Small Tree (LV1)",
+        "position": "x:97.497817993164 y:51.000381469727 z:78.785949707031",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8503779102584127489",
+        "name": "Small Tree (LV1)",
+        "position": "x:110.44194030762 y:51.000114440918 z:76.107780456543",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8503787027092930561",
+        "name": "Big tree (LV2)",
+        "position": "x:73.096168518066 y:54.0 z:-42.682395935059",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8503787288163221505",
+        "name": "Big tree (LV2)",
+        "position": "x:93.599403381348 y:54.006469726563 z:102.266456604",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8503787341337214977",
+        "name": "Big tree (LV2)",
+        "position": "x:81.110595703125 y:54.006385803223 z:100.98796844482",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8503787642735214593",
+        "name": "Big tree (LV2)",
+        "position": "x:135.46138000488 y:54.00008392334 z:60.686855316162",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8503787745359052801",
+        "name": "Big tree (LV2)",
+        "position": "x:152.07766723633 y:54.000045776367 z:-5.6010360717773",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8503787922968838145",
+        "name": "Big tree (LV2)",
+        "position": "x:137.54035949707 y:54.000022888184 z:4.4831867218018",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8503788110474149889",
+        "name": "Big tree (LV2)",
+        "position": "x:140.41014099121 y:51.00182723999 z:44.507099151611",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree3",
+      "properties": {
+        "id": "8503788344014323713",
+        "name": "Old tree (LV3)",
+        "position": "x:177.21394348145 y:54.0 z:-8.8576412200928",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree3",
+      "properties": {
+        "id": "8503788396631015425",
+        "name": "Old tree (LV3)",
+        "position": "x:186.52079772949 y:54.003120422363 z:-8.3730430603027",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree3",
+      "properties": {
+        "id": "8503788540977250305",
+        "name": "Old tree (LV3)",
+        "position": "x:185.84869384766 y:58.000492095947 z:70.876525878906",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8503791043400548353",
+        "name": "Small Tree (LV1)",
+        "position": "x:104.08940124512 y:53.000160217285 z:0.99017685651779",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8503791117017333761",
+        "name": "Small Tree (LV1)",
+        "position": "x:92.58837890625 y:53.002365112305 z:42.649608612061",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8503791140507680769",
+        "name": "Small Tree (LV1)",
+        "position": "x:117.74105834961 y:52.000007629395 z:43.0520362854",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8503791172409294849",
+        "name": "Small Tree (LV1)",
+        "position": "x:118.49166107178 y:51.009506225586 z:1.1946256160736",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8503791184192028673",
+        "name": "Small Tree (LV1)",
+        "position": "x:111.15383911133 y:51.0 z:-6.572437286377",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree1",
+      "properties": {
+        "id": "8503791250891194369",
+        "name": "Small Tree (LV1)",
+        "position": "x:121.04894256592 y:50.982612609863 z:56.595344543457",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8503793444802363393",
+        "name": "Big tree (LV2)",
+        "position": "x:189.78274536133 y:53.999996185303 z:-1.241406917572",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Tree2",
+      "properties": {
+        "id": "8503793516783566849",
+        "name": "Big tree (LV2)",
+        "position": "x:190.41519165039 y:54.001605987549 z:63.48611831665",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
