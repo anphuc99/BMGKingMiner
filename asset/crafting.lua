@@ -45,6 +45,7 @@ function self:onOpen(p)
         self.select:setVisible(true)
     end
     selectClick = function(i)
+      
       self.select:setVisible(false)
       self.crafting:setVisible(true)
       local deCraf,item = BUS_crafting:getDetailCraft(recId[i].recId,Backpack)

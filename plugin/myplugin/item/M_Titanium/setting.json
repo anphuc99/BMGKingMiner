@@ -11,7 +11,7 @@
   "itemintroduction": "0e9e50af-77fd-4168-ad6c-b4f5186eed1e",
   "itemname": "item_M_Titanium",
   "needSave": false,
-  "stack_count_max": 1,
+  "stack_count_max": 100000000,
   "syncGameData": {
     "currentCapacity": true,
     "extCapacity": true

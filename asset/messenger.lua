@@ -1,10 +1,20 @@
-function self:onOpen(p)
-  self.Text:setText(Lang:toText(p.Text))
-  if p.Color ~= nil then
-    self.Text:setTextColours(Color3.fromRGB(p.Color.r,p.Color.g,p.Color.b))
-  end  
-  World.Timer(p.time or 80, function ()
-        self:close()
-        return false
-  end)
-end
+-- function self:onOpen(p)
+--   p.time = p.time or 80
+--   self.Text:setText(Lang:toText(p.Text))
+--   if p.Color ~= nil then
+--     self.Text:setTextColours(Color3.fromRGB(p.Color.r,p.Color.g,p.Color.b))
+--   end  
+--   World.Timer(1, function ()
+--     if p.time <= 0 then
+--         self:close()
+--         return false
+--     else
+--       p.time = p.time - 1
+--       return 0.5
+--     end        
+--   end)
+--   self.onClose = function ()
+--     print("wwwwwwwwwwwwwwwwsssssssssssss")
+--     p.time = 0
+--   end
+-- end

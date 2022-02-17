@@ -11,7 +11,7 @@
   "itemintroduction": "6ad8edf0-624c-4bf0-ad48-a41bb1e4bc37",
   "itemname": "item_M_Iron",
   "needSave": false,
-  "stack_count_max": 1,
+  "stack_count_max": 100000000,
   "syncGameData": {
     "currentCapacity": true,
     "extCapacity": true

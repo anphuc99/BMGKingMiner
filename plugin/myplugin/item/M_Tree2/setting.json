@@ -11,7 +11,7 @@
   "itemintroduction": "113fcc2a-196d-4a36-be75-e96cc9274dd7",
   "itemname": "item_M_Tree2",
   "needSave": false,
-  "stack_count_max": 1,
+  "stack_count_max": 100000000,
   "syncGameData": {
     "currentCapacity": true,
     "extCapacity": true

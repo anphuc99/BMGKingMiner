@@ -11,7 +11,7 @@
   "itemintroduction": "dd53dfa9-8bd9-45fc-890f-1b3f81a2d012",
   "itemname": "item_M_Copper",
   "needSave": false,
-  "stack_count_max": 1,
+  "stack_count_max": 100000000,
   "syncGameData": {
     "currentCapacity": true,
     "extCapacity": true

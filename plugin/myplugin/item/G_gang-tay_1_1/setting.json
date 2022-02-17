@@ -1,0 +1,21 @@
+{
+  "canAbandon": false,
+  "candrop": false,
+  "canEquipPlural": true,
+  "canUse": false,
+  "equip_skill": [],
+  "equip_skin": {
+    "": ""
+  },
+  "icon": "@asset/TrangBi/Găng tay1.png",
+  "itemintroduction": "d14c2d8c-cc44-43d0-aa2e-0f7fd153b2ba",
+  "itemname": "item_G_gang-tay_1_1",
+  "needSave": false,
+  "stack_count_max": 1,
+  "syncGameData": {
+    "currentCapacity": true,
+    "extCapacity": true
+  },
+  "trap": false,
+  "tray": []
+}

@@ -138,43 +138,79 @@ return {
         id = "myplugin/V_Vortex",
         name ="item_V_Vortex",
         icon = "asset/TaiNguyen/Vortex.png",
-        typeItem = typeItem.Vortex
+        typeItem = typeItem.Equipment
     },
     {
         id = "myplugin/H_non_1_1",
         name ="item_H_non_1_1",
         icon = "asset/TrangBi/Nón1.png",
-        typeItem = typeItem.Vortex
+        typeItem = typeItem.Equipment
     },
     {
         id = "myplugin/H_non_1_2",
         name ="item_H_non_1_2",
         icon = "asset/TrangBi/Nón1.png",
-        typeItem = typeItem.Vortex
+        typeItem = typeItem.Equipment
     },
     {
         id = "myplugin/S_ao_1_1",
         name ="item_S_ao_1_1",
         icon = "asset/TrangBi/Giáp1.png",
-        typeItem = typeItem.Vortex
+        typeItem = typeItem.Equipment
     },
     {
         id = "myplugin/S_ao_1_2",
         name ="item_S_ao_1_2",
         icon = "asset/TrangBi/Giáp1.png",
-        typeItem = typeItem.Vortex
+        typeItem = typeItem.Equipment
     },
     {
         id = "myplugin/T_quan_1_1",
         name ="item_T_quan_1_1",
         icon = "asset/TrangBi/Quần1.png",
-        typeItem = typeItem.Vortex
+        typeItem = typeItem.Equipment
     },
     {
         id = "myplugin/T_quan_1_2",
         name ="item_T_quan_1_1",
         icon = "asset/TrangBi/Quần1.png",
-        typeItem = typeItem.Vortex
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/C_ao-choan_1_1",
+        name ="item_C_ao-choan_1_1",
+        icon = "asset/TrangBi/Áo choàng1.png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/C_ao-choan_1_2",
+        name ="item_C_ao-choan_1_2",
+        icon = "asset/TrangBi/Áo choàng1.png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/Sh_giay-sat_1_1",
+        name ="item_Sh_giay-sat_1_1",
+        icon = "asset/TrangBi/Giầy.png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/Sh_giay-sat_1_2",
+        name ="item_Sh_giay-sat_1_2",
+        icon = "asset/TrangBi/Giầy.png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/G_gang-tay_1_1",
+        name ="item_G_gang-tay_1_1",
+        icon = "asset/TrangBi/Găng tay1.png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/G_gang-tay_1_2",
+        name ="item_G_gang-tay_1_2",
+        icon = "asset/TrangBi/Găng tay1.png",
+        typeItem = typeItem.Equipment
     },
 
     option = {

@@ -205,6 +205,7 @@ PlayerClass:create("Player",function ()
         player:setValue("PlayerItem", playerItem)
     end
     function o:addItemInBalo(itemId, num)
+        num = num or 1
         local context_item = Context:new("Item")
         local itemData = context_item:where("id",itemId):firstData()
         local itemObj = Item:new(itemData)

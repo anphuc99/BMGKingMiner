@@ -1,13 +1,31 @@
 local Material = require("script_common.database.Material")
+local time
 PackageHandlers.registerClientHandler("UI", function(player, packet)
     UI:openWindow(packet.UI,nil,nil,packet)
 end)
 PackageHandlers.registerClientHandler("Player_enter", function(player, packet)
     -- PackageHandlers.sendClientHandler("setLanguage", {lang = Lang:toText("lang")})
 end)
-PackageHandlers.registerClientHandler("sendTip", function(player, packet)
-    if  UI:isOpenWindow("messenger") then
-        UI:closeWindow("messenger")
+PackageHandlers.registerClientHandler("sendTip", function(player, p)
+    local win = UI:isOpenWindow("messenger")
+    if not win then
+        win = UI:openWindow("messenger")
+        win:setProperty("AlwaysOnTop", "true")
+        time = p.time or 80
+        World.Timer(1, function ()
+            if time == 0 then
+                UI:closeWindow("messenger")
+                return false
+            else
+                time = time - 1
+                return 0.5
+            end
+        end)
+    else
+        time = p.time or 80
     end
-    UI:openWindow("messenger",nil,nil,packet)
+    win.Text:setText(Lang:toText(p.Text))
+    if p.Color ~= nil then
+        win.Text:setTextColours(Color3.fromRGB(p.Color.r,p.Color.g,p.Color.b))
+    end      
 end)

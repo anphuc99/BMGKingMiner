@@ -31,6 +31,7 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
         PackageHandlers.sendServerHandler(context.obj1, "setMoney", { money = PlayerObj:getMoney()})
     end
     PackageHandlers.sendServerHandler(context.obj1, "Player_enter", nil)
+    PlayerObj:refreshHand()
 end)
 Trigger.RegisterHandler(this, "ENTITY_LEAVE", function(context)
     Gol.Player[context.objID] = nil
@@ -127,7 +128,7 @@ PackageHandlers.registerServerHandler("crafting", function(player, packet)
         messeger(player,{Text = {"messeger_FullBP"}})        
         return {rs = false}
     end
-    local context_recipe = Context:new("Recipe")
+    local context_recipe = Context:new("recipe")
     local recipe = context_recipe:where("id",packet.recId):firstData()
     local playerItem = player:getValue("PlayerItem")    
     local context_playerItem = Context:new(playerItem)
@@ -245,12 +246,14 @@ end)
 PackageHandlers.registerServerHandler("seenBlackMarket", function(player, packet)
     local blackMarket = {}
     for key, value in pairs(Gol.Player) do
-        local Market = value:getMarket()
-        for key2, value2 in pairs(Market) do
-            value2.playerName = value:getObj().name
-            value2.objId = key
-            blackMarket[#blackMarket+1] = value2
-        end      
+        pcall(function ()
+            local Market = value:getMarket()
+            for key2, value2 in pairs(Market) do                
+                value2.playerName = value:getObj().name
+                value2.objId = key
+                blackMarket[#blackMarket+1] = value2       
+            end      
+        end)  
     end
     print(Lib.pv(blackMarket))
     local context_blackMarket = Context:new(blackMarket)    
@@ -270,7 +273,7 @@ PackageHandlers.registerServerHandler("deleteProduct", function(player, packet)
         local blackMarket = player:getValue("blackMarket")
         local context_blackMarket = Context:new(blackMarket)   
         local item = context_blackMarket:where("created_at",packet.created_at):firstData()
-        Gol.Player[player.objID]:addItemInBalo(item.idItem,item.num)        
+        Gol.Player[player.objID]:addItemInBalo(item.idItem,item.count)        
         for key, value in pairs(blackMarket) do
             if type(key) == "number" then
                 if value.created_at == packet.created_at then
