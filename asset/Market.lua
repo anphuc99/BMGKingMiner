@@ -21,6 +21,9 @@ function self:onOpen(p)
     local market = {}
     local typeMk = 1
     local setMarket
+    if p.BlackMarket then
+        self.Image.Black:setVisible(true)
+    end
     local function ProductClick(i)
     -- chợ trời
         if typeMk == 1 then

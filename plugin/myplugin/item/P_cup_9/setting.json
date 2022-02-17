@@ -7,7 +7,7 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Mesh/Diamond Pickaxe2/g1008_diamond_weapon_3.tga",
+  "icon": "@asset/TrangBi/iconmau10.png",
   "itemintroduction": "ce9c70fe-fc94-4157-9813-bdbd1f47d09c",
   "itemname": "item_P_cup_9",
   "mesh": "asset/Mesh/Diamond Pickaxe2/g1008_pickaxe_08.mesh",

@@ -50,7 +50,7 @@ Item:create("Item", function()
         else
             local context_player = Context:new(playerItem)
             local checkItem = context_player:where("position",positionItem.balo):where("idItem", id):firstData()
-            if typeItem ~= TypeItem.Equipment and checkItem ~= nil then
+            if checkItem ~= nil then
                 checkItem.num = checkItem.num + num
                 Player:setValue("PlayerItem", playerItem)                
             else

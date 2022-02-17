@@ -61,22 +61,22 @@ PackageHandlers.registerServerHandler("getValuePlayer", function(player, packet)
     return plpro
 end)
 -- thực hiện chuyển vật phẩm từ balo xuống tay người chơi
-PackageHandlers.registerServerHandler("baloToHand", function(player, packet)
-    local objPlayer = Gol.Player[player.objID]    
-    return objPlayer:baloToHand(packet.cellNum)
-end)
+-- PackageHandlers.registerServerHandler("baloToHand", function(player, packet)
+--     local objPlayer = Gol.Player[player.objID]    
+--     return objPlayer:baloToHand(packet.cellNum)
+-- end)
 -- thực hiện chuyển vật phẩm từ tay lên balo
-PackageHandlers.registerServerHandler("handToBalo", function(player, packet)
-    local objPlayer = Gol.Player[player.objID]
-    objPlayer:handToBalo(packet.cellNum)
-    local playerItem = player:getValue("PlayerItem")
-    local context_playerItem = Context:new(playerItem)
-    local context_item = Context:new("Item")
-    local playerItem2 = context_playerItem:where("position",positionItem.balo):where("cellNum",packet.cellNum):firstData()     
-    local res = context_item:where("id",playerItem2.idItem):firstData()
-    res.num = playerItem2.num     
-    return res
-end)
+-- PackageHandlers.registerServerHandler("handToBalo", function(player, packet)
+--     local objPlayer = Gol.Player[player.objID]
+--     objPlayer:handToBalo(packet.cellNum)
+--     local playerItem = player:getValue("PlayerItem")
+--     local context_playerItem = Context:new(playerItem)
+--     local context_item = Context:new("Item")
+--     local playerItem2 = context_playerItem:where("position",positionItem.balo):where("cellNum",packet.cellNum):firstData()     
+--     local res = context_item:where("id",playerItem2.idItem):firstData()
+--     res.num = playerItem2.num     
+--     return res
+-- end)
 -- thực hiện đổi chỗ của item
 PackageHandlers.registerServerHandler("moveItem", function(player, packet)
     local objPlayer = Gol.Player[player.objID]
@@ -303,7 +303,10 @@ PackageHandlers.registerServerHandler("sellBlackMarket", function(player, packet
             if not sellerObj:spendMoney(item.price) then
                 return false
             end
-            sellerObj:addItemInBalo(item.idItem,item.count) 
+            if not sellerObj:addItemInBalo(item.idItem,item.count) then
+                sellerObj:increaseMoney(item.price) 
+                return false
+            end
             playerObj:increaseMoney(item.price)   
             for key, value in pairs(blackMarket) do
                 if value.created_at == packet.created_at then

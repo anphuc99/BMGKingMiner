@@ -117,13 +117,6 @@ return {
 	    recipe = "T_quan_1_1",
         typeEquipment = 1,
     },
-
-
-
-
-
-
-    
     {
         id = "myplugin/C_ao-choan_1_1",
         level = 1,
@@ -141,19 +134,19 @@ return {
         typeEquipment = 1,
     },
     {
-        id = "myplugin/Sh_giay-sat_1_1",
+        id = "myplugin/Sh_giay_1_1",
         level = 1,
 	    percentage = 70,
 	    rarity = 1,
-	    recipe = "Sh_giay-sat_1_1",
+	    recipe = "Sh_giay_1_1",
         typeEquipment = 1,
     },
     {
-        id = "myplugin/Sh_giay-sat_1_2",
+        id = "myplugin/Sh_giay_1_2",
         level = 1,
 	    percentage = 30,
 	    rarity = 2,
-	    recipe = "Sh_giay-sat_1_1",
+	    recipe = "Sh_giay_1_1",
         typeEquipment = 1,
     },
     {

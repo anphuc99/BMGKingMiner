@@ -7,7 +7,7 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
+  "icon": "@asset/TrangBi/iconmau1.png",
   "itemintroduction": "18c50226-5558-4773-af0b-82d4ea313495",
   "itemname": "item_P_cup_1",
   "mesh": "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_14.mesh",

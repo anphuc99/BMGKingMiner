@@ -503,7 +503,7 @@
       "properties": {
         "id": "8503787027092930561",
         "name": "Big tree (LV2)",
-        "position": "x:73.096168518066 y:54.0 z:-42.682395935059",
+        "position": "x:73.096168518066 y:54 z:-42.682395935059",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -580,7 +580,7 @@
       "properties": {
         "id": "8503788344014323713",
         "name": "Old tree (LV3)",
-        "position": "x:177.21394348145 y:54.0 z:-8.8576412200928",
+        "position": "x:177.21394348145 y:54 z:-8.8576412200928",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -657,7 +657,7 @@
       "properties": {
         "id": "8503791184192028673",
         "name": "Small Tree (LV1)",
-        "position": "x:111.15383911133 y:51.0 z:-6.572437286377",
+        "position": "x:111.15383911133 y:51 z:-6.572437286377",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
@@ -692,6 +692,17 @@
         "name": "Big tree (LV2)",
         "position": "x:190.41519165039 y:54.001605987549 z:63.48611831665",
         "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_NPC_ban-trang-bi",
+      "properties": {
+        "id": "8506148453246173185",
+        "name": "Shop bán trang bị",
+        "position": "x:25.302135467529 y:53.0 z:34.635219573975",
+        "rotation": "x:0 y:94.998947143555 z:0",
         "scale": "x:1 y:1 z:1"
       }
     }

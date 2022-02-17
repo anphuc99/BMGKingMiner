@@ -50,11 +50,6 @@ return {
             },
         }
     },
-
-
-
-
-
     {
         id = "C_ao-choan_1_1",
         Material = {
@@ -73,7 +68,7 @@ return {
         }
     },
     {
-        id = "Sh_giay-sat_1_1",
+        id = "Sh_giay_1_1",
         Material = {
             {
                 id = "myplugin/M_Tree1",

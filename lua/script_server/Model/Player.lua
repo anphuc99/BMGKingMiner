@@ -70,10 +70,22 @@ PlayerClass:create("Player",function ()
     function o:getExp()
         return o:getObj():getValue("Player").exp
     end
-    function o:setExp(_Money)
+    function o:setExp(_exp)
         local player = o:getObj()
         local proPlayer = player:getValue("Player")
-        proPlayer.exp = _Money
+        local Exp
+        local Level = require("script_common.database.Level")
+        for index, value in ipairs(Level) do
+            if o:getLv() >= value.Lv[1] and o:getLv() <= value.Lv[2] then
+                Exp = value.Exp
+                break
+            end
+        end
+        if _exp >= Exp then
+            o:setLv(o:getLv() + 1)
+            _exp = _exp - Exp
+        end
+        proPlayer.exp = _exp
         player:setValue("Player", proPlayer)
     end
 
@@ -115,17 +127,17 @@ PlayerClass:create("Player",function ()
             isMining = true
             -- truyền đến UI          
             PackageHandlers.sendServerHandler(obj, "UI", {real_speed = real_speed, UI="thanh dao"})
-            obj:addBuff("myplugin/Buff_DaoKhoan",real_speed)
+            local buff = obj:addBuff("myplugin/Buff_DaoKhoan",real_speed)
             -- chạy thời gian thực
             World.Timer(2, function ()
                 if Gol.Material[MaObjID] == nil then
                     isMining = false
                     PackageHandlers.sendServerHandler(obj,"StopMine")
-                    obj:removeBuff("myplugin/Buff_DaoKhoan")
+                    obj:removeBuff(buff)
                     return false
                 elseif not isMining then
                     PackageHandlers.sendServerHandler(obj,"StopMine")
-                    obj:removeBuff("myplugin/Buff_DaoKhoan")
+                    obj:removeBuff(buff)
                     return false
                 else
                     local plaPos = obj:curBlockPos()
@@ -134,11 +146,13 @@ PlayerClass:create("Player",function ()
                     if distance > 2 then
                         isMining = false
                         PackageHandlers.sendServerHandler(obj,"StopMine")
+                        obj:removeBuff(buff)
                         return false
                     end
                     if real_speed <= 0 then
                         if o:endMine(MaterialModel:getId()) then
                             MaObj:kill(obj, "hit")
+                            o:setExp(o:getExp() + MaterialModel:getExp())
                         end                         
                         PackageHandlers.sendServerHandler(obj,"StopMine")
                         isMining = false
@@ -209,6 +223,21 @@ PlayerClass:create("Player",function ()
         local context_item = Context:new("Item")
         local itemData = context_item:where("id",itemId):firstData()
         local itemObj = Item:new(itemData)
+        -- if itemData.typeItem == TypeItem.Equipment then
+        --     if o:freeBalo() < num then
+        --         messenger(o:getObj(), {Text = {"messeger_FullBP",num,itemData.name}})
+        --         return false
+        --     end
+        --     for i = 1, num, 1 do
+        --         if not itemObj:addToPlayer(o:getObj(),1) then
+        --             return false
+        --         end                
+        --     end
+        --     messenger(o:getObj(), {Text = {"messager_addItem",num,itemData.name}, Color = {r=0,g=0,b=0}})
+        --     return true
+        -- else
+
+        -- end        
         if itemObj:addToPlayer(o:getObj(),num) then
             messenger(o:getObj(), {Text = {"messager_addItem",num,itemData.name}, Color = {r=0,g=0,b=0}})
             return true
@@ -236,15 +265,16 @@ PlayerClass:create("Player",function ()
         else
             if playerOldCellItem.idItem == playerNewCellItem.idItem then
                 local context_item = Context:new("Item")             
-                local checkItem2 = context_item:where("id",playerOldCellItem.idItem):firstData()
-                if checkItem2.typeItem == typeItem.Equipment then
-                    messenger(player,{Text = {"messeger_ItemNotMerge",1}, Color = {r = 255, g = 0, b = 0}})
-                    return false
-                else
-                    playerNewCellItem.num = playerNewCellItem.num + playerOldCellItem.num 
-                    player:setValue("PlayerItem", playerItem)
-                    o:removeCellNumItem(playerOldCellItem.cellNum)
-                end
+                -- local checkItem2 = context_item:where("id",playerOldCellItem.idItem):firstData()
+                -- if checkItem2.typeItem == typeItem.Equipment then
+                --     messenger(player,{Text = {"messeger_ItemNotMerge",1}, Color = {r = 255, g = 0, b = 0}})
+                --     return false
+                -- else
+
+                -- end
+                playerNewCellItem.num = playerNewCellItem.num + playerOldCellItem.num 
+                player:setValue("PlayerItem", playerItem)
+                o:removeCellNumItem(playerOldCellItem.cellNum)
             else
                 playerOldCellItem.cellNum = NewCellNum
                 playerNewCellItem.cellNum = oldCellNum 
@@ -254,55 +284,55 @@ PlayerClass:create("Player",function ()
         
         return true
     end
-    function o:baloToHand(cellNum)        
-        local player = o:getObj()
-        local playerItem = player:getValue("PlayerItem")
-        local context_player = Context:new(playerItem)
-        local playerItem2 = context_player:where("position",positionItem.balo):where("cellNum",cellNum):firstData()
+    -- function o:baloToHand(cellNum)        
+    --     local player = o:getObj()
+    --     local playerItem = player:getValue("PlayerItem")
+    --     local context_player = Context:new(playerItem)
+    --     local playerItem2 = context_player:where("position",positionItem.balo):where("cellNum",cellNum):firstData()
         
-        local context_player = Context:new(playerItem)
-        local checkItem = context_player:where("position",positionItem.hand):where("idItem", playerItem2.idItem):firstData()
-        local context_item = Context:new("Item")
-        local typeItem = context_item:where("id",playerItem2.idItem):firstData()        
-        if typeItem.typeItem ~= TypeItem.Equipment and checkItem ~= nil then            
-            checkItem.num = checkItem.num + playerItem2.num            
-            player:setValue("PlayerItem", playerItem)
-            o:removeCellNumItem(cellNum,positionItem.balo)
-            removeSlotItem(player,checkItem.cellNum)
-            addSlotItem(player,checkItem.idItem,checkItem.num,checkItem.cellNum)
-            return true
-        else            
-            local rs = false
-            for i = 1, 9, 1 do
-                local checkCellNum = context_player:where("position",positionItem.hand):where("cellNum", i):firstData()
-                if checkCellNum == nil then
-                    playerItem2.position = positionItem.hand
-                    playerItem2.cellNum = i
-                    player:setValue("PlayerItem", playerItem)
-                    addSlotItem(player,playerItem2.idItem,playerItem2.num,playerItem2.cellNum)
-                    rs = true
-                    break
-                end
-            end
-            if not rs then                
-                messenger(player,{Text = {"messeger_FullBP",1}, Color = {r = 255, g = 0, b = 0}})
-            end
-            return rs
-        end
-    end
+    --     local context_player = Context:new(playerItem)
+    --     local checkItem = context_player:where("position",positionItem.hand):where("idItem", playerItem2.idItem):firstData()
+    --     local context_item = Context:new("Item")
+    --     local typeItem = context_item:where("id",playerItem2.idItem):firstData()        
+    --     if typeItem.typeItem ~= TypeItem.Equipment and checkItem ~= nil then            
+    --         checkItem.num = checkItem.num + playerItem2.num            
+    --         player:setValue("PlayerItem", playerItem)
+    --         o:removeCellNumItem(cellNum,positionItem.balo)
+    --         removeSlotItem(player,checkItem.cellNum)
+    --         addSlotItem(player,checkItem.idItem,checkItem.num,checkItem.cellNum)
+    --         return true
+    --     else            
+    --         local rs = false
+    --         for i = 1, 9, 1 do
+    --             local checkCellNum = context_player:where("position",positionItem.hand):where("cellNum", i):firstData()
+    --             if checkCellNum == nil then
+    --                 playerItem2.position = positionItem.hand
+    --                 playerItem2.cellNum = i
+    --                 player:setValue("PlayerItem", playerItem)
+    --                 addSlotItem(player,playerItem2.idItem,playerItem2.num,playerItem2.cellNum)
+    --                 rs = true
+    --                 break
+    --             end
+    --         end
+    --         if not rs then                
+    --             messenger(player,{Text = {"messeger_FullBP",1}, Color = {r = 255, g = 0, b = 0}})
+    --         end
+    --         return rs
+    --     end
+    -- end
 
-    function o:handToBalo(cellNum)
-        local player = o:getObj()
-        local playerItem = player:getValue("PlayerItem")
-        local context_player = Context:new(playerItem)
-        local slot = player:getHandItem():slot()        
-        local playerItem2 = context_player:where("position",positionItem.hand):where("cellNum",slot):firstData()
-        playerItem2.position = positionItem.balo
-        playerItem2.cellNum = cellNum
-        player:setValue("PlayerItem", playerItem)
-        removeSlotItem(player,slot)
-        return true
-    end
+    -- function o:handToBalo(cellNum)
+    --     local player = o:getObj()
+    --     local playerItem = player:getValue("PlayerItem")
+    --     local context_player = Context:new(playerItem)
+    --     local slot = player:getHandItem():slot()        
+    --     local playerItem2 = context_player:where("position",positionItem.hand):where("cellNum",slot):firstData()
+    --     playerItem2.position = positionItem.balo
+    --     playerItem2.cellNum = cellNum
+    --     player:setValue("PlayerItem", playerItem)
+    --     removeSlotItem(player,slot)
+    --     return true
+    -- end
 
     function o:spendMoney(money)
         local plMoney = o:getMoney()

@@ -53,44 +53,58 @@ function self:onOpen(p)
         end        
         -- chuyển từ balo xuống tay
         if  i <= balo then
-            if hasItem[i] then
-                lisItem[i].cellNum = i
-                PackageHandlers.sendClientHandler("baloToHand", lisItem[i],
-                function(rs)
-                    print(rs)
-                    if rs then
-                        self.BackPack.ScrollableView.CellBP["cell" .. i].Item:setVisible(false)
-                        self.BackPack.ScrollableView.CellBP["cell" .. i].Image1:setVisible(false)
-                        hasItem[i] = nil
-                        lisItem[i] = nil
-                    end
-                end)                
+            -- if hasItem[i] then
+            --     lisItem[i].cellNum = i
+            --     PackageHandlers.sendClientHandler("baloToHand", lisItem[i],
+            --     function(rs)
+            --         print(rs)
+            --         if rs then
+            --             self.BackPack.ScrollableView.CellBP["cell" .. i].Item:setVisible(false)
+            --             self.BackPack.ScrollableView.CellBP["cell" .. i].Image1:setVisible(false)
+            --             hasItem[i] = nil
+            --             lisItem[i] = nil
+            --         end
+            --     end)                
+            -- else
+            --     -- chuyển từ tay lên balo 
+            --     if i <= balo then
+            --         PackageHandlers.sendClientHandler("handToBalo", {cellNum = i},
+            --         function(v)
+            --             print(Lib.pv(v))
+            --             setItem(v, i)
+            --         end)
+            --     end
+            -- end
+            if lisItem[curClick] then
+                self.BackPack.Blur:setVisible(true)
+                self.BackPack.InfoBox:setVisible(true)
+                self.BackPack.InfoBox.name:setText(Lang:toText({lisItem[curClick].name}))
+                self.BackPack.InfoBox.amount:setText(lisItem[curClick].num)
+                self.BackPack.InfoBox.Icon:setImage("gameres|"..lisItem[curClick].icon)
+                self.BackPack.InfoBox.description:setText(lisItem[curClick].description)
+                if lisItem[curClick].typeItem == typeItem.Equipment then
+                    self.BackPack.InfoBox.type:setText(Lang:toText({"typeItem_Equi"})) 
+                elseif lisItem[curClick].typeItem == typeItem.Material then
+                    self.BackPack.InfoBox.type:setText(Lang:toText({"typeItem_Mar"})) 
+                elseif lisItem[curClick].typeItem == typeItem.Trophy then
+                    self.BackPack.InfoBox.type:setText(Lang:toText({"typeItem_Tro"})) 
+                elseif lisItem[curClick].typeItem == typeItem.Vortex then
+                    self.BackPack.InfoBox.type:setText(Lang:toText({"typeItem_Vor"})) 
+                end              
+                self.BackPack.ScrollableView.CellBP["cell" .. curClick]:setImage(unBlockImg)  
+                curClick = nil
             else
-                -- chuyển từ tay lên balo 
-                if i <= balo then
-                    PackageHandlers.sendClientHandler("handToBalo", {cellNum = i},
-                    function(v)
-                        print(Lib.pv(v))
-                        setItem(v, i)
-                    end)
-                end
-            end
-        else
-            -- mở thêm ô balo
-            print("eeeeeee")
-            UI:openWindow("MessagerBox",nil,nil,{
-                Text = {"notify_OpenBP",SlotBalo[i].money},
-                Yes = function (e)
-                    PackageHandlers.sendClientHandler("OpenCellNum", nil, function (rs)
-                        if rs then
-                            self.BackPack.ScrollableView.CellBP["cell" .. (balo + 1)]:setImage(unBlockImg)  
-                            balo = balo + 1
-                        end
-                    end)
-                end
-            })
-        end
-        
+                self.BackPack.Blur:setVisible(false)
+                self.BackPack.InfoBox:setVisible(false)
+                self.BackPack.ScrollableView.CellBP["cell" .. curClick]:setImage(unBlockImg)  
+                curClick = nil
+            end                    
+        end        
+    end
+    -- 
+    self.BackPack.onMouseClick = function() 
+        self.BackPack.ScrollableView.CellBP["cell" .. curClick]:setImage(unBlockImg)  
+        curClick = nil
     end
     -- sự kiện ô click
     local function cellClick(i)
@@ -117,7 +131,7 @@ function self:onOpen(p)
             self.BackPack.ScrollableView.CellBP["cell" .. ii]:setImage(unBlockImg)
         end
         if i <= balo then
-            if curClick == nil or not hasItem[curClick] then
+            if curClick == nil or not hasItem[curClick] or curClick == i then
                 self.BackPack.ScrollableView.CellBP["cell" .. i]:setImage(selectBlockImg)
                 curClick = i
             else
@@ -137,10 +151,27 @@ function self:onOpen(p)
                             lisItem[curClick] = nil
                         end
                         setItem(rep.newCell, i)
-                    end
-                    curClick = nil
+                        curClick = nil
+                    end                    
                 end)
             end
+        else
+            if curClick ~= nil then
+                self.BackPack.ScrollableView.CellBP["cell" .. curClick]:setImage(unBlockImg)  
+                curClick = nil
+            end
+            -- mở thêm ô balo
+            UI:openWindow("MessagerBox",nil,nil,{
+                Text = {"notify_OpenBP",SlotBalo[i].money},
+                Yes = function (e)
+                    PackageHandlers.sendClientHandler("OpenCellNum", nil, function (rs)
+                        if rs then
+                            self.BackPack.ScrollableView.CellBP["cell" .. (balo + 1)]:setImage(unBlockImg)  
+                            balo = balo + 1
+                        end
+                    end)
+                end
+            })
         end
     end
     for i = 1, 30, 1 do
@@ -156,28 +187,6 @@ function self:onOpen(p)
         self.BackPack.ScrollableView.CellBP["cell" .. i].Image1.num.onMouseClick = function()
             cellClick(i)
         end
-    end
-    self.BackPack.Info.onMouseClick = function() 
-        if lisItem[curClick] then
-            self.BackPack.Blur:setVisible(true)
-            self.BackPack.InfoBox:setVisible(true)
-            self.BackPack.InfoBox.name:setText(Lang:toText({lisItem[curClick].name}))
-            self.BackPack.InfoBox.amount:setText(lisItem[curClick].num)
-            self.BackPack.InfoBox.Icon:setImage("gameres|"..lisItem[curClick].icon)
-            self.BackPack.InfoBox.description:setText(lisItem[curClick].description)
-            if lisItem[curClick].typeItem == typeItem.Equipment then
-                self.BackPack.InfoBox.type:setText(Lang:toText({"typeItem_Equi"})) 
-            elseif lisItem[curClick].typeItem == typeItem.Material then
-                self.BackPack.InfoBox.type:setText(Lang:toText({"typeItem_Mar"})) 
-            elseif lisItem[curClick].typeItem == typeItem.Trophy then
-                self.BackPack.InfoBox.type:setText(Lang:toText({"typeItem_Tro"})) 
-            elseif lisItem[curClick].typeItem == typeItem.Vortex then
-                self.BackPack.InfoBox.type:setText(Lang:toText({"typeItem_Vor"})) 
-            end  
-        else
-            self.BackPack.Blur:setVisible(false)
-            self.BackPack.InfoBox:setVisible(false)
-        end                      
     end
     self.BackPack.Blur.onMouseClick = function ()
         self.BackPack.InfoBox:setVisible(false)

@@ -9,6 +9,7 @@ Material:create("Material",function ()
 	local stiffness
 	local entityId
     local objID
+    local exp
 
     function o:__constructor(data,_objID)
         -- constructor
@@ -20,6 +21,7 @@ Material:create("Material",function ()
 		Time_retrieval = data.Time_retrieval
 		stiffness = data.stiffness
 		entityId = data.entityId
+        exp = data.exp
         objID = _objID
         
     end
@@ -58,6 +60,12 @@ Material:create("Material",function ()
     end
     function o:setObjID(_objID)
         objID = _objID
+    end
+    function o:getExp()
+        return exp
+    end
+    function o:setExp(_exp)
+        exp = _exp
     end
 
     function o:getObj()

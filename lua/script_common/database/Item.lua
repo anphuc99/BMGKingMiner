@@ -67,70 +67,70 @@ return {
     {
         id = "myplugin/P_cup_1",
         name ="item_P_cup_1",
-        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
+        icon = "asset/TrangBi/iconmau1.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/P_cup_10",
         name ="item_P_cup_10",
-        icon = "asset/Mesh/Diamond Pickaxe3/g1008_diamond_weapon_3.tga",
+        icon = "asset/TrangBi/iconmau11.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/P_cup_2",
         name ="item_P_cup_2",
-        icon = "asset/Mesh/Arrow Pickaxe/g1008_pickaxe_13_14.tga",
+        icon = "asset/TrangBi/iconmau13.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/P_cup_3",
         name ="item_P_cup_3",
-        icon = "asset/Mesh/Iron Pickaxe1/g1008_steel_weapon_04.tga",
+        icon = "asset/TrangBi/iconmau3.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/P_cup_4",
         name ="item_P_cup_4",
-        icon = "asset/Mesh/Green Tailed Pickaxe/g1008_pickaxe_17_18.tga",
+        icon = "asset/TrangBi/iconmau5.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/P_cup_5",
         name ="item_P_cup_5",
-        icon = "asset/Mesh/Golden Pickaxe1/g1008_golden_weapon_3.tga",
+        icon = "asset/TrangBi/iconmau6.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/P_cup_6",
         name ="item_P_cup_6",
-        icon = "asset/Mesh/Golden Pickaxe2/g1008_golden_weapon_3.tga",
+        icon = "asset/TrangBi/iconmau7.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/P_cup_7",
         name ="item_P_cup_7",
-        icon = "asset/Mesh/Golden Pickaxe3/g1008_golden_weapon_6.tga",
+        icon = "asset/TrangBi/iconmau8.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/P_cup_8",
         name ="item_P_cup_8",
-        icon = "asset/Mesh/Diamond Pickaxe1/g1008_diamond_weapon_2.tga",
+        icon = "asset/TrangBi/iconmau9.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/P_cup_9",
         name ="item_P_cup_9",
-        icon = "asset/Mesh/Diamond Pickaxe2/g1008_diamond_weapon_3.tga",
+        icon = "asset/TrangBi/iconmau10.png",
         typeItem = typeItem.Trophy
     },
 
@@ -172,7 +172,7 @@ return {
     },
     {
         id = "myplugin/T_quan_1_2",
-        name ="item_T_quan_1_1",
+        name ="item_T_quan_1_2",
         icon = "asset/TrangBi/Quần1.png",
         typeItem = typeItem.Equipment
     },
@@ -189,14 +189,14 @@ return {
         typeItem = typeItem.Equipment
     },
     {
-        id = "myplugin/Sh_giay-sat_1_1",
-        name ="item_Sh_giay-sat_1_1",
+        id = "myplugin/Sh_giay_1_1",
+        name ="item_Sh_giay_1_1",
         icon = "asset/TrangBi/Giầy.png",
         typeItem = typeItem.Equipment
     },
     {
-        id = "myplugin/Sh_giay-sat_1_2",
-        name ="item_Sh_giay-sat_1_2",
+        id = "myplugin/Sh_giay_1_2",
+        name ="item_Sh_giay_1_2",
         icon = "asset/TrangBi/Giầy.png",
         typeItem = typeItem.Equipment
     },

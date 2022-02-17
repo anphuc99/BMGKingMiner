@@ -44,6 +44,66 @@ return {
 	    idNPC = 1,
 	    price = 150
     },
+    {
+        idItem = "myplugin/C_ao-choan_1_1",
+	    idNPC = 2,
+	    price = 1500
+    },
+    {
+        idItem = "myplugin/C_ao-choan_1_2",
+	    idNPC = 2,
+	    price = 2000
+    },
+    {
+        idItem = "myplugin/G_gang-tay_1_1",
+	    idNPC = 2,
+	    price = 1500
+    },
+    {
+        idItem = "myplugin/G_gang-tay_1_2",
+	    idNPC = 2,
+	    price = 2000
+    },
+    {
+        idItem = "myplugin/Sh_giay_1_1",
+	    idNPC = 2,
+	    price = 1500
+    },
+    {
+        idItem = "myplugin/Sh_giay_1_2",
+	    idNPC = 2,
+	    price = 2000
+    },
+    {
+        idItem = "myplugin/S_ao_1_1",
+	    idNPC = 2,
+	    price = 1500
+    },
+    {
+        idItem = "myplugin/S_ao_1_2",
+	    idNPC = 2,
+	    price = 2000
+    },
+    {
+        idItem = "myplugin/T_quan_1_1",
+	    idNPC = 2,
+	    price = 1500
+    },
+    {
+        idItem = "myplugin/T_quan_1_2",
+	    idNPC = 2,
+	    price = 2000
+    },
+    {
+        idItem = "myplugin/H_non_1_1",
+	    idNPC = 2,
+	    price = 1500
+    },
+    {
+        idItem = "myplugin/H_non_1_2",
+	    idNPC = 2,
+	    price = 2000
+    },
     option = {
         primaryKey = {"idItem","idNPC"}
     }
