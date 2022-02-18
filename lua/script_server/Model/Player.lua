@@ -61,10 +61,14 @@ PlayerClass:create("Player",function ()
         return o:getObj():getValue("Player").Lv
     end
     function o:setLv(_Lv)
+        print("wwwwwwwwwwweeeeeeeeeeeeeee")
         local player = o:getObj()
-        local proPlayer = player:getValue("Player")
-        proPlayer.Lv = _Lv
+        local proPlayer = player:getValue("Player")     
+        print(Lib.pv(proPlayer))   
+        proPlayer.Lv = _Lv        
         player:setValue("Player", proPlayer)
+        local proPlayer = player:getValue("Player")  
+        print(Lib.pv(proPlayer))
     end
 
     function o:getExp()
@@ -72,7 +76,6 @@ PlayerClass:create("Player",function ()
     end
     function o:setExp(_exp)
         local player = o:getObj()
-        local proPlayer = player:getValue("Player")
         local Exp
         local Level = require("script_common.database.Level")
         for index, value in ipairs(Level) do
@@ -85,6 +88,7 @@ PlayerClass:create("Player",function ()
             o:setLv(o:getLv() + 1)
             _exp = _exp - Exp
         end
+        local proPlayer = player:getValue("Player")
         proPlayer.exp = _exp
         player:setValue("Player", proPlayer)
     end

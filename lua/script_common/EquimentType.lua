@@ -5,5 +5,6 @@ return {
     trousers = 4,
     cloak = 5,
     gloves = 6,
-    shoes = 7
+    shoes = 7,
+    axe = 8
 }

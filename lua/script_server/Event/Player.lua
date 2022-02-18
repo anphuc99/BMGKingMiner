@@ -337,3 +337,47 @@ PackageHandlers.registerServerHandler("getCup", function(player, packet)
     local context_item = Context:new("Item")
     return context_item:where("id",getCup.idItem):firstData()
 end)
+-- lấy trang bị
+PackageHandlers.registerServerHandler("getEquiment", function(player, packet)
+    return player:getValue("Equipment")
+end)
+
+-- mặc trang bị
+PackageHandlers.registerServerHandler("wearEquipment", function(player, packet)
+    local playerItem = player:getValue("PlayerItem")
+    print(packet.id)
+    local context_playerItem = Context:new(playerItem)
+    if context_playerItem:where("idItem",packet.id):sum("num") == 1 then
+        local context_equipment = Context:new("Equipment")
+        local equipmentPlayer = player:getValue("Equipment")
+        for index, value in ipairs(equipmentPlayer) do
+            local item = context_equipment:where("id",value):firstData()
+            local item2 = context_equipment:where("id",packet.id):firstData()
+            if item.typeEquipment == item2.typeEquipment then
+                equipmentPlayer[index] = packet.id
+                player:setValue("Equipment", equipmentPlayer)
+                Gol.Player[player.objID]:removeItemInBalo(packet.id,1)
+                Gol.Player[player.objID]:addItemInBalo(item.id,1)
+                return equipmentPlayer
+            end
+        end
+        equipmentPlayer[#equipmentPlayer+1] = packet.id
+        player:setValue("Equipment", equipmentPlayer)
+        Gol.Player[player.objID]:removeItemInBalo(packet.id,1)
+        return equipmentPlayer
+    end
+    return false    
+end)
+--  gỡ trang bị
+PackageHandlers.registerServerHandler("unequip", function(player, packet)
+    local equipmentPlayer = player:getValue("Equipment")
+    for index, value in ipairs(equipmentPlayer) do
+        if value == packet.id then
+            table.remove(equipmentPlayer,index)
+            break
+        end
+    end
+    player:setValue("Equipment", equipmentPlayer)
+    Gol.Player[player.objID]:addItemInBalo(packet.id,1)
+    return equipmentPlayer
+end)

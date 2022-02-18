@@ -25,3 +25,4 @@ this.addValueDef("PlayerItem", {
 }, false, false, true, false)
 this.addValueDef("Player", PlayerProperty, false, false, true, false)
 this.addValueDef("blackMarket", {}, false, false, true, false)
+this.addValueDef("Equipment", {}, false, false, true, false)

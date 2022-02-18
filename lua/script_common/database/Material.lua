@@ -53,7 +53,7 @@ return {
         level = 1,
 	    stiffness = 5*20,
 	    entityId = "myplugin/Enti_M_Tree1",
-        exp = 100
+        exp = 5
     },
 
     {

@@ -4,23 +4,33 @@ function self:onOpen(p)
     local unBlockImg = "gameres|asset/Texture/Gui/Slot Item-1 Nút.png"
     local selectBlockImg = "gameres|asset/Texture/Gui/Slot Item-3 Nút.png"
     local typeItem = require "script_common.typeItem"
+    local Context = require "script_common.lbr.Context"
     local dbClick = {} -- biến đệm cho sự kiện dbClick
     local hasItem = {} -- lưu những ô có vật phẩm
     local lisItem = {} -- danh sách sản phẩm
+    local dbEquiClick = {} -- biến đệm cho sự kiện dbClick của trang bị
     local curClick = nil
     local balo
     local player =Blockman.Instance().player
     -- phần balo
     self.BackPack.exit.onMouseClick = function() self:close() end
     local function setItem(v, cellNum)
-        self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Item:setVisible(true)
-        self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Image1:setVisible(true)
-        self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Item:setImage("gameres|" ..v.icon)
-        self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Image1.num:setText(v.num)
-        hasItem[cellNum] = true
-        lisItem[cellNum] = v
+        if v.num <=0 then
+            self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Item:setVisible(false)
+            self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Image1:setVisible(false)
+            hasItem[cellNum] = false
+            lisItem[cellNum] = nil
+        else
+            self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Item:setVisible(true)
+            self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Image1:setVisible(true)
+            self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Item:setImage("gameres|" ..v.icon)
+            self.BackPack.ScrollableView.CellBP["cell" .. cellNum].Image1.num:setText(v.num)
+            hasItem[cellNum] = true
+            lisItem[cellNum] = v
+        end
+        
     end
-    local function reloadBackPack()
+    
         for i = 1, 30, 1 do
             self.BackPack.ScrollableView.CellBP["cell" .. i].Item:setVisible(false)
             self.BackPack.ScrollableView.CellBP["cell" .. i].Image1:setVisible(false)
@@ -33,6 +43,7 @@ function self:onOpen(p)
                 self.BackPack.ScrollableView.CellBP["cell" .. i]:setImage(unBlockImg)
             end
         end)
+    local function reloadBackPack()    
         -- tải balo lên
         hasItem = {}
         lisItem = {}
@@ -41,6 +52,12 @@ function self:onOpen(p)
             print(Lib.pv(data))
             for k, v in pairs(data) do
                 setItem(v, v.cellNum)
+            end
+            for i = 1, balo, 1 do
+                if not hasItem[i] then
+                    self.BackPack.ScrollableView.CellBP["cell" .. i].Item:setVisible(false)
+                    self.BackPack.ScrollableView.CellBP["cell" .. i].Image1:setVisible(false)
+                end
             end
         end)
     end
@@ -193,11 +210,68 @@ function self:onOpen(p)
         self.BackPack.Blur:setVisible(false)
     end
     -- phần trang bị
+    -- lấy thông tin
     self.BackPack.playerName:setText(player.name)
     PackageHandlers.sendClientHandler("getValuePlayer", nil, function (propPlayer)
         self.BackPack.Lv:setText(propPlayer.Lv)
         self.BackPack.Id_card:setText(propPlayer.idCard)
         self.BackPack.Exp:setText(propPlayer.exp)
     end)
-    
+
+    local function setUIEquiment(equiment)
+        local context_equipment = Context:new("Equipment")
+        for i = 2, 7, 1 do
+            self.BackPack.Equiment["e"..i]:setVisible(false)
+            self.BackPack.Equiment["e"..i].id = nil
+        end
+        for index, value in ipairs(equiment) do
+            local item = context_equipment:where("id",value):firstData()
+            print("eeeeeeeeessss")
+            print(item.typeEquipment)
+            self.BackPack.Equiment["e"..item.typeEquipment]:setVisible(true)
+            self.BackPack.Equiment["e"..item.typeEquipment]:setImage("gameres|"..item.icon)
+            self.BackPack.Equiment["e"..item.typeEquipment].id = item.id
+        end
+    end
+    -- lấy trang bị
+    PackageHandlers.sendClientHandler("getEquiment", nil, function (equiment)
+        setUIEquiment(equiment)
+    end)
+    -- mặc trang bị
+    local wearEquipmen = function ()
+        if lisItem[curClick] then            
+            local contextItem = Context:new("Item")
+            local item = contextItem:where("id",lisItem[curClick].id):firstData()
+            if item.typeItem == typeItem.Equipment then
+                PackageHandlers.sendClientHandler("wearEquipment", {id = lisItem[curClick].id}, function (rs)
+                    if rs then
+                        setUIEquiment(rs)
+                        reloadBackPack()
+                        self.BackPack.ScrollableView.CellBP["cell" .. curClick]:setImage(unBlockImg)  
+                        curClick = nil
+                    end
+                end)
+            end
+        end
+    end
+
+    self.BackPack.Equiment.onMouseClick = wearEquipmen
+    self.BackPack.Equiment.ActorWindow.onMouseClick = wearEquipmen
+    for i = 2, 7, 1 do
+        self.BackPack.Equiment["e"..i].onMouseClick = function() 
+            dbEquiClick[i] = (dbEquiClick[i] or 0) + 1
+            World.Timer(10, function()
+                dbEquiClick[i] = 0
+                return false
+            end)
+            if dbEquiClick[i] == 2 then
+                PackageHandlers.sendClientHandler("unequip", {id = self.BackPack.Equiment["e"..i].id}, function (rs)
+                    if rs then
+                        setUIEquiment(rs)
+                        reloadBackPack()
+                    end
+                end)
+            end
+        end
+    end
 end
