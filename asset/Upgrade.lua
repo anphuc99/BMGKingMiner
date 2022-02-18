@@ -3,6 +3,7 @@ function self:onOpen(p)
     local blockBtn = "gameres|asset/Texture/Gui/nutupgrade1(C).png"
     local unblockBtn = "gameres|asset/Texture/Gui/nutupgrade2(C).png"    
     local split = require "script_common.lbr.split"
+    local Type = "myplugin/P_cup"
     local lv = 0
     self.Image.btnClose.onMouseClick = function() 
         self:close()
@@ -19,11 +20,22 @@ function self:onOpen(p)
 
     local conut = 0
     -- lấy cúp
-    PackageHandlers.sendClientHandler("getCup", nil, function (cup)
-        self.Image.Item:setImage("gameres|"..cup.icon)
-        print(Lib.pv(cup))
-        lv = tonumber(split(cup.id,"_")[3])        
-    end)
+    local function getCup ()
+        PackageHandlers.sendClientHandler("getCup", {cup = Type}, function (cup)
+            self.Image.Item:setImage("gameres|"..cup.icon)
+            print(Lib.pv(cup))
+            lv = tonumber(split(cup.id,"_")[3])        
+        end)
+    end
+    getCup()
+    self.Image.Cup.onMouseClick = function ()
+        Type = "myplugin/P_cup"
+        getCup()
+    end
+    self.Image.Riu.onMouseClick = function() 
+        Type = "myplugin/A_riu"
+        getCup()        
+    end
     -- lấy vortex        
     PackageHandlers.sendClientHandler("getBackPackPlayer", nil, function (bp)       
         local context_bp = Context:new(bp) 
@@ -38,7 +50,7 @@ function self:onOpen(p)
 
     self.Image.Upgrate.onMouseClick = function() 
         if conut >= 5 then
-            PackageHandlers.sendClientHandler("Upgrate", {cup = "myplugin/P_cup"}, function (rs,itemPlayer)
+            PackageHandlers.sendClientHandler("Upgrate", {cup = Type}, function (rs,itemPlayer)
                 if rs then
                     conut = conut - 5
                     self.Image.amu:setText(conut.."/5")

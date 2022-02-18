@@ -3,6 +3,8 @@
   "_serverScript": [],
   "actorGirlName": "empty.actor",
   "actorName": "empty.actor",
+  "attackNpc": false,
+  "autoAttack": false,
   "autoMove": false,
   "autoRotateColliderBox": true,
   "avoidCliff": true,
@@ -14,6 +16,8 @@
   "canPickOnDie": false,
   "canTurnHead": false,
   "castRealShadowAtFirstPRV": false,
+  "chaseDistance": 10,
+  "chaseInterval": 10,
   "checkPartTouchEvent": true,
   "clickDistance": 4,
   "collider": {
@@ -57,17 +61,24 @@
   "hpBarHeight": 0.2,
   "hpBarWidth": 1,
   "hurtResistantTime": 0,
+  "idleProb": 0,
+  "idleTime": [
+    10,
+    30
+  ],
   "isAIGoHomePos": true,
   "isPlayer": false,
   "jumpHeight": 0.6,
   "jumpSpeed": 0.5,
   "maxHp": 20,
+  "maxVisualAngle": 360,
   "meetCliffBackRun": true,
   "moveAcc": 0.2,
   "moveFactor": 1,
   "moveSpeed": 0.2,
   "name": "entity_Enti_Effect",
   "needCheckTouch": true,
+  "patrolDistance": 5,
   "randomPlayDeadActions": [
     ""
   ],

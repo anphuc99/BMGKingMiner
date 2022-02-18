@@ -214,7 +214,7 @@ function self:onOpen(p)
     self.BackPack.playerName:setText(player.name)
     PackageHandlers.sendClientHandler("getValuePlayer", nil, function (propPlayer)
         self.BackPack.Lv:setText(propPlayer.Lv)
-        self.BackPack.Id_card:setText(propPlayer.idCard)
+        self.BackPack.Id_card:setText(Lang:toText({"ID_card"..propPlayer.idCard}))
         self.BackPack.Exp:setText(propPlayer.exp)
     end)
 
@@ -273,5 +273,21 @@ function self:onOpen(p)
                 end)
             end
         end
+    end
+    -- nâng cấp id card
+    self.BackPack.Id_card.onMouseClick = function() 
+        if self.BackPack.Id_card:getText() ~= Lang:toText({"ID_card9"}) then
+            UI:openWindow("MessagerBox",nil,nil,{
+                Text = {"messeger_updateIdCard"},
+                Yes = function (s)
+                    PackageHandlers.sendClientHandler("updateIdCard", nil, function (rs)
+                        if rs then
+                            self.BackPack.Id_card:setText(Lang:toText({"ID_card"..rs}))
+                        end
+                    end)
+                end
+            })
+        end
+        
     end
 end

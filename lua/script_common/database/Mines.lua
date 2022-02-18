@@ -5,7 +5,8 @@ return {
         InPosition = {x = 29, y= 53, z = 4},
         Out = "dc9a6450-224d-4fab-b040-f0ebb05ef6de",
         OutPosition = {x=21,y=53,z=-1},
-        map = "map2"
+        map = "map2",
+        Id_card = 1
     },
     {
         id = 2,
@@ -13,7 +14,8 @@ return {
         InPosition = {x = 29, y= 53, z = 4},
         Out = "1665f6e5-b225-4819-8465-04b86d29695a",
         OutPosition = {x=14,y=53,z=-1},
-        map = "map3"
+        map = "map3",
+        Id_card = 1
     },
     {
         id = 3,
@@ -21,7 +23,8 @@ return {
         InPosition = {x = 29, y= 53, z = 4},
         Out = "6e98f81e-518d-4faa-ac38-155fffa24411",
         OutPosition = {x=7,y=53,z=-1},
-        map = "map4"
+        map = "map4",
+        Id_card = 2
     },
     {
         id = 4,
@@ -29,7 +32,8 @@ return {
         InPosition = {x = 29, y= 53, z = 4},
         Out = "18f92774-751b-4a9c-8c96-ca33fc67db16",
         OutPosition = {x=0,y=53,z=-1},
-        map = "map5"
+        map = "map5",
+        Id_card = 2
     },
     {
         id = 5,
@@ -37,7 +41,8 @@ return {
         InPosition = {x = 29, y= 53, z = 4},
         Out = "c1be7e5c-c2da-4eb3-b964-aee2b5767f3b",
         OutPosition = {x=-7,y=53,z=-1},
-        map = "map6"
+        map = "map6",
+        Id_card = 3
     },
     {
         id = 6,
@@ -45,6 +50,7 @@ return {
         InPosition = {x = 29, y= 53, z = 4},
         Out = "36dc8a94-9ee2-414d-82b7-091cc3afeba3",
         OutPosition = {x=-14,y=53,z=-1},
-        map = "map7"
+        map = "map7",
+        Id_card = 3
     },
 }

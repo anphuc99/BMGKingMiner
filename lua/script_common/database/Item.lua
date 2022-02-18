@@ -72,13 +72,6 @@ return {
     },
 
     {
-        id = "myplugin/P_cup_10",
-        name ="item_P_cup_10",
-        icon = "asset/TrangBi/iconmau11.png",
-        typeItem = typeItem.Trophy
-    },
-
-    {
         id = "myplugin/P_cup_2",
         name ="item_P_cup_2",
         icon = "asset/TrangBi/iconmau13.png",
@@ -131,6 +124,83 @@ return {
         id = "myplugin/P_cup_9",
         name ="item_P_cup_9",
         icon = "asset/TrangBi/iconmau10.png",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/P_cup_10",
+        name ="item_P_cup_10",
+        icon = "asset/TrangBi/iconmau11.png",
+        typeItem = typeItem.Trophy
+    },
+    
+    {
+        id = "myplugin/A_riu_1",
+        name ="item_A_riu_1",
+        icon = "asset/Mesh/Wooden Axe/g1008_wooden_weapon_01.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/A_riu_2",
+        name ="item_A_riu_2",
+        icon = "asset/Mesh/Wooden Double Axe/g1008_wooden_weapon_01.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/A_riu_3",
+        name ="item_A_riu_3",
+        icon = "asset/Mesh/Ordinary Iron Axe/g1008_steel_weapon_01.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/A_riu_4",
+        name ="item_A_riu_4",
+        icon = "asset/Mesh/Storm Axe/g1008_steel_weapon_01.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/A_riu_5",
+        name ="item_A_riu_5",
+        icon = "asset/Mesh/Short Golden Axe/g1008_golden_weapon_4.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/A_riu_6",
+        name ="item_A_riu_6",
+        icon = "asset/Mesh/Sharp Golden Axe/g1008_golden_weapon_5.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/A_riu_7",
+        name ="item_A_riu_7",
+        icon = "asset/Mesh/Crystal Blue Axe/g1008_diamond_weapon_1.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/A_riu_8",
+        name ="item_A_riu_8",
+        icon = "asset/Mesh/Crystal Double Axe/g1008_diamond_weapon_1.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/A_riu_9",
+        name ="item_A_riu_9",
+        icon = "asset/Mesh/Thick Silver Axe/g1008_axe_20.tga",
+        typeItem = typeItem.Trophy
+    },
+
+    {
+        id = "myplugin/A_riu_10",
+        name ="item_A_riu_10",
+        icon = "asset/Mesh/Silvery Axe/g1008_axe_19.tga",
         typeItem = typeItem.Trophy
     },
 

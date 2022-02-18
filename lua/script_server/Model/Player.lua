@@ -9,6 +9,7 @@ local addSlotItem = require "script_server.lbr.addSlotItem"
 local removeSlotItem = require "script_server.lbr.removeSlotItem"
 local TypeItem = require "script_common.typeItem"
 local Vortex = require "script_common.database.Vortex"
+local typeEquipment = require "script_common.EquimentType"
 -- local lang = require "script_server.lbr.lang"
 local PlayerClass = class()
 PlayerClass:create("Player",function ()
@@ -87,10 +88,13 @@ PlayerClass:create("Player",function ()
         if _exp >= Exp then
             o:setLv(o:getLv() + 1)
             _exp = _exp - Exp
+            o:setExp(_exp)
+        else
+            local proPlayer = player:getValue("Player")
+            proPlayer.exp = _exp
+            player:setValue("Player", proPlayer)
         end
-        local proPlayer = player:getValue("Player")
-        proPlayer.exp = _exp
-        player:setValue("Player", proPlayer)
+        
     end
 
     function o:getLastLogin()
@@ -123,49 +127,59 @@ PlayerClass:create("Player",function ()
             local context_trophy = Context:new("Trophy")
             local Item_hand = obj:getHandItem()  
             local Item_id = Item_hand:full_name()
-            local trophy = context_trophy:where("id",Item_id):getData()[1]
-            local real_speed = MaterialModel:getStiffness() - trophy.mineSpeed
-            if real_speed <= 0 then
-                real_speed = 1
-            end
-            isMining = true
-            -- truyền đến UI          
-            PackageHandlers.sendServerHandler(obj, "UI", {real_speed = real_speed, UI="thanh dao"})
-            local buff = obj:addBuff("myplugin/Buff_DaoKhoan",real_speed)
-            -- chạy thời gian thực
-            World.Timer(2, function ()
-                if Gol.Material[MaObjID] == nil then
-                    isMining = false
-                    PackageHandlers.sendServerHandler(obj,"StopMine")
-                    obj:removeBuff(buff)
-                    return false
-                elseif not isMining then
-                    PackageHandlers.sendServerHandler(obj,"StopMine")
-                    obj:removeBuff(buff)
-                    return false
-                else
-                    local plaPos = obj:curBlockPos()
-                    local MaPos = MaObj:curBlockPos()
-                    local distance = math.abs(math.sqrt((plaPos.x - MaPos.x)^2+(plaPos.y - MaPos.y)^2+(plaPos.z - MaPos.z)^2))
-                    if distance > 2 then
+            local trophy = context_trophy:where("id",Item_id):firstData()
+            if (trophy.typeEquipment == typeEquipment.axe and MaterialModel:getTypeMar() == "Tree") or (trophy.typeEquipment == typeEquipment.pickaxe and MaterialModel:getTypeMar() == "Mar") then
+                local mineSpeed = trophy.mineSpeed
+                local playerEquiment = obj:getValue("Equipment")
+                local context_equipment = Context:new("Equipment")
+                for index, value in ipairs(playerEquiment) do
+                    local item = context_equipment:where("id",value):firstData()
+                    mineSpeed = mineSpeed + item.mineSpeed
+                end
+                local real_speed = MaterialModel:getStiffness() - mineSpeed
+                if real_speed <= 0 then
+                    real_speed = 1
+                end
+                isMining = true
+                -- truyền đến UI          
+                PackageHandlers.sendServerHandler(obj, "UI", {real_speed = real_speed, UI="thanh dao"})
+                local buff = obj:addBuff("myplugin/Buff_DaoKhoan",real_speed)
+                -- chạy thời gian thực
+                World.Timer(2, function ()
+                    if Gol.Material[MaObjID] == nil then
                         isMining = false
                         PackageHandlers.sendServerHandler(obj,"StopMine")
                         obj:removeBuff(buff)
                         return false
-                    end
-                    if real_speed <= 0 then
-                        if o:endMine(MaterialModel:getId()) then
-                            MaObj:kill(obj, "hit")
-                            o:setExp(o:getExp() + MaterialModel:getExp())
-                        end                         
+                    elseif not isMining then
                         PackageHandlers.sendServerHandler(obj,"StopMine")
-                        isMining = false
+                        obj:removeBuff(buff)
                         return false
-                    end
-                    real_speed = real_speed -1 
-                    return 1
-                end      
-            end)   
+                    else
+                        local plaPos = obj:curBlockPos()
+                        local MaPos = MaObj:curBlockPos()
+                        local distance = math.abs(math.sqrt((plaPos.x - MaPos.x)^2+(plaPos.y - MaPos.y)^2+(plaPos.z - MaPos.z)^2))
+                        if distance > 2 then
+                            isMining = false
+                            PackageHandlers.sendServerHandler(obj,"StopMine")
+                            obj:removeBuff(buff)
+                            return false
+                        end
+                        if real_speed <= 0 then
+                            if o:endMine(MaterialModel:getId()) then
+                                MaObj:kill(obj, "hit")
+                                o:setExp(o:getExp() + MaterialModel:getExp())
+                            end                         
+                            PackageHandlers.sendServerHandler(obj,"StopMine")
+                            isMining = false
+                            return false
+                        end
+                        real_speed = real_speed -1 
+                        return 1
+                    end      
+                end)  
+            end
+             
         else
             isMining = false 
         end        

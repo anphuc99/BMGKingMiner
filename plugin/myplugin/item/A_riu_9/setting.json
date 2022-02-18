@@ -1,0 +1,22 @@
+{
+  "canAbandon": false,
+  "candrop": false,
+  "canEquipPlural": true,
+  "canUse": false,
+  "equip_skill": [],
+  "equip_skin": {
+    "": ""
+  },
+  "icon": "@asset/Mesh/Thick Silver Axe/g1008_axe_20.tga",
+  "itemintroduction": "0c161e81-fdfb-418b-afd0-9c9b442cb861",
+  "itemname": "item_A_riu_9",
+  "mesh": "asset/Mesh/Thick Silver Axe/g1008_axe_20.mesh",
+  "needSave": false,
+  "stack_count_max": 1,
+  "syncGameData": {
+    "currentCapacity": true,
+    "extCapacity": true
+  },
+  "trap": false,
+  "tray": []
+}

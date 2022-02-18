@@ -333,7 +333,7 @@ end)
 PackageHandlers.registerServerHandler("getCup", function(player, packet)
     local playerItem = player:getValue("PlayerItem")
     local context_playerItem = Context:new(playerItem)
-    local getCup = context_playerItem:where("idItem","find",cup):firstData()
+    local getCup = context_playerItem:where("idItem","find",packet.cup):firstData()
     local context_item = Context:new("Item")
     return context_item:where("id",getCup.idItem):firstData()
 end)
@@ -347,7 +347,7 @@ PackageHandlers.registerServerHandler("wearEquipment", function(player, packet)
     local playerItem = player:getValue("PlayerItem")
     print(packet.id)
     local context_playerItem = Context:new(playerItem)
-    if context_playerItem:where("idItem",packet.id):sum("num") == 1 then
+    if context_playerItem:where("idItem",packet.id):sum("num") >= 1 then
         local context_equipment = Context:new("Equipment")
         local equipmentPlayer = player:getValue("Equipment")
         for index, value in ipairs(equipmentPlayer) do
@@ -380,4 +380,17 @@ PackageHandlers.registerServerHandler("unequip", function(player, packet)
     player:setValue("Equipment", equipmentPlayer)
     Gol.Player[player.objID]:addItemInBalo(packet.id,1)
     return equipmentPlayer
+end)
+-- nâng cấp id card
+PackageHandlers.registerServerHandler("updateIdCard", function(player, packet)
+    local Id_card = {20000,60000,100000,200000,600000,1000000,2000000,4000000}
+    local objPlayer = Gol.Player[player.objID]
+    if objPlayer:getMoney() >= Id_card[objPlayer:getIdCard()] then
+        objPlayer:spendMoney(Id_card[objPlayer:getIdCard()])
+        objPlayer:setIdCard(objPlayer:getIdCard() + 1)
+        return objPlayer:getIdCard()
+    else
+        messeger(player,{Text = {"messeger_NotEnoughMoney"}, Color = {r=0,b=0,g=0}})
+        return false
+    end
 end)
