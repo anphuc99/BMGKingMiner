@@ -97,6 +97,16 @@ PlayerClass:create("Player",function ()
         
     end
 
+    function o:getTutorial()
+        return o:getObj():getValue("Player").tutorial
+    end
+    function o:setTutorial(_tutorial)
+        local player = o:getObj()
+        local proPlayer = player:getValue("Player")
+        proPlayer.tutorial = _tutorial
+        player:setValue("Player", proPlayer)
+    end    
+
     function o:getLastLogin()
         return o:getObj():getValue("Player").lastLogin
     end
@@ -104,6 +114,16 @@ PlayerClass:create("Player",function ()
         local player = o:getObj()
         local proPlayer = player:getValue("Player")
         proPlayer.lastLogin = _lastLogin
+        player:setValue("Player", proPlayer)
+    end    
+
+    function o:getTakingMissionTutorial()
+        return o:getObj():getValue("Player").takingMissionTutorial
+    end
+    function o:setTakingMissionTutorial(_takingMissionTutorial)
+        local player = o:getObj()
+        local proPlayer = player:getValue("Player")
+        proPlayer.takingMissionTutorial = _takingMissionTutorial
         player:setValue("Player", proPlayer)
     end    
 
@@ -169,6 +189,7 @@ PlayerClass:create("Player",function ()
                             if o:endMine(MaterialModel:getId()) then
                                 MaObj:kill(obj, "hit")
                                 o:setExp(o:getExp() + MaterialModel:getExp())
+                                PackageHandlers.sendServerHandler(obj, "shopArrow")
                             end                         
                             PackageHandlers.sendServerHandler(obj,"StopMine")
                             isMining = false
@@ -256,8 +277,9 @@ PlayerClass:create("Player",function ()
         -- else
 
         -- end        
-        if itemObj:addToPlayer(o:getObj(),num) then
+        if itemObj:addToPlayer(o:getObj(),num) then            
             messenger(o:getObj(), {Text = {"messager_addItem",num,itemData.name}, Color = {r=0,g=0,b=0}})
+            Trigger.CheckTriggers(o:getObj():cfg(), "PLAYER_ADD_ITEM_IN_BALO", {obj1 = o:getObj(), itemid = itemId, num = num, model = o})
             return true
         end
         return false

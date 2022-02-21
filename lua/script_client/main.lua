@@ -4,5 +4,3 @@ require("script_client.OpenUI")
 -- 	--local window = UI:openWindow("")
 -- end)
 
---UI:openWindow("main")
-

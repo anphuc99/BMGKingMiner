@@ -60,19 +60,9 @@ return {
 	    price = 1500
     },
     {
-        idItem = "myplugin/G_gang-tay_1_2",
-	    idNPC = 2,
-	    price = 2000
-    },
-    {
         idItem = "myplugin/Sh_giay_1_1",
 	    idNPC = 2,
 	    price = 1500
-    },
-    {
-        idItem = "myplugin/Sh_giay_1_2",
-	    idNPC = 2,
-	    price = 2000
     },
     {
         idItem = "myplugin/S_ao_1_1",
@@ -88,11 +78,6 @@ return {
         idItem = "myplugin/T_quan_1_1",
 	    idNPC = 2,
 	    price = 1500
-    },
-    {
-        idItem = "myplugin/T_quan_1_2",
-	    idNPC = 2,
-	    price = 2000
     },
     {
         idItem = "myplugin/H_non_1_1",

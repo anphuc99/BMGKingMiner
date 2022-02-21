@@ -7,7 +7,7 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Mesh/Wooden Double Axe/g1008_wooden_weapon_01.tga",
+  "icon": "@asset/TrangBi/riu2.png",
   "itemintroduction": "52fc6496-dbca-4b78-bc05-dff9d9f8ae30",
   "itemname": "item_A_riu_2",
   "mesh": "asset/Mesh/Wooden Double Axe/g1008_axe_02.mesh",

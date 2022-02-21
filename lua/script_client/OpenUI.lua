@@ -5,6 +5,11 @@ PackageHandlers.registerClientHandler("UI", function(player, packet)
 end)
 PackageHandlers.registerClientHandler("Player_enter", function(player, packet)
     -- PackageHandlers.sendClientHandler("setLanguage", {lang = Lang:toText("lang")})
+    PackageHandlers.sendClientHandler("getValuePlayer", nil, function (player)
+        if player.tutorial < 5 then
+            UI:openWindow("Tutorial",nil,nil,player)
+        end
+    end)
 end)
 PackageHandlers.registerClientHandler("sendTip", function(player, p)
     local win = UI:isOpenWindow("messenger")

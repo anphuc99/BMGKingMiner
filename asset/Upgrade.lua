@@ -26,27 +26,31 @@ function self:onOpen(p)
             print(Lib.pv(cup))
             lv = tonumber(split(cup.id,"_")[3])        
         end)
+         -- lấy vortex        
+        PackageHandlers.sendClientHandler("getBackPackPlayer", nil, function (bp)       
+            local context_bp = Context:new(bp) 
+            conut = context_bp:where("id","myplugin/V_Vortex"):sum("num")
+            self.Image.amu:setText(conut.."/5")
+            if conut >=5 and lv <10 then
+                self.Image.Upgrate:setImage(unblockBtn)
+            else
+                self.Image.Upgrate:setImage(blockBtn)
+            end
+        end)
     end
     getCup()
     self.Image.Cup.onMouseClick = function ()
         Type = "myplugin/P_cup"
         getCup()
+        self.Image.Cup:setProperty("Disabled", "true")
+        self.Image.Riu:setProperty("Disabled", "false")
     end
     self.Image.Riu.onMouseClick = function() 
         Type = "myplugin/A_riu"
-        getCup()        
-    end
-    -- lấy vortex        
-    PackageHandlers.sendClientHandler("getBackPackPlayer", nil, function (bp)       
-        local context_bp = Context:new(bp) 
-        conut = context_bp:where("id","myplugin/V_Vortex"):sum("num")
-        self.Image.amu:setText(conut.."/5")
-        if conut >=5 and lv <10 then
-            self.Image.Upgrate:setImage(unblockBtn)
-        else
-            self.Image.Upgrate:setImage(blockBtn)
-        end
-    end)
+        getCup()       
+        self.Image.Cup:setProperty("Disabled", "false")
+        self.Image.Riu:setProperty("Disabled", "true") 
+    end   
 
     self.Image.Upgrate.onMouseClick = function() 
         if conut >= 5 then

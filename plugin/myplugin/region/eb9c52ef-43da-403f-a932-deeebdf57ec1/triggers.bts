@@ -1,0 +1,3 @@
+REGION_ENTER {
+	ExecScript(obj1 = $obj1, script_name = "ScriptableNode_4")
+}

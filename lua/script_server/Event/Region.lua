@@ -8,7 +8,7 @@ Trigger.RegisterHandler(World.cfg, "GAME_START", function(context)
             local map = World.CurWorld:getOrCreateStaticMap(loopy)            
             local this = map:addRegion(Lib.v3(0, 0, 0), Lib.v3(0, 0, 0), "myplugin/"..value.In)
             -- dịch chuyển đến hang
-            Trigger.RegisterHandler(this.cfg, "REGION_ENTER", function(context)
+            Trigger.addHandler(this.cfg, "REGION_ENTER", function(context)
                 local proPlayer = context.obj1:getValue("Player")
                 if proPlayer.idCard >= value.Id_card then
                     local dynamicMap = World.CurWorld:getOrCreateStaticMap(value.map, true) 
@@ -21,7 +21,7 @@ Trigger.RegisterHandler(World.cfg, "GAME_START", function(context)
             -- dịch chuyển về nhà
             local map2 = World.CurWorld:getOrCreateStaticMap(value.map)  
             local this2 = map2:addRegion(Lib.v3(0, 0, 0), Lib.v3(0, 0, 0), "myplugin/"..value.Out)
-            Trigger.RegisterHandler(this2.cfg, "REGION_ENTER", function(context)
+            Trigger.addHandler(this2.cfg, "REGION_ENTER", function(context)
                 local dynamicMap = World.CurWorld:getOrCreateStaticMap(loopy, true) 
                 context.obj1:setMapPos(dynamicMap, Lib.v3(value.OutPosition.x, value.OutPosition.y, value.OutPosition.z))
             end)

@@ -7,11 +7,11 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/TrangBi/Găng tay1.png",
-  "itemintroduction": "06f22a22-5d19-471d-94ca-59c57e22945d",
-  "itemname": "item_G_gang-tay_1_2",
+  "icon": "@asset/TrangBi/Áo choàng1(Siêu hiếm).png",
+  "itemintroduction": "576dfd9a-5d45-49eb-8195-e5232fee8b33",
+  "itemname": "item_C_ao-choan_1_3",
   "needSave": false,
-  "stack_count_max": 1,
+  "stack_count_max": 1000,
   "syncGameData": {
     "currentCapacity": true,
     "extCapacity": true

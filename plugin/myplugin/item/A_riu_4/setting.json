@@ -7,7 +7,7 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Mesh/Storm Axe/g1008_steel_weapon_01.tga",
+  "icon": "@asset/TrangBi/riu4.png",
   "itemintroduction": "0df7e660-b5e5-439c-96fe-4fe5de8ec31a",
   "itemname": "item_A_riu_4",
   "mesh": "asset/Mesh/Storm Axe/g1008_axe_05.mesh",

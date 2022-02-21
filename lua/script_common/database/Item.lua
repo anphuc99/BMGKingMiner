@@ -137,70 +137,70 @@ return {
     {
         id = "myplugin/A_riu_1",
         name ="item_A_riu_1",
-        icon = "asset/Mesh/Wooden Axe/g1008_wooden_weapon_01.tga",
+        icon = "asset/TrangBi/riu1.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/A_riu_2",
         name ="item_A_riu_2",
-        icon = "asset/Mesh/Wooden Double Axe/g1008_wooden_weapon_01.tga",
+        icon = "asset/TrangBi/riu2.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/A_riu_3",
         name ="item_A_riu_3",
-        icon = "asset/Mesh/Ordinary Iron Axe/g1008_steel_weapon_01.tga",
+        icon = "asset/TrangBi/riu3.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/A_riu_4",
         name ="item_A_riu_4",
-        icon = "asset/Mesh/Storm Axe/g1008_steel_weapon_01.tga",
+        icon = "asset/TrangBi/riu4.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/A_riu_5",
         name ="item_A_riu_5",
-        icon = "asset/Mesh/Short Golden Axe/g1008_golden_weapon_4.tga",
+        icon = "asset/TrangBi/riu5.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/A_riu_6",
         name ="item_A_riu_6",
-        icon = "asset/Mesh/Sharp Golden Axe/g1008_golden_weapon_5.tga",
+        icon = "asset/TrangBi/riu6.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/A_riu_7",
         name ="item_A_riu_7",
-        icon = "asset/Mesh/Crystal Blue Axe/g1008_diamond_weapon_1.tga",
+        icon = "asset/TrangBi/iconmau14.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/A_riu_8",
         name ="item_A_riu_8",
-        icon = "asset/Mesh/Crystal Double Axe/g1008_diamond_weapon_1.tga",
+        icon = "asset/TrangBi/riu7.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/A_riu_9",
         name ="item_A_riu_9",
-        icon = "asset/Mesh/Thick Silver Axe/g1008_axe_20.tga",
+        icon = "asset/TrangBi/riu8.png",
         typeItem = typeItem.Trophy
     },
 
     {
         id = "myplugin/A_riu_10",
         name ="item_A_riu_10",
-        icon = "asset/Mesh/Silvery Axe/g1008_axe_19.tga",
+        icon = "asset/TrangBi/riu9.png",
         typeItem = typeItem.Trophy
     },
 
@@ -219,7 +219,7 @@ return {
     {
         id = "myplugin/H_non_1_2",
         name ="item_H_non_1_2",
-        icon = "asset/TrangBi/Nón1.png",
+        icon = "asset/TrangBi/Nón1(hiếm).png",
         typeItem = typeItem.Equipment
     },
     {
@@ -231,18 +231,12 @@ return {
     {
         id = "myplugin/S_ao_1_2",
         name ="item_S_ao_1_2",
-        icon = "asset/TrangBi/Giáp1.png",
+        icon = "asset/TrangBi/Giáp1(hiếm).png",
         typeItem = typeItem.Equipment
     },
     {
         id = "myplugin/T_quan_1_1",
         name ="item_T_quan_1_1",
-        icon = "asset/TrangBi/Quần1.png",
-        typeItem = typeItem.Equipment
-    },
-    {
-        id = "myplugin/T_quan_1_2",
-        name ="item_T_quan_1_2",
         icon = "asset/TrangBi/Quần1.png",
         typeItem = typeItem.Equipment
     },
@@ -255,7 +249,13 @@ return {
     {
         id = "myplugin/C_ao-choan_1_2",
         name ="item_C_ao-choan_1_2",
-        icon = "asset/TrangBi/Áo choàng1.png",
+        icon = "asset/TrangBi/Áo choàng1(hiếm).png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/C_ao-choan_1_3",
+        name ="item_C_ao-choan_1_3",
+        icon = "asset/TrangBi/Áo choàng1(Siêu hiếm).png",
         typeItem = typeItem.Equipment
     },
     {
@@ -265,20 +265,8 @@ return {
         typeItem = typeItem.Equipment
     },
     {
-        id = "myplugin/Sh_giay_1_2",
-        name ="item_Sh_giay_1_2",
-        icon = "asset/TrangBi/Giầy.png",
-        typeItem = typeItem.Equipment
-    },
-    {
         id = "myplugin/G_gang-tay_1_1",
         name ="item_G_gang-tay_1_1",
-        icon = "asset/TrangBi/Găng tay1.png",
-        typeItem = typeItem.Equipment
-    },
-    {
-        id = "myplugin/G_gang-tay_1_2",
-        name ="item_G_gang-tay_1_2",
         icon = "asset/TrangBi/Găng tay1.png",
         typeItem = typeItem.Equipment
     },

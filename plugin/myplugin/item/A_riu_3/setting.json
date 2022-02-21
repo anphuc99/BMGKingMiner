@@ -7,7 +7,7 @@
   "equip_skin": {
     "": ""
   },
-  "icon": "@asset/Mesh/Ordinary Iron Axe/g1008_steel_weapon_01.tga",
+  "icon": "@asset/TrangBi/riu3.png",
   "itemintroduction": "7412501e-0487-4b0e-ad34-935ee4a171ab",
   "itemname": "item_A_riu_3",
   "mesh": "asset/Mesh/Ordinary Iron Axe/g1008_axe_04.mesh",

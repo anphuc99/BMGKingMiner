@@ -29,6 +29,9 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
     else
         PlayerObj:setLastLogin(os.time())        
         PackageHandlers.sendServerHandler(context.obj1, "setMoney", { money = PlayerObj:getMoney()})
+        if PlayerObj:getTakingMissionTutorial() then
+            Trigger.CheckTriggers(this, "PALYER_CHECK_TUTORIAL_MISSION", {obj1 = context.obj1, model = PlayerObj}) 
+        end        
     end
     PackageHandlers.sendServerHandler(context.obj1, "Player_enter", nil)
     PlayerObj:refreshHand()
@@ -393,4 +396,9 @@ PackageHandlers.registerServerHandler("updateIdCard", function(player, packet)
         messeger(player,{Text = {"messeger_NotEnoughMoney"}, Color = {r=0,b=0,g=0}})
         return false
     end
+end)
+-- nhận nhiệm vụ tutorial
+PackageHandlers.registerServerHandler("TakingMissionTutorial", function(player, packet)
+    Gol.Player[player.objID]:setTakingMissionTutorial(true)
+    Trigger.CheckTriggers(this, "PALYER_CHECK_TUTORIAL_MISSION", {obj1 = player, model = Gol.Player[player.objID]}) 
 end)
