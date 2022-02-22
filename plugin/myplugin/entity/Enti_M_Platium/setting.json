@@ -83,7 +83,7 @@
     ""
   ],
   "reachDistance": 6.5,
-  "reviveTime": 1200,
+  "reviveTime": 5200,
   "setFollowWhenCreate": true,
   "skills": [],
   "stepHeight": 0.6,

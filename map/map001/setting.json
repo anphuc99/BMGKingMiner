@@ -705,6 +705,17 @@
         "rotation": "x:0 y:94.998947143555 z:0",
         "scale": "x:1 y:1 z:1"
       }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_NPC_Mission",
+      "properties": {
+        "id": "8513341383241334785",
+        "name": "entity_Enti_NPC_Mission",
+        "position": "x:25.318338394165 y:53.002967834473 z:31.294364929199",
+        "rotation": "x:0 y:90.999633789062 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
     }
   ],
   "skyBox": [

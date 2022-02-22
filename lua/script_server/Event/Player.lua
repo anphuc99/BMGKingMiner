@@ -223,6 +223,7 @@ PackageHandlers.registerServerHandler("Upgrate", function(player, packet)
     end
     if itemUpgrate.position == positionItem.hand then
         objPlsyer:refreshHand(itemUpgrate.cellNum)
+        Trigger.CheckTriggers(player:cfg(), "PALYER_CHECK_TUTORIAL_MISSION", {obj1 = player, model = objPlsyer})
     end
     return true,itemUpgrate
 end)
@@ -310,7 +311,7 @@ PackageHandlers.registerServerHandler("sellBlackMarket", function(player, packet
                 sellerObj:increaseMoney(item.price) 
                 return false
             end
-            playerObj:increaseMoney(item.price)   
+            playerObj:increaseMoney(math.floor(item.price*90/100))   
             for key, value in pairs(blackMarket) do
                 if value.created_at == packet.created_at then
                     table.remove(blackMarket,key)

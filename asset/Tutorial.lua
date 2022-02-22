@@ -1,4 +1,5 @@
 function self:onOpen(p)
+    print(Lib.pv(p))
     local Tutorial = {
         {
             ImgDescription = {
@@ -63,12 +64,107 @@ function self:onOpen(p)
                     self:close()                    
                 end)
             end
-        }
+        },
+        {
+            ImgDescription = {
+                "asset/Tutorial/T5.png",
+                "asset/Tutorial/T6.png",
+            },
+            txtDescription = {
+                "Đây là nút dùng nâng cấp",
+                "Bạn hãy thu thập 5 đá vortex để nâng cấp nhé",
+            },
+            Index = 2,
+            fun = function ()                
+                PackageHandlers.sendClientHandler("TakingMissionTutorial", nil, function ()                    
+                    self:close()                    
+                end)
+            end
+        },
+        {
+            ImgDescription = {
+                "asset/Tutorial/T5.png",
+                "asset/Tutorial/T6.png",
+            },
+            txtDescription = {
+                "Sau khi thu thập đủ 5 viên đá bạn hãy nhấn vào nâng cấp",
+                "Bạn hãy nâng cấp cúp của mình lên lv 2 nhé",
+            },
+            Index = 2,
+            fun = function ()                
+                PackageHandlers.sendClientHandler("TakingMissionTutorial", nil, function ()                    
+                    self:close()                    
+                end)
+            end
+        },
+        {
+            ImgDescription = {
+                "asset/Tutorial/T5.png",
+                "asset/Tutorial/T6.png",
+                "asset/Tutorial/T6.png",
+            },
+            txtDescription = {
+                "Đây là cửa hàng",
+                "Đây là túi",
+                "...",
+            },
+            Index = 2,
+            fun = function ()                                 
+                self:close()                    
+            end
+        },
+        M1 = {
+            ImgDescription = {
+                "asset/Tutorial/T5.png",
+            },
+            txtDescription = {
+                "Nhà ta hư hỏng nặng, ta cần một số vật liệu để xây lại nhà. Ngươi cho những vật liệu này không?",
+            },
+            Index = 1,
+            fun = function ()
+                PackageHandlers.sendClientHandler("takingMission", nil, function ()
+                    self:close()
+                end)
+            end
+        },
+        M2 = {
+            ImgDescription = {
+                "asset/Tutorial/T5.png",
+            },
+            txtDescription = {
+                "Có một thương nhân muốn mua một cái Head (Military) thường. Ngươi có không?",
+            },
+            Index = 1,
+            fun = function ()
+                PackageHandlers.sendClientHandler("takingMission", nil, function ()
+                    self:close()
+                end)
+            end
+        },
+        M3 = {
+            ImgDescription = {
+                "asset/Tutorial/T5.png",
+            },
+            txtDescription = {
+                "Dạo này nhà tôi bị dột nhiều, ngươi có gỗ bán cho ta không?",
+            },
+            Index = 1,
+            fun = function ()
+                PackageHandlers.sendClientHandler("takingMission", nil, function ()
+                    self:close()
+                end)
+            end
+        },
     }
     local page = 1
     local function setPage()
         self.Tutorial.ImgDescription:setImage("gameres|"..Tutorial[p.tutorial].ImgDescription[page])
         self.Tutorial.txtDescription:setText(Lang:toText({Tutorial[p.tutorial].txtDescription[page]})) 
+        if page == Tutorial[p.tutorial].Index then
+            self.Tutorial.btnOk:setVisible(true)
+            self.Tutorial.btnOk.onMouseClick = Tutorial[p.tutorial].fun
+            self.Tutorial.right:setVisible(false)
+        end  
     end 
     setPage()
     if page == Tutorial[p.tutorial].Index then

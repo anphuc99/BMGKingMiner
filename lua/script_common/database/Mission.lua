@@ -1,0 +1,59 @@
+return {
+    {
+        id = "M1",
+        item = {
+            ["myplugin/M_Tree1"] = 5,
+            ["myplugin/M_Iron"] = 3,
+            ["myplugin/M_Copper"] = 5
+        },
+        money = 200,
+        id_card = 1
+    },
+    {
+        id = "M2",
+        item = {
+            ["myplugin/H_non_1_1"] = 1,
+            ["myplugin/M_Iron"] = 3,
+        },
+        money = 700,
+        id_card = 1
+    },
+    {
+        id = "M3",
+        item = {
+            ["myplugin/M_Tree2"] = 5,
+        },
+        money = 300,
+        id_card = 1
+    },
+    {
+        id = "M4",
+        item = {
+            ["myplugin/M_Tree1"] = 5,
+            ["myplugin/M_Iron"] = 3,
+            ["myplugin/M_Copper"] = 5
+        },
+        money = 200,
+        id_card = 2
+    },
+    {
+        id = "M5",
+        item = {
+            ["myplugin/H_non_1_1"] = 1,
+            ["myplugin/M_Iron"] = 3,
+        },
+        money = 700,
+        id_card = 2
+    },
+    {
+        id = "M6",
+        item = {
+            ["myplugin/M_Tree2"] = 5,
+        },
+        money = 300,
+        id_card = 2
+    },
+    option = {
+        primaryKey = "id",        
+    }
+}

@@ -14,6 +14,9 @@ function self:onOpen(p)
     end)       
     PackageHandlers.registerClientHandler("setMission", function(player, packet)        
         self.Mission:cleanupChildren()
+        if #packet == 0 then
+            return
+        end
         local text1 = UI:createStaticText("Mi")
         text1:setText(Lang:toText({"Mission"}))
         text1:setTextColours(Color3.new(1,1,1))
@@ -61,4 +64,9 @@ function self:onOpen(p)
     --     -- self.Option.Upgrate:setProperty("Position","{{0,298.66},{0,1.90735e-06}}")
 
     -- end
+    self.Option.Tutorial.onMouseClick = function() 
+        PackageHandlers.sendClientHandler("getValuePlayer", nil, function (package)
+            UI:openWindow("Tutorial",nil,nil,package)
+        end)
+    end
 end

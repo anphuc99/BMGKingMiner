@@ -24,7 +24,7 @@ local itemTuotrial = {
     {
         item = "myplugin/P_cup_2",
         num = 1,
-        money = 100         
+        money = 1000         
     }
 }
 
