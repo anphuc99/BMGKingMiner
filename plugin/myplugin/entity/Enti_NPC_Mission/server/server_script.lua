@@ -37,11 +37,11 @@ local cancelFunc = Trigger.addHandler(this:cfg(), "ENTITY_CLICK", function(conte
             PackageHandlers.sendServerHandler(player, "UI", {UI = "Tutorial", tutorial = mission.msid}) 
         end        
     else        
-        if valuePlayer.Lv >= 1 then             
+        if valuePlayer.tutorial >= 6 then             
             if mission.lastCompleteMs == nil or compareDate(mission.lastCompleteMs,os.time()) >= 1 then
                 local context_mission = Context:new("Mission")
                 local getAllMission = context_mission:where("id_card",valuePlayer.idCard):getData()
-                mission.msid =  getAllMission[3].id
+                mission.msid =  getAllMission[math.random(1,#getAllMission)].id
                 player:setValue("mission",mission)
                 PackageHandlers.sendServerHandler(player, "UI", {UI = "Tutorial", tutorial = mission.msid}) 
             end

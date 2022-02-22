@@ -6,7 +6,7 @@ end)
 PackageHandlers.registerClientHandler("Player_enter", function(player, packet)
     -- PackageHandlers.sendClientHandler("setLanguage", {lang = Lang:toText("lang")})
     PackageHandlers.sendClientHandler("getValuePlayer", nil, function (player)
-        if player.tutorial < 1 then
+        if player.tutorial < 6 then
             UI:openWindow("Tutorial",nil,nil,player)
         end
     end)
