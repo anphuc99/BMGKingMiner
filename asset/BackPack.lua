@@ -276,7 +276,7 @@ function self:onOpen(p)
     end
     -- nâng cấp id card
     self.BackPack.Id_card.onMouseClick = function() 
-        if self.BackPack.Id_card:getText() ~= Lang:toText({"ID_card9"}) then
+        if self.BackPack.Id_card:getText() ~= Lang:toText({"ID_card3"}) then
             UI:openWindow("MessagerBox",nil,nil,{
                 Text = {"messeger_updateIdCard"},
                 Yes = function (s)
