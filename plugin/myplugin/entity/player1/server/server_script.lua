@@ -9,9 +9,14 @@ local PlayerProperty = {
     idCard = 1,
     Lv = 1,
     exp = 0,
+    Mine = 0,
     tutorial = 1,
     takingMissionTutorial = false,
-    lastLogin = os.time()           
+    lastLogin = os.time(),
+    lastRollUp7 = nil,
+    lastRollUp28 = nil,
+    countRollUp7 = 0,
+    countRollUp28 = 0
 }
 this.addValueDef("PlayerItem", {
     {idPlayer = this.platformUserId, idItem = cupLv1,cellNum = 1, num = 1, position = positionItem.hand, lv = 1},
@@ -35,3 +40,7 @@ this.addValueDef("mission", {
 this.addValueDef("Player", PlayerProperty, false, false, true, false)
 this.addValueDef("blackMarket", {}, false, false, true, false)
 this.addValueDef("Equipment", {}, false, false, true, false)
+this.addValueDef("Achievement",{
+    done = {},
+    proceed = {}
+},false, false, true, false)

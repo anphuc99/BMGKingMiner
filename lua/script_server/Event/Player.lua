@@ -403,3 +403,32 @@ PackageHandlers.registerServerHandler("TakingMissionTutorial", function(player, 
     Gol.Player[player.objID]:setTakingMissionTutorial(true)
     Trigger.CheckTriggers(this, "PALYER_CHECK_TUTORIAL_MISSION", {obj1 = player, model = Gol.Player[player.objID]}) 
 end)
+-- điểm danh 7 ngày và 28 ngày
+PackageHandlers.registerServerHandler("RollUp", function(player, packet)
+    local compareDate = require "script_common.lbr.compareDate"
+    local valuePlayer = player:getValue("Player")
+    local objPlayer = Gol.Player[player.objID]
+    local lastRollUp = valuePlayer["lastRollUp"..packet.rollUp] or (os.time() - 86400)
+    if compareDate(lastRollUp,os.time()) >= 1 then
+        local login = require "script_common.database.Login"        
+        local day7 = login["day"..packet.rollUp][(valuePlayer["countRollUp"..packet.rollUp]%packet.rollUp)+1]
+        objPlayer:increaseMoney(day7.coin)
+        objPlayer:addExp(day7.exp) 
+        for key, value in pairs(day7.item) do
+            objPlayer:addItemInBalo(key,value)
+        end
+        local valuePlayer = player:getValue("Player")
+        valuePlayer["lastRollUp"..packet.rollUp] = os.time()
+        valuePlayer["countRollUp"..packet.rollUp] = valuePlayer["countRollUp"..packet.rollUp] + 1
+        player:setValue("Player",valuePlayer)
+        return true
+    end
+    return false
+end)
+
+local cancelFunc = Trigger.addHandler(this, "PALYER_CHECK_ACHIEVEMENT", function(context)
+    local Achievement = require "script_common.database.Acievement"
+    for index, value in ipairs(Achievement) do
+        local check
+    end
+end)

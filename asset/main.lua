@@ -9,6 +9,12 @@ function self:onOpen(p)
     self.Option.Forge.onMouseClick = function() 
         UI:openWindow("crafting")
     end
+    self.Option.Achievement.onMouseClick = function() 
+        PackageHandlers.sendClientHandler("getValuePlayer", nil, function (packet)
+            UI:openWindow("Login",nil,nil,packet)
+        end)
+        
+    end
     PackageHandlers.registerClientHandler("setMoney", function(player, packet)
         self.Coin.Money:setText(packet.money)
     end)       

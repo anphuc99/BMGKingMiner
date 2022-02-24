@@ -190,6 +190,7 @@ PlayerClass:create("Player",function ()
                                 MaObj:kill(obj, "hit")
                                 o:setExp(o:getExp() + MaterialModel:getExp())
                                 PackageHandlers.sendServerHandler(obj, "shopArrow")
+                                Trigger.CheckTriggers(obj:cfg(), "PLAYER_END_MINE", {obj1 = obj, model = 0, item = MaterialModel:getId()})
                             end                         
                             PackageHandlers.sendServerHandler(obj,"StopMine")
                             isMining = false
@@ -428,6 +429,37 @@ PlayerClass:create("Player",function ()
             end
         end
     end
+    function o:addExp(exp)
+        o:setExp(o:getExp() + exp)
+    end
+
+    function o:checkAchievement()
+        local Achievement = require "script_common.database.Acievement"
+        local obj = o:getObj()
+        local function locate( table, value )
+            for i = 1, #table do
+                if table[i] == value then return true end
+            end
+            return false
+        end
+        local getAchievement = obj:getValue("Achievement")
+        local valuePlayer = obj:getValue("Player")
+        for index, value in ipairs(Achievement) do
+            if not locate(getAchievement.done,index) then
+                local check = true
+                for key, value in pairs(value.condition) do
+                    if valuePlayer[key] ~= value then
+                        check = false
+                        break
+                    end
+                end
+                if check then
+                    getAchievement.done[#getAchievement.done+1] = index
+                end
+            end
+        end
+    end
+
     return o
 end)
 
