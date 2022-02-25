@@ -56,20 +56,29 @@ PlayerClass:create("Player",function ()
         local proPlayer = player:getValue("Player")
         proPlayer.idCard = _idCard
         player:setValue("Player", proPlayer)
+        o:checkAchievement()
     end
 
     function o:getLv()
         return o:getObj():getValue("Player").Lv
     end
     function o:setLv(_Lv)
-        print("wwwwwwwwwwweeeeeeeeeeeeeee")
         local player = o:getObj()
-        local proPlayer = player:getValue("Player")     
-        print(Lib.pv(proPlayer))   
+        local proPlayer = player:getValue("Player")             
         proPlayer.Lv = _Lv        
         player:setValue("Player", proPlayer)
-        local proPlayer = player:getValue("Player")  
-        print(Lib.pv(proPlayer))
+        o:checkAchievement()        
+    end
+    
+    function o:getMine()
+        return o:getObj():getValue("Player").Mine
+    end
+    function o:setMine(_Mine)
+        local player = o:getObj()
+        local proPlayer = player:getValue("Player")             
+        proPlayer.Mine = _Mine        
+        player:setValue("Player", proPlayer)
+        o:checkAchievement()        
     end
 
     function o:getExp()
@@ -190,6 +199,7 @@ PlayerClass:create("Player",function ()
                                 MaObj:kill(obj, "hit")
                                 o:setExp(o:getExp() + MaterialModel:getExp())
                                 PackageHandlers.sendServerHandler(obj, "shopArrow")
+                                o:setMine(o:getMine() + 1)
                                 Trigger.CheckTriggers(obj:cfg(), "PLAYER_END_MINE", {obj1 = obj, model = 0, item = MaterialModel:getId()})
                             end                         
                             PackageHandlers.sendServerHandler(obj,"StopMine")
@@ -447,7 +457,7 @@ PlayerClass:create("Player",function ()
         for index, value in ipairs(Achievement) do
             if not locate(getAchievement.done,index) then
                 local check = true
-                for key, value in pairs(value.condition) do
+                for key, value in pairs(value.condition) do                    
                     if valuePlayer[key] ~= value then
                         check = false
                         break
@@ -458,6 +468,7 @@ PlayerClass:create("Player",function ()
                 end
             end
         end
+        obj:setValue("Achievement", getAchievement)
     end
 
     return o

@@ -34,7 +34,8 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
         end        
     end
     PackageHandlers.sendServerHandler(context.obj1, "Player_enter", nil)
-    PlayerObj:refreshHand()
+    PlayerObj:refreshHand()    
+    PlayerObj:checkAchievement()
 end)
 Trigger.RegisterHandler(this, "ENTITY_LEAVE", function(context)
     Gol.Player[context.objID] = nil
@@ -405,17 +406,23 @@ PackageHandlers.registerServerHandler("TakingMissionTutorial", function(player, 
 end)
 -- điểm danh 7 ngày và 28 ngày
 PackageHandlers.registerServerHandler("RollUp", function(player, packet)
+    local rollbackPlayerItem = player:getValue("PlayerItem")
+    local rollbackPlayer = player:getValue("Player")
     local compareDate = require "script_common.lbr.compareDate"
     local valuePlayer = player:getValue("Player")
     local objPlayer = Gol.Player[player.objID]
-    local lastRollUp = valuePlayer["lastRollUp"..packet.rollUp] or (os.time() - 86400)
+    local lastRollUp = valuePlayer["lastRollUp"..packet.rollUp] or (os.time() - 86400)    
     if compareDate(lastRollUp,os.time()) >= 1 then
         local login = require "script_common.database.Login"        
         local day7 = login["day"..packet.rollUp][(valuePlayer["countRollUp"..packet.rollUp]%packet.rollUp)+1]
         objPlayer:increaseMoney(day7.coin)
         objPlayer:addExp(day7.exp) 
         for key, value in pairs(day7.item) do
-            objPlayer:addItemInBalo(key,value)
+            if not objPlayer:addItemInBalo(key,value) then
+                player:setValue("Player", rollbackPlayer)
+                player:setValue("PlayerItem", rollbackPlayerItem)
+                return false
+            end
         end
         local valuePlayer = player:getValue("Player")
         valuePlayer["lastRollUp"..packet.rollUp] = os.time()
@@ -426,9 +433,39 @@ PackageHandlers.registerServerHandler("RollUp", function(player, packet)
     return false
 end)
 
-local cancelFunc = Trigger.addHandler(this, "PALYER_CHECK_ACHIEVEMENT", function(context)
-    local Achievement = require "script_common.database.Acievement"
-    for index, value in ipairs(Achievement) do
-        local check
+PackageHandlers.registerServerHandler("getAchievement", function(player, packet)
+    return player:getValue("Achievement"), player:getValue("Player")
+end)
+
+-- nhận Achievement
+PackageHandlers.registerServerHandler("ProccedAchievement", function(player, packet)
+    local playerAchi = player:getValue("Achievement")
+    local function locate( table, value )
+        for i = 1, #table do
+            if table[i] == value then return true end
+        end
+        return false
     end
+    if locate(playerAchi.done,packet.achi) and not locate(playerAchi.proceed,packet.achi) then
+        local rollbackPlayerItem = player:getValue("PlayerItem")
+        local rollbackPlayer = player:getValue("Player")        
+        local rollbackAchi = player:getValue("Achievement")        
+        local Achievement = require "script_common.database.Acievement"[packet.achi]
+        playerAchi.proceed[#playerAchi.proceed+1] = packet.achi
+        player:setValue("Achievement",playerAchi)
+        local objPlayer = Gol.Player[player.objID]
+        for key, value in pairs(Achievement.reward.item) do
+            if not objPlayer:addItemInBalo(key,value) then
+                player:setValue("Player", rollbackPlayer)
+                player:setValue("PlayerItem", rollbackPlayerItem)
+                player:setValue("Achievement", rollbackAchi)
+                return false
+            end
+        end
+        objPlayer:increaseMoney(Achievement.reward.coin)
+        objPlayer:addExp(Achievement.reward.exp) 
+        
+        return true
+    end
+    return false
 end)

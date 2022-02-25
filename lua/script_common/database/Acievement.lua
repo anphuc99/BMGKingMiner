@@ -13,7 +13,7 @@ return {
             },
             exp = 0,
             coin = 0
-        }  
+        },        
     },
     {
         condition = {
@@ -204,57 +204,7 @@ return {
             exp = 0,
             coin = 0
         }  
-    },
-    {
-        condition = {
-            Lv = 100,
-        },
-        reward = {
-            item = {},
-            exp = 0,
-            coin = 0
-        }  
-    },
-    {
-        condition = {
-            Lv = 100,
-        },
-        reward = {
-            item = {},
-            exp = 0,
-            coin = 0
-        }  
-    },
-    {
-        condition = {
-            Lv = 100,
-        },
-        reward = {
-            item = {},
-            exp = 0,
-            coin = 0
-        }  
-    },
-    {
-        condition = {
-            Lv = 100,
-        },
-        reward = {
-            item = {},
-            exp = 0,
-            coin = 0
-        }  
-    },
-    {
-        condition = {
-            Lv = 100,
-        },
-        reward = {
-            item = {},
-            exp = 0,
-            coin = 0
-        }  
-    },
+    },    
     -- Mine
     {
         condition = {
