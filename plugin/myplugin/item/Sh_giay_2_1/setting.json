@@ -1,0 +1,21 @@
+{
+  "canAbandon": false,
+  "candrop": false,
+  "canEquipPlural": true,
+  "canUse": false,
+  "equip_skill": [],
+  "equip_skin": {
+    "": ""
+  },
+  "icon": "@asset/TrangBi/Giầy2.png",
+  "itemintroduction": "dd5ed2f1-0999-4a4c-9430-0ba6068608dd",
+  "itemname": "31f5de0c-72c5-4c4d-aba6-d3b3c0340ccd",
+  "needSave": false,
+  "stack_count_max": 1,
+  "syncGameData": {
+    "currentCapacity": true,
+    "extCapacity": true
+  },
+  "trap": false,
+  "tray": []
+}

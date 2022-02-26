@@ -9,25 +9,22 @@ function self:onOpen(p)
     self.Option.Forge.onMouseClick = function() 
         UI:openWindow("crafting")
     end
-    self.Option.Achievement.onMouseClick = function() 
+    self.Option.Dally.onMouseClick = function() 
         PackageHandlers.sendClientHandler("getValuePlayer", nil, function (packet)
             UI:openWindow("Login",nil,nil,packet)
-        end)
-        
+        end)        
+    end
+    self.Option.Achievement.onMouseClick = function() 
+        UI:openWindow("Achievement")      
     end
     PackageHandlers.registerClientHandler("setMoney", function(player, packet)
         self.Coin.Money:setText(packet.money)
     end)       
     PackageHandlers.registerClientHandler("setMission", function(player, packet)        
-        self.Mission:cleanupChildren()
+        self.frameMission.Mission:cleanupChildren()
         if #packet == 0 then
             return
         end
-        local text1 = UI:createStaticText("Mi")
-        text1:setText(Lang:toText({"Mission"}))
-        text1:setTextColours(Color3.new(1,1,1))
-        text1:setHeight(UDim.new(0,20))
-        self.Mission:addChild(text1)
         for ii, value in ipairs(packet) do
             local text = UI:createStaticText("M"..ii)
             local context_item = Context:new("Item")
@@ -35,7 +32,7 @@ function self:onOpen(p)
             text:setText(Lang:toText({item.name})..": "..value.num.."/"..value.count)
             text:setTextColours(Color3.new(1,1,1))
             text:setHeight(UDim.new(0,20))
-            self.Mission:addChild(text)
+            self.frameMission.Mission:addChild(text)
         end        
     end)       
     self.Option.Upgrate.onMouseClick = function() 
@@ -77,4 +74,12 @@ function self:onOpen(p)
             UI:openWindow("Tutorial",nil,nil,package)
         end)
     end
+
+    PackageHandlers.registerClientHandler("RedDotDally", function(player, packet)
+        self.Option.Dally.dot:setVisible(true)
+    end)
+
+    PackageHandlers.registerClientHandler("RedDotAchievement", function(player, packet)
+        self.Option.Achievement.dot:setVisible(true)
+    end)
 end

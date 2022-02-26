@@ -11,6 +11,7 @@ local messeger = require "script_server.Helper.SendMesseger"
 local split = require "script_common.lbr.split"
 local Upgrate = require "script_common.database.Upgrate"
 local Vortex = require "script_common.database.Vortex"
+local compareDate = require "script_common.lbr.compareDate"
 -- local lang = require "script_server.lbr.lang"
 
 Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
@@ -36,6 +37,12 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
     PackageHandlers.sendServerHandler(context.obj1, "Player_enter", nil)
     PlayerObj:refreshHand()    
     PlayerObj:checkAchievement()
+    if PlayerObj:getLastRollUp7() == nil or compareDate(PlayerObj:getLastRollUp7(),os.time()) >=1 then        
+        PackageHandlers.sendServerHandler(context.obj1, "RedDotDally", nil)
+    end
+    if PlayerObj:getLastRollUp28() == nil or compareDate(PlayerObj:getLastRollUp28(),os.time()) >=1 then
+        PackageHandlers.sendServerHandler(context.obj1, "RedDotDally", nil)
+    end
 end)
 Trigger.RegisterHandler(this, "ENTITY_LEAVE", function(context)
     Gol.Player[context.objID] = nil

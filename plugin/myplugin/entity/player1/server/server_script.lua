@@ -4,13 +4,13 @@ local positionItem = require "script_common.positionItem"
 this.addValueDef("new", false, false, false, true, false)
 local PlayerProperty = {
     id = this.platformUserId,
-    money = 0,
+    money = 100000,
     balo = 6,
     idCard = 1,
     Lv = 1,
     exp = 0,
     Mine = 0,
-    tutorial = 1,
+    tutorial = 6,
     takingMissionTutorial = false,
     lastLogin = os.time(),
     lastRollUp7 = nil,

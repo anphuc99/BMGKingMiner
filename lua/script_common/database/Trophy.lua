@@ -22,7 +22,7 @@ return {
 
     {
         id = "myplugin/P_cup_5",
-        mineSpeed = 9*20
+        mineSpeed = 10*20
     },
 
     {

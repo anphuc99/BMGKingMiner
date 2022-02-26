@@ -41,6 +41,7 @@ function self:onOpen(p)
             balo = data.balo
             for i = 1, data.balo, 1 do
                 self.BackPack.ScrollableView.CellBP["cell" .. i]:setImage(unBlockImg)
+                self.BackPack.idCard:setImage("gameres|asset/idCard/idCard"..data.idCard..".png")
             end
         end)
     local function reloadBackPack()    
@@ -209,7 +210,7 @@ function self:onOpen(p)
         self.BackPack.InfoBox:setVisible(false)
         self.BackPack.Blur:setVisible(false)
     end
-    -- phần trang bị
+    -- phần trang bị    
     -- lấy thông tin
     self.BackPack.playerName:setText(player.name)
     PackageHandlers.sendClientHandler("getValuePlayer", nil, function (propPlayer)
@@ -275,7 +276,7 @@ function self:onOpen(p)
         end
     end
     -- nâng cấp id card
-    self.BackPack.Id_card.onMouseClick = function() 
+    self.BackPack.idCard.onMouseClick = function() 
         if self.BackPack.Id_card:getText() ~= Lang:toText({"ID_card3"}) then
             UI:openWindow("MessagerBox",nil,nil,{
                 Text = {"messeger_updateIdCard"},
@@ -283,6 +284,7 @@ function self:onOpen(p)
                     PackageHandlers.sendClientHandler("updateIdCard", nil, function (rs)
                         if rs then
                             self.BackPack.Id_card:setText(Lang:toText({"ID_card"..rs}))
+                            self.BackPack.idCard:setImage("gameres|asset/idCard/idCard"..rs..".png")
                         end
                     end)
                 end

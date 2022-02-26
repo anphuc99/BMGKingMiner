@@ -1,0 +1,21 @@
+{
+  "canAbandon": false,
+  "candrop": false,
+  "canEquipPlural": true,
+  "canUse": false,
+  "equip_skill": [],
+  "equip_skin": {
+    "": ""
+  },
+  "icon": "@asset/TrangBi/Áo choàng2-2.png",
+  "itemintroduction": "db9e57d8-b671-4fbb-8241-2d2e6e417e55",
+  "itemname": "0bda2746-d8c7-479a-97dc-aeb47a5b1efd",
+  "needSave": false,
+  "stack_count_max": 1,
+  "syncGameData": {
+    "currentCapacity": true,
+    "extCapacity": true
+  },
+  "trap": false,
+  "tray": []
+}

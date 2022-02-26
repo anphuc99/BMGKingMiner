@@ -13,7 +13,8 @@ return {
             },
             exp = 0,
             coin = 0
-        },        
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"        
     },
     {
         condition = {
@@ -23,7 +24,8 @@ return {
             item = {},
             exp = 60,
             coin = 0
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -33,7 +35,8 @@ return {
             item = {},
             exp = 0,
             coin = 1000
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -43,7 +46,8 @@ return {
             item = {},
             exp = 100,
             coin = 0
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -55,7 +59,8 @@ return {
             },
             exp = 0,
             coin = 0
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -65,7 +70,8 @@ return {
             item = {},
             exp = 150,
             coin = 0
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -75,7 +81,8 @@ return {
             item = {},
             exp = 0,
             coin = 1000
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -85,11 +92,12 @@ return {
             item = {},
             exp = 200,
             coin = 0
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
-            Lv = 10,
+            Lv = 9,
         },
         reward = {
             item = {
@@ -97,7 +105,8 @@ return {
             },
             exp = 0,
             coin = 0
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -107,7 +116,8 @@ return {
             item = {},
             exp = 0,
             coin = 1000
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -119,7 +129,8 @@ return {
             },
             exp = 0,
             coin = 0
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -129,7 +140,8 @@ return {
             item = {},
             exp = 0,
             coin = 5000
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -139,7 +151,8 @@ return {
             item = {},
             exp = 0,
             coin = 10000
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -151,7 +164,8 @@ return {
             },
             exp = 0,
             coin = 0
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -161,7 +175,8 @@ return {
             item = {},
             exp = 0,
             coin = 20000
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -171,7 +186,8 @@ return {
             item = {},
             exp = 0,
             coin = 0
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -181,7 +197,8 @@ return {
             item = {},
             exp = 0,
             coin = 30000
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -193,7 +210,8 @@ return {
             },
             exp = 0,
             coin = 0
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },
     {
         condition = {
@@ -203,7 +221,8 @@ return {
             item = {},
             exp = 0,
             coin = 0
-        }  
+        },
+        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
     },    
     -- Mine
     {
@@ -214,17 +233,8 @@ return {
             item = {},
             exp = 100,
             coin = 0
-        }  
-    },
-    {
-        condition = {
-            Mine = 200,
         },
-        reward = {
-            item = {},
-            exp = 150,
-            coin = 0
-        }  
+        icon = "asset/achi (TT)/1-thu thập (100).png"
     },
     {
         condition = {
@@ -232,19 +242,10 @@ return {
         },
         reward = {
             item = {},
-            exp = 200,
+            exp = 150,
             coin = 0
-        }  
-    },
-    {
-        condition = {
-            Mine = 400,
         },
-        reward = {
-            item = {},
-            exp = 250,
-            coin = 0
-        }  
+        icon = "asset/achi (TT)/2-thu thập (300).png"
     },
     {
         condition = {
@@ -252,8 +253,58 @@ return {
         },
         reward = {
             item = {},
+            exp = 200,
+            coin = 0
+        },
+        icon = "asset/achi (TT)/3-thu thập (500).png"
+    },
+    {
+        condition = {
+            Mine = 800,
+        },
+        reward = {
+            item ={},
+            exp = 250,
+            coin = 0
+        },
+        icon = "asset/achi (TT)/4-thu thập (800).png"
+    },
+    {
+        condition = {
+            Mine = 1000,
+        },
+        reward = {
+            item = {},
             exp = 300,
             coin = 0
-        }
+        },
+        icon = "asset/achi (TT)/5-thu thập (1000).png"
     },
+    -- id card
+    {
+        condition = {
+            idCard = 2,
+        },
+        reward = {
+            item = {
+                ["myplugin/V_Vortex"] = 10
+            },
+            exp = 200,
+            coin = 0
+        },
+        icon = "asset/idCard/idCard2.png"
+    },
+    {
+        condition = {
+            idCard = 3,
+        },
+        reward = {
+            item = {
+                ["myplugin/V_Vortex"] = 20
+            },
+            exp = 500,
+            coin = 0
+        },
+        icon = "asset/idCard/idCard3.png"
+    },    
 }

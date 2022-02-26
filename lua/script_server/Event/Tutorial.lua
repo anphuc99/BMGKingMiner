@@ -8,11 +8,11 @@ local itemTuotrial = {
     },
     {
         item = "myplugin/M_Iron",
-        num = 5,
+        num = 10,
         money = 200 
     },
     {
-        item = "myplugin/H_non_1_1",
+        item = "myplugin/Sh_giay_1_1",
         num = 1,
         money = 300         
     },

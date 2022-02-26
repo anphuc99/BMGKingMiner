@@ -270,6 +270,66 @@ return {
         icon = "asset/TrangBi/Găng tay1.png",
         typeItem = typeItem.Equipment
     },
+    {
+        id = "myplugin/H_non_2_1",
+        name ="item_H_non_2_1",
+        icon = "asset/TrangBi/Nón2.png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/H_non_2_2",
+        name ="item_H_non_2_2",
+        icon = "asset/TrangBi/Nón2-2.png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/S_ao_2_1",
+        name ="item_S_ao_2_1",
+        icon = "asset/TrangBi/Giáp2.png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/S_ao_2_2",
+        name ="item_S_ao_2_2",
+        icon = "asset/TrangBi/Giaps2-2.png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/T_quan_2_1",
+        name ="item_T_quan_2_1",
+        icon = "asset/TrangBi/Quần2.png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/C_ao-choan_2_1",
+        name ="item_C_ao-choan_2_1",
+        icon = "asset/TrangBi/Áo choàng2.png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/C_ao-choan_2_2",
+        name ="item_C_ao-choan_2_2",
+        icon = "asset/TrangBi/Áo choàng2-2.png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/C_ao-choan_2_3",
+        name ="item_C_ao-choan_2_3",
+        icon = "asset/TrangBi/Áo choàng2-3.png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/Sh_giay_2_1",
+        name ="item_Sh_giay_2_1",
+        icon = "asset/TrangBi/Giầy2.png",
+        typeItem = typeItem.Equipment
+    },
+    {
+        id = "myplugin/G_gang-tay_2_1",
+        name ="item_G_gang-tay_2_1",
+        icon = "asset/TrangBi/Găng tay2.png",
+        typeItem = typeItem.Equipment
+    },
 
     option = {
         primaryKey = "id",        

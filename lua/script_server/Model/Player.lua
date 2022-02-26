@@ -124,6 +124,26 @@ PlayerClass:create("Player",function ()
         local proPlayer = player:getValue("Player")
         proPlayer.lastLogin = _lastLogin
         player:setValue("Player", proPlayer)
+    end  
+
+    function o:getLastRollUp7()
+        return o:getObj():getValue("Player").lastRollUp7
+    end
+    function o:setLastRollUp7(_lastRollUp7)
+        local player = o:getObj()
+        local proPlayer = player:getValue("Player")
+        proPlayer.lastRollUp7 = _lastRollUp7
+        player:setValue("Player", proPlayer)
+    end    
+
+    function o:getlastRollUp28()
+        return o:getObj():getValue("Player").lastRollUp28
+    end
+    function o:setlastRollUp28(_lastRollUp28)
+        local player = o:getObj()
+        local proPlayer = player:getValue("Player")
+        proPlayer.lastRollUp28 = _lastRollUp28
+        player:setValue("Player", proPlayer)
     end    
 
     function o:getTakingMissionTutorial()
@@ -465,6 +485,7 @@ PlayerClass:create("Player",function ()
                 end
                 if check then
                     getAchievement.done[#getAchievement.done+1] = index
+                    PackageHandlers.sendServerHandler(obj, "RedDotAchievement", nil)
                 end
             end
         end

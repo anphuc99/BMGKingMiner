@@ -2,6 +2,14 @@ function self:onOpen(p)
     local Achievement = require "script_common.database.Acievement"
     local eleAchi = self.Image.ScrollableView.HorizontalLayout    
     local Context = require "script_common.lbr.Context"
+    local dot = 0
+    local function setDot(_dot)
+        dot = _dot
+        if dot == 0 then
+            local win = UI:isOpenWindow("main")
+            win.Option.Achievement.dot:setVisible(false)
+        end
+    end
     local function locate( table, value )
         for i = 1, #table do
             if table[i] == value then return true end
@@ -84,12 +92,14 @@ function self:onOpen(p)
                     eleAchi["Achi"..i].gift2.num:setText(Achievement[v].reward.coin)                    
                 end
             end          
-            eleAchi["Achi"..i].Proceed:setProperty("Disabled", dis)          
+            eleAchi["Achi"..i].Proceed:setProperty("Disabled", dis)
+            eleAchi["Achi"..i].icon:setImage("gameres|"..Achievement[v].icon)
             i = i + 1
         end
         print(Lib.pv(top))
         for index, value in ipairs(top) do                  
             setAchi(value,"false")   
+            setDot(dot + 1)
         end
         for index, value in ipairs(middi) do
             setAchi(value,"true")            
@@ -101,9 +111,9 @@ function self:onOpen(p)
         for ii = 1, #top, 1 do
             eleAchi["Achi"..ii].Proceed.onMouseClick = function() 
                 PackageHandlers.sendClientHandler("ProccedAchievement", {achi = top[ii]}, function (rs)
-                    if rs then
-                        print(ii)
+                    if rs then                        
                         eleAchi["Achi"..ii].blru:setVisible(true)
+                        setDot(dot - 1)
                     end
                 end)
             end   
