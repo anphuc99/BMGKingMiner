@@ -216,6 +216,8 @@ function self:onOpen(p)
     PackageHandlers.sendClientHandler("getValuePlayer", nil, function (propPlayer)
         self.BackPack.Lv:setText(propPlayer.Lv)
         self.BackPack.Id_card:setText(Lang:toText({"ID_card"..propPlayer.idCard}))
+        self.BackPack.Id_card2:setText(Lang:toText({"ID_card"..propPlayer.idCard}))
+        self.BackPack.desc_Id_card:setText(Lang:toText({"desc_Id_card"..propPlayer.idCard}))
         self.BackPack.Exp:setText(propPlayer.exp)
     end)
 
@@ -284,6 +286,8 @@ function self:onOpen(p)
                     PackageHandlers.sendClientHandler("updateIdCard", nil, function (rs)
                         if rs then
                             self.BackPack.Id_card:setText(Lang:toText({"ID_card"..rs}))
+                            self.BackPack.Id_card2:setText(Lang:toText({"ID_card"..rs}))
+                            self.BackPack.desc_Id_card:setText(Lang:toText({"desc_Id_card"..rs}))
                             self.BackPack.idCard:setImage("gameres|asset/idCard/idCard"..rs..".png")
                         end
                     end)
