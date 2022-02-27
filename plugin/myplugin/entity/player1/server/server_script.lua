@@ -5,7 +5,7 @@ this.addValueDef("new", false, false, false, true, false)
 local PlayerProperty = {
     id = this.platformUserId,
     money = 0,
-    balo = 20,
+    balo = 6,
     idCard = 1,
     Lv = 1,
     exp = 0,

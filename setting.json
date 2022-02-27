@@ -49,7 +49,7 @@
       }
     ]
   },
-  "canJoinMidway": false,
+  "canJoinMidway": true,
   "defaultMap": "map001",
   "defaultQualityLevel": 2,
   "dragControlConfig": {
@@ -108,7 +108,7 @@
   "moveStateConfig": {
     "isShow": false
   },
-  "needSave": false,
+  "needSave": true,
   "noLoadHp": true,
   "notReadUserSettingCfgAtEditor": true,
   "nowTime": 10666.666666667,

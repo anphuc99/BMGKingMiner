@@ -402,7 +402,7 @@ PackageHandlers.registerServerHandler("updateIdCard", function(player, packet)
         objPlayer:setIdCard(objPlayer:getIdCard() + 1)
         return objPlayer:getIdCard()
     else
-        messeger(player,{Text = {"messeger_NotEnoughMoney"}, Color = {r=0,b=0,g=0}})
+        messeger(player,{Text = {"messeger_NotEnoughMoney"}})
         return false
     end
 end)

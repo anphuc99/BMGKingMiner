@@ -11,6 +11,7 @@ function self:onOpen(p)
     local dbEquiClick = {} -- biến đệm cho sự kiện dbClick của trang bị
     local curClick = nil
     local balo
+    local id_card
     local player =Blockman.Instance().player
     -- phần balo
     self.BackPack.exit.onMouseClick = function() self:close() end
@@ -43,6 +44,7 @@ function self:onOpen(p)
                 self.BackPack.ScrollableView.CellBP["cell" .. i]:setImage(unBlockImg)
                 self.BackPack.idCard:setImage("gameres|asset/idCard/idCard"..data.idCard..".png")
             end
+            id_card = data.idCard
         end)
     local function reloadBackPack()    
         -- tải balo lên
@@ -280,8 +282,9 @@ function self:onOpen(p)
     -- nâng cấp id card
     self.BackPack.idCard.onMouseClick = function() 
         if self.BackPack.Id_card:getText() ~= Lang:toText({"ID_card3"}) then
+            local Id_card = {20000,60000,100000,200000,600000,1000000,2000000,4000000}
             UI:openWindow("MessagerBox",nil,nil,{
-                Text = {"messeger_updateIdCard"},
+                Text = {"messeger_updateIdCard",Id_card[id_card]},
                 Yes = function (s)
                     PackageHandlers.sendClientHandler("updateIdCard", nil, function (rs)
                         if rs then
@@ -289,6 +292,7 @@ function self:onOpen(p)
                             self.BackPack.Id_card2:setText(Lang:toText({"ID_card"..rs}))
                             self.BackPack.desc_Id_card:setText(Lang:toText({"desc_Id_card"..rs}))
                             self.BackPack.idCard:setImage("gameres|asset/idCard/idCard"..rs..".png")
+                            id_card = rs
                         end
                     end)
                 end
