@@ -1,5 +1,8 @@
 function self:onOpen(p)
-    print(Lib.pv(p))
+    self.Tutorial.Close.onMouseClick = function() 
+        self:close()
+    end
+
     local Tutorial = {
         {
             ImgDescription = {

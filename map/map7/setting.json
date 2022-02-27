@@ -26,99 +26,154 @@
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Titanium",
+      "config": "myplugin/Enti_M_Platium",
       "properties": {
-        "id": "8502145344787988481",
-        "name": "entity_Enti_M_Titanium",
-        "position": "x:47.057731628418 y:53.000011444092 z:8.6561002731323",
+        "id": "8520110418783092737",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:41.891181945801 y:53.001003265381 z:27.572340011597",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Titanium",
+      "config": "myplugin/Enti_M_Platium",
       "properties": {
-        "id": "8502145392410591233",
-        "name": "entity_Enti_M_Titanium",
-        "position": "x:44.694278717041 y:54.009220123291 z:24.792921066284",
+        "id": "8520111031397367809",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:34.797409057617 y:56.0 z:39.094924926758",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Titanium",
+      "config": "myplugin/Enti_M_Platium",
       "properties": {
-        "id": "8502145451254792193",
-        "name": "entity_Enti_M_Titanium",
-        "position": "x:35.144966125488 y:54 z:34.690021514893",
+        "id": "8520111313697226753",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:22.881204605103 y:69.000061035156 z:61.508491516113",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Titanium",
+      "config": "myplugin/Enti_M_Platium",
       "properties": {
-        "id": "8502145517544439809",
-        "name": "entity_Enti_M_Titanium",
-        "position": "x:19.919422149658 y:53 z:32.821708679199",
+        "id": "8520111478191292417",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:58.53010559082 y:68.000015258789 z:32.165397644043",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Titanium",
+      "config": "myplugin/Enti_M_Platium",
       "properties": {
-        "id": "8502145596940828673",
-        "name": "entity_Enti_M_Titanium",
-        "position": "x:27.668933868408 y:56.008903503418 z:48.556999206543",
+        "id": "8520111619365928961",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:4.7697868347168 y:52.999996185303 z:11.52316570282",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Titanium",
+      "config": "myplugin/Enti_M_Platium",
       "properties": {
-        "id": "8502145720790482945",
-        "name": "entity_Enti_M_Titanium",
-        "position": "x:24.347528457642 y:67.005561828613 z:56.387565612793",
+        "id": "8520111683264167937",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:0.90543121099472 y:53.000072479248 z:43.362194061279",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Titanium",
+      "config": "myplugin/Enti_M_Platium",
       "properties": {
-        "id": "8502145781212758017",
-        "name": "entity_Enti_M_Titanium",
-        "position": "x:34.93839263916 y:53.006702423096 z:85.950729370117",
+        "id": "8520111791889825793",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:-3.7790529727936 y:53.003391265869 z:72.251541137695",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Titanium",
+      "config": "myplugin/Enti_M_Platium",
       "properties": {
-        "id": "8502146077956653057",
-        "name": "entity_Enti_M_Titanium",
-        "position": "x:4.3955421447754 y:53.000358581543 z:67.970520019531",
+        "id": "8520112737256112129",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:25.476608276367 y:53.000003814697 z:101.50000762939",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Titanium",
+      "config": "myplugin/Enti_M_Platium",
       "properties": {
-        "id": "8502146101184839681",
-        "name": "entity_Enti_M_Titanium",
-        "position": "x:12.142833709717 y:53 z:72.189903259277",
+        "id": "8520112820050870273",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:32.93270111084 y:53.000205993652 z:94.281280517578",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8520113039237562369",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:26.186138153076 y:52.999996185303 z:73.099906921387",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8520113542871793665",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:62.742198944092 y:53.0 z:75.150527954102",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8520113578130227201",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:70.709358215332 y:53.0 z:64.718597412109",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8520117521103224833",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:29.186401367188 y:53.000484466553 z:57.730472564697",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Platium",
+      "properties": {
+        "id": "8520117956495900673",
+        "name": "entity_Enti_M_Platium",
+        "position": "x:71.699996948242 y:54.983528137207 z:44.545352935791",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }

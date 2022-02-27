@@ -26,110 +26,165 @@
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Platium",
+      "config": "myplugin/Enti_M_Titanium",
       "properties": {
-        "id": "8502143697318461441",
-        "name": "entity_Enti_M_Platium",
-        "position": "x:41.585433959961 y:56.726741790771 z:28.699993133545",
+        "id": "8520095577380618241",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:45.467212677002 y:63.000885009766 z:50.618762969971",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Platium",
+      "config": "myplugin/Enti_M_Titanium",
       "properties": {
-        "id": "8502143921923244033",
-        "name": "entity_Enti_M_Platium",
-        "position": "x:33.415348052979 y:52.999996185303 z:37.703247070312",
+        "id": "8520095657246474241",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:35.776119232178 y:53.000019073486 z:43.735286712646",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Platium",
+      "config": "myplugin/Enti_M_Titanium",
       "properties": {
-        "id": "8502143981800456193",
-        "name": "entity_Enti_M_Platium",
-        "position": "x:19.002948760986 y:52.999996185303 z:36.063404083252",
+        "id": "8520095685455478785",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:45.856708526611 y:55.000331878662 z:50.588989257812",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Platium",
+      "config": "myplugin/Enti_M_Titanium",
       "properties": {
-        "id": "8502144000556744705",
-        "name": "entity_Enti_M_Platium",
-        "position": "x:21.275556564331 y:53.00008392334 z:29.905567169189",
+        "id": "8520095754860576769",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:33.821418762207 y:53.000003814697 z:16.848430633545",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Platium",
+      "config": "myplugin/Enti_M_Titanium",
       "properties": {
-        "id": "8502144079856123905",
-        "name": "entity_Enti_M_Platium",
-        "position": "x:51.566017150879 y:53.003143310547 z:21.423974990845",
+        "id": "8520095781147541505",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:21.275827407837 y:53.004741668701 z:23.108661651611",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Platium",
+      "config": "myplugin/Enti_M_Titanium",
       "properties": {
-        "id": "8502144188829827073",
-        "name": "entity_Enti_M_Platium",
-        "position": "x:56.189975738525 y:53.000022888184 z:37.700653076172",
+        "id": "8520095821626523649",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:20.287284851074 y:53.00862121582 z:30.077770233154",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Platium",
+      "config": "myplugin/Enti_M_Titanium",
       "properties": {
-        "id": "8502144301037109249",
-        "name": "entity_Enti_M_Platium",
-        "position": "x:48.811336517334 y:52.999996185303 z:46.670608520508",
+        "id": "8520095960807325697",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:38.481437683105 y:74.000984191895 z:43.399883270264",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Platium",
+      "config": "myplugin/Enti_M_Titanium",
       "properties": {
-        "id": "8502144356726145025",
-        "name": "entity_Enti_M_Platium",
-        "position": "x:45.773445129395 y:53.000003814697 z:63.080646514893",
+        "id": "8520096313843318785",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:45.507747650146 y:53.000289916992 z:68.632186889648",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Platium",
+      "config": "myplugin/Enti_M_Titanium",
       "properties": {
-        "id": "8502144465568497665",
-        "name": "entity_Enti_M_Platium",
-        "position": "x:33.539806365967 y:63.999992370605 z:78.780570983887",
+        "id": "8520096417483079681",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:35.243396759033 y:64.0 z:78.628723144531",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Platium",
+      "config": "myplugin/Enti_M_Titanium",
       "properties": {
-        "id": "8502144622654832641",
-        "name": "entity_Enti_M_Platium",
-        "position": "x:26.58514213562 y:64.999992370605 z:68.227172851562",
+        "id": "8520096537479774209",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:19.583068847656 y:64.000022888184 z:80.462890625",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Titanium",
+      "properties": {
+        "id": "8520096691829227521",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:-0.19431689381599 y:53.000984191895 z:66.78377532959",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Titanium",
+      "properties": {
+        "id": "8520096759050223617",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:7.7107577323914 y:53.000255584717 z:88.699028015137",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Titanium",
+      "properties": {
+        "id": "8520096840378417153",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:27.189958572388 y:53.000003814697 z:100.11437225342",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Titanium",
+      "properties": {
+        "id": "8520097037134266369",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:45.700000762939 y:65.55640411377 z:34.620052337646",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Titanium",
+      "properties": {
+        "id": "8520097132463505409",
+        "name": "entity_Enti_M_Titanium",
+        "position": "x:54.24405670166 y:53.000015258789 z:13.783178329468",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }

@@ -1,0 +1,99 @@
+    <GUILayout version="4">
+        <Window name="Root" type="DefaultWindow">
+            <Property name="Area" value="{{0,0},{0,2.32},{1,0},{1,2.32}}">
+
+            </Property>
+            <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+            </Property>
+            <Property name="PivotX" value="0.5">
+
+            </Property>
+            <Property name="Disabled" value="false">
+
+            </Property>
+            <Property name="VerticalAlignment" value="Top">
+
+            </Property>
+            <Property name="PivotY" value="0.5">
+
+            </Property>
+            <Property name="ClippedByParent" value="false">
+
+            </Property>
+            <Property name="HorizontalAlignment" value="Left">
+
+            </Property>
+            <Property name="MousePassThroughEnabled" value="true">
+
+            </Property>
+            <Property name="Alpha" value="1">
+
+            </Property>
+            <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+            </Property>
+            <Property name="Visible" value="true">
+
+            </Property>
+              <Window name="GoHome" type="WindowsLook/ProgressBar">
+                  <Property name="Area" value="{{0,0},{0,-171.31832881756},{0,448.22},{0,-139.31832881756}}">
+
+                  </Property>
+                  <Property name="MaxSize" value="{{999,0},{999,0}}">
+
+                  </Property>
+                  <Property name="ProgressBgStretch" value="0 0 0 0">
+
+                  </Property>
+                  <Property name="progress_lights_image" value="gameres|asset/Texture/Gui/progressbar_top.png">
+
+                  </Property>
+                  <Property name="ReversedProgress" value="false">
+
+                  </Property>
+                  <Property name="ProgressLightsStretch" value="0 0 0 0">
+
+                  </Property>
+                  <Property name="PivotX" value="0.5">
+
+                  </Property>
+                  <Property name="Disabled" value="false">
+
+                  </Property>
+                  <Property name="VerticalAlignment" value="Bottom">
+
+                  </Property>
+                  <Property name="PivotY" value="0.5">
+
+                  </Property>
+                  <Property name="ClippedByParent" value="false">
+
+                  </Property>
+                  <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+
+                  </Property>
+                  <Property name="HorizontalAlignment" value="Centre">
+
+                  </Property>
+                  <Property name="VerticalProgress" value="false">
+
+                  </Property>
+                  <Property name="progress_background_image" value="gameres|asset/Texture/Gui/progressbar_bg.png">
+
+                  </Property>
+                  <Property name="MousePassThroughEnabled" value="false">
+
+                  </Property>
+                  <Property name="Alpha" value="1">
+
+                  </Property>
+                  <Property name="CurrentProgress" value="0">
+
+                  </Property>
+                  <Property name="Visible" value="true">
+
+                  </Property>
+              </Window>
+        </Window>
+    </GUILayout>

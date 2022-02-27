@@ -17,12 +17,16 @@ function self:onOpen(p)
     self.Option.Achievement.onMouseClick = function() 
         UI:openWindow("Achievement")      
     end
+    self.Option.GoHome.onMouseClick = function() 
+        UI:openWindow("GoHome")      
+    end
     PackageHandlers.registerClientHandler("setMoney", function(player, packet)
         self.Coin.Money:setText(packet.money)
     end)       
     PackageHandlers.registerClientHandler("setMission", function(player, packet)        
         self.frameMission.Mission:cleanupChildren()
         if #packet == 0 then
+            self.frameMission:setVisible(false)
             return
         end
         for ii, value in ipairs(packet) do
@@ -30,9 +34,10 @@ function self:onOpen(p)
             local context_item = Context:new("Item")
             local item = context_item:where("id",value.item):firstData()
             text:setText(Lang:toText({item.name})..": "..value.num.."/"..value.count)
-            text:setTextColours(Color3.new(1,1,1))
+            text:setTextColours(Color3.new(0,0,0))
             text:setHeight(UDim.new(0,20))
             self.frameMission.Mission:addChild(text)
+            self.frameMission:setVisible(true)
         end        
     end)       
     self.Option.Upgrate.onMouseClick = function() 

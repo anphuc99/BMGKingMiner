@@ -99,7 +99,7 @@ function self:onOpen(p)
                 self.BackPack.InfoBox.name:setText(Lang:toText({lisItem[curClick].name}))
                 self.BackPack.InfoBox.amount:setText(lisItem[curClick].num)
                 self.BackPack.InfoBox.Icon:setImage("gameres|"..lisItem[curClick].icon)
-                self.BackPack.InfoBox.description:setText(lisItem[curClick].description)
+                self.BackPack.InfoBox.description:setText(Lang:toText({lisItem[curClick].description}):gsub("%<p>","\n"))
                 if lisItem[curClick].typeItem == typeItem.Equipment then
                     self.BackPack.InfoBox.type:setText(Lang:toText({"typeItem_Equi"})) 
                 elseif lisItem[curClick].typeItem == typeItem.Material then

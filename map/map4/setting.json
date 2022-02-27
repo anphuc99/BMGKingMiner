@@ -28,39 +28,6 @@
       "class": "Entity",
       "config": "myplugin/Enti_M_Gold",
       "properties": {
-        "id": "8502139793435885569",
-        "name": "entity_Enti_M_Gold",
-        "position": "x:23.73247718811 y:53.002117156982 z:17.456560134888",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/Enti_M_Gold",
-      "properties": {
-        "id": "8502139841305395201",
-        "name": "entity_Enti_M_Gold",
-        "position": "x:39.338356018066 y:53.000003814697 z:21.459878921509",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/Enti_M_Gold",
-      "properties": {
-        "id": "8502139868545105921",
-        "name": "entity_Enti_M_Gold",
-        "position": "x:38.427761077881 y:53.000007629395 z:24.631187438965",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
-      "config": "myplugin/Enti_M_Gold",
-      "properties": {
         "id": "8502139887027683329",
         "name": "entity_Enti_M_Gold",
         "position": "x:36.221786499023 y:53 z:28.888492584229",
@@ -97,6 +64,127 @@
         "id": "8502140212613365761",
         "name": "entity_Enti_M_Gold",
         "position": "x:54.46004486084 y:54 z:30.751728057861",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8519417379519807489",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:39.158340454102 y:61.000194549561 z:59.247619628906",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8519417405388210177",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:31.45401763916 y:61.0 z:54.27950668335",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8519417470799986689",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:5.6228046417236 y:53.0 z:64.63321685791",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8519417481446457345",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:8.3609800338745 y:53.009559631348 z:50.897304534912",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8519417501767598081",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:24.672403335571 y:53.000534057617 z:78.321029663086",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8519417521542430721",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:19.540397644043 y:57.0 z:95.800201416016",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8519417571046146049",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:64.854682922363 y:53.000171661377 z:68.098785400391",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8519417600894484481",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:61.9333152771 y:53.002857208252 z:44.437618255615",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8519417655745675265",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:2.7669105529785 y:53.000003814697 z:15.112840652466",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8519417686180298753",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:1.6073951721191 y:56.999996185303 z:74.56859588623",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Gold",
+      "properties": {
+        "id": "8519417895067090945",
+        "name": "entity_Enti_M_Gold",
+        "position": "x:64.605224609375 y:57.000003814697 z:32.848251342773",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }

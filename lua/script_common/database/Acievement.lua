@@ -1,113 +1,113 @@
 return {
-    {
-        condition = {
-            Lv = 1,
-            -- idCard = 0,
-            -- Mine = 0,
-            -- Upgrate = 0,
-            -- Crafting = 0,
-        },
-        reward = {
-            item = {
-                ["myplugin/V_Vortex"] = 5,
-            },
-            exp = 0,
-            coin = 0
-        },
-        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"        
-    },
-    {
-        condition = {
-            Lv = 2,
-        },
-        reward = {
-            item = {},
-            exp = 60,
-            coin = 0
-        },
-        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
-    },
-    {
-        condition = {
-            Lv = 3,
-        },
-        reward = {
-            item = {},
-            exp = 0,
-            coin = 1000
-        },
-        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
-    },
-    {
-        condition = {
-            Lv = 4,
-        },
-        reward = {
-            item = {},
-            exp = 100,
-            coin = 0
-        },
-        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
-    },
-    {
-        condition = {
-            Lv = 5,
-        },
-        reward = {
-            item = {
-                ["myplugin/V_Vortex"] = 10
-            },
-            exp = 0,
-            coin = 0
-        },
-        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
-    },
-    {
-        condition = {
-            Lv = 6,
-        },
-        reward = {
-            item = {},
-            exp = 150,
-            coin = 0
-        },
-        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
-    },
-    {
-        condition = {
-            Lv = 7,
-        },
-        reward = {
-            item = {},
-            exp = 0,
-            coin = 1000
-        },
-        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
-    },
-    {
-        condition = {
-            Lv = 8,
-        },
-        reward = {
-            item = {},
-            exp = 200,
-            coin = 0
-        },
-        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
-    },
-    {
-        condition = {
-            Lv = 9,
-        },
-        reward = {
-            item = {
-                ["myplugin/S_ao_1_2"] = 1
-            },
-            exp = 0,
-            coin = 0
-        },
-        icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
-    },
+    -- {
+    --     condition = {
+    --         Lv = 1,
+    --         -- idCard = 0,
+    --         -- Mine = 0,
+    --         -- Upgrate = 0,
+    --         -- Crafting = 0,
+    --     },
+    --     reward = {
+    --         item = {
+    --             ["myplugin/V_Vortex"] = 5,
+    --         },
+    --         exp = 0,
+    --         coin = 0
+    --     },
+    --     icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"        
+    -- },
+    -- {
+    --     condition = {
+    --         Lv = 2,
+    --     },
+    --     reward = {
+    --         item = {},
+    --         exp = 60,
+    --         coin = 0
+    --     },
+    --     icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
+    -- },
+    -- {
+    --     condition = {
+    --         Lv = 3,
+    --     },
+    --     reward = {
+    --         item = {},
+    --         exp = 0,
+    --         coin = 1000
+    --     },
+    --     icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
+    -- },
+    -- {
+    --     condition = {
+    --         Lv = 4,
+    --     },
+    --     reward = {
+    --         item = {},
+    --         exp = 100,
+    --         coin = 0
+    --     },
+    --     icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
+    -- },
+    -- {
+    --     condition = {
+    --         Lv = 5,
+    --     },
+    --     reward = {
+    --         item = {
+    --             ["myplugin/V_Vortex"] = 10
+    --         },
+    --         exp = 0,
+    --         coin = 0
+    --     },
+    --     icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
+    -- },
+    -- {
+    --     condition = {
+    --         Lv = 6,
+    --     },
+    --     reward = {
+    --         item = {},
+    --         exp = 150,
+    --         coin = 0
+    --     },
+    --     icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
+    -- },
+    -- {
+    --     condition = {
+    --         Lv = 7,
+    --     },
+    --     reward = {
+    --         item = {},
+    --         exp = 0,
+    --         coin = 1000
+    --     },
+    --     icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
+    -- },
+    -- {
+    --     condition = {
+    --         Lv = 8,
+    --     },
+    --     reward = {
+    --         item = {},
+    --         exp = 200,
+    --         coin = 0
+    --     },
+    --     icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
+    -- },
+    -- {
+    --     condition = {
+    --         Lv = 9,
+    --     },
+    --     reward = {
+    --         item = {
+    --             ["myplugin/S_ao_1_2"] = 1
+    --         },
+    --         exp = 0,
+    --         coin = 0
+    --     },
+    --     icon = "asset/Texture/Gui/Cấp độ (mỗi 10lv).png"   
+    -- },
     {
         condition = {
             Lv = 10,

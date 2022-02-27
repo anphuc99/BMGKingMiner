@@ -16,6 +16,7 @@ PlayerClass:create("Player",function ()
     local o = {}
     local id
     local isMining = false
+    local buff = {}
 
     -- function o:getLanguage()        
     --     return o:getObj():getValue("Player").language
@@ -168,6 +169,21 @@ PlayerClass:create("Player",function ()
     function o:getObj() 
         return World.CurWorld:getObject(id)
     end
+    
+    function o:addBuff(buffCfg)
+        local buffId = 1
+        while buff[buffId] ~= nil do
+            buffId = buffId + 1
+        end        
+        buff[buffId] = o:getObj():addBuff(buffCfg)
+        return buffId
+    end
+
+    function o:removeBuff(buffId)
+        o:getObj():removeBuff(buff[buffId])
+        buff[buffId] = nil
+    end
+
     function o:beginMine(MaterialModel)        
         if not isMining then
             local obj = o:getObj()

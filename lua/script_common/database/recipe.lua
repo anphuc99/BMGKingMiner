@@ -213,6 +213,138 @@ return {
             },
         }
     },
+    
+    
+    {
+        id = "H_non_3_1",
+        Material = {
+            {
+                id = "myplugin/M_Tree3",
+                num = 12
+            },
+            {
+                id = "myplugin/M_Crystal",
+                num = 20
+            },
+            {
+                id = "myplugin/M_Titanium",
+                num = 16
+            },
+            {
+                id = "myplugin/M_Platium",
+                num = 15
+            },
+        }
+    },
+    {
+        id = "S_ao_3_1",
+        Material = {
+            {
+                id = "myplugin/M_Tree3",
+                num = 12
+            },
+            {
+                id = "myplugin/M_Crystal",
+                num = 20
+            },
+            {
+                id = "myplugin/M_Titanium",
+                num = 15
+            },
+            {
+                id = "myplugin/M_Platium",
+                num = 15
+            },
+        }
+    },
+    {
+        id = "T_quan_3_1",
+        Material = {
+            {
+                id = "myplugin/M_Tree3",
+                num = 10
+            },
+            {
+                id = "myplugin/M_Crystal",
+                num = 20
+            },
+            {
+                id = "myplugin/M_Titanium",
+                num = 15
+            },
+            {
+                id = "myplugin/M_Platium",
+                num = 15
+            },
+        }
+    },
+    {
+        id = "C_ao-choan_3_1",
+        Material = {
+            {
+                id = "myplugin/M_Tree3",
+                num = 14
+            },
+            {
+                id = "myplugin/M_Gold",
+                num = 20
+            },
+            {
+                id = "myplugin/M_Crystal",
+                num = 20
+            },
+            {
+                id = "myplugin/M_Titanium",
+                num = 16
+            },
+            {
+                id = "myplugin/M_Platium",
+                num = 16
+            },
+        }
+    },
+    {
+        id = "Sh_giay_3_1",
+        Material = {
+            {
+                id = "myplugin/M_Tree3",
+                num = 10
+            },
+            {
+                id = "myplugin/M_Copper",
+                num = 50
+            },
+            {
+                id = "myplugin/M_Gold",
+                num = 30
+            },
+            {
+                id = "myplugin/M_Titanium",
+                num = 20
+            },
+        }
+    },
+    {
+        id = "G_gang-tay_3_1",
+        Material = {
+            {
+                id = "myplugin/M_Tree3",
+                num = 10
+            },
+            {
+                id = "myplugin/M_Gold",
+                num = 30
+            },
+            {
+                id = "myplugin/M_Crystal",
+                num = 30
+            },
+            {
+                id = "myplugin/M_Platium",
+                num = 15
+            },
+        }
+    },
     option = {
         primaryKey= "id",
     }

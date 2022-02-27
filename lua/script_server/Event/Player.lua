@@ -476,3 +476,21 @@ PackageHandlers.registerServerHandler("ProccedAchievement", function(player, pac
     end
     return false
 end)
+
+PackageHandlers.registerServerHandler("GoHome", function(player, packet)
+    player:serverRebirth()
+end)
+
+PackageHandlers.registerServerHandler("addBuff", function(player, packet)
+    local objPlayer = Gol.Player[player.objID]
+    return objPlayer:addBuff(packet.buff)
+    
+end)
+PackageHandlers.registerServerHandler("removeBuff", function(player, packet)
+    local objPlayer = Gol.Player[player.objID]
+    objPlayer:removeBuff(packet.buff)
+end)
+
+Trigger.addHandler(this, "ENTITY_STATUS_CHANGE", function(context)
+    PackageHandlers.sendServerHandler(context.obj1, "StopGoHome")
+end)

@@ -321,6 +321,97 @@ return {
         typeEquipment = typeEquipment.gloves,
         mineSpeed = 2*20
     },
+    
+    {
+        id = "myplugin/H_non_3_1",
+        level = 1,
+	    percentage = 70,
+	    rarity = 1,
+	    recipe = "H_non_3_1",
+        typeEquipment = typeEquipment.hat,
+        mineSpeed = 3*20
+    },
+    {
+        id = "myplugin/H_non_3_2",
+        level = 1,
+	    percentage = 30,
+	    rarity = 2,
+	    recipe = "H_non_3_1",
+        typeEquipment = typeEquipment.hat,
+        mineSpeed = 6*20
+    },
+    {
+        id = "myplugin/S_ao_3_1",
+        level = 1,
+	    percentage = 70,
+	    rarity = 1,
+	    recipe = "S_ao_3_1",
+        typeEquipment = typeEquipment.shirt,
+        mineSpeed = 3*20
+    },
+    {
+        id = "myplugin/S_ao_3_2",
+        level = 1,
+	    percentage = 30,
+	    rarity = 2,
+	    recipe = "S_ao_3_1",
+        typeEquipment = typeEquipment.shirt,
+        mineSpeed = 6 * 20
+    },
+    {
+        id = "myplugin/T_quan_3_1",
+        level = 1,
+	    percentage = 70,
+	    rarity = 1,
+	    recipe = "T_quan_3_1",
+        typeEquipment = typeEquipment.trousers,
+        mineSpeed = 3*20
+    },
+    {
+        id = "myplugin/C_ao-choan_3_1",
+        level = 1,
+	    percentage = 70,
+	    rarity = 1,
+	    recipe = "C_ao-choan_3_1",
+        typeEquipment = typeEquipment.cloak,
+        mineSpeed = 3*20
+    },
+    {
+        id = "myplugin/C_ao-choan_3_2",
+        level = 1,
+	    percentage = 20,
+	    rarity = 2,
+	    recipe = "C_ao-choan_3_1",
+        typeEquipment = typeEquipment.cloak,
+        mineSpeed = 6*20
+    },
+    {
+        id = "myplugin/C_ao-choan_3_3",
+        level = 1,
+	    percentage = 10,
+	    rarity = 3,
+	    recipe = "C_ao-choan_3_1",
+        typeEquipment = typeEquipment.cloak,
+        mineSpeed = 15*20
+    },
+    {
+        id = "myplugin/Sh_giay_3_1",
+        level = 1,
+	    percentage = 70,
+	    rarity = 1,
+	    recipe = "Sh_giay_3_1",
+        typeEquipment = typeEquipment.shoes,
+        mineSpeed = 3*20
+    },
+    {
+        id = "myplugin/G_gang-tay_3_1",
+        level = 1,
+	    percentage = 70,
+	    rarity = 1,
+	    recipe = "G_gang-tay_3_1",
+        typeEquipment = typeEquipment.gloves,
+        mineSpeed = 3*20
+    },
 
     option = {
         primaryKey= "id",
