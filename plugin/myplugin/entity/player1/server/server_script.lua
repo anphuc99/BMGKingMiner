@@ -46,3 +46,5 @@ this.addValueDef("Achievement",{
     done = {},
     proceed = {}
 },false, false, true, false)
+
+--6076
