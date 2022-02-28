@@ -733,6 +733,17 @@
         "uiID": "8521605851507048449",
         "UIScaleMode": "0"
       }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_Cheat",
+      "properties": {
+        "id": "8521905059449159681",
+        "name": "Cheat",
+        "position": "x:6.6050953865051 y:54.001495361328 z:32.924457550049",
+        "rotation": "x:0 y:-95.999816894531 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
     }
   ],
   "skyBox": [

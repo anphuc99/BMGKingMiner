@@ -35,7 +35,8 @@ function self:onOpen(p)
                     Yes = function(s)                
                         local amu = tonumber(s.info.TextBox:getText())
                         if amu == nil then                    
-                            UI:openWindow("messenger",nil,nil,{Text = {"messeger_InputAmount"}})
+                            --UI:openWindow("messenger",nil,nil,{Text = {"messeger_InputAmount"}})
+                            require "script_client.senTip".sendTip({Text = {"messeger_InputAmount"}})
                             return false
                         end         
                         market[i].num = amu       
@@ -100,11 +101,13 @@ function self:onOpen(p)
                     local amount = tonumber(s.info.Amount:getText())
                     local money = tonumber(s.info.Money:getText())
                     if amount == nil then
-                        UI:openWindow("messenger",nil,nil,{Text = {"messeger_InputAmount"}})
+                        --UI:openWindow("messenger",nil,nil,{Text = {"messeger_InputAmount"}})
+                        require "script_client.senTip".sendTip({Text = {"messeger_InputAmount"}})
                         return false
                     end
                     if money == nil then
-                        UI:openWindow("messenger",nil,nil,{Text = {"messeger_InputMoney"}})
+                        --UI:openWindow("messenger",nil,nil,{Text = {"messeger_InputMoney"}})
+                        require "script_client.senTip".sendTip({Text = {"messeger_InputMoney"}})
                         return false
                     end
                     PackageHandlers.sendClientHandler("publishBlackMarket", {

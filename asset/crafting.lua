@@ -136,6 +136,7 @@ function self:onOpen(p)
     end)
   end)
   if not rs then
-    UI:openWindow("messenger",nil,nil,{Text = {msg}})
+    --UI:openWindow("messenger",nil,nil,{Text = {msg}})
+    require "script_client.senTip".sendTip({Text = {msg}})
   end
 end

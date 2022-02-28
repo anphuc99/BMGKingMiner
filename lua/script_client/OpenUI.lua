@@ -11,7 +11,7 @@ PackageHandlers.registerClientHandler("Player_enter", function(player, packet)
         end
     end)
 end)
-PackageHandlers.registerClientHandler("sendTip", function(player, p)
+require "script_client.senTip".sendTip = function (p)
     local win = UI:isOpenWindow("messenger")
     if not win then
         win = UI:openWindow("messenger")
@@ -32,5 +32,8 @@ PackageHandlers.registerClientHandler("sendTip", function(player, p)
     win.Text:setText(Lang:toText(p.Text))
     if p.Color ~= nil then
         win.Text:setTextColours(Color3.fromRGB(p.Color.r,p.Color.g,p.Color.b))
-    end      
+    end  
+end
+PackageHandlers.registerClientHandler("sendTip", function(player, p)
+    require "script_client.senTip".sendTip(p)
 end)

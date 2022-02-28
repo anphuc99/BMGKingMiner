@@ -201,7 +201,18 @@ PlayerClass:create("Player",function ()
                     local item = context_equipment:where("id",value):firstData()
                     mineSpeed = mineSpeed + item.mineSpeed
                 end
-                local real_speed = MaterialModel:getStiffness() - mineSpeed
+                local function toint(n)
+                    local s = tostring(n)
+                    local i, j = s:find('%.')
+                    if i then
+                        return tonumber(s:sub(1, i-1))
+                    else
+                        return n
+                    end
+                end
+                local real_speed = toint(MaterialModel:getStiffness() * (30/ (mineSpeed + 30)))
+                print("werwerwerwer")
+                print(real_speed)
                 if real_speed <= 0 then
                     real_speed = 1
                 end

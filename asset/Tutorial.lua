@@ -73,7 +73,7 @@ function self:onOpen(p)
                 "Tutorial_8",
                 "Tutorial_9",
             },
-            Index = 4,
+            Index = 2,
             fun = function ()                
                 PackageHandlers.sendClientHandler("TakingMissionTutorial", nil, function ()                    
                     self:close()                    
@@ -87,7 +87,7 @@ function self:onOpen(p)
             txtDescription = {
                 "Tutorial_10",
             },
-            Index = 4,
+            Index = 1,
             fun = function ()                
                 PackageHandlers.sendClientHandler("TakingMissionTutorial", nil, function ()                    
                     self:close()                    
@@ -103,17 +103,17 @@ function self:onOpen(p)
                 "Tutorial_11",
                 "Tutorial_12",
             },
-            Index = 3,
+            Index = 2,
             fun = function ()                                 
                 self:close()                    
             end
         },
         M1 = {
             ImgDescription = {
-                "asset/Tutorial/Hướng dẫn7.png",
+                "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Nhà ta hư hỏng nặng, ta cần một số vật liệu để xây lại nhà. Ngươi cho những vật liệu này không?",
+                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
             },
             Index = 1,
             fun = function ()
@@ -124,10 +124,10 @@ function self:onOpen(p)
         },
         M2 = {
             ImgDescription = {
-                "asset/Tutorial/Hướng dẫn7.png",
+                "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Có một thương nhân muốn mua một cái Head (Military) thường. Ngươi có không?",
+                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
             },
             Index = 1,
             fun = function ()
@@ -138,10 +138,10 @@ function self:onOpen(p)
         },
         M3 = {
             ImgDescription = {
-                "asset/Tutorial/Hướng dẫn7.png",
+                "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Dạo này nhà tôi bị dột nhiều, ngươi có gỗ bán cho ta không?",
+                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
             },
             Index = 1,
             fun = function ()
@@ -152,10 +152,10 @@ function self:onOpen(p)
         },
         M4 = {
             ImgDescription = {
-                "asset/Tutorial/Hướng dẫn7.png",
+                "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Nhà ta hư hỏng nặng, ta cần một số vật liệu để xây lại nhà. Ngươi cho những vật liệu này không?",
+                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
             },
             Index = 1,
             fun = function ()
@@ -166,10 +166,10 @@ function self:onOpen(p)
         },
         M5 = {
             ImgDescription = {
-                "asset/Tutorial/Hướng dẫn7.png",
+                "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Có một thương nhân muốn mua một cái Head (Military) thường. Ngươi có không?",
+                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
             },
             Index = 1,
             fun = function ()
@@ -180,10 +180,10 @@ function self:onOpen(p)
         },
         M6 = {
             ImgDescription = {
-                "asset/Tutorial/Hướng dẫn7.png",
+                "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Dạo này nhà tôi bị dột nhiều, ngươi có gỗ bán cho ta không?",
+                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
             },
             Index = 1,
             fun = function ()
@@ -192,6 +192,7 @@ function self:onOpen(p)
                 end)
             end
         },
+        
     }
     local page = 1
     local function setPage()
