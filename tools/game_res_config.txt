@@ -1781,6 +1781,7 @@ asset/Texture/Block/wool_colored_pink_wool_6.png=bd8e0996d85c44a643ec5f79fe66a04
 asset/Texture/Block/wool_colored_red_wool_14.png=6a40e8cf9d22d3c9d024dd8178bfaf58
 asset/Texture/Block/wool_colored_white_wool_0.png=b05673ec1ee18490a07123c949afed36
 asset/Texture/Block/wool_colored_yellow_wool_4.png=2b642e9756ba2a1605c2b5096365b5ce
+asset/Texture/Gui/684x282.png=38735791/6d8c001c5ad2b0fa206512c9f9e19b37
 asset/Texture/Gui/BackPack.png=38735791/6ff9b6705bd91a0d194451678757c171
 asset/Texture/Gui/Bang nâng cấp(C).png=38735791/9e6be1e4e65dece14d6bc10afa0a2c43
 asset/Texture/Gui/Bang thông báo2(C).png=38735791/a792ee952d391cf184297370a6616059

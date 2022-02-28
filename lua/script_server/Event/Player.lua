@@ -483,7 +483,7 @@ end)
 
 PackageHandlers.registerServerHandler("addBuff", function(player, packet)
     local objPlayer = Gol.Player[player.objID]
-    return objPlayer:addBuff(packet.buff)
+    return objPlayer:addBuff(packet.buff,packet.time)
     
 end)
 PackageHandlers.registerServerHandler("removeBuff", function(player, packet)

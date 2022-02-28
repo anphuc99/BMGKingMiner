@@ -170,12 +170,12 @@ PlayerClass:create("Player",function ()
         return World.CurWorld:getObject(id)
     end
     
-    function o:addBuff(buffCfg)
+    function o:addBuff(buffCfg,time)
         local buffId = 1
         while buff[buffId] ~= nil do
             buffId = buffId + 1
         end        
-        buff[buffId] = o:getObj():addBuff(buffCfg)
+        buff[buffId] = o:getObj():addBuff(buffCfg,time)
         return buffId
     end
 
@@ -257,12 +257,20 @@ PlayerClass:create("Player",function ()
         local rd = math.random(1,100) 
         for key, value in pairs(Vortex) do
             if type(key) == "number" then
-                if rd <= value.percentage then
-                    o:addItemInBalo(value.id,1)
-                    break
+                if o:getTutorial() == 4 then
+                    if rd <= 50 then
+                        o:addItemInBalo("myplugin/V_Vortex",1)
+                        break
+                    end  
                 else
-                    rd = rd - value.percentage
-                end  
+                    if rd <= value.percentage then
+                        o:addItemInBalo(value.id,1)
+                        break
+                    else
+                        rd = rd - value.percentage
+                    end  
+                end
+                
             end
         end        
         return rs
