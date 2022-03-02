@@ -37,3 +37,19 @@ end
 PackageHandlers.registerClientHandler("sendTip", function(player, p)
     require "script_client.senTip".sendTip(p)
 end)
+local soundID
+
+soundID = TdAudioEngine.Instance():play2dSound("asset/MP3/Loppy.mp3", true)
+print(soundID,"wwwwwwwwwwwwwwwwsssssssssssss")
+
+
+PackageHandlers.registerClientHandler("PlayMP3Loppy", function(player, packet)
+    TdAudioEngine.Instance():stopSound(soundID)
+    soundID = TdAudioEngine.Instance():play2dSound("asset/MP3/Loppy.mp3", true)
+end)
+
+PackageHandlers.registerClientHandler("PlayMP3Mine", function(player, packet)
+    TdAudioEngine.Instance():stopSound(soundID)
+    print("wwwwwwwwwwwwwwwwsssssssssssss",soundID)
+    soundID = TdAudioEngine.Instance():play2dSound("asset/MP3/Mine.mp3", true)
+end)

@@ -13,6 +13,7 @@ Trigger.RegisterHandler(World.cfg, "GAME_START", function(context)
                 if proPlayer.idCard >= value.Id_card then
                     local dynamicMap = World.CurWorld:getOrCreateStaticMap(value.map, true) 
                     context.obj1:setMapPos(dynamicMap, Lib.v3(value.InPosition.x, value.InPosition.y, value.InPosition.z))
+                    PackageHandlers.sendServerHandler(context.obj1, "PlayMP3Mine")
                 else
                     messager(context.obj1,{Text = {"messeger_NotEnoughIdCard"}})
                 end
@@ -24,6 +25,7 @@ Trigger.RegisterHandler(World.cfg, "GAME_START", function(context)
             Trigger.addHandler(this2.cfg, "REGION_ENTER", function(context)
                 local dynamicMap = World.CurWorld:getOrCreateStaticMap(loopy, true) 
                 context.obj1:setMapPos(dynamicMap, Lib.v3(value.OutPosition.x, value.OutPosition.y, value.OutPosition.z))
+                PackageHandlers.sendServerHandler(context.obj1, "PlayMP3Loppy")
             end)
         end
     end

@@ -333,7 +333,7 @@ PackageHandlers.registerServerHandler("sellBlackMarket", function(player, packet
             return false
         end
     end)
-    if not rs then
+    if not rs then       
         messeger(player, {Text ={"messeger_offlinePlayer"}})
         return false
     else
