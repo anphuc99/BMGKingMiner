@@ -479,6 +479,7 @@ end)
 
 PackageHandlers.registerServerHandler("GoHome", function(player, packet)
     player:serverRebirth()
+    PackageHandlers.sendServerHandler(player, "PlayMP3Loppy")
 end)
 
 PackageHandlers.registerServerHandler("addBuff", function(player, packet)

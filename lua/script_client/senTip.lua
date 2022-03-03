@@ -1,3 +1,4 @@
 return {
-    sendTip = nil
+    sendTip = nil,
+    SoundId = 0
 }

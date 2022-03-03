@@ -192,6 +192,48 @@ function self:onOpen(p)
                 end)
             end
         },
+        M7 = {
+            ImgDescription = {
+                "asset/Tutorial/daily mission.png",
+            },
+            txtDescription = {
+                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
+            },
+            Index = 1,
+            fun = function ()
+                PackageHandlers.sendClientHandler("takingMission", nil, function ()
+                    self:close()
+                end)
+            end
+        },
+        M8 = {
+            ImgDescription = {
+                "asset/Tutorial/daily mission.png",
+            },
+            txtDescription = {
+                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
+            },
+            Index = 1,
+            fun = function ()
+                PackageHandlers.sendClientHandler("takingMission", nil, function ()
+                    self:close()
+                end)
+            end
+        },
+        M9 = {
+            ImgDescription = {
+                "asset/Tutorial/daily mission.png",
+            },
+            txtDescription = {
+                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
+            },
+            Index = 1,
+            fun = function ()
+                PackageHandlers.sendClientHandler("takingMission", nil, function ()
+                    self:close()
+                end)
+            end
+        },
         
     }
     local page = 1
