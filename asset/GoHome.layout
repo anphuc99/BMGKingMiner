@@ -1,99 +1,99 @@
     <GUILayout version="4">
-        <Window name="Root" type="DefaultWindow">
-            <Property name="Area" value="{{0,0},{0,2.32},{1,0},{1,2.32}}">
+        <Window type="DefaultWindow" name="Root">
+            <Window type="WindowsLook/ProgressBar" name="GoHome">
+                <Property value="{{0,0},{0,-137.42},{0,176.14},{0,-113.65}}" name="Area">
 
-            </Property>
-            <Property name="MaxSize" value="{{999,0},{999,0}}">
+                </Property>
+                <Property value="{{999,0},{999,0}}" name="MaxSize">
 
-            </Property>
-            <Property name="PivotX" value="0.5">
+                </Property>
+                <Property value="Bottom" name="VerticalAlignment">
 
-            </Property>
-            <Property name="Disabled" value="false">
+                </Property>
+                <Property value="0" name="CurrentProgress">
 
-            </Property>
-            <Property name="VerticalAlignment" value="Top">
+                </Property>
+                <Property value="0 0 0 0" name="ProgressLightsStretch">
 
-            </Property>
-            <Property name="PivotY" value="0.5">
+                </Property>
+                <Property value="0.5" name="PivotY">
 
-            </Property>
-            <Property name="ClippedByParent" value="false">
+                </Property>
+                <Property value="false" name="ReversedProgress">
 
-            </Property>
-            <Property name="HorizontalAlignment" value="Left">
+                </Property>
+                <Property value="1" name="Alpha">
 
-            </Property>
-            <Property name="MousePassThroughEnabled" value="true">
+                </Property>
+                <Property value="0 0 0 0" name="ProgressBgStretch">
 
-            </Property>
-            <Property name="Alpha" value="1">
+                </Property>
+                <Property value="false" name="VerticalProgress">
 
-            </Property>
-            <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+                </Property>
+                <Property value="gameres|asset/Texture/Gui/progressbar_top.png" name="progress_lights_image">
 
-            </Property>
-            <Property name="Visible" value="true">
+                </Property>
+                <Property value="false" name="Disabled">
 
-            </Property>
-              <Window name="GoHome" type="WindowsLook/ProgressBar">
-                  <Property name="Area" value="{{0,0},{0,-171.31832881756},{0,448.22},{0,-139.31832881756}}">
+                </Property>
+                <Property value="false" name="MousePassThroughEnabled">
 
-                  </Property>
-                  <Property name="MaxSize" value="{{999,0},{999,0}}">
+                </Property>
+                <Property value="true" name="Visible">
 
-                  </Property>
-                  <Property name="ProgressBgStretch" value="0 0 0 0">
+                </Property>
+                <Property value="Centre" name="HorizontalAlignment">
 
-                  </Property>
-                  <Property name="progress_lights_image" value="gameres|asset/Texture/Gui/progressbar_top.png">
+                </Property>
+                <Property value="w:1.0 x:0.0 y:0.0 z:0.0" name="Rotation">
 
-                  </Property>
-                  <Property name="ReversedProgress" value="false">
+                </Property>
+                <Property value="false" name="ClippedByParent">
 
-                  </Property>
-                  <Property name="ProgressLightsStretch" value="0 0 0 0">
+                </Property>
+                <Property value="gameres|asset/Texture/Gui/progressbar_bg.png" name="progress_background_image">
 
-                  </Property>
-                  <Property name="PivotX" value="0.5">
+                </Property>
+                <Property value="0.5" name="PivotX">
 
-                  </Property>
-                  <Property name="Disabled" value="false">
+                </Property>
+            </Window>
+              <Property value="{{0,0},{0,2.32},{1,0},{1,2.32}}" name="Area">
 
-                  </Property>
-                  <Property name="VerticalAlignment" value="Bottom">
+              </Property>
+              <Property value="{{999,0},{999,0}}" name="MaxSize">
 
-                  </Property>
-                  <Property name="PivotY" value="0.5">
+              </Property>
+              <Property value="Left" name="HorizontalAlignment">
 
-                  </Property>
-                  <Property name="ClippedByParent" value="false">
+              </Property>
+              <Property value="1" name="Alpha">
 
-                  </Property>
-                  <Property name="Rotation" value="w:1.0 x:0.0 y:0.0 z:0.0">
+              </Property>
+              <Property value="false" name="Disabled">
 
-                  </Property>
-                  <Property name="HorizontalAlignment" value="Centre">
+              </Property>
+              <Property value="true" name="MousePassThroughEnabled">
 
-                  </Property>
-                  <Property name="VerticalProgress" value="false">
+              </Property>
+              <Property value="true" name="Visible">
 
-                  </Property>
-                  <Property name="progress_background_image" value="gameres|asset/Texture/Gui/progressbar_bg.png">
+              </Property>
+              <Property value="Top" name="VerticalAlignment">
 
-                  </Property>
-                  <Property name="MousePassThroughEnabled" value="false">
+              </Property>
+              <Property value="w:1.0 x:0.0 y:0.0 z:0.0" name="Rotation">
 
-                  </Property>
-                  <Property name="Alpha" value="1">
+              </Property>
+              <Property value="false" name="ClippedByParent">
 
-                  </Property>
-                  <Property name="CurrentProgress" value="0">
+              </Property>
+              <Property value="0.5" name="PivotX">
 
-                  </Property>
-                  <Property name="Visible" value="true">
+              </Property>
+              <Property value="0.5" name="PivotY">
 
-                  </Property>
-              </Window>
+              </Property>
         </Window>
     </GUILayout>
