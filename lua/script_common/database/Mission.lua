@@ -48,10 +48,38 @@ return {
     {
         id = "M6",
         item = {
-            ["myplugin/M_Crystal"] = 10,
+            ["myplugin/M_Tree3"] = 10,
         },
         money = 500,
         id_card = 2
+    },
+    {
+        id = "M7",
+        item = {
+            ["myplugin/M_Tree3"] = 5,
+            ["myplugin/M_Titanium"] = 5,
+            ["myplugin/M_Platium"] = 5,
+        },
+        money = 1500,
+        id_card = 3
+    },
+    {
+        id = "M8",
+        item = {
+            ["myplugin/H_ao-choan_3_1"] = 1,
+            ["myplugin/M_Titanium"] = 3,
+        },
+        money = 6500,
+        id_card = 3
+    },
+    {
+        id = "M9",
+        item = {
+            ["myplugin/M_Platium"] = 10,
+            ["myplugin/M_Tree3"] = 10,
+        },
+        money = 2500,
+        id_card = 3
     },
     option = {
         primaryKey = "id",        
