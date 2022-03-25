@@ -124,6 +124,7 @@ PackageHandlers.registerServerHandler("OpenCellNum", function(player, packet)
     local rs = objPlayer:spendMoney(SlotBalo[objPlayer:getBalo()+1].money)
     if rs then
         objPlayer:setBalo(objPlayer:getBalo() + 1)
+        Trigger.CheckTriggers(player:cfg(), "PLAYER_UPGRATE_BALO", {cell = objPlayer:getBalo(), obj1 = player})
     end
     return rs
 end)
@@ -167,6 +168,7 @@ PackageHandlers.registerServerHandler("crafting", function(player, packet)
             end
         end
         objPlayer:addItemInBalo(winPrizes,1)
+        Trigger.CheckTriggers(player:cfg(), "PLAYER_CRAFTING", {item = winPrizes, obj1 = player})
         for key, value in pairs(recipe.Material) do
             objPlayer:removeItemInBalo(value.id,value.num)
         end
@@ -183,6 +185,7 @@ PackageHandlers.registerServerHandler("sellFleaMarket", function(player, packet)
         local flea = context_flea:where("idItem",packet.id):where("idNPC",packet.NPC):firstData()        
         objPlayer:increaseMoney(flea.price * packet.num)
         objPlayer:removeItemInBalo(flea.idItem,packet.num)
+        Trigger.CheckTriggers(player:cfg(), "PLAYER_SELL_ITEM", {obj1 = player, where = 1, item = flea.idItem})
     else
         messeger(player, {Text = {"messeger_NotEnoughItem",packet.name}, Color = {r = 255, g = 0, b = 0}})
     end
@@ -196,6 +199,7 @@ PackageHandlers.registerServerHandler("Upgrate", function(player, packet)
     local sumVor = context_playerItem:where("idItem",Vortex[1].id):sum("num")
     local context_equipment = Context:new("Equipment")
     local itemUpgrate = context_playerItem:where("idItem","find",packet.cup):firstData() 
+    local oldItem = itemUpgrate.idItem
     local equipment = context_equipment:where("id",itemUpgrate.idItem):firstData()
     local money = Upgrate[equipment.level].money
     if objPlsyer:getMoney() < money then
@@ -233,6 +237,7 @@ PackageHandlers.registerServerHandler("Upgrate", function(player, packet)
         objPlsyer:refreshHand(itemUpgrate.cellNum)
         Trigger.CheckTriggers(player:cfg(), "PALYER_CHECK_TUTORIAL_MISSION", {obj1 = player, model = objPlsyer})
     end
+    Trigger.CheckTriggers(player:cfg(), "PLAYER_UPGRATE", {item = itemUpgrate.idItem, oldItem = oldItem, obj1 = player})
     return true,itemUpgrate
 end)
 -- đăng bán sản phẩm lên chợ đen
@@ -251,7 +256,7 @@ PackageHandlers.registerServerHandler("publishBlackMarket", function(player, pac
     player:setValue("blackMarket", blackMarket)
     Gol.Player[player.objID]:removeItemInBalo(packet.idItem,packet.count)
     messeger(player,{Text = {"messager_publishProduct"}, Color = {r=0,b=0,g=0}})
-    -- player:sendTip(1, lang(player,{"messager_publishProduct"}))
+    Trigger.CheckTriggers(player:cfg(), "PLAYER_BUY_ITEM", {item = packet.idItem,obj1 = player, where = 2})
     return true
 end)
 -- xem sản phẩm ở chợ đen
@@ -295,6 +300,7 @@ PackageHandlers.registerServerHandler("deleteProduct", function(player, packet)
             end
         end
         player:setValue("blackMarket", blackMarket)
+        Trigger.CheckTriggers(player:cfg(), "PLAYER_REMOVE_BLACKMARKET", {item = item.idItem,obj1 = player})
     else
         messeger(player,{Text = {"messeger_FullBP"}})
     end    
@@ -327,6 +333,7 @@ PackageHandlers.registerServerHandler("sellBlackMarket", function(player, packet
                 end
             end     
             playerObj:getObj():setValue("blackMarket", blackMarket)
+            Trigger.CheckTriggers(player:cfg(), "PLAYER_BUY_ITEM", {obj1 = player, item = item.idItem})
             return true
         else
             messeger(player, {Text ={"messeger_offlinePlayer"}})
@@ -400,6 +407,7 @@ PackageHandlers.registerServerHandler("updateIdCard", function(player, packet)
     if objPlayer:getMoney() >= Id_card[objPlayer:getIdCard()] then
         objPlayer:spendMoney(Id_card[objPlayer:getIdCard()])
         objPlayer:setIdCard(objPlayer:getIdCard() + 1)
+        Trigger.CheckTriggers(player:cfg(), "PLAYER_UPDATE_IDCARD", {obj1 = player, idcard = objPlayer:getIdCard()})
         return objPlayer:getIdCard()
     else
         messeger(player,{Text = {"messeger_NotEnoughMoney"}})

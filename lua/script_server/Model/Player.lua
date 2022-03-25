@@ -37,6 +37,7 @@ PlayerClass:create("Player",function ()
         proPlayer.money = _Money
         player:setValue("Player", proPlayer)
         PackageHandlers.sendServerHandler(o:getObj(), "setMoney", {money = _Money})
+        Trigger.CheckTriggers(o:getObj():cfg(), "PLAYER_SET_MONEY", {money = _Money, obj1 = o:getObj()})
     end
 
     function o:getBalo()

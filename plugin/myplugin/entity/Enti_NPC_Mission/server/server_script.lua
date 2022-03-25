@@ -25,9 +25,10 @@ local cancelFunc = Trigger.addHandler(this:cfg(), "ENTITY_CLICK", function(conte
                 objPlayer:removeItemInBalo(key,value)
             end
             objPlayer:increaseMoney(getMission.money)
+            mission.lastCompleteMs = os.time()
+            Trigger.CheckTriggers(player:cfg(), "PLAYER_FINISH_MISSiON", {id = mission.msid, receivingTime = mission.curReceived, completionTime = mission.lastCompleteMs, obj1 = player})
             mission.msid = nil
             mission.takMs = false
-            mission.lastCompleteMs = os.time()
             player:setValue("mission", mission)
             World.Timer(4, function ()
                 PackageHandlers.sendServerHandler(context.obj2, "setMission", {})
@@ -42,6 +43,7 @@ local cancelFunc = Trigger.addHandler(this:cfg(), "ENTITY_CLICK", function(conte
                 local context_mission = Context:new("Mission")
                 local getAllMission = context_mission:where("id_card",valuePlayer.idCard):getData()
                 mission.msid =  getAllMission[math.random(1,#getAllMission)].id
+                mission.curReceived = os.time()
                 player:setValue("mission",mission)
                 PackageHandlers.sendServerHandler(player, "UI", {UI = "Tutorial", tutorial = mission.msid}) 
             end
