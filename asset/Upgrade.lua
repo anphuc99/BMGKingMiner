@@ -23,7 +23,6 @@ function self:onOpen(p)
     local function getCup ()
         PackageHandlers.sendClientHandler("getCup", {cup = Type}, function (cup)
             self.Image.Item:setImage("gameres|"..cup.icon)
-            print(Lib.pv(cup))
             lv = tonumber(split(cup.id,"_")[3])        
         end)
          -- lấy vortex        

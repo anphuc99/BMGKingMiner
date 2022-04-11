@@ -113,7 +113,7 @@ function self:onOpen(p)
                 "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
+                "mission_M1",
             },
             Index = 1,
             fun = function ()
@@ -127,7 +127,7 @@ function self:onOpen(p)
                 "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
+                "mission_M2",
             },
             Index = 1,
             fun = function ()
@@ -141,7 +141,7 @@ function self:onOpen(p)
                 "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
+                "mission_M3",
             },
             Index = 1,
             fun = function ()
@@ -155,7 +155,7 @@ function self:onOpen(p)
                 "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
+                "mission_M4",
             },
             Index = 1,
             fun = function ()
@@ -169,7 +169,7 @@ function self:onOpen(p)
                 "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
+                "mission_M5",
             },
             Index = 1,
             fun = function ()
@@ -183,7 +183,7 @@ function self:onOpen(p)
                 "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
+                "mission_M6",
             },
             Index = 1,
             fun = function ()
@@ -197,7 +197,7 @@ function self:onOpen(p)
                 "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
+                "mission_M7",
             },
             Index = 1,
             fun = function ()
@@ -211,7 +211,7 @@ function self:onOpen(p)
                 "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
+                "mission_M8",
             },
             Index = 1,
             fun = function ()
@@ -225,7 +225,7 @@ function self:onOpen(p)
                 "asset/Tutorial/daily mission.png",
             },
             txtDescription = {
-                "Hi, Can you help me collect something? My store is overloaded today. Your reward will be well deserved.",
+                "mission_M9",
             },
             Index = 1,
             fun = function ()

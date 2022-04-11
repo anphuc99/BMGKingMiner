@@ -26,7 +26,6 @@ end
 -- lấy chi tiết công thức
 function crafting:getDetailCraft(recipeId,BP)
     local data = {}
-    print(recipeId)
     local context_recipe = Context:new("recipe")
     local rec = context_recipe:where("id",recipeId):firstData()
     for key, value in pairs(rec.Material) do

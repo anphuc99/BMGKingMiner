@@ -43,6 +43,23 @@ return {
 		name = 'item_M_Titanium'
 	},
 	{
+		description = 'description_item_M_Diamond',
+		typeItem = typeItem.Material,
+		icon = 'asset/TaiNguyen/Titan.png',
+		id = 'myplugin/M_Diamond',
+		name = 'item_M_Diamond',
+	},
+	{
+		description = 'description_item_M_Chryso',
+		typeItem = typeItem.Material,
+		icon = 'asset/TaiNguyen/Titan.png',
+		id = 'myplugin/M_Chryso',
+		name = 'item_M_Chryso'
+	},
+
+
+
+	{
 		description = 'description_item_M_Tree1',
 		typeItem = typeItem.Material,
 		icon = 'asset/TaiNguyen/Cây LV1.png',
@@ -419,6 +436,143 @@ return {
 		icon = 'asset/TrangBi/Găng tay3.png',
 		id = 'myplugin/G_gang-tay_3_1',
 		name = 'item_G_gang-tay_3_1'
+	},
+
+
+
+
+
+
+	{
+		description = 'description_item_G_gang-tay_4_1',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Găng tay4-1.png',
+		id = 'myplugin/G_gang-tay_4_1',
+		name = 'item_G_gang-tay_4_1'
+	},
+	{
+		description = 'description_item_G_gang-tay_4_2',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Găng tay4-2.png',
+		id = 'myplugin/G_gang-tay_4_2',
+		name = 'item_G_gang-tay_4_2'
+	},
+	{
+		description = 'description_item_G_gang-tay_4_3',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Găng tay4-3.png',
+		id = 'myplugin/G_gang-tay_4_3',
+		name = 'item_G_gang-tay_4_3'
+	},
+
+	{
+		description = 'description_item_Sh_giay_4_1',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Giầy4-1.png',
+		id = 'myplugin/Sh_giay_4_1',
+		name = 'item_Sh_giay_4_1'
+	},
+	{
+		description = 'description_item_Sh_giay_4_2',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Giầy4-2.png',
+		id = 'myplugin/Sh_giay_4_2',
+		name = 'item_Sh_giay_4_2'
+	},
+	{
+		description = 'description_item_Sh_giay_4_3',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Giầy4-3.png',
+		id = 'myplugin/Sh_giay_4_3',
+		name = 'item_Sh_giay_4_3'
+	},
+
+	{
+		description = 'description_item_C_ao-choan_4_1',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Áo choàng4-1.png',
+		id = 'myplugin/C_ao-choan_4_1',
+		name = 'item_C_ao-choan_4_1'
+	},
+	{
+		description = 'description_item_C_ao-choan_4_2',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Áo choàng4-2.png',
+		id = 'myplugin/C_ao-choan_4_2',
+		name = 'item_C_ao-choan_4_2'
+	},
+	{
+		description = 'description_item_C_ao-choan_4_3',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Áo choàng4-3.png',
+		id = 'myplugin/C_ao-choan_4_3',
+		name = 'item_C_ao-choan_4_3'
+	},
+
+	{
+		description = 'description_item_T_quan_4_1',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Quần4-1.png',
+		id = 'myplugin/T_quan_4_1',
+		name = 'item_T_quan_4_1'
+	},
+	{
+		description = 'description_item_T_quan_4_2',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Quần4-2.png',
+		id = 'myplugin/T_quan_4_2',
+		name = 'item_T_quan_4_2'
+	},
+	{
+		description = 'description_item_T_quan_4_3',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Quần4-3.png',
+		id = 'myplugin/T_quan_4_3',
+		name = 'item_T_quan_4_3'
+	},
+
+	{
+		description = 'description_item_S_ao_4_1',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Giap4-1.png',
+		id = 'myplugin/S_ao_4_1',
+		name = 'item_S_ao_4_1'
+	},
+	{
+		description = 'description_item_S_ao_4_2',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Giap4-2.png',
+		id = 'myplugin/S_ao_4_2',
+		name = 'item_S_ao_4_2'
+	},
+	{
+		description = 'description_item_S_ao_4_3',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Giap4-3.png',
+		id = 'myplugin/S_ao_4_3',
+		name = 'item_S_ao_4_3'
+	},
+
+	{
+		description = 'description_item_H_non_4_1',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Nón4-1.png',
+		id = 'myplugin/H_non_4_1',
+		name = 'item_H_non_4_1'
+	},
+	{
+		description = 'description_item_H_non_4_2',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Nón4-2.png',
+		id = 'myplugin/H_non_4_2',
+		name = 'item_H_non_4_2'
+	},
+	{
+		description = 'description_item_H_non_4_3',
+		typeItem = typeItem.Equipment,
+		icon = 'asset/TrangBi/Nón4-3.png',
+		id = 'myplugin/H_non_4_3',
+		name = 'item_H_non_4_3'
 	},
 	option = {
 		primaryKey = 'id'

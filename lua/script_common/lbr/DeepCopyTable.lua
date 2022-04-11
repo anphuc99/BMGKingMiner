@@ -1,14 +1,15 @@
+local cjson = require "cjson"
 local function deepcopy(orig)
-    local orig_type = type(orig)
-    local copy
-    if orig_type == 'table' then
-        copy = {}
-        for orig_key, orig_value in next, orig, nil do
-            copy[deepcopy(orig_key)] = deepcopy(orig_value)
+    local copy = {}
+    for key, value in pairs(orig) do
+        if tonumber(key) then
+            key = math.floor(tonumber(key))
         end
-        setmetatable(copy, deepcopy(getmetatable(orig)))
-    else -- number, string, boolean, etc
-        copy = orig
+        if type(value) == "table" then
+            copy[key] = deepcopy(value)
+        else
+            copy[key] = value
+        end
     end
     return copy
 end

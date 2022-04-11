@@ -1,5 +1,13 @@
 local Gol = {
     Player = {},
-    Material = {}
+    Material = {},
+    dataKey = {
+        Player = "Player",
+        PlayerItem = "PlayerItem",
+        BlackMarket = "BlackMarket"
+    },
+    subKey = {
+        BlackMarket = -1
+    }
 }
 return Gol

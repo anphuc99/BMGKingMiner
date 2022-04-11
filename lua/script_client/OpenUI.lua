@@ -40,7 +40,6 @@ end)
 local soundID = require "script_client.senTip".SoundId
 
 soundID = TdAudioEngine.Instance():play2dSound("asset/MP3/Loppy.mp3", true)
-print(soundID,"wwwwwwwwwwwwwwwwsssssssssssss")
 
 
 PackageHandlers.registerClientHandler("PlayMP3Loppy", function(player, packet)
@@ -50,6 +49,25 @@ end)
 
 PackageHandlers.registerClientHandler("PlayMP3Mine", function(player, packet)
     TdAudioEngine.Instance():stopSound(soundID)
-    print("wwwwwwwwwwwwwwwwsssssssssssss",soundID)
     soundID = TdAudioEngine.Instance():play2dSound("asset/MP3/Mine.mp3", true)
+end)
+
+PackageHandlers.registerClientHandler("PlayerItem", function(player, packet)
+    Lib.playerItem = packet
+    print(Lib.pv(Lib.playerItem))
+end)
+
+PackageHandlers.registerClientHandler("Entity_mission", function(player, value)
+    World.Timer(100,function ()
+        local sceneArgs = {
+            position = {x = 0, y = 2, z = 0},
+            rotation = {x = 0, y = 0, z = 0},
+            width = 7,
+            height = 7,
+            isCullBack = false,
+            objID = value.objid,
+            flags = 4
+        }
+        local sceneWindow,window = UI:openSceneWindow("Piaxe", value.objid, sceneArgs, "layouts", value)        
+    end)
 end)

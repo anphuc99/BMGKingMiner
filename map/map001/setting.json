@@ -716,6 +716,39 @@
         "rotation": "x:0 y:90.999633789062 z:0",
         "scale": "x:1 y:1 z:1"
       }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_Cheat",
+      "properties": {
+        "id": "8576938206778621953",
+        "name": "Cheat",
+        "position": "x:23.315208435059 y:53.000556945801 z:28.592100143433",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Diamond",
+      "properties": {
+        "id": "8580103543019880449",
+        "name": "Diamond",
+        "position": "x:24.941850662231 y:53.0 z:25.877576828003",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "Entity",
+      "config": "myplugin/Enti_M_Chryso",
+      "properties": {
+        "id": "8580103610406600705",
+        "name": "Chryso",
+        "position": "x:22.419448852539 y:53.008491516113 z:25.581495285034",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:1 y:1 z:1"
+      }
     }
   ],
   "skyBox": [

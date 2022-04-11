@@ -47,4 +47,6 @@ this.addValueDef("Achievement",{
     proceed = {}
 },false, false, true, false)
 
+this.addValueDef("converted", false, false, false, true, false)
+
 --6076

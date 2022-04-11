@@ -19,7 +19,7 @@
   "chaseDistance": 10,
   "chaseInterval": 10,
   "checkPartTouchEvent": true,
-  "clickDistance": 4,
+  "clickDistance": 2.5,
   "collider": {
     "extent": {
       "x": 0.6,
@@ -82,7 +82,7 @@
   "randomPlayDeadActions": [
     ""
   ],
-  "reachDistance": 6.5,
+  "reachDistance": 2.5,
   "reviveTime": 2000,
   "setFollowWhenCreate": true,
   "skills": [],

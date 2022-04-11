@@ -64,7 +64,6 @@ function self:onOpen(p)
     --             i = i + 0.01
     --             self.openOption:setProperty("Rotation","w:1 x:0 y:0 z:"..i)
     --             local size = self.openOption:getProperty("Size")
-    --             print(size)
     --             -- self.Option.Upgrate:setProperty("Position","{{0,298.66},{0,1.90735e-06}}")
     --             return 0.5
     --         end

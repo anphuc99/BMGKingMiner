@@ -52,7 +52,7 @@ function self:onOpen(p)
         lisItem = {}
         PackageHandlers.sendClientHandler("getBackPackPlayer", nil,
         function(data)
-            print(Lib.pv(data))
+
             for k, v in pairs(data) do
                 setItem(v, v.cellNum)
             end
@@ -77,7 +77,6 @@ function self:onOpen(p)
             --     lisItem[i].cellNum = i
             --     PackageHandlers.sendClientHandler("baloToHand", lisItem[i],
             --     function(rs)
-            --         print(rs)
             --         if rs then
             --             self.BackPack.ScrollableView.CellBP["cell" .. i].Item:setVisible(false)
             --             self.BackPack.ScrollableView.CellBP["cell" .. i].Image1:setVisible(false)
@@ -90,7 +89,6 @@ function self:onOpen(p)
             --     if i <= balo then
             --         PackageHandlers.sendClientHandler("handToBalo", {cellNum = i},
             --         function(v)
-            --             print(Lib.pv(v))
             --             setItem(v, i)
             --         end)
             --     end
@@ -231,8 +229,6 @@ function self:onOpen(p)
         end
         for index, value in ipairs(equiment) do
             local item = context_equipment:where("id",value):firstData()
-            print("eeeeeeeeessss")
-            print(item.typeEquipment)
             self.BackPack.Equiment["e"..item.typeEquipment]:setVisible(true)
             self.BackPack.Equiment["e"..item.typeEquipment]:setImage("gameres|"..item.icon)
             self.BackPack.Equiment["e"..item.typeEquipment].id = item.id

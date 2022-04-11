@@ -33,16 +33,14 @@ function Maket:getBlackMarket(bMk)
     local context_item = Context:new("Item")    
     local data = {}
     for key, value in pairs(bMk) do
-        if type(key) == "number" then
-            local item = context_item:where("id",value.idItem):firstData()
-            item.playerId = value.playerId
-            item.created_at = value.created_at
-            item.objId = value.objId
-            item.playerName = value.playerName
-            item.price = value.price
-            item.count = value.count
-            data[#data+1] = item
-        end
+        local item = context_item:where("id",value.idItem):firstData()
+        item.playerId = value.playerId
+        item.created_at = value.created_at
+        item.key = key
+        item.playerName = value.playerName
+        item.price = value.price
+        item.quantily = value.quantily
+        data[#data+1] = item
     end
     return data
 end

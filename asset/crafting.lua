@@ -16,6 +16,11 @@ function self:onOpen(p)
       local item = UI:createStaticImage("item" .. key)
       item:setImage("gameres|asset/Texture/Gui/Bảng Item craft1.png")
       item:setSize(UDim2.new(0, 183.56, 0, 183.56))
+      local name = UI:createStaticImage("name")
+      name:setProperty("MousePassThroughEnabled", "true")
+      name:setSize(UDim2.new(0, 170, 0, 30))
+      name:setPosition(UDim2.new(0, 10, 0, 20))
+      item:addChild(name)
       local icon = UI:createStaticImage("icon")
       icon:setPosition(UDim2.new(0, 48.95, 0, 57.39))
       icon:setProperty("MousePassThroughEnabled", "true")
@@ -63,8 +68,6 @@ function self:onOpen(p)
         end
       end
       local text = {}
-      print("oooooooooooooo")
-      print(Lib.pv(item))
       for index, value in ipairs(item) do      
         text[#text+1] = value.percentage.."% "..Lang:toText(value.name)
       end
@@ -87,7 +90,6 @@ function self:onOpen(p)
                 local icon = Context:new("Item"):where("id",res.item):firstData()          
                 PackageHandlers.sendClientHandler("getBackPackPlayer", nil, function (BP)            
                   Backpack = BP
-                  print(Lib.pv(Backpack))
                   selectClick(postion)
                   self.crafting.ItemCf:setImage("gameres|"..icon.icon)
                 end)              
@@ -119,6 +121,7 @@ function self:onOpen(p)
           recId[key].show = value.show      
           createItem(key)
           self.select.ScrollableView.GridView["item"..key].icon:setImage("gameres|"..value.icon)
+          self.select.ScrollableView.GridView["item"..key].name:setImage("gameres|asset/Texture/Gui/name"..value.level..".png")
           self.select.ScrollableView.GridView["item"..key].blur:setVisible(not value.show)
         end
       end
@@ -129,10 +132,10 @@ function self:onOpen(p)
           recId[key].show = value.show      
           createItem(key)
           self.select.ScrollableView.GridView["item"..key].icon:setImage("gameres|"..value.icon)
+          self.select.ScrollableView.GridView["item"..key].name:setImage("gameres|asset/Texture/Gui/name"..value.level..".png")
           self.select.ScrollableView.GridView["item"..key].blur:setVisible(not value.show)
         end
       end
-      print(Lib.pv(recId))
     end)
   end)
   if not rs then

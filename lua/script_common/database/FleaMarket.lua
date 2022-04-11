@@ -37,12 +37,22 @@ return {
     {
         idItem = "myplugin/M_Platium",
 	    idNPC = 1,
-	    price = 100
+	    price = 130
     },
     {
         idItem = "myplugin/M_Titanium",
 	    idNPC = 1,
-	    price = 130
+	    price = 100
+    },
+    {
+        idItem = "myplugin/M_Diamond",
+	    idNPC = 1,
+	    price = 150
+    },
+    {
+        idItem = "myplugin/M_Chryso",
+	    idNPC = 1,
+	    price = 200
     },
     {
         idItem = "myplugin/V_Vortex",
@@ -188,6 +198,68 @@ return {
 	    idNPC = 2,
 	    price = 5900
     },
+
+    {
+        idItem = "myplugin/H_non_4_1",
+	    idNPC = 2,
+	    price = 11500
+    },
+    {
+        idItem = "myplugin/H_non_4_2",
+	    idNPC = 2,
+	    price = 14000
+    },
+    {
+        idItem = "myplugin/T_quan_4_1",
+	    idNPC = 2,
+	    price = 10500
+    },
+    {
+        idItem = "myplugin/T_quan_4_2",
+	    idNPC = 2,
+	    price = 12000
+    },
+    {
+        idItem = "myplugin/S_ao_4_1",
+	    idNPC = 2,
+	    price = 11000
+    },
+    {
+        idItem = "myplugin/S_ao_4_2",
+	    idNPC = 2,
+	    price = 13000
+    },
+    {
+        idItem = "myplugin/Sh_giay_4_1",
+	    idNPC = 2,
+	    price = 8000
+    },
+    {
+        idItem = "myplugin/Sh_giay_4_2",
+	    idNPC = 2,
+	    price = 10000
+    },
+    {
+        idItem = "myplugin/G_gang-tay_4_1",
+	    idNPC = 2,
+	    price = 9500
+    },
+    {
+        idItem = "myplugin/G_gang-tay_4_2",
+	    idNPC = 2,
+	    price = 11000
+    },
+    {
+        idItem = "myplugin/C_ao-choan_4_1",
+	    idNPC = 2,
+	    price = 12000
+    },
+    {
+        idItem = "myplugin/C_ao-choan_4_2",
+	    idNPC = 2,
+	    price = 15000
+    },
+
     option = {
         primaryKey = {"idItem","idNPC"}
     }

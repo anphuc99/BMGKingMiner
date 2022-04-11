@@ -49,7 +49,6 @@ Context:create("Context", function()
             dt.Index = {}
             local check
             if operator == "find" then
-                print("eeeeeeeeeee")
                 check = function (val1,val2) local a = string.find( val1,val2,1,true ) return a~= nil end
             else
                 check = load("return function (val1,val2) return val1 "..operator.." val2 end")()    
@@ -62,7 +61,6 @@ Context:create("Context", function()
             end            
             dt.option = dataSelect.option            
             dataSelect = dt
-            print(Lib.pv(dataSelect))
         end
         return o
     end

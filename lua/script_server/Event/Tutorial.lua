@@ -38,7 +38,8 @@ Trigger.addHandler(Entity.GetCfg("myplugin/player1"), "PALYER_CHECK_TUTORIAL_MIS
     if not itemTuotrial[context.model:getTutorial()] then
         return
     end
-    local playerItem = context.obj1:getValue("PlayerItem")
+    local objPlayer = context.model
+    local playerItem = objPlayer:getPlayerItem()
     local contex_playerItem = Context:new(playerItem)
     local count = contex_playerItem:where("idItem",itemTuotrial[context.model:getTutorial()].item):sum("num")
     if count >= itemTuotrial[context.model:getTutorial()].num then
@@ -48,7 +49,7 @@ Trigger.addHandler(Entity.GetCfg("myplugin/player1"), "PALYER_CHECK_TUTORIAL_MIS
         context.model:setTakingMissionTutorial(false)
         World.Timer(4, function ()
             messager(context.obj1,{Text = {"messeger_completeMission"}, Color = {r=0,b=0,g=0}})
-            local proPlayer = context.obj1:getValue("Player")
+            local proPlayer = objPlayer:toTable()
             proPlayer.UI = "Tutorial"
             PackageHandlers.sendServerHandler(context.obj1, "UI", proPlayer)
             return false

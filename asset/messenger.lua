@@ -14,7 +14,6 @@
 --     end        
 --   end)
 --   self.onClose = function ()
---     print("wwwwwwwwwwwwwwwwsssssssssssss")
 --     p.time = 0
 --   end
 -- end

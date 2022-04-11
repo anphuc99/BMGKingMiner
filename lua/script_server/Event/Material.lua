@@ -12,17 +12,21 @@ for key, value in pairs(Material) do
         local cfg = Entity.GetCfg(value.entityId)
         Trigger.RegisterHandler(cfg, "ENTITY_ENTER", function(context)
             Gol.Material[context.obj1.objID] = MaterialModel:new(value,context.obj1.objID)
-        end)
-        Trigger.RegisterHandler(cfg, "ENTITY_DIE", function(context)
-            Gol.Material[context.obj1.objID] = nil
+            local objid = {}
+            for key, value in pairs(Gol.Material) do
+                objid[#objid+1] = {
+                    objid = key,
+                    type = value:getTypeMar()
+                }
+            end
+            PackageHandlers.sendServerHandlerToAll("setObjMaterial", objid)
         end)
         Trigger.RegisterHandler(cfg, "ENTITY_REBIRTH", function(context)
             Gol.Material[context.obj1.objID] = MaterialModel:new(value,context.obj1.objID)
         end)
         Trigger.RegisterHandler(cfg, "ENTITY_CLICK", function(context)
-            print(context.obj2.objID)
-            print(Lib.pv(Gol.Player))
-            Gol.Player[context.obj2.objID]:beginMine(Gol.Material[context.obj1.objID])
+            Gol.Player[context.obj2.platformUserId]:beginMine(Gol.Material[context.obj1.objID])
+            PackageHandlers.sendServerHandler(context.obj2, "HideMine")
         end)
     end
 end

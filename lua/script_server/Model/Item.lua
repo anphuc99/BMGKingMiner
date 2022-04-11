@@ -41,44 +41,40 @@ Item:create("Item", function()
         if typeItem == TypeItem.Equipment then
             lv = 1
         end
-        local idPlayer = Player:getValue("Player")
-        local playerItem = Player:getValue("PlayerItem")
-        if playerItem == nil then
-            Player.addValueDef("PlayerItem", {
-                {idPlayer = idPlayer.id, idItem = id, num = num, cellNum = 1, position = positionItem.balo, lv = lv}
-            }, true, true, true, false)
+        local idPlayer,playerItem = Player:toTable()
+
+        local context_player = Context:new(playerItem)
+        local checkItem = context_player:where("position",positionItem.balo):where("idItem", id):firstData()
+        if checkItem ~= nil then
+            checkItem.num = checkItem.num + num             
+            Player:setPlayerItem(playerItem)
         else
-            local context_player = Context:new(playerItem)
-            local checkItem = context_player:where("position",positionItem.balo):where("idItem", id):firstData()
-            if checkItem ~= nil then
-                checkItem.num = checkItem.num + num
-                Player:setValue("PlayerItem", playerItem)                
-            else
-                local rs = false
-                for i = 1, idPlayer.balo, 1 do
-                    local checkCellNum = context_player:where("position",positionItem.balo):where("cellNum", i):firstData()
-                    if checkCellNum == nil then
-                        playerItem[#playerItem + 1] = {
-                            idPlayer = idPlayer.id,
-                            idItem = id,
-                            num = num,
-                            cellNum = i,
-                            position = positionItem.balo,
-                            lv = lv
-                        }
-                        Player:setValue("PlayerItem", playerItem)
-                        rs = true
-                        break
-                    end
+            local rs = false
+            for i = 1, idPlayer.balo, 1 do
+                local checkCellNum = context_player:where("position",positionItem.balo):where("cellNum", i):firstData()
+                if checkCellNum == nil then
+                    playerItem[#playerItem + 1] = {
+                        idPlayer = idPlayer.id,
+                        idItem = id,
+                        num = num,
+                        cellNum = i,
+                        position = positionItem.balo,
+                        lv = lv
+                    }
+                    rs = true
+                    break
                 end
-                if not rs then
-                    --local language = Gol.Player[Player.objID]:getLanguage()
-                    --print(language)
-                    messenger(Player,{Text = {"messeger_FullBP",1}, Color = {r = 255, g = 0, b = 0}})                                    
-                end
-                return rs
             end
+            if not rs then
+                --local language = Gol.Player[Player.objID]:getLanguage()
+                --print(language)
+                messenger(Player:getObj(),{Text = {"messeger_FullBP",1}, Color = {r = 255, g = 0, b = 0}})      
+                return false                              
+            end
+            Player:setPlayerItem(playerItem)
+            return rs
         end
+
         return true
     end
     return o

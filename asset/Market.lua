@@ -1,16 +1,11 @@
 function self:onOpen(p)
     -- local AdHelper = Game.GetService("AdHelper")
-    -- print("Eeeeeeeeeeeewwwwwwww")
     -- AdHelper:defineAdPlace('place1')
     -- AdHelper:reportAdPlace('place1')
-    -- print(Lib.pv(AdHelper))
     -- local cancelfunc = AdHelper:videoAd('place1',9,function(videoAdResult,place,index)
     --     if videoAdResult == AdHelper.VideoAdResult.FINISHED then --Watched successfully
-    --         print('Watch out')
     --     elseif videoAdResult == AdHelper.VideoAdResult.FAILED then --Watch failed
-    --         print('Watch the failure')
     --     elseif videoAdResult == AdHelper.VideoAdResult.CLOSE then -- Exit without reading
-    --         print('Exit while watching')
     --     end
     -- end)
     local BUS_Market = require "script_client.Bus.Market"
@@ -112,7 +107,7 @@ function self:onOpen(p)
                     end
                     PackageHandlers.sendClientHandler("publishBlackMarket", {
                         idItem = market[i].id,
-                        count = amount,
+                        quantily = amount,
                         price = money
                     }, function (rs)
                         if rs then
@@ -182,8 +177,13 @@ function self:onOpen(p)
             else
                 requet = "seenMyMarket"
             end
-            PackageHandlers.sendClientHandler(requet, nil, function (bMk)
-                if #bMk == 0 then
+            PackageHandlers.sendClientHandler(requet)
+            PackageHandlers.registerClientHandler("BlackMarket", function(player, bMk)
+                local conut = 0
+                for key, value in pairs(bMk) do
+                    conut = conut + 1
+                end
+                if conut == 0 then
                     self.Image.NoProduct:setVisible(true)
                     if mk == 2 then
                         self.Image.NoProduct:setText(Lang:toText({"NoProductBlack"}))
@@ -193,17 +193,15 @@ function self:onOpen(p)
                     return
                 end
                 PackageHandlers.sendClientHandler("getValuePlayer", nil, function (player)                    
-                    mar = BUS_Market:getBlackMarket(bMk)
-                    print(Lib.pv(player))  
+                    mar = BUS_Market:getBlackMarket(bMk) 
                     for key, value in pairs(mar) do
                         createProduct(key)
                         self.Image.ScrollableView.GridView["Product" .. key]:setVisible(true)
                         self.Image.ScrollableView.GridView["Product" .. key].item:setImage("gameres|" .. value.icon)
                         self.Image.ScrollableView.GridView["Product" .. key].name:setText(Lang:toText(value.name))
                         self.Image.ScrollableView.GridView["Product" .. key].num:setText(value.price)
-                        self.Image.ScrollableView.GridView["Product" .. key].count:setText(value.count)
+                        self.Image.ScrollableView.GridView["Product" .. key].count:setText(value.quantily)
                         self.Image.ScrollableView.GridView["Product" .. key].block:setVisible(false)
-                        print(Lib.pv(player))
                         self.Image.ScrollableView.GridView["Product" .. key].block:setVisible(mk ~= 3 and player.money < value.price)
                         value.NPC = p.NPC
                         market[#market + 1] = value                                                                      

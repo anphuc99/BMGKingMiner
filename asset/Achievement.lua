@@ -30,7 +30,6 @@ function self:onOpen(p)
         local top = {}
         local middi = {}
         local buttom = {}
-        print(Lib.pv(achi))
         for index, value in ipairs(achi.proceed) do
             buttom[#buttom+1] = value
         end
@@ -96,7 +95,6 @@ function self:onOpen(p)
             eleAchi["Achi"..i].icon:setImage("gameres|"..Achievement[v].icon)
             i = i + 1
         end
-        print(Lib.pv(top))
         for index, value in ipairs(top) do                  
             setAchi(value,"false")   
             setDot(dot + 1)
