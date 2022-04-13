@@ -26,6 +26,7 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
         context.obj1:setValue("converted", true)
         local PlayerProperty = {
             id = context.obj1.platformUserId,
+            name = context.obj1.name,
             money = 0,
             balo = 6,
             idCard = 1,
@@ -62,12 +63,14 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
         context.obj1:addItem(cupLv1, 1)        
         --PackageHandlers.sendServerHandler(context.obj1, "UI", {UI = "Language"})
         Trigger.CheckTriggers(this, "PLAYER_INIT", context)  
+        Trigger.CheckTriggers(this, "NEW_PLAYER_INIT", context)            
     else
         local converted = context.obj1:getValue("converted")
         --context.obj1:setValue("converted", false)
         if not converted then
             context.obj1:setValue("converted",true)
             local PlayerProperty = context.obj1:getValue("Player")
+            PlayerProperty.name = context.obj1.name
             PlayerProperty.Equipment = context.obj1:getValue("Equipment")
             PlayerProperty.Achievement = context.obj1:getValue("Achievement")
             PlayerProperty.mission = context.obj1:getValue("mission")
@@ -86,8 +89,11 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
                 }
                 local clsBlackMar = BlackMarket:new(data) 
                 clsBlackMar:sell()
-            end            
-            Trigger.CheckTriggers(this, "PLAYER_INIT", context)
+            end
+            Trigger.CheckTriggers(this, "ADD_RANK_MINE", {obj1 = context.obj1, value = PlayerProperty.Mine})            
+            Trigger.CheckTriggers(this, "ADD_RANK_LV", {obj1 = context.obj1, value = PlayerProperty.LV})            
+            Trigger.CheckTriggers(this, "PLAYER_INIT", context)            
+            Trigger.CheckTriggers(this, "NEW_PLAYER_INIT", context)            
         else
             DBHandler:getDataByUserId(context.obj1.platformUserId, Gol.dataKey.Player, function (userId,jdata)
                 if jdata == nil or jdata == "" then
@@ -117,7 +123,6 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
         }
     end
     PackageHandlers.sendServerHandler(context.obj1,"setObjMaterial", objid)
-    PackageHandlers.sendServerHandler(context.obj1, "Entity_mission", {objid = Lib.objMission})
 end)
 
 -- sau khi thêm dữ liệu vào model sẽ kích hoạt
@@ -137,13 +142,65 @@ Trigger.RegisterHandler(this, "PLAYER_INIT", function(context)
         PackageHandlers.sendServerHandler(context.obj1, "RedDotDally", nil)
     end
     DBHandler:getDataByUserId(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket, function (userId,jdata)
-       local data = cjson.decode(jdata)
-       for key, value in pairs(data) do
-           if value.idPlayer == context.obj1.platformUserId and value.sold then
-               local clsBlackMar = BlackMarket:new(value,key)
-               clsBlackMar:receiveMoney()
-           end
-       end 
+        local data = cjson.decode(jdata)
+        for key, value in pairs(data) do
+            if value.idPlayer == context.obj1.platformUserId and value.sold then
+                local clsBlackMar = BlackMarket:new(value,key)
+                clsBlackMar:receiveMoney()
+            end
+        end 
+    end)
+    local mission = PlayerObj:getMission()    
+    if mission.lastCompleteMs == nil or compareDate(mission.lastCompleteMs,os.time()) >= 1 and PlayerObj:getTutorial() >= 6 then        
+        PackageHandlers.sendServerHandler(context.obj1, "Entity_mission", {objid = Lib.objMission, received = mission.msid ~= nil})
+    end
+    Trigger.CheckTriggers(context.obj1:cfg(), "PLAYER_CHECK_MISSION", {obj1 = context.obj1})  
+    -- giả lập người chơi
+    -- local idPlayer = ""
+    -- for i = 1, 10000, 1 do
+    --     local PlayerProperty = {
+    --         id = i,
+    --         name = utf8.char(math.random(1,255)),
+    --         money = 0,
+    --         balo = 6,
+    --         idCard = 1,
+    --         Lv = math.random(1,1000),
+    --         exp = 0,
+    --         Mine = math.random(1,500000),
+    --         tutorial = 1,
+    --         takingMissionTutorial = false,
+    --         lastLogin = os.time(),
+    --         lastRollUp7 = nil,
+    --         lastRollUp28 = nil,
+    --         countRollUp7 = 0,
+    --         countRollUp28 = 0,
+    --         Upgrate = 0,
+    --         Crafting = 0,
+    --         Equipment = {},
+    --         Achievement = {
+    --             done = {},
+    --             proceed = {}
+    --         },
+    --         mission = {
+    --             msid = nil,
+    --             takMs = false,
+    --             lastCompleteMs = nil
+    --         }
+    --     }
+    --     DBHandler:setData(i, Gol.dataKey.Player, cjson.encode(PlayerProperty), false)
+    --     idPlayer = idPlayer..i..","
+    --     print(i)
+    -- end  
+    -- DBHandler:setData(Gol.subKey.AllPlayer, Gol.subKey.AllPlayer, "", true)
+    -- DBHandler:setData(Gol.subKey.AllPlayer, Gol.dataKey.AllPlayer, idPlayer, true)
+end)
+
+Trigger.RegisterHandler(this, "NEW_PLAYER_INIT", function(context)
+    local player = context.obj1
+    DBHandler:getDataByUserId(Gol.subKey.AllPlayer, Gol.dataKey.AllPlayer, function (userId,jdata)
+        jdata = jdata or ""
+        jdata = jdata..player.platformUserId..","
+        DBHandler:setData(Gol.subKey.AllPlayer, Gol.dataKey.AllPlayer, jdata, true)
     end)
 end)
 
@@ -600,4 +657,62 @@ end)
 PackageHandlers.registerServerHandler("PLAYER_END_MINE", function(player, packet)
     Gol.Player[player.platformUserId]:endMine(packet.itemid,packet.objId)
     Gol.Player[player.platformUserId]:save(false)
+end)
+
+PackageHandlers.registerServerHandler("buyCoin", function(player, packet)
+    local Gcube = {
+        [1] = 1000,
+        [5] = 5000,
+        [10] = 10000,
+        [25] = 28000,
+        [50] = 60000,
+        [100] = 130000,
+        [200] = 300000,
+        [300] = 480000
+    }
+    local PayHelper = Game.GetService("PayHelper")
+    PayHelper:payMoney(player, "buyCoin"..packet.Gcube, packet.Gcube, function(ret)
+        if ret then
+            Gol.Player[player.platformUserId]:increaseMoney(Gcube[packet.Gcube])     
+            Gol.Player[player.platformUserId]:save(false)     
+        end
+    end)
+end)
+
+PackageHandlers.registerServerHandler("getRank", function(player, packet)
+    local function binarySearch(data,value,col)
+        local left = 1
+        local right = #data
+        local mid
+        while right >= left do
+            mid = math.floor((left + right)/2)
+            if value > data[mid][col] then
+                left = mid + 1
+            elseif value < data[mid][col] then
+                right = mid - 1
+            else
+                return mid
+            end
+        end
+
+        return left
+    end
+    DBHandler:getDataByUserId(Gol.subKey.AllPlayer, Gol.dataKey.AllPlayer, function (userId,jdata)
+        local data = load("return {"..jdata.."}")()
+        local sortDataMine = {}
+        local sortDataLv = {}
+        for index,value2 in ipairs(data) do
+            DBHandler:getDataByUserId(value2, Gol.dataKey.Player, function (userid,jdata)
+                local data2 = cjson.decode(jdata)
+                local indexSortDataMine = binarySearch(sortDataMine,data2.Mine,"Mine")
+                table.insert( sortDataMine, indexSortDataMine, data2 )
+                local indexSortDataLv = binarySearch(sortDataLv,data2.Lv,"Lv")
+                table.insert( sortDataLv, indexSortDataLv, data2 )
+                if index == 10000 then
+                    local valuePlayer = Gol.Player[player.platformUserId]
+                    PackageHandlers.sendServerHandler(player, "getRank", {sortDataMine = sortDataMine, sortDataLv = sortDataLv, valuePlayer = valuePlayer:toTable()})                   
+               end 
+            end)
+        end
+    end)
 end)

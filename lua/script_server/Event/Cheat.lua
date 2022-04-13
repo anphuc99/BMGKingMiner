@@ -1,7 +1,7 @@
 local Gol = require "script_server.Golde_Valiable"
 Trigger.addHandler(Entity.GetCfg("myplugin/Enti_Cheat"), "ENTITY_CLICK", function(context)
     local objPlayer = Gol.Player[context.obj2.platformUserId]
-    objPlayer:setBalo(10)
+    objPlayer:setBalo(20)
     objPlayer:setMoney(1000000000)
     objPlayer:addItemInBalo("myplugin/M_Copper",1000)
     objPlayer:addItemInBalo("myplugin/M_Crystal",1000)

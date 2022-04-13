@@ -26,7 +26,6 @@ for key, value in pairs(Material) do
         end)
         Trigger.RegisterHandler(cfg, "ENTITY_CLICK", function(context)
             Gol.Player[context.obj2.platformUserId]:beginMine(Gol.Material[context.obj1.objID])
-            PackageHandlers.sendServerHandler(context.obj2, "HideMine")
         end)
     end
 end
