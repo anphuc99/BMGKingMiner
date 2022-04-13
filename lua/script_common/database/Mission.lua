@@ -81,6 +81,34 @@ return {
         money = 2500,
         id_card = 3
     },
+    {
+        id = "M10",
+        item = {
+            ["myplugin/M_Diamond"] = 10,
+            ["myplugin/M_Chryso"] = 10,
+            ["myplugin/M_Tree3"] = 20,
+        },
+        money = 6000,
+        id_card = 4
+    },
+    {
+        id = "M11",
+        item = {
+            ["myplugin/T_quan_4_1"] = 1
+        },
+        money = 11000,
+        id_card = 4
+    },
+    {
+        id = "M12",
+        item = {
+            ["myplugin/M_Tree1"] = 50,
+            ["myplugin/M_Tree2"] = 30,
+            ["myplugin/M_Tree3"] = 30,
+        },
+        money = 6000,
+        id_card = 4
+    },
     option = {
         primaryKey = "id",        
     }

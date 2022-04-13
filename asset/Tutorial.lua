@@ -234,6 +234,48 @@ function self:onOpen(p)
                 end)
             end
         },
+        M10 = {
+            ImgDescription = {
+                "asset/Tutorial/daily mission.png",
+            },
+            txtDescription = {
+                "mission_M1",
+            },
+            Index = 1,
+            fun = function ()
+                PackageHandlers.sendClientHandler("takingMission", nil, function ()
+                    self:close()
+                end)
+            end
+        },
+        M11 = {
+            ImgDescription = {
+                "asset/Tutorial/daily mission.png",
+            },
+            txtDescription = {
+                "mission_M2",
+            },
+            Index = 1,
+            fun = function ()
+                PackageHandlers.sendClientHandler("takingMission", nil, function ()
+                    self:close()
+                end)
+            end
+        },
+        M12 = {
+            ImgDescription = {
+                "asset/Tutorial/daily mission.png",
+            },
+            txtDescription = {
+                "mission_M3",
+            },
+            Index = 1,
+            fun = function ()
+                PackageHandlers.sendClientHandler("takingMission", nil, function ()
+                    self:close()
+                end)
+            end
+        },
         
     }
     local page = 1
