@@ -9,10 +9,13 @@ function self:onOpen(p)
         local MaPos = entity:curBlockPos()
         local distance = math.abs(math.sqrt((plaPos.x - MaPos.x)^2+(plaPos.y - MaPos.y)^2+(plaPos.z - MaPos.z)^2))
         if distance > 2 then                    
+            PackageHandlers.sendClientHandler("removeBuff", {buff = p.buffId})
+            PackageHandlers.sendClientHandler("addBuff", {buff = "myplugin/koDao"})
             self:close()
             return false
         end
         if entity:isDead() then
+            PackageHandlers.sendClientHandler("removeBuff", {buff = p.buffId})
             self:close()
             return false
         end

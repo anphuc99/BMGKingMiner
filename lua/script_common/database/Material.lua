@@ -57,9 +57,9 @@ return {
     {
         id = "myplugin/M_Diamond",
         level = 1,
-	    stiffness = 150*20,
+	    stiffness = 200*20,
 	    entityId = "myplugin/Enti_M_Diamond",
-        exp = 12,
+        exp = 18,
         typeMar = "Mar",
     },
 
@@ -68,7 +68,7 @@ return {
         level = 1,
 	    stiffness = 150*20,
 	    entityId = "myplugin/Enti_M_Chryso",
-        exp = 12,
+        exp = 16,
         typeMar = "Mar",
     },
 

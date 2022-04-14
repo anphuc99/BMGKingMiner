@@ -53,4 +53,22 @@ return {
         map = "map7",
         Id_card = 3
     },
+    {
+        id = 7,
+        In = "f581d252-4f64-445c-8b66-0a3bda2b8b43",
+        InPosition = {x = 54, y= 53, z = 14},
+        Out = "d9caf5eb-f6c7-4936-ad0f-45b71b22949c",
+        OutPosition = {x=21,y=53,z=-8},
+        map = "map8",
+        Id_card = 4
+    },
+    {
+        id = 8,
+        In = "34fef3b6-985c-494f-8860-9d9508964f47",
+        InPosition = {x = 29, y= 53, z = 4},
+        Out = "ecc1a8fa-3803-4f2e-ba65-dd5b2d5a094c",
+        OutPosition = {x=14,y=53,z=-8},
+        map = "map11",
+        Id_card = 4
+    },
 }

@@ -45,14 +45,14 @@ return {
 	{
 		description = 'description_item_M_Diamond',
 		typeItem = typeItem.Material,
-		icon = 'asset/TaiNguyen/Titan.png',
+		icon = 'asset/TaiNguyen/Diamond.png',
 		id = 'myplugin/M_Diamond',
 		name = 'item_M_Diamond',
 	},
 	{
 		description = 'description_item_M_Chryso',
 		typeItem = typeItem.Material,
-		icon = 'asset/TaiNguyen/Titan.png',
+		icon = 'asset/TaiNguyen/Chryso.png',
 		id = 'myplugin/M_Chryso',
 		name = 'item_M_Chryso'
 	},

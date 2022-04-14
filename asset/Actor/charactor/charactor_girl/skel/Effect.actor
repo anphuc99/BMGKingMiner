@@ -1,0 +1,24 @@
+<ActorTemplates>
+	<ActorTemplate Originalscale="1 1 1" SoundName3="" Volume="0.8" MinDistance="1" IntervalTime="2" WoundBone="" AttackScale="1" SoundName4="" SoundName1="" SoundName5="" SoundName2="" Skeleton="girl_01.skel" TextHeight="0" name="111.actor" MaxDistance="16" SelectedRingSize="1" Alpha="1" SoundFileNum="0" WoundAngle="25" IsShowShadow="true">
+		<BodyParts>
+			<BodyPart ColorParams="1 1 1 1" SlaveName="group0" MasterName="mutex_name_0" EdgeColor="1 1 1 1" DefaultUse="true">
+				<Effect>
+					<Position_Z value="0"/>
+					<SocketName value="Origin197011"/>
+					<pitch value="0"/>
+					<TimeScale value="1"/>
+					<scale value="10"/>
+					<type_name value="111_newchest"/>
+					<roll value="0"/>
+					<yaw value="0"/>
+					<Alpha value="1"/>
+					<Position_Y value="0"/>
+					<FileName value="asset/Actor/charactor/charactor_girl/effect/111_newchest.effect"/>
+					<Position_X value="0"/>
+				</Effect>
+			</BodyPart>
+		</BodyParts>
+		<Skills/>
+		<Anims/>
+	</ActorTemplate>
+</ActorTemplates>

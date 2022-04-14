@@ -107,7 +107,8 @@ PlayerClass:create("Player",function ()
     end
     function o:setLv(_Lv)
         Lv = _Lv
-        o:checkAchievement()        
+        o:checkAchievement()      
+        Trigger.CheckTriggers(o:getObj():cfg(), "ADD_RANK_LV", {obj1 = o:getObj(), value = Lv})  
     end
     
     function o:getMine()
@@ -116,6 +117,7 @@ PlayerClass:create("Player",function ()
     function o:setMine(_Mine)
         Mine = _Mine
         o:checkAchievement()        
+        Trigger.CheckTriggers(o:getObj():cfg(), "ADD_RANK_MINE", {obj1 = o:getObj(), value = Mine})
     end
 
     function o:getExp()
@@ -294,6 +296,12 @@ PlayerClass:create("Player",function ()
         buff[buffId] = nil
     end
 
+    function o:removeAllBuff()
+        for key, value in pairs(buff) do
+            o:getObj():removeBuff(value)
+        end
+    end
+
     function o:beginMine(MaterialModel)        
         o:startTransaction()
         local obj = o:getObj()
@@ -311,14 +319,16 @@ PlayerClass:create("Player",function ()
                 mineSpeed = mineSpeed + item.mineSpeed
             end
             
-            real_speed = math.ceil((MaterialModel:getStiffness()) * (300/ ((mineSpeed) + 300)))
+            real_speed = math.ceil((MaterialModel:getStiffness()) * (100/ ((mineSpeed) + 100)))
             if real_speed <= 0 then
                 real_speed = 1
             end
-            -- truyền đến UI          
-            PackageHandlers.sendServerHandler(obj, "UI", {real_speed = real_speed, UI="thanh dao", objId = MaObjID, itemid = MaterialModel:getId()})
+            -- truyền đến UI         
+            o:removeAllBuff() 
             buffMine = o:addBuff("myplugin/Buff_DaoKhoan",real_speed)
-            startMine = os.clock()
+            PackageHandlers.sendServerHandler(obj, "UI", {real_speed = real_speed, UI="thanh dao", objId = MaObjID, itemid = MaterialModel:getId(), buffId = buffMine})
+            PackageHandlers.sendServerHandler(obj, "HideMine")
+            startMine = os.time()
             -- chạy thời gian thực
             -- World.Timer(2, function ()
             --     if Gol.Material[MaObjID] == nil then
@@ -359,8 +369,8 @@ PlayerClass:create("Player",function ()
         end    
     end
     function o:endMine(itemid,objid)    
-        print(os.clock() - startMine,real_speed/20) 
-        if(os.clock() - startMine >= real_speed/20) then
+        print(os.time() - startMine,real_speed/20) 
+        if(os.time() - startMine >= math.floor(real_speed/20)) then
             local obj = o:getObj()    
             local rs = o:addItemInBalo(itemid,1)
             local rd = math.random(1,100) 
@@ -388,7 +398,7 @@ PlayerClass:create("Player",function ()
                 local MaterialModel = Gol.Material[objid]
                 o:setExp(o:getExp() + MaterialModel:getExp())
                 PackageHandlers.sendServerHandler(obj, "shopArrow")
-                Mine = Mine + 1
+                o:setMine(Mine + 1)
                 Trigger.CheckTriggers(obj:cfg(), "PLAYER_END_MINE", {obj1 = obj, model = o, item = itemid})        
                 o:commitTransaction()                
             else

@@ -66,7 +66,7 @@ return {
     {
         id = "M8",
         item = {
-            ["myplugin/H_ao-choan_3_1"] = 1,
+            ["myplugin/C_ao-choan_3_1"] = 1,
             ["myplugin/M_Titanium"] = 3,
         },
         money = 6500,

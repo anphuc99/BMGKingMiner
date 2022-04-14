@@ -1,0 +1,33 @@
+<ActorTemplates>
+	<ActorTemplate SoundFileNum="0" IntervalTime="2" SoundName2="" SelectedRingSize="1" Alpha="1" SoundName4="" TextHeight="0" Skeleton="boy_01.skel" Originalscale="1 0.8 1" WoundBone="" name="111.actor" IsShowShadow="true" WoundAngle="25" MaxDistance="16" Volume="0.8" MinDistance="1" SoundName5="" SoundName3="" SoundName1="" AttackScale="1">
+		<Skills/>
+		<Anims/>
+		<BodyParts>
+			<BodyPart DefaultUse="true" EdgeColor="1 1 1 1" ColorParams="1 1 1 1" SlaveName="group0" MasterName="mutex_name_0">
+				<StaticMesh DiscardAlpha="0" LocalAlpha="1" type_name="diamond">
+					<SpecularCoef value="0.01"/>
+					<UseOverlayColorReplaceMode value="false"/>
+					<UseTransparentNearestSlice value="false"/>
+					<FileName value="asset/chryso/chryso.mesh"/>
+					<SocketName value="Origin197011"/>
+					<roll value="0"/>
+					<UseBloom value="false"/>
+					<SpecularStrength value="1.0"/>
+					<OverlayColor value="1.0 1.0 1.0 1.0"/>
+					<UseOriginalcolor value="false"/>
+					<UseEdge value="false"/>
+					<pitch value="0"/>
+					<EdgeColor value="1.0 0 0 1.0"/>
+					<SpecularColor value="0.67 0.75 0.76 1.0"/>
+					<Position_Y value="-0.08"/>
+					<LocalBrightnessScale value="0.5"/>
+					<Position_Z value="0"/>
+					<UseReflect value="false"/>
+					<yaw value="0"/>
+					<Position_X value="0"/>
+					<scale value="1"/>
+				</StaticMesh>
+			</BodyPart>
+		</BodyParts>
+	</ActorTemplate>
+</ActorTemplates>

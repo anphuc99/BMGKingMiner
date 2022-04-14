@@ -147,6 +147,25 @@ Context:create("Context", function()
         return o
     end
 
+    -- tìm kiếm danh sách yêu cầu phải sắp xếp từ trước
+    function o:findList(col,value)
+        local left = 1
+        local right = #data
+        local mid
+        while right >= left do
+            mid = math.floor((left + right)/2)
+            if value > data[mid][col] then
+                left = mid + 1
+            elseif value < data[mid][col] then
+                right = mid - 1
+            else
+                return data[mid]
+            end
+        end
+
+        return left
+    end
+
     return o
 end)
 

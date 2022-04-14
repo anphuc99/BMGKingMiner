@@ -58,16 +58,14 @@ PackageHandlers.registerClientHandler("PlayerItem", function(player, packet)
 end)
 
 PackageHandlers.registerClientHandler("Entity_mission", function(player, value)
-    World.Timer(100,function ()
-        local sceneArgs = {
-            position = {x = 0, y = 2, z = 0},
-            rotation = {x = 0, y = 0, z = 0},
-            width = 7,
-            height = 7,
-            isCullBack = false,
-            objID = value.objid,
-            flags = 4
-        }
-        local sceneWindow,window = UI:openSceneWindow("Piaxe", value.objid, sceneArgs, "layouts", value)        
-    end)
+    local sceneArgs = {
+        position = {x = 0, y = 2.5, z = 0},
+        rotation = {x = 0, y = 0, z = 0},
+        width = 0.5,
+        height = 0.5,
+        isCullBack = false,
+        objID = value.objid,
+        flags = 4
+    }
+    local sceneWindow,window = UI:openSceneWindow("Mission", "mis", sceneArgs, "layouts",value)        
 end)

@@ -74,9 +74,9 @@
         "cfgName": "myplugin/eb9c52ef-43da-403f-a932-deeebdf57ec1",
         "id": "8496385931250843649",
         "name": "Region1",
-        "position": "x:21.607322692871 y:56.075336456299 z:2.5633807182312",
+        "position": "x:21.607322692871 y:56.075336456299 z:1.8664681911469",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:3.28116 y:4.23627 z:3.10183"
+        "scale": "x:3.28115 y:4.23624 z:1.70799"
       }
     },
     {
@@ -730,24 +730,46 @@
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Diamond",
+      "config": "myplugin/Enti_Effect",
       "properties": {
-        "id": "8580103543019880449",
-        "name": "Diamond",
-        "position": "x:24.941850662231 y:53.0 z:25.877576828003",
+        "id": "8584300541796532225",
+        "name": "Effect",
+        "position": "x:21.396554946899 y:54.000988006592 z:-9.7091455459595",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
       }
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_M_Chryso",
+      "config": "myplugin/Enti_Effect",
       "properties": {
-        "id": "8580103610406600705",
-        "name": "Chryso",
-        "position": "x:22.419448852539 y:53.008491516113 z:25.581495285034",
+        "id": "8584300583772995585",
+        "name": "Effect",
+        "position": "x:14.786189079285 y:54.000003814697 z:-9.5611000061035",
         "rotation": "x:0 y:0 z:0",
         "scale": "x:1 y:1 z:1"
+      }
+    },
+    {
+      "class": "RegionPart",
+      "properties": {
+        "cfgName": "myplugin/f581d252-4f64-445c-8b66-0a3bda2b8b43",
+        "id": "8584304577118535681",
+        "name": "Region7",
+        "position": "x:21.510942459106 y:56.049610137939 z:-9.3903932571411",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:3.28907 y:4.11091 z:0.999991"
+      }
+    },
+    {
+      "class": "RegionPart",
+      "properties": {
+        "cfgName": "myplugin/34fef3b6-985c-494f-8860-9d9508964f47",
+        "id": "8584304985356517377",
+        "name": "Region8",
+        "position": "x:14.458680152893 y:56.070613861084 z:-10.029850006104",
+        "rotation": "x:0 y:0 z:0",
+        "scale": "x:3.10117 y:4.13559 z:2.0375"
       }
     }
   ],

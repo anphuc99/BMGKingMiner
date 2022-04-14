@@ -2,7 +2,7 @@
   "_clientScript": [],
   "_serverScript": [],
   "actorGirlName": "empty.actor",
-  "actorName": "empty.actor",
+  "actorName": "asset/Actor/charactor/charactor_girl/skel/Effect.actor",
   "attackNpc": false,
   "autoAttack": false,
   "autoMove": false,

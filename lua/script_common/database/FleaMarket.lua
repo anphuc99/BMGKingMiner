@@ -45,12 +45,12 @@ return {
 	    price = 100
     },
     {
-        idItem = "myplugin/M_Diamond",
-	    idNPC = 1,
-	    price = 150
+        idItem = "myplugin/M_Chryso",
+        idNPC = 1,
+        price = 150
     },
     {
-        idItem = "myplugin/M_Chryso",
+        idItem = "myplugin/M_Diamond",
 	    idNPC = 1,
 	    price = 200
     },

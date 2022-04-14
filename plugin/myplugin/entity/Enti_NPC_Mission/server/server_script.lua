@@ -29,7 +29,7 @@ local cancelFunc = Trigger.addHandler(this:cfg(), "ENTITY_CLICK", function(conte
             mission.takMs = false
             objPlayer:setMission(mission)
             World.Timer(4, function ()
-                PackageHandlers.sendServerHandler(context.obj2, "setMission", {})
+                PackageHandlers.sendServerHandler(context.obj2, "setMission", {})                
                 messager(player,{Text = {"messeger_completeMission"}, Color = {r=0,b=0,g=0}})
             end)
             objPlayer:save(false)
@@ -46,7 +46,12 @@ local cancelFunc = Trigger.addHandler(this:cfg(), "ENTITY_CLICK", function(conte
                 objPlayer:setMission(mission)
                 objPlayer:save(false)
                 PackageHandlers.sendServerHandler(player, "UI", {UI = "Tutorial", tutorial = mission.msid}) 
+                PackageHandlers.sendServerHandler(player, "receivedMission")
             end
         end
     end
+end)
+
+PackageHandlers.registerServerHandler("getMission", function(player, packet)
+    Trigger.CheckTriggers(this:cfg(), "ENTITY_CLICK", {obj2 = player})
 end)

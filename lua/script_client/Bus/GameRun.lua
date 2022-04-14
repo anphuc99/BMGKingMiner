@@ -14,24 +14,21 @@ World.Timer(2, function ()
                     return
                 end
                 local sceneArgs = {
-                    position = {x = 0, y = 2, z = 0},
+                    position = {x = 0, y = 2.5, z = 0},
                     rotation = {x = 0, y = 0, z = 0},
-                    width = 7,
-                    height = 7,
+                    width = 0.5,
+                    height = 0.5,
                     isCullBack = false,
                     objID = value.objid,
                     flags = 4
                 }
                 local sceneWindow,window = UI:openSceneWindow("Piaxe", value.objid, sceneArgs, "layouts", value)
-                local HandItem = Context:new(Lib.playerItem):where("position",positionItem.hand):getData()
-                for key, value2 in pairs(HandItem) do
-                    local Equipment = Context:new("Equipment"):where("id",value2.idItem):firstData()
-                    if value.type == "Mar" and Equipment.typeEquipment == typeEquipment.pickaxe then
-                        window.Mine:setImage("gameres|"..Equipment.icon)
-                    elseif value.type == "Tree" and Equipment.typeEquipment == typeEquipment.axe then
-                        window.Mine:setImage("gameres|"..Equipment.icon)
-                    end
+                if value.type == "Mar" then
+                    window.Mine:setImage("gameres|asset/Texture/Gui/Nút khoáng.png")
+                elseif value.type == "Tree" then
+                    window.Mine:setImage("gameres|asset/Texture/Gui/Nút gỗ.png")
                 end
+
             else
                 UI:closeSceneWindow(value.objid)
             end

@@ -2,9 +2,6 @@ function self:onOpen(p)
     local typeItem = require "script_common.typeItem"
     local Context = require "script_common.lbr.Context"
     -- local Option = true
-    self.Option.OpenBP.onMouseClick = function() 
-        UI:openWindow("BackPack")
-    end
     -- self.test:setText(Lang:toText(""))
     self.Option.Forge.onMouseClick = function() 
         UI:openWindow("crafting")
@@ -27,6 +24,7 @@ function self:onOpen(p)
         self.frameMission.Mission:cleanupChildren()
         if #packet == 0 then
             self.frameMission:setVisible(false)
+            UI:closeSceneWindow("mis")
             return
         end
         for ii, value in ipairs(packet) do
@@ -86,4 +84,13 @@ function self:onOpen(p)
     PackageHandlers.registerClientHandler("RedDotAchievement", function(player, packet)
         self.Option.Achievement.dot:setVisible(true)
     end)
+    self.Coin.addCoin.onMouseClick = function() 
+        UI:openWindow("ShopDev")
+    end
+    self.Option.Rank.onMouseClick = function() 
+        UI:openWindow("Rank")
+    end
+    self.Option.ShopDev.onMouseClick = function() 
+        UI:openWindow("ShopDev")
+    end
 end

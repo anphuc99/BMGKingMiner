@@ -4,11 +4,11 @@
   "cameraCfg": {
     "canSwitchView": true,
     "defaultPitch": 0,
-    "defaultView": 0,
+    "defaultView": 1,
     "defaultYaw": 0,
     "viewModeConfig": [
       {
-        "enable": true,
+        "enable": false,
         "lockSlideScreen": false,
         "viewFovAngle": 75
       },
@@ -61,8 +61,8 @@
     "actionControlMode": "flexibleDragControl",
     "appMainRole": false,
     "chat": true,
-    "playerinfo": true,
-    "shortcutBar": true,
+    "playerinfo": false,
+    "shortcutBar": false,
     "toolbar": true
   },
   "forcePickBlock": true,
