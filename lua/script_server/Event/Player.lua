@@ -79,17 +79,28 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
             DBHandler:setData(context.obj1.platformUserId, Gol.dataKey.PlayerItem, cjson.encode(playerItem), false)
             Gol.Player[context.obj1.platformUserId]  = PlayerModel:new(PlayerProperty,playerItem)
             local blackMarket = context.obj1:getValue("blackMarket")
-            for key, value in pairs(blackMarket) do
-                local data = {
-                    idItem = value.idItem,
-                    price = value.price,
-                    quantily = value.count,
-                    idPlayer = context.obj1.platformUserId,
-                    playerName = context.obj1.name
-                }
-                local clsBlackMar = BlackMarket:new(data) 
-                clsBlackMar:sell()
-            end
+            local ti = 0
+            DBHandler:getDataByUserId(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket, function (userid, jdata)
+                if jdata == nil or jdata == "" then
+                    jdata = "[]"
+                end
+                local data = cjson.decode(jdata)
+                for key, value in pairs(blackMarket) do
+                    local data2 = {
+                        idItem = value.idItem,
+                        price = value.price,
+                        quantily = value.count,
+                        idPlayer = context.obj1.platformUserId,
+                        playerName = context.obj1.name,
+                        create_at = os.time() + ti,
+                        sold = false
+                    }
+                    local key = context.obj1.platformUserId.."_"..os.time() + ti
+                    data[key] = data2
+                    DBHandler:setData(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket, cjson.encode(data), true)
+                    ti = ti + 1
+                end            
+            end)
             Trigger.CheckTriggers(this, "ADD_RANK_MINE", {obj1 = context.obj1, value = PlayerProperty.Mine})            
             Trigger.CheckTriggers(this, "ADD_RANK_LV", {obj1 = context.obj1, value = PlayerProperty.LV})            
             Trigger.CheckTriggers(this, "PLAYER_INIT", context)            
@@ -416,7 +427,7 @@ PackageHandlers.registerServerHandler("publishBlackMarket", function(player, pac
     packet.playerName = player.name
     local clsBlackMar = BlackMarket:new(packet)
     clsBlackMar:sell()
-    PlayerModel:removeItemInBalo(packet.idItem,packet.count)
+    PlayerModel:removeItemInBalo(packet.idItem,packet.quantily)
     messeger(player,{Text = {"messager_publishProduct"}, Color = {r=0,b=0,g=0}})
     Trigger.CheckTriggers(player:cfg(), "PLAYER_BUY_ITEM", {item = packet.idItem,obj1 = player, where = 2})
     return true
@@ -468,6 +479,7 @@ PackageHandlers.registerServerHandler("deleteProduct", function(player, packet)
         else
             data[packet.key] = nil
             DBHandler:setData(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket, data, true)
+            Trigger.CheckTriggers(this, "PLAYER_REMOVE_BLACKMARKET", {obj1 = player})
         end
     end)    
 end)

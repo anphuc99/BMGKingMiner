@@ -9,7 +9,7 @@
   "autoRotateColliderBox": true,
   "avoidCliff": true,
   "avoidCliffHight": 5,
-  "canClick": true,
+  "canClick": false,
   "canHurtMove": true,
   "canJump": true,
   "canMove": true,
@@ -88,7 +88,7 @@
   "skills": [],
   "stepHeight": 0.6,
   "swimSpeed": 0.2,
-  "textHeight": 2.3,
+  "textHeight": 2,
   "unassailable": 0,
   "undamageable": 0,
   "waterline": 0

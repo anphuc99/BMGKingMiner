@@ -417,7 +417,7 @@ return {
     {
         id = "myplugin/G_gang-tay_4_1",
         level = 4,
-	    percentage = 70,
+	    percentage = 80,
 	    rarity = 1,
 	    recipe = "G_gang-tay_4_1",
         typeEquipment = typeEquipment.gloves,
@@ -426,7 +426,7 @@ return {
     {
         id = "myplugin/G_gang-tay_4_2",
         level = 4,
-	    percentage = 20,
+	    percentage = 15,
 	    rarity = 2,
 	    recipe = "G_gang-tay_4_1",
         typeEquipment = typeEquipment.gloves,
@@ -435,155 +435,155 @@ return {
     {
         id = "myplugin/G_gang-tay_4_3",
         level = 4,
-	    percentage = 10,
+	    percentage = 5,
 	    rarity = 3,
 	    recipe = "G_gang-tay_4_1",
         typeEquipment = typeEquipment.gloves,
-        mineSpeed = 20*20
+        mineSpeed = 10*20
     },
 
     {
         id = "myplugin/Sh_giay_4_1",
         level = 4,
-	    percentage = 70,
+	    percentage = 80,
 	    rarity = 1,
 	    recipe = "Sh_giay_4_1",
-        typeEquipment = typeEquipment.gloves,
+        typeEquipment = typeEquipment.shoes,
         mineSpeed = 4*20
     },
     {
         id = "myplugin/Sh_giay_4_2",
         level = 4,
-	    percentage = 20,
+	    percentage = 15,
 	    rarity = 2,
 	    recipe = "Sh_giay_4_1",
-        typeEquipment = typeEquipment.gloves,
+        typeEquipment = typeEquipment.shoes,
         mineSpeed = 5*20
     },
     {
         id = "myplugin/Sh_giay_4_3",
         level = 4,
-	    percentage = 10,
+	    percentage = 5,
 	    rarity = 3,
 	    recipe = "Sh_giay_4_1",
-        typeEquipment = typeEquipment.gloves,
-        mineSpeed = 20*20
+        typeEquipment = typeEquipment.shoes,
+        mineSpeed = 10*20
     },
 
     
     {
         id = "myplugin/C_ao-choan_4_1",
         level = 4,
-	    percentage = 70,
+	    percentage = 80,
 	    rarity = 1,
 	    recipe = "C_ao-choan_4_1",
-        typeEquipment = typeEquipment.gloves,
+        typeEquipment = typeEquipment.cloak,
         mineSpeed = 4*20
     },
     {
         id = "myplugin/C_ao-choan_4_2",
         level = 4,
-	    percentage = 20,
+	    percentage = 15,
 	    rarity = 2,
 	    recipe = "C_ao-choan_4_1",
-        typeEquipment = typeEquipment.gloves,
+        typeEquipment = typeEquipment.cloak,
         mineSpeed = 5*20
     },
     {
         id = "myplugin/C_ao-choan_4_3",
         level = 4,
-	    percentage = 10,
+	    percentage = 5,
 	    rarity = 3,
 	    recipe = "C_ao-choan_4_1",
-        typeEquipment = typeEquipment.gloves,
-        mineSpeed = 20*20
+        typeEquipment = typeEquipment.cloak,
+        mineSpeed = 10*20
     },
 
 
     {
         id = "myplugin/T_quan_4_1",
         level = 4,
-	    percentage = 70,
+	    percentage = 80,
 	    rarity = 1,
 	    recipe = "T_quan_4_1",
-        typeEquipment = typeEquipment.gloves,
+        typeEquipment = typeEquipment.trousers,
         mineSpeed = 4*20
     },
     {
         id = "myplugin/T_quan_4_2",
         level = 4,
-	    percentage = 20,
+	    percentage = 15,
 	    rarity = 2,
 	    recipe = "T_quan_4_1",
-        typeEquipment = typeEquipment.gloves,
+        typeEquipment = typeEquipment.trousers,
         mineSpeed = 5*20
     },
     {
         id = "myplugin/T_quan_4_3",
         level = 4,
-	    percentage = 10,
+	    percentage = 5,
 	    rarity = 3,
 	    recipe = "T_quan_4_1",
-        typeEquipment = typeEquipment.gloves,
-        mineSpeed = 20*20
+        typeEquipment = typeEquipment.trousers,
+        mineSpeed = 10*20
     },
 
 
     {
         id = "myplugin/S_ao_4_1",
         level = 4,
-	    percentage = 70,
+	    percentage = 80,
 	    rarity = 1,
 	    recipe = "S_ao_4_1",
-        typeEquipment = typeEquipment.gloves,
+        typeEquipment = typeEquipment.shirt,
         mineSpeed = 4*20
     },
     {
         id = "myplugin/S_ao_4_2",
         level = 4,
-	    percentage = 20,
+	    percentage = 15,
 	    rarity = 2,
 	    recipe = "S_ao_4_1",
-        typeEquipment = typeEquipment.gloves,
+        typeEquipment = typeEquipment.shirt,
         mineSpeed = 5*20
     },
     {
         id = "myplugin/S_ao_4_3",
         level = 4,
-	    percentage = 10,
+	    percentage = 5,
 	    rarity = 3,
 	    recipe = "S_ao_4_1",
-        typeEquipment = typeEquipment.gloves,
-        mineSpeed = 20*20
+        typeEquipment = typeEquipment.shirt,
+        mineSpeed = 10*20
     },
 
 
     {
         id = "myplugin/H_non_4_1",
         level = 4,
-	    percentage = 70,
+	    percentage = 80,
 	    rarity = 1,
 	    recipe = "H_non_4_1",
-        typeEquipment = typeEquipment.gloves,
+        typeEquipment = typeEquipment.hat,
         mineSpeed = 4*20
     },
     {
         id = "myplugin/H_non_4_2",
         level = 4,
-	    percentage = 20,
+	    percentage = 15,
 	    rarity = 2,
 	    recipe = "H_non_4_1",
-        typeEquipment = typeEquipment.gloves,
+        typeEquipment = typeEquipment.hat,
         mineSpeed = 5*20
     },
     {
         id = "myplugin/H_non_4_3",
         level = 4,
-	    percentage = 10,
+	    percentage = 5,
 	    rarity = 3,
 	    recipe = "H_non_4_1",
-        typeEquipment = typeEquipment.gloves,
-        mineSpeed = 20*20
+        typeEquipment = typeEquipment.hat,
+        mineSpeed = 10*20
     },
 
 

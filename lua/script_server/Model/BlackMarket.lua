@@ -77,6 +77,7 @@ BlackMarket:create("BlackMarket",function ()
             local data = cjson.decode(jdata)
             local key = idPlayer.."_"..os.time()
             data[key] = o:toTable()
+            print(Lib.pv(data[key]))
             DBHandler:setData(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket, cjson.encode(data), true)
         end)
     end

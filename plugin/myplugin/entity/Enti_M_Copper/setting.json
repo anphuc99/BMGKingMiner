@@ -9,7 +9,7 @@
   "autoRotateColliderBox": true,
   "avoidCliff": true,
   "avoidCliffHight": 5,
-  "canClick": true,
+  "canClick": false,
   "canHurtMove": true,
   "canJump": false,
   "canMove": false,

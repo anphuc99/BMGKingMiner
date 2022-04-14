@@ -4,7 +4,6 @@ function self:onOpen(p)
     self.Image.Close.onMouseClick = function() 
         self:close()
     end
-    self.Image.Name:setText(Me.name)
     PackageHandlers.sendClientHandler("getRank")
     PackageHandlers.registerClientHandler("getRank", function(player, data)
         local i = 1

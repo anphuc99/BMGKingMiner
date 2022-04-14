@@ -1,13 +1,24 @@
-local gameReport = Game.GetService("GameReport")
+local gameReport = {}
 local Context = require "script_common.lbr.Context"
 local cjson = require "cjson"
+local DBHandler = require "dbhandler"
+function gameReport:reportGameData (id,data,player)
+    DBHandler:getDataByUserId(player.platformUserId, id, function (userId,jdata)
+        if jdata == nil or jdata == "" then
+            jdata = "[]"
+        end
+        local datas = cjson.decode(jdata)
+        datas[#datas+1] = data
+        DBHandler:setData(player.platformUserId, "mine",cjson.encode(datas), false)
+    end)    
+end
 Trigger.addHandler(this:cfg(), "PLAYER_END_MINE", function(context)
     local name = Context:new("Item"):where("id",context.item):firstData().name
     local mine = {
         id = context.item,
         realTime = os.time(),
     }
-    gameReport:reportGameData("mine",cjson.encode(mine) , context.obj1)
+    gameReport:reportGameData("mine",mine , context.obj1)
 end)
 
 Trigger.addHandler(this:cfg(), "PLAYER_CRAFTING", function(context)
@@ -15,7 +26,7 @@ Trigger.addHandler(this:cfg(), "PLAYER_CRAFTING", function(context)
         id = context.item,
         realTime = os.time(),
     }
-    gameReport:reportGameData("crafting",cjson.encode(crafting) , context.obj1)
+    gameReport:reportGameData("crafting",crafting , context.obj1)
 end)
 
 Trigger.addHandler(this:cfg(), "PLAYER_SELL_ITEM", function(context)
@@ -24,7 +35,7 @@ Trigger.addHandler(this:cfg(), "PLAYER_SELL_ITEM", function(context)
         realTime = os.time(),
         where = context.where,
     }
-    gameReport:reportGameData("sell_item",cjson.encode(sell_item) , context.obj1)
+    gameReport:reportGameData("sell_item",sell_item , context.obj1)
 end)
 
 Trigger.addHandler(this:cfg(), "PLAYER_BUY_ITEM", function(context)
@@ -33,7 +44,7 @@ Trigger.addHandler(this:cfg(), "PLAYER_BUY_ITEM", function(context)
         realTime = os.time(),
         where = context.where,
     }
-    gameReport:reportGameData("buy_item",cjson.encode(buy_item) , context.obj1)
+    gameReport:reportGameData("buy_item",buy_item , context.obj1)
 end)
 
 Trigger.addHandler(this:cfg(), "PLAYER_UPGRATE", function(context)
@@ -45,7 +56,7 @@ Trigger.addHandler(this:cfg(), "PLAYER_UPGRATE", function(context)
         realTime = os.time(),
         totalVortex = vortex
     }
-    gameReport:reportGameData("upgrate",cjson.encode(upgrate) , context.obj1)
+    gameReport:reportGameData("upgrate",upgrate, context.obj1)
 end)
 
 Trigger.addHandler(this:cfg(), "PLAYER_UPGRATE_BALO", function(context)
@@ -53,7 +64,7 @@ Trigger.addHandler(this:cfg(), "PLAYER_UPGRATE_BALO", function(context)
         cell = context.cell,
         realTime = os.time(),        
     }
-    gameReport:reportGameData("upgrateBalo",cjson.encode(balo) , context.obj1)
+    gameReport:reportGameData("upgrateBalo",balo, context.obj1)
 end)
 
 
@@ -62,7 +73,7 @@ Trigger.addHandler(this:cfg(), "PLAYER_SET_MONEY", function(context)
         money = context.money,
         realTime = os.time(),
     }
-    gameReport:reportGameData("money",cjson.encode(money) , context.obj1)
+    gameReport:reportGameData("money",money, context.obj1)
 end)
 
 Trigger.addHandler(this:cfg(), "PLAYER_UPDATE_IDCARD", function(context)
@@ -70,7 +81,7 @@ Trigger.addHandler(this:cfg(), "PLAYER_UPDATE_IDCARD", function(context)
         idcard = context.idcard,
         realTime = os.time(),
     }
-    gameReport:reportGameData("idcard",cjson.encode(idcard) , context.obj1)
+    gameReport:reportGameData("idcard",idcard, context.obj1)
 end)
 
 Trigger.addHandler(this:cfg(), "PLAYER_FINISH_MISSiON", function(context)
@@ -79,7 +90,7 @@ Trigger.addHandler(this:cfg(), "PLAYER_FINISH_MISSiON", function(context)
         receivingTime = context.receivingTime,
         completionTime = context.completionTime
     }
-    gameReport:reportGameData("mission",cjson.encode(mission) , context.obj1)
+    gameReport:reportGameData("mission",mission, context.obj1)
 end)
 
 Trigger.addHandler(this:cfg(), "PLAYER_REMOVE_BLACKMARKET", function(context)
@@ -87,5 +98,5 @@ Trigger.addHandler(this:cfg(), "PLAYER_REMOVE_BLACKMARKET", function(context)
         id = context.item,
         realTime = os.time(),
     }
-    gameReport:reportGameData("removeBlackMarket",cjson.encode(removeBlackMarket) , context.obj1)
+    gameReport:reportGameData("removeBlackMarket",removeBlackMarket, context.obj1)
 end)

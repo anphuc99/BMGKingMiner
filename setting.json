@@ -21,7 +21,7 @@
       },
       {
         "distance": 4,
-        "enable": false,
+        "enable": true,
         "enableCollisionDetect": true,
         "lockSlideScreen": false,
         "viewFovAngle": 75

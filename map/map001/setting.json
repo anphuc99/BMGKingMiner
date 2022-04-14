@@ -719,17 +719,6 @@
     },
     {
       "class": "Entity",
-      "config": "myplugin/Enti_Cheat",
-      "properties": {
-        "id": "8576938206778621953",
-        "name": "Cheat",
-        "position": "x:23.315208435059 y:53.000556945801 z:28.592100143433",
-        "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
-      }
-    },
-    {
-      "class": "Entity",
       "config": "myplugin/Enti_Effect",
       "properties": {
         "id": "8584300541796532225",

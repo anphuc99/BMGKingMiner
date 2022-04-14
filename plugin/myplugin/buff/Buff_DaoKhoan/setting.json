@@ -1,6 +1,6 @@
 {
   "actionMap": {
-    "idle": "minig"
+    "": ""
   },
   "antiGravity": 0.0,
   "continueDamage": 0,
@@ -12,7 +12,7 @@
   "dropDamageRatio": 0,
   "dropDamageStart": 0,
   "effect": {
-    "effect": "asset/Actor/charactor/charactor_boy/effect/elingqishi_huoyan01.effect",
+    "effect": "asset/Actor/charactor/charactor_girl/effect/elingqishi_huoyan01.effect",
     "once": true,
     "pos": {
       "x": 0,
@@ -27,10 +27,11 @@
     "selfOnly": false,
     "yaw": 0
   },
+  "fixTime": "reset",
   "gravity": 0.0,
   "hide": 0,
   "jumpSpeed": 0.0,
-  "maxHp": 2,
+  "maxHp": 0,
   "moveAcc": 0.0,
   "moveFactor": 0,
   "moveSpeed": 0.0,

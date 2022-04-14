@@ -309,6 +309,9 @@ PlayerClass:create("Player",function ()
         local MaObj = MaterialModel:getObj()
         local context_trophy = Context:new("Trophy")
         local Item_hand = obj:getHandItem()  
+        if Item_hand == nil then
+            messenger(obj,{Text = "messeger_wrongTool"})
+        end
         local Item_id = Item_hand:full_name()
         local trophy = context_trophy:where("id",Item_id):firstData()
         if (trophy.typeEquipment == typeEquipment.axe and MaterialModel:getTypeMar() == "Tree") or (trophy.typeEquipment == typeEquipment.pickaxe and MaterialModel:getTypeMar() == "Mar") then
@@ -319,7 +322,7 @@ PlayerClass:create("Player",function ()
                 mineSpeed = mineSpeed + item.mineSpeed
             end
             
-            real_speed = math.ceil((MaterialModel:getStiffness()) * (100/ ((mineSpeed) + 100)))
+            real_speed = math.ceil((MaterialModel:getStiffness()) * (230/ ((mineSpeed) + 230)))
             if real_speed <= 0 then
                 real_speed = 1
             end
@@ -366,6 +369,8 @@ PlayerClass:create("Player",function ()
             --         return 1
             --     end      
             -- end)  
+        else
+            messenger(obj,{Text = "messeger_wrongTool"})
         end    
     end
     function o:endMine(itemid,objid)    
