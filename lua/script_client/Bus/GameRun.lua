@@ -40,11 +40,15 @@ World.Timer(2, function ()
     end   
     if #objHopLe > 0 then
         local value = objHopLe[1]
-        local window = UI:openWindow("Piaxe", nil,nil, value)
-        if value.type == "Mar" then
-            window.Mine:setImage("gameres|asset/Texture/Gui/Nút khoáng.png")
-        elseif value.type == "Tree" then
-            window.Mine:setImage("gameres|asset/Texture/Gui/Nút gỗ.png")
+        if not UI:isOpenWindow("GoHome") then
+            local window = UI:openWindow("Piaxe", nil,nil, value)
+            if value.type == "Mar" then
+                window.Mine:setImage("gameres|asset/Texture/Gui/Nút khoáng.png")
+            elseif value.type == "Tree" then
+                window.Mine:setImage("gameres|asset/Texture/Gui/Nút gỗ.png")
+            end
+        else
+            objHopLe = {}
         end
     else
         UI:closeWindow("Piaxe")

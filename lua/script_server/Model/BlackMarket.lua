@@ -109,6 +109,7 @@ BlackMarket:create("BlackMarket",function ()
                 data[key].sold = true
             end
             DBHandler:setData(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket, cjson.encode(data), true)
+            Trigger.CheckTriggers(player:getObj():cfg(), "PLAYER_BUY_ITEM", {obj1 = playerBuy:getObj(), where = 2, item = idItem})
         end)        
     end
     
@@ -118,6 +119,14 @@ BlackMarket:create("BlackMarket",function ()
         DBHandler:getDataByUserId(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket, function (userid,jdata)
             local data = cjson.decode(jdata)
             data[key] = nil            
+            DBHandler:setData(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket, cjson.encode(data), true)
+        end)
+    end
+
+    function o:remove()
+        DBHandler:getDataByUserId(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket, function (userid,jdata)
+            local data = cjson.decode(jdata)
+            data[key] = nil  
             DBHandler:setData(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket, cjson.encode(data), true)
         end)
     end

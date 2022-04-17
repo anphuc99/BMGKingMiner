@@ -358,7 +358,7 @@ PackageHandlers.registerServerHandler("sellFleaMarket", function(player, packet)
         local flea = context_flea:where("idItem",packet.id):where("idNPC",packet.NPC):firstData()        
         objPlayer:increaseMoney(flea.price * packet.num)
         objPlayer:removeItemInBalo(flea.idItem,packet.num)
-        Trigger.CheckTriggers(player:cfg(), "PLAYER_SELL_ITEM", {obj1 = player, where = 1, item = flea.idItem})
+        Trigger.CheckTriggers(player:cfg(), "PLAYER_BUY_ITEM", {obj1 = player, where = 1, item = flea.idItem})
         objPlayer:save(false)
     else
         messeger(player, {Text = {"messeger_NotEnoughItem",packet.name}, Color = {r = 255, g = 0, b = 0}})
@@ -429,7 +429,7 @@ PackageHandlers.registerServerHandler("publishBlackMarket", function(player, pac
     clsBlackMar:sell()
     PlayerModel:removeItemInBalo(packet.idItem,packet.quantily)
     messeger(player,{Text = {"messager_publishProduct"}, Color = {r=0,b=0,g=0}})
-    Trigger.CheckTriggers(player:cfg(), "PLAYER_BUY_ITEM", {item = packet.idItem,obj1 = player, where = 2})
+    Trigger.CheckTriggers(player:cfg(), "PLAYER_SELL_ITEM", {item = packet.idItem,obj1 = player, where = 2})
     return true
 end)
 -- xem sản phẩm ở chợ đen
@@ -477,9 +477,10 @@ PackageHandlers.registerServerHandler("deleteProduct", function(player, packet)
         if not PlayerModel:addItemInBalo(product.idItem,product.quantily) then
             PlayerModel:rollbackTransaction()
         else
+            Trigger.CheckTriggers(this, "PLAYER_REMOVE_BLACKMARKET", {obj1 = player, item = data[packet.key].idItem})
             data[packet.key] = nil
-            DBHandler:setData(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket, data, true)
-            Trigger.CheckTriggers(this, "PLAYER_REMOVE_BLACKMARKET", {obj1 = player})
+            DBHandler:setData(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket,cjson.encode(data), true)
+            PlayerModel:commitTransaction()
         end
     end)    
 end)
@@ -488,7 +489,7 @@ PackageHandlers.registerServerHandler("sellBlackMarket", function(player, packet
     DBHandler:getDataByUserId(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket, function (userId,jdata)
         local data = cjson.decode(jdata)
         local MarKet = BlackMarket:new(data[packet.key],packet.key)        
-        MarKet:buy(Gol.Player[player.platformUserId])
+        MarKet:buy(Gol.Player[player.platformUserId])        
     end)
 end)
 

@@ -1,5 +1,6 @@
 function self:onOpen(p)
     self.GoHome:setStepSize(1/(10*20))
+    UI:closeWindow("Piaxe")
     local buffId
     local stop = false
     PackageHandlers.sendClientHandler("addBuff", {buff = "myplugin/Buff_GoHom", time = 10*20},function (id)
@@ -9,8 +10,11 @@ function self:onOpen(p)
         self.GoHome:step()
         if self.GoHome:getProgress() >= 1 then
             PackageHandlers.sendClientHandler("GoHome")            
-            -- PackageHandlers.sendClientHandler("removeBuff",{buff = buffId})            
-            self:close()
+            -- PackageHandlers.sendClientHandler("removeBuff",{buff = buffId})                        
+            self.GoHome:setVisible(false)
+            World.Timer(60,function ()
+                self:close()                
+            end)
             return false
         end
         if stop then
