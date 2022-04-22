@@ -11,7 +11,7 @@
   "itemintroduction": "e931add0-380d-4a42-a9e2-8699dbecc145",
   "itemname": "item_A_riu_1",
   "mesh": "asset/Mesh/Wooden Axe/g1008_axe_01.mesh",
-  "needSave": false,
+  "needSave": true,
   "stack_count_max": 1,
   "syncGameData": {
     "currentCapacity": true,

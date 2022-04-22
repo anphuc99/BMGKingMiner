@@ -11,7 +11,7 @@
   "itemintroduction": "8a0f8ed1-d3da-45ef-b81b-d86d762cf2ab",
   "itemname": "item_A_riu_5",
   "mesh": "asset/Mesh/Short Golden Axe/g1008_axe_11.mesh",
-  "needSave": false,
+  "needSave": true,
   "stack_count_max": 1,
   "syncGameData": {
     "currentCapacity": true,

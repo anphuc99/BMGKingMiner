@@ -11,7 +11,7 @@
   "itemintroduction": "52fc6496-dbca-4b78-bc05-dff9d9f8ae30",
   "itemname": "item_A_riu_2",
   "mesh": "asset/Mesh/Wooden Double Axe/g1008_axe_02.mesh",
-  "needSave": false,
+  "needSave": true,
   "stack_count_max": 1,
   "syncGameData": {
     "currentCapacity": true,

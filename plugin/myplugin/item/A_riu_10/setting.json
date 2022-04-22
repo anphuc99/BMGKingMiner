@@ -11,7 +11,7 @@
   "itemintroduction": "33abc040-513f-41eb-9a94-a13d012851d8",
   "itemname": "item_A_riu_10",
   "mesh": "asset/Mesh/Silvery Axe/g1008_axe_19.mesh",
-  "needSave": false,
+  "needSave": true,
   "stack_count_max": 1,
   "syncGameData": {
     "currentCapacity": true,

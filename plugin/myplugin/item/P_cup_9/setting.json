@@ -11,7 +11,7 @@
   "itemintroduction": "ce9c70fe-fc94-4157-9813-bdbd1f47d09c",
   "itemname": "item_P_cup_9",
   "mesh": "asset/Mesh/Diamond Pickaxe2/g1008_pickaxe_08.mesh",
-  "needSave": false,
+  "needSave": true,
   "stack_count_max": 1,
   "syncGameData": {
     "currentCapacity": true,

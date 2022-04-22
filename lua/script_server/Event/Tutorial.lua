@@ -29,8 +29,10 @@ local itemTuotrial = {
 }
 
 Trigger.addHandler(Entity.GetCfg("myplugin/player1"), "PLAYER_ADD_ITEM_IN_BALO", function(context)    
-    if itemTuotrial[context.model:getTutorial()].item == context.itemid then               
-      Trigger.CheckTriggers(context.obj1:cfg(), "PALYER_CHECK_TUTORIAL_MISSION", {obj1 = context.obj1, model = context.model})
+    if itemTuotrial[context.model:getTutorial()] ~= nil then
+        if itemTuotrial[context.model:getTutorial()].item == context.itemid then               
+          Trigger.CheckTriggers(context.obj1:cfg(), "PALYER_CHECK_TUTORIAL_MISSION", {obj1 = context.obj1, model = context.model})
+        end        
     end
 end)
 

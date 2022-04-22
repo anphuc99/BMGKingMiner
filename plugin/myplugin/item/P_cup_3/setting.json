@@ -11,7 +11,7 @@
   "itemintroduction": "593cd53d-db34-4e00-ada0-f47a81e174a4",
   "itemname": "e6809d57-fc2e-43a1-9a29-b1ebfada278f",
   "mesh": "asset/Mesh/Iron Pickaxe1/g1008_pickaxe_04.mesh",
-  "needSave": false,
+  "needSave": true,
   "stack_count_max": 1,
   "syncGameData": {
     "currentCapacity": true,

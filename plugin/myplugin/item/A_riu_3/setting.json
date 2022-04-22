@@ -11,7 +11,7 @@
   "itemintroduction": "7412501e-0487-4b0e-ad34-935ee4a171ab",
   "itemname": "item_A_riu_3",
   "mesh": "asset/Mesh/Ordinary Iron Axe/g1008_axe_04.mesh",
-  "needSave": false,
+  "needSave": true,
   "stack_count_max": 1,
   "syncGameData": {
     "currentCapacity": true,

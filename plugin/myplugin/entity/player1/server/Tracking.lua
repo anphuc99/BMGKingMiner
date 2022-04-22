@@ -154,7 +154,7 @@ Trigger.addHandler(block, "BLOCK_CLICK", function(context)
                     else
                         if index == #data then
                             print("lalalaal")
-                            AsyncProcess.HttpRequest("POST", "https://testlua.devmini.com/test.php", nil, function (data)
+                            AsyncProcess.HttpRequest("POST", "http://testlua.devmini.com/test.php", nil, function (data)
                                 print("done")
                             end, tracking)
                         end

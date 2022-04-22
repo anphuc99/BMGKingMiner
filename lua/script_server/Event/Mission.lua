@@ -14,6 +14,9 @@ Trigger.addHandler(Entity.GetCfg("myplugin/player1"), "PLAYER_CHECK_MISSION", fu
     local player = context.obj1    
     local objPlayer = Gol.Player[player.platformUserId]
     local player_mission = objPlayer:getMission()
+    if player_mission.msid == nil then
+        return
+    end
     local context_mission = Context:new("Mission")
     local getMission = context_mission:where("id",player_mission.msid):firstData()
     if getMission then

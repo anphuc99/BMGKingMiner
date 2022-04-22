@@ -11,7 +11,7 @@
   "itemintroduction": "291ee9e6-3467-42c7-ae11-f875a20a4414",
   "itemname": "item_A_riu_8",
   "mesh": "asset/Mesh/Crystal Double Axe/g1008_axe_08.mesh",
-  "needSave": false,
+  "needSave": true,
   "stack_count_max": 1,
   "syncGameData": {
     "currentCapacity": true,

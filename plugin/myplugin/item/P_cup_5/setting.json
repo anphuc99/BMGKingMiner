@@ -11,7 +11,7 @@
   "itemintroduction": "b23ca7a9-bb6e-4b43-a004-c640e217670a",
   "itemname": "item_P_cup_5",
   "mesh": "asset/Mesh/Golden Pickaxe1/g1008_pickaxe_10.mesh",
-  "needSave": false,
+  "needSave": true,
   "stack_count_max": 1,
   "syncGameData": {
     "currentCapacity": true,
