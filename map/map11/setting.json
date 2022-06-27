@@ -1,126 +1,172 @@
 {
+  "blinn": 0,
   "canBreak": false,
+  "hdr": 0,
   "hideCloud": true,
   "scene": [
     {
       "class": "RegionPart",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "cfgName": "myplugin/ecc1a8fa-3803-4f2e-ba65-dd5b2d5a094c",
         "id": "8584309193216409601",
         "name": "Region",
+        "needSync": "true",
         "position": "x:29.561534881592 y:55.06160736084 z:2.2177786827087",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:3.14273 y:4.1232 z:0.999995"
+        "scale": "x:3.14273 y:4.1232 z:0.999995",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_Effect",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584315480877088769",
         "name": "Effect",
-        "position": "x:29.474855422974 y:53.0 z:2.7156088352203",
+        "needSync": "true",
+        "position": "x:29.474855422974 y:53 z:2.7156088352203",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Diamond",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584324076785893377",
         "name": "entity_Enti_M_Diamond",
-        "position": "x:28.95269203186 y:62.0 z:38.788204193115",
+        "needSync": "true",
+        "position": "x:28.95269203186 y:62 z:38.788204193115",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Diamond",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584324122457161729",
         "name": "entity_Enti_M_Diamond",
-        "position": "x:48.529518127441 y:61.0 z:56.603820800781",
+        "needSync": "true",
+        "position": "x:48.529518127441 y:61 z:56.603820800781",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Diamond",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584324153485295617",
         "name": "entity_Enti_M_Diamond",
-        "position": "x:53.893356323242 y:62.0 z:39.269241333008",
+        "needSync": "true",
+        "position": "x:53.893356323242 y:62 z:39.269241333008",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Diamond",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584324241612439553",
         "name": "entity_Enti_M_Diamond",
+        "needSync": "true",
         "position": "x:38.241310119629 y:64.000717163086 z:59.559661865234",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Diamond",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584324339851182081",
         "name": "entity_Enti_M_Diamond",
+        "needSync": "true",
         "position": "x:10.295946121216 y:61.000503540039 z:44.49027633667",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Diamond",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584324373888450561",
         "name": "entity_Enti_M_Diamond",
-        "position": "x:0.58727848529816 y:61.0 z:50.939056396484",
+        "needSync": "true",
+        "position": "x:0.58727848529816 y:61 z:50.939056396484",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Diamond",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584324407375151105",
         "name": "entity_Enti_M_Diamond",
+        "needSync": "true",
         "position": "x:17.57661819458 y:67.003807067871 z:38.59822845459",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Diamond",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584324547220848641",
         "name": "entity_Enti_M_Diamond",
+        "needSync": "true",
         "position": "x:48.105628967285 y:63.0009765625 z:19.30237197876",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Diamond",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584325252699947009",
         "name": "entity_Enti_M_Diamond",
-        "position": "x:26.930305480957 y:60.0 z:28.890930175781",
+        "needSync": "true",
+        "position": "x:26.930305480957 y:60 z:28.890930175781",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     }
   ],
@@ -136,6 +182,7 @@
       ]
     }
   ],
+  "skyBoxMode": "static_display",
   "skyBoxRotate": {
     "x": 0,
     "y": 0,

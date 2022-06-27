@@ -17,6 +17,12 @@
         "enable": true,
         "enableCollisionDetect": true,
         "lockSlideScreen": false,
+        "offset": {
+          "__OBJ_TYPE": "Vector3",
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
         "viewFovAngle": 75
       },
       {
@@ -24,6 +30,12 @@
         "enable": true,
         "enableCollisionDetect": true,
         "lockSlideScreen": false,
+        "offset": {
+          "__OBJ_TYPE": "Vector3",
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
         "viewFovAngle": 75
       },
       {
@@ -32,6 +44,12 @@
         "enableCollisionDetect": true,
         "lockBodyRotation": false,
         "lockSlideScreen": false,
+        "offset": {
+          "__OBJ_TYPE": "Vector3",
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
         "viewFovAngle": 75
       },
       {
@@ -56,6 +74,7 @@
     "useDragControl": true
   },
   "editorFovAngle": 65,
+  "enableNewLighting": false,
   "engineDefUIEnable": {
     "actionControl": true,
     "actionControlMode": "flexibleDragControl",
@@ -261,7 +280,8 @@
   "vars": {
     "__OBJ_TYPE": [],
     "entity": [],
-    "global": []
+    "global": [],
+    "ui": []
   },
   "waitAtInitPos": true,
   "waitGoTime": 0,

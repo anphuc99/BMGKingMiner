@@ -1,181 +1,247 @@
 {
+  "blinn": 0,
   "canBreak": false,
+  "hdr": 0,
   "hideCloud": true,
   "scene": [
     {
       "class": "Entity",
       "config": "myplugin/Enti_Effect",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8496450979741106177",
         "name": "Effect",
+        "needSync": "true",
         "position": "x:29.482709884644 y:53.000003814697 z:1.7722144126892",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "RegionPart",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "cfgName": "myplugin/36dc8a94-9ee2-414d-82b7-091cc3afeba3",
         "id": "8496451168436027393",
         "name": "Region",
+        "needSync": "true",
         "position": "x:29.602689743042 y:54.997577667236 z:1.6305195093155",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:3.20535 y:4.20659 z:2.72232"
+        "scale": "x:3.20535 y:4.20659 z:2.72232",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Platium",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8520110418783092737",
         "name": "entity_Enti_M_Platium",
+        "needSync": "true",
         "position": "x:41.891181945801 y:53.001003265381 z:27.572340011597",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Platium",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8520111031397367809",
         "name": "entity_Enti_M_Platium",
-        "position": "x:34.797409057617 y:56.0 z:39.094924926758",
+        "needSync": "true",
+        "position": "x:34.797409057617 y:56 z:39.094924926758",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Platium",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8520111313697226753",
         "name": "entity_Enti_M_Platium",
+        "needSync": "true",
         "position": "x:22.881204605103 y:69.000061035156 z:61.508491516113",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Platium",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8520111478191292417",
         "name": "entity_Enti_M_Platium",
+        "needSync": "true",
         "position": "x:58.53010559082 y:68.000015258789 z:32.165397644043",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Platium",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8520111619365928961",
         "name": "entity_Enti_M_Platium",
+        "needSync": "true",
         "position": "x:4.7697868347168 y:52.999996185303 z:11.52316570282",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Platium",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8520111683264167937",
         "name": "entity_Enti_M_Platium",
+        "needSync": "true",
         "position": "x:0.90543121099472 y:53.000072479248 z:43.362194061279",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Platium",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8520111791889825793",
         "name": "entity_Enti_M_Platium",
+        "needSync": "true",
         "position": "x:-3.7790529727936 y:53.003391265869 z:72.251541137695",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Platium",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8520112737256112129",
         "name": "entity_Enti_M_Platium",
+        "needSync": "true",
         "position": "x:25.476608276367 y:53.000003814697 z:101.50000762939",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Platium",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8520112820050870273",
         "name": "entity_Enti_M_Platium",
+        "needSync": "true",
         "position": "x:32.93270111084 y:53.000205993652 z:94.281280517578",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Platium",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8520113039237562369",
         "name": "entity_Enti_M_Platium",
+        "needSync": "true",
         "position": "x:26.186138153076 y:52.999996185303 z:73.099906921387",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Platium",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8520113542871793665",
         "name": "entity_Enti_M_Platium",
-        "position": "x:62.742198944092 y:53.0 z:75.150527954102",
+        "needSync": "true",
+        "position": "x:62.742198944092 y:53 z:75.150527954102",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Platium",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8520113578130227201",
         "name": "entity_Enti_M_Platium",
-        "position": "x:70.709358215332 y:53.0 z:64.718597412109",
+        "needSync": "true",
+        "position": "x:70.709358215332 y:53 z:64.718597412109",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Platium",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8520117521103224833",
         "name": "entity_Enti_M_Platium",
+        "needSync": "true",
         "position": "x:29.186401367188 y:53.000484466553 z:57.730472564697",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Platium",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8520117956495900673",
         "name": "entity_Enti_M_Platium",
+        "needSync": "true",
         "position": "x:71.699996948242 y:54.983528137207 z:44.545352935791",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     }
   ],
@@ -191,6 +257,7 @@
       ]
     }
   ],
+  "skyBoxMode": "static_display",
   "skyBoxRotate": {
     "x": 0,
     "y": 0,

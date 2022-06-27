@@ -1,5 +1,5 @@
 {
-  "breakTime": false,
+  "breakTime": 20,
   "canClick": false,
   "candrop": false,
   "canSwim": false,

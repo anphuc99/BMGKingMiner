@@ -1,5 +1,7 @@
 {
+  "blinn": 0,
   "canBreak": false,
+  "hdr": 0,
   "hideCloud": true,
   "skyBox": [
     {
@@ -13,6 +15,7 @@
       ]
     }
   ],
+  "skyBoxMode": "static_display",
   "skyBoxRotate": {
     "x": 0,
     "y": 0,

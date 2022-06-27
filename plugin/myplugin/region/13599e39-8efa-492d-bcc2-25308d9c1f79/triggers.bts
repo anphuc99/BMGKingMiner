@@ -1,3 +1,0 @@
-REGION_ENTER {
-	SetEntityPosition(entity = $obj1, map = "map2", pos = { x = 29, y = 53, z = 4 }, rp = 0, ry = 0)
-}

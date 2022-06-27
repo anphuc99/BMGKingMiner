@@ -1,269 +1,367 @@
 {
+  "blinn": 0,
   "canBreak": false,
+  "hdr": 0,
   "hideCloud": true,
   "scene": [
     {
       "class": "RegionPart",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "cfgName": "myplugin/d9caf5eb-f6c7-4936-ad0f-45b71b22949c",
         "id": "8584307347520929793",
         "name": "Region",
+        "needSync": "true",
         "position": "x:54.480266571045 y:54.999099731445 z:12.406890869141",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:3.10945 y:4.00922 z:0.999992"
+        "scale": "x:3.10945 y:4.00922 z:0.999992",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_Effect",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584315991297687553",
         "name": "Effect",
-        "position": "x:54.40620803833 y:53.0 z:12.665247917175",
+        "needSync": "true",
+        "position": "x:54.40620803833 y:53 z:12.665247917175",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584318800895426561",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:66.731025695801 y:62.008441925049 z:43.639049530029",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584318870587179009",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:67.532768249512 y:62.007213592529 z:52.876972198486",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584318908734177281",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:70.055068969727 y:62.001113891602 z:65.097946166992",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584318934802153473",
         "name": "entity_Enti_M_Chryso",
-        "position": "x:71.629241943359 y:55.0 z:64.571975708008",
+        "needSync": "true",
+        "position": "x:71.629241943359 y:55 z:64.571975708008",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584318982150078465",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:84.795310974121 y:53.000148773193 z:86.151260375977",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584318997749514241",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:72.519172668457 y:53.000045776367 z:95.032470703125",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584319041509998593",
         "name": "entity_Enti_M_Chryso",
-        "position": "x:94.057563781738 y:53.0 z:71.299575805664",
+        "needSync": "true",
+        "position": "x:94.057563781738 y:53 z:71.299575805664",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584319076505452545",
         "name": "entity_Enti_M_Chryso",
-        "position": "x:95.735427856445 y:53.0 z:63.197612762451",
+        "needSync": "true",
+        "position": "x:95.735427856445 y:53 z:63.197612762451",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584319431290060801",
         "name": "entity_Enti_M_Chryso",
-        "position": "x:42.926067352295 y:61.0 z:79.870483398438",
+        "needSync": "true",
+        "position": "x:42.926067352295 y:61 z:79.870483398438",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584319574635872257",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:57.596561431885 y:61.96960067749 z:70.926879882812",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584319700813070337",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:87.645141601562 y:66.999992370605 z:48.686241149902",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584319720912191489",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:80.582656860352 y:67.999992370605 z:56.843288421631",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584319845599985665",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:77.553833007812 y:74.698936462402 z:64.699996948242",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584319932262449153",
         "name": "entity_Enti_M_Chryso",
-        "position": "x:61.678081512451 y:70.0 z:85.768600463867",
+        "needSync": "true",
+        "position": "x:61.678081512451 y:70 z:85.768600463867",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584319966415732737",
         "name": "entity_Enti_M_Chryso",
-        "position": "x:48.184623718262 y:70.0 z:90.178703308105",
+        "needSync": "true",
+        "position": "x:48.184623718262 y:70 z:90.178703308105",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584320823285317633",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:52.51314163208 y:70.001602172852 z:96.219680786133",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584320959781109761",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:79.422492980957 y:61.000576019287 z:31.507614135742",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584320978968559617",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:71.769500732422 y:61.000183105469 z:24.267614364624",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584321003402461185",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:76.626266479492 y:62.999996185303 z:42.576587677002",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584321057469317121",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:66.493431091309 y:67.000007629395 z:45.331439971924",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584321203744194561",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:48.388900756836 y:61.000007629395 z:31.417646408081",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Chryso",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8584321286366248961",
         "name": "entity_Enti_M_Chryso",
+        "needSync": "true",
         "position": "x:45.474529266357 y:62.00016784668 z:32.233734130859",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     }
   ],
@@ -279,6 +377,7 @@
       ]
     }
   ],
+  "skyBoxMode": "static_display",
   "skyBoxRotate": {
     "x": 0,
     "y": 0,

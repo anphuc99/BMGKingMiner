@@ -1,192 +1,262 @@
 {
+  "blinn": 0,
   "canBreak": false,
+  "hdr": 0,
   "hideCloud": true,
   "scene": [
     {
       "class": "Entity",
       "config": "myplugin/Enti_Effect",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8496448665990086657",
         "name": "Effect",
+        "needSync": "true",
         "position": "x:29.504051208496 y:53 z:1.471001625061",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "RegionPart",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "cfgName": "myplugin/18f92774-751b-4a9c-8c96-ca33fc67db16",
         "id": "8496448783974170625",
         "name": "Region",
+        "needSync": "true",
         "position": "x:29.476722717285 y:55.084095001221 z:1.3855812549591",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:3.63234 y:4.18723 z:3.16433"
+        "scale": "x:3.63234 y:4.18723 z:3.16433",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8502141597597466625",
         "name": "entity_Enti_M_Crystal",
+        "needSync": "true",
         "position": "x:42.622116088867 y:53 z:8.5713720321655",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8502141746733711361",
         "name": "entity_Enti_M_Crystal",
+        "needSync": "true",
         "position": "x:35.933258056641 y:53.96960067749 z:21.535442352295",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8502141888287309825",
         "name": "entity_Enti_M_Crystal",
+        "needSync": "true",
         "position": "x:41.921520233154 y:60 z:16.607654571533",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8502142216648916993",
         "name": "entity_Enti_M_Crystal",
+        "needSync": "true",
         "position": "x:16.478445053101 y:53.001247406006 z:10.666853904724",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8502142601129230337",
         "name": "entity_Enti_M_Crystal",
+        "needSync": "true",
         "position": "x:46.35188293457 y:45 z:16.519466400146",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8502142657043906561",
         "name": "entity_Enti_M_Crystal",
+        "needSync": "true",
         "position": "x:37.468730926514 y:43.000091552734 z:27.366899490356",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8502142908070887425",
         "name": "entity_Enti_M_Crystal",
+        "needSync": "true",
         "position": "x:38.8489112854 y:26.999996185303 z:41.12873840332",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8519427147166318593",
         "name": "entity_Enti_M_Crystal",
+        "needSync": "true",
         "position": "x:29.502544403076 y:56.000076293945 z:35.547286987305",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8519427250231771137",
         "name": "entity_Enti_M_Crystal",
+        "needSync": "true",
         "position": "x:20.496223449707 y:64 z:33.3134765625",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8519427485676732417",
         "name": "entity_Enti_M_Crystal",
+        "needSync": "true",
         "position": "x:24.699085235596 y:63.785778045654 z:58.520568847656",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8519427621237866497",
         "name": "entity_Enti_M_Crystal",
+        "needSync": "true",
         "position": "x:51.969284057617 y:28.002559661865 z:52.795501708984",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8519427667455508481",
         "name": "entity_Enti_M_Crystal",
+        "needSync": "true",
         "position": "x:33.784038543701 y:31.991748809814 z:48.036083221436",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8519427731962068993",
         "name": "entity_Enti_M_Crystal",
+        "needSync": "true",
         "position": "x:32.867084503174 y:25.001794815063 z:74.321502685547",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8519427860543553537",
         "name": "Crystal",
+        "needSync": "true",
         "position": "x:23.358901977539 y:25.000003814697 z:55.781440734863",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     },
     {
       "class": "Entity",
       "config": "myplugin/Enti_M_Crystal",
+      "customProperties": [],
       "properties": {
+        "batchType": "Static",
         "id": "8519427953412702209",
         "name": "Crystal",
+        "needSync": "true",
         "position": "x:14.182809829712 y:40.000003814697 z:65.819747924805",
         "rotation": "x:0 y:0 z:0",
-        "scale": "x:1 y:1 z:1"
+        "scale": "x:1 y:1 z:1",
+        "selectable": "true"
       }
     }
   ],
@@ -202,6 +272,7 @@
       ]
     }
   ],
+  "skyBoxMode": "static_display",
   "skyBoxRotate": {
     "x": 0,
     "y": 0,
