@@ -16,6 +16,7 @@ local deepCopy = require "script_common.lbr.DeepCopyTable"
 -- local lang = require "script_server.lbr.lang"
 local PlayerClass = class()
 PlayerClass:create("Player",function ()
+    ---@class Player
     local o = {}
     local id
     local isMining = false
@@ -204,6 +205,7 @@ PlayerClass:create("Player",function ()
     function o:toTable()        
         local Player = {
             id = id,
+            name = o:getObj().name,
             money = money,
             balo = balo,
             idCard = idCard,
