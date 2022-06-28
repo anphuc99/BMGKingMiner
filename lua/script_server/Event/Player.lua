@@ -1,5 +1,6 @@
 local Gol = require "script_server.Golde_Valiable"
 local this = Entity.GetCfg("myplugin/player1")
+---@class Player
 local PlayerModel = require "script_server.Model.Player"
 local cupLv1 = "myplugin/P_cup_1"
 local riuLv1 = "myplugin/A_riu_1"
@@ -18,12 +19,68 @@ local cjson = require "cjson"
 local DBHandler = require "dbhandler"
 local BlackMarket = require "script_server.Model.BlackMarket"
 
-Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
-    -- context.obj1.addValueDef("new", false, false, false, true, false)
-    local newPlayer = context.obj1:getValue("new") -- kiểm tra có phải là người mới hay không
-    if (not newPlayer) then
-        context.obj1:setValue("new", true)
-        context.obj1:setValue("converted", true)
+Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)    
+    DBHandler:getDataByUserId(context.obj1.platformUserId, Gol.dataKey.Player, function(userId, jdata)
+        local function check()
+            local rs, msg = pcall(function ()
+                local a = cjson.decode(jdata)
+            end)
+            return rs
+        end
+        local PlayerProperty
+        if not check() then
+            PlayerProperty = {
+                id = context.obj1.platformUserId,
+                name = context.obj1.name,
+                money = 0,
+                balo = 6,
+                idCard = 1,
+                Lv = 1,
+                exp = 0,
+                Mine = 0,
+                tutorial = 1,
+                takingMissionTutorial = false,
+                lastLogin = os.time(),
+                lastRollUp7 = nil,
+                lastRollUp28 = nil,
+                countRollUp7 = 0,
+                countRollUp28 = 0,
+                Upgrate = 0,
+                Crafting = 0,
+                Equipment = {},
+                Achievement = {
+                    done = {},
+                    proceed = {}
+                },
+                mission = {
+                    msid = nil,
+                    takMs = false,
+                    lastCompleteMs = nil
+                }
+            }
+        else
+            PlayerProperty = cjson.decode(jdata)
+        end
+        PlayerProperty.lastLogin = os.time()
+        DBHandler:setData(context.obj1.platformUserId, Gol.dataKey.Player, cjson.encode(PlayerProperty), false)
+        DBHandler:getDataByUserId(context.obj1.platformUserId, Gol.dataKey.PlayerItem, function(userid, jdata)
+            local playerItem
+            if jdata == nil or jdata == "" then
+                playerItem = {
+                    { idPlayer = context.obj1.platformUserId, idItem = cupLv1, cellNum = 1, num = 1, position = positionItem.hand,
+                        lv = 1 },
+                    { idPlayer = context.obj1.platformUserId, idItem = riuLv1, cellNum = 2, num = 1, position = positionItem.hand,
+                        lv = 1 },
+                }
+            else
+                playerItem = cjson.decode(jdata)
+            end
+            Gol.Player[context.obj1.platformUserId] = PlayerModel:new(PlayerProperty, playerItem)
+            Trigger.CheckTriggers(this, "PLAYER_INIT", context)
+        end, function()
+
+        end)
+    end, function()
         local PlayerProperty = {
             id = context.obj1.platformUserId,
             name = context.obj1.name,
@@ -53,81 +110,15 @@ Trigger.RegisterHandler(this, "ENTITY_ENTER", function(context)
                 lastCompleteMs = nil
             }
         }
-        DBHandler:setData(context.obj1.platformUserId, Gol.dataKey.Player, cjson.encode(PlayerProperty), false)
         local playerItem = {
             { idPlayer = context.obj1.platformUserId, idItem = cupLv1, cellNum = 1, num = 1, position = positionItem.hand,
                 lv = 1 },
             { idPlayer = context.obj1.platformUserId, idItem = riuLv1, cellNum = 2, num = 1, position = positionItem.hand,
                 lv = 1 },
         }
-        DBHandler:setData(context.obj1.platformUserId, Gol.dataKey.PlayerItem, cjson.encode(playerItem), false)
         Gol.Player[context.obj1.platformUserId] = PlayerModel:new(PlayerProperty, playerItem)
-        context.obj1:addItem(cupLv1, 1)
-        --PackageHandlers.sendServerHandler(context.obj1, "UI", {UI = "Language"})
         Trigger.CheckTriggers(this, "PLAYER_INIT", context)
-        Trigger.CheckTriggers(this, "NEW_PLAYER_INIT", context)
-    else
-        local converted = context.obj1:getValue("converted")
-        --context.obj1:setValue("converted", false)
-        if not converted then
-            context.obj1:setValue("converted", true)
-            local PlayerProperty = context.obj1:getValue("Player")
-            PlayerProperty.name = context.obj1.name
-            PlayerProperty.Equipment = context.obj1:getValue("Equipment")
-            PlayerProperty.Achievement = context.obj1:getValue("Achievement")
-            PlayerProperty.mission = context.obj1:getValue("mission")
-            DBHandler:setData(context.obj1.platformUserId, Gol.dataKey.Player, cjson.encode(PlayerProperty), false)
-            local playerItem = context.obj1:getValue("PlayerItem")
-            DBHandler:setData(context.obj1.platformUserId, Gol.dataKey.PlayerItem, cjson.encode(playerItem), false)
-            Gol.Player[context.obj1.platformUserId] = PlayerModel:new(PlayerProperty, playerItem)
-            local blackMarket                       = context.obj1:getValue("blackMarket")
-            local ti                                = 0
-            DBHandler:getDataByUserId(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket, function(userid, jdata)
-                if jdata == nil or jdata == "" then
-                    jdata = "[]"
-                end
-                local data = cjson.decode(jdata)
-                for key, value in pairs(blackMarket) do
-                    local data2 = {
-                        idItem = value.idItem,
-                        price = value.price,
-                        quantily = value.count,
-                        idPlayer = context.obj1.platformUserId,
-                        playerName = context.obj1.name,
-                        create_at = os.time() + ti,
-                        sold = false
-                    }
-                    local key = context.obj1.platformUserId .. "_" .. os.time() + ti
-                    data[key] = data2
-                    DBHandler:setData(Gol.subKey.BlackMarket, Gol.dataKey.BlackMarket, cjson.encode(data), true)
-                    ti = ti + 1
-                end
-            end)
-            Trigger.CheckTriggers(this, "ADD_RANK_MINE", { obj1 = context.obj1, value = PlayerProperty.Mine })
-            Trigger.CheckTriggers(this, "ADD_RANK_LV", { obj1 = context.obj1, value = PlayerProperty.LV })
-            Trigger.CheckTriggers(this, "PLAYER_INIT", context)
-            Trigger.CheckTriggers(this, "NEW_PLAYER_INIT", context)
-        else
-            DBHandler:getDataByUserId(context.obj1.platformUserId, Gol.dataKey.Player, function(userId, jdata)
-                if jdata == nil or jdata == "" then
-                    jdata = "[]"
-                end
-                local PlayerProperty = cjson.decode(jdata)
-                PlayerProperty.lastLogin = os.time()
-                DBHandler:setData(context.obj1.platformUserId, Gol.dataKey.Player, cjson.encode(PlayerProperty), false)
-                DBHandler:getDataByUserId(context.obj1.platformUserId, Gol.dataKey.PlayerItem, function(userid, jdata)
-                    local playerItem                        = cjson.decode(jdata)
-                    Gol.Player[context.obj1.platformUserId] = PlayerModel:new(PlayerProperty, playerItem)
-                    Trigger.CheckTriggers(this, "PLAYER_INIT", context)
-                end, function()
-
-                end)
-            end, function()
-
-            end)
-        end
-
-    end
+    end)
     local objid = {}
     for key, value in pairs(Gol.Material) do
         objid[#objid + 1] = {
@@ -175,6 +166,13 @@ Trigger.RegisterHandler(this, "PLAYER_INIT", function(context)
     local RankLvData = Engine.DataService:GetRankDataStore("Lv")
     RankLvData:SetData(tostring(context.obj1.platformUserId), PlayerObj:getLv())
     Trigger.CheckTriggers(context.obj1:cfg(), "PLAYER_CHECK_MISSION", { obj1 = context.obj1 })
+    print("reprot")
+    local gameReport = Game.GetService("GameReport")
+    gameReport:reportGameData("player_init", "player init "..os.time(), context.obj1)
+    local data = PlayerObj:toTable()
+    local json = cjson.encode(data)
+    gameReport:reportGameData("player_data", json, context.obj1)
+    print(json)
     -- giả lập người chơi
     -- local idPlayer = ""
     -- local name = {

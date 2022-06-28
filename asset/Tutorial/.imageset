@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Imageset name="Tutorial" autoScaled="vertical" version="2" nativeHorzRes="2048" nativeVertRes="2048" imagefile="Tutorial.png">
-    <Image name="Hướng dẫn10" height="574" xPos="0" yPos="0" width="1100"/>
-    <Image name="Nút-Back(C)" height="675" xPos="0" yPos="574" width="675"/>
-    <Image name="YES(C)" height="393" xPos="675" yPos="574" width="686"/>
-    <Image name="Mũi phải" height="47" xPos="0" yPos="1249" width="47"/>
-    <Image name="Mũi trái" height="47" xPos="0" yPos="1296" width="47"/>
+<Imageset imagefile="Tutorial.png" nativeVertRes="2048" name="Tutorial" version="2" nativeHorzRes="2048" autoScaled="vertical">
+    <Image name="Hướng dẫn10" yPos="0" width="1100" height="574" xPos="0"/>
+    <Image name="Nút-Back(C)" yPos="574" width="675" height="675" xPos="0"/>
+    <Image name="YES(C)" yPos="574" width="686" height="393" xPos="675"/>
+    <Image name="Mũi phải" yPos="1249" width="47" height="47" xPos="0"/>
+    <Image name="Mũi trái" yPos="1296" width="47" height="47" xPos="0"/>
 </Imageset>
