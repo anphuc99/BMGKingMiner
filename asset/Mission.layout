@@ -70,7 +70,7 @@
                 <Property value="0 0 0 0" name="StaticImageCutStretch">
 
                 </Property>
-                <Property value="gameres|asset/Texture/Gui/EXP icon.png" name="Image">
+                <Property value="gameres|asset/Texture/Gui/exp_icon.png" name="Image">
 
                 </Property>
                 <Property value="false" name="ClippedByParent">

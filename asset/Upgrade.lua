@@ -1,7 +1,7 @@
 function self:onOpen(p)
     local Context = require "script_common.lbr.Context"
-    local blockBtn = "gameres|asset/Texture/Gui/nutupgrade1(C).png"
-    local unblockBtn = "gameres|asset/Texture/Gui/nutupgrade2(C).png"    
+    local blockBtn = "gameres|asset/Texture/Gui/button_upgrade1c.png"
+    local unblockBtn = "gameres|asset/Texture/Gui/button_upgrade2c.png"    
     local split = require "script_common.lbr.split"
     local Type = "myplugin/P_cup"
     local lv = 0

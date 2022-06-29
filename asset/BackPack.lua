@@ -1,8 +1,8 @@
 function self:onOpen(p)
     local SlotBalo = require "script_common.SlotBalo"
-    local BlockImg = "gameres|asset/Texture/Gui/Slot Item-2 Nút.png"
-    local unBlockImg = "gameres|asset/Texture/Gui/Slot Item-1 Nút.png"
-    local selectBlockImg = "gameres|asset/Texture/Gui/Slot Item-3 Nút.png"
+    local BlockImg = "gameres|asset/Texture/Gui/button_slot_item_2.png"
+    local unBlockImg = "gameres|asset/Texture/Gui/button_slot_item_1.png"
+    local selectBlockImg = "gameres|asset/Texture/Gui/button_slot_item_3.png"
     local typeItem = require "script_common.typeItem"
     local Context = require "script_common.lbr.Context"
     local dbClick = {} -- biến đệm cho sự kiện dbClick

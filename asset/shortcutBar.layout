@@ -162,7 +162,7 @@
                   <Property name="VerticalAlignment" value="Bottom">
 
                   </Property>
-                  <Property name="Image" value="gameres|asset/Texture/Gui/IconBackPack(C).png">
+                  <Property name="Image" value="gameres|asset/Texture/Gui/iconBackPack_c.png">
 
                   </Property>
                   <Property name="FrameColours" value="ffffffff">

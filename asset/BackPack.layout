@@ -207,7 +207,7 @@
                                   <Property value="0.5" name="PivotY">
 
                                   </Property>
-                                  <Property value="gameres|asset/Texture/Gui/Số lượng (Đã cắt).png" name="Image">
+                                  <Property value="gameres|asset/Texture/Gui/amount_cut.png" name="Image">
 
                                   </Property>
                                   <Property value="1" name="Alpha">
@@ -286,7 +286,7 @@
                               <Property value="0.5" name="PivotY">
 
                               </Property>
-                              <Property value="gameres|asset/Texture/Gui/Slot Item-1 Nút.png" name="Image">
+                              <Property value="gameres|asset/Texture/Gui/button_slot_item_1.png" name="Image">
 
                               </Property>
                               <Property value="1" name="Alpha">
@@ -10185,7 +10185,7 @@
                     <Property value="0.5" name="PivotY">
 
                     </Property>
-                    <Property value="gameres|asset/Texture/Gui/Nút-Back(C).png" name="Image">
+                    <Property value="gameres|asset/Texture/Gui/button_backc.png" name="Image">
 
                     </Property>
                     <Property value="1" name="Alpha">
@@ -11780,7 +11780,7 @@
                     <Property value="0.5" name="PivotY">
 
                     </Property>
-                    <Property value="gameres|asset/Texture/Gui/Khung Item Mờ(1500).png" name="Image">
+                    <Property value="gameres|asset/Texture/Gui/item_frame_block_1500.png" name="Image">
 
                     </Property>
                     <Property value="1" name="Alpha">
@@ -12320,7 +12320,7 @@
                       <Property value="0.5" name="PivotY">
 
                       </Property>
-                      <Property value="gameres|asset/Texture/Gui/Thông tin Item.png" name="Image">
+                      <Property value="gameres|asset/Texture/Gui/information_item.png" name="Image">
 
                       </Property>
                       <Property value="1" name="Alpha">
@@ -12399,7 +12399,7 @@
                   <Property value="0.5" name="PivotY">
 
                   </Property>
-                  <Property value="gameres|asset/Texture/Gui/Role&Bag-Nền.png" name="Image">
+                  <Property value="gameres|asset/Texture/Gui/bg_role&bag.png" name="Image">
 
                   </Property>
                   <Property value="1" name="Alpha">

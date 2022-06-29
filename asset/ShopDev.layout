@@ -1,4 +1,4 @@
-    <GUILayout version="4">
+<GUILayout version="4">
         <Window type="DefaultWindow" name="Root">
             <Property value="{{0,0},{0,0},{1,0},{1,0}}" name="Area">
 

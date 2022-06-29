@@ -82,7 +82,7 @@
                   <Property name="VerticalAlignment" value="Centre">
 
                   </Property>
-                  <Property name="Image" value="gameres|asset/Texture/Gui/Nút gỗ.png">
+                  <Property name="Image" value="gameres|asset/Texture/Gui/button_wood.png">
 
                   </Property>
                   <Property name="FrameColours" value="ffffffff">

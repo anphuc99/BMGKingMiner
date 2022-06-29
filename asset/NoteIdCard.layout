@@ -97,7 +97,7 @@
                   <Property name="Visible" value="true">
 
                   </Property>
-                  <Property name="Image" value="gameres|asset/Texture/Gui/Khung Item Mờ(1500).png">
+                  <Property name="Image" value="gameres|asset/Texture/Gui/item_frame_block_1500.png">
 
                   </Property>
                   <Property name="horzFormatting" value="Stretched">

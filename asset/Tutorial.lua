@@ -6,9 +6,9 @@ function self:onOpen(p)
     local Tutorial = {
         {
             ImgDescription = {
-                "asset/Tutorial/Hướng dẫn1.png",
-                "asset/Tutorial/Hướng dẫn2.png",
-                "asset/Tutorial/Hướng dẫn3.png",
+                "asset/Tutorial/Tutorial1.png",
+                "asset/Tutorial/Tutorial2.png",
+                "asset/Tutorial/Tutorial3.png",
             },
             txtDescription = {
                 "Tutorial_1",
@@ -18,7 +18,7 @@ function self:onOpen(p)
             Index = 3,
             fun = function ()                
                 PackageHandlers.sendClientHandler("TakingMissionTutorial", nil, function ()
-                    Me:setGuideTarget(Lib.v3(74.46,51,33.57), 'asset/Texture/Gui/pngegg (1).png',0.1)                                        
+                    Me:setGuideTarget(Lib.v3(74.46,51,33.57), 'asset/Texture/Gui/pngegg_1.png',0.1)                                        
                     self.Tutorial:setVisible(false)
                     PackageHandlers.registerClientHandler("shopArrow", function (pa)
                         Me:delGuideTarget()
@@ -29,8 +29,8 @@ function self:onOpen(p)
         },
         {
             ImgDescription = {
-                "asset/Tutorial/Hướng dẫn4.png",
-                "asset/Tutorial/Hướng dẫn5.png",
+                "asset/Tutorial/Tutorial4.png",
+                "asset/Tutorial/Tutorial5.png",
             },
             txtDescription = {
                 "Tutorial_4",
@@ -50,8 +50,8 @@ function self:onOpen(p)
         },
         {
             ImgDescription = {
-                "asset/Tutorial/Hướng dẫn6.png",
-                "asset/Tutorial/Hướng dẫn7.png",
+                "asset/Tutorial/Tutorial6.png",
+                "asset/Tutorial/Tutorial7.png",
             },
             txtDescription = {
                 "Tutorial_6",
@@ -66,8 +66,8 @@ function self:onOpen(p)
         },
         {
             ImgDescription = {
-                "asset/Tutorial/Hướng dẫn8.png",
-                "asset/Tutorial/Hướng dẫn9.png",
+                "asset/Tutorial/Tutorial8.png",
+                "asset/Tutorial/Tutorial9.png",
             },
             txtDescription = {
                 "Tutorial_8",
@@ -82,7 +82,7 @@ function self:onOpen(p)
         },
         {
             ImgDescription = {
-                "asset/Tutorial/Hướng dẫn10.png",
+                "asset/Tutorial/Tutorial10.png",
             },
             txtDescription = {
                 "Tutorial_10",
@@ -96,8 +96,8 @@ function self:onOpen(p)
         },
         {
             ImgDescription = {
-                "asset/Tutorial/Hướng dẫn11.png",
-                "asset/Tutorial/Hướng dẫn12.png",          
+                "asset/Tutorial/Tutorial11.png",
+                "asset/Tutorial/Tutorial12.png",          
             },
             txtDescription = {
                 "Tutorial_11",
@@ -110,7 +110,7 @@ function self:onOpen(p)
         },
         M1 = {
             ImgDescription = {
-                "asset/Tutorial/daily mission.png",
+                "asset/Tutorial/daily_mission.png",
             },
             txtDescription = {
                 "mission_M1",
@@ -124,7 +124,7 @@ function self:onOpen(p)
         },
         M2 = {
             ImgDescription = {
-                "asset/Tutorial/daily mission.png",
+                "asset/Tutorial/daily_mission.png",
             },
             txtDescription = {
                 "mission_M2",
@@ -138,7 +138,7 @@ function self:onOpen(p)
         },
         M3 = {
             ImgDescription = {
-                "asset/Tutorial/daily mission.png",
+                "asset/Tutorial/daily_mission.png",
             },
             txtDescription = {
                 "mission_M3",
@@ -152,7 +152,7 @@ function self:onOpen(p)
         },
         M4 = {
             ImgDescription = {
-                "asset/Tutorial/daily mission.png",
+                "asset/Tutorial/daily_mission.png",
             },
             txtDescription = {
                 "mission_M4",
@@ -166,7 +166,7 @@ function self:onOpen(p)
         },
         M5 = {
             ImgDescription = {
-                "asset/Tutorial/daily mission.png",
+                "asset/Tutorial/daily_mission.png",
             },
             txtDescription = {
                 "mission_M5",
@@ -180,7 +180,7 @@ function self:onOpen(p)
         },
         M6 = {
             ImgDescription = {
-                "asset/Tutorial/daily mission.png",
+                "asset/Tutorial/daily_mission.png",
             },
             txtDescription = {
                 "mission_M6",
@@ -194,7 +194,7 @@ function self:onOpen(p)
         },
         M7 = {
             ImgDescription = {
-                "asset/Tutorial/daily mission.png",
+                "asset/Tutorial/daily_mission.png",
             },
             txtDescription = {
                 "mission_M7",
@@ -208,7 +208,7 @@ function self:onOpen(p)
         },
         M8 = {
             ImgDescription = {
-                "asset/Tutorial/daily mission.png",
+                "asset/Tutorial/daily_mission.png",
             },
             txtDescription = {
                 "mission_M8",
@@ -222,7 +222,7 @@ function self:onOpen(p)
         },
         M9 = {
             ImgDescription = {
-                "asset/Tutorial/daily mission.png",
+                "asset/Tutorial/daily_mission.png",
             },
             txtDescription = {
                 "mission_M9",
@@ -236,7 +236,7 @@ function self:onOpen(p)
         },
         M10 = {
             ImgDescription = {
-                "asset/Tutorial/daily mission.png",
+                "asset/Tutorial/daily_mission.png",
             },
             txtDescription = {
                 "mission_M1",
@@ -250,7 +250,7 @@ function self:onOpen(p)
         },
         M11 = {
             ImgDescription = {
-                "asset/Tutorial/daily mission.png",
+                "asset/Tutorial/daily_mission.png",
             },
             txtDescription = {
                 "mission_M2",
@@ -264,7 +264,7 @@ function self:onOpen(p)
         },
         M12 = {
             ImgDescription = {
-                "asset/Tutorial/daily mission.png",
+                "asset/Tutorial/daily_mission.png",
             },
             txtDescription = {
                 "mission_M3",

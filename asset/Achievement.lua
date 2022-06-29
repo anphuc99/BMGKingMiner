@@ -74,8 +74,8 @@ function self:onOpen(p)
                 end)    
             end            
             if Achievement[v].reward.exp > 0 then
-                if eleAchi["Achi"..i].gift1:getProperty("Image") == "gameres|asset/Texture/Gui/Nút chưa nhận2.png" then
-                    eleAchi["Achi"..i].gift1:setImage("gameres|asset/Texture/Gui/EXP icon.png")
+                if eleAchi["Achi"..i].gift1:getProperty("Image") == "gameres|asset/Texture/Gui/button_notreceived2.png" then
+                    eleAchi["Achi"..i].gift1:setImage("gameres|asset/Texture/Gui/exp_icon.png")
                     eleAchi["Achi"..i].gift1.num:setText(Achievement[v].reward.exp)
                 else
                     eleAchi["Achi"..i].gift2:setImage("gameres|asset/Texture/Gui/EXP icon.png")
@@ -84,7 +84,7 @@ function self:onOpen(p)
             end
             if Achievement[v].reward.coin > 0 then
                 if eleAchi["Achi"..i].gift1:getProperty("Image") == "gameres|asset/Texture/Gui/Nút chưa nhận2.png" then
-                    eleAchi["Achi"..i].gift1:setImage("gameres|asset/Texture/Gui/coin_.png")
+                    eleAchi["Achi"..i].gift1:setImage("gameres|asset/Texture/Gui/coin.png")
                     eleAchi["Achi"..i].gift1.num:setText(Achievement[v].reward.coin)
                 else
                     eleAchi["Achi"..i].gift2:setImage("gameres|asset/Texture/Gui/coin_.png")

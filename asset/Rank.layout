@@ -97,7 +97,7 @@
                   <Property value="Stretched" name="vertFormatting">
 
                   </Property>
-                  <Property value="gameres|asset/Texture/Gui/bảng XH2.png" name="Image">
+                  <Property value="gameres|asset/Texture/Gui/leaderboard2.png" name="Image">
 
                   </Property>
                   <Property value="0.5" name="PivotX">
@@ -675,7 +675,7 @@
                                           <Property value="Stretched" name="vertFormatting">
 
                                           </Property>
-                                          <Property value="gameres|asset/Texture/Gui/top1 thu thập.png" name="Image">
+                                          <Property value="gameres|asset/Texture/Gui/top1_collect.png" name="Image">
 
                                           </Property>
                                           <Property value="0.5" name="PivotX">
@@ -1216,7 +1216,7 @@
                                           <Property value="Stretched" name="vertFormatting">
 
                                           </Property>
-                                          <Property value="gameres|asset/Texture/Gui/top2 thu thập.png" name="Image">
+                                          <Property value="gameres|asset/Texture/Gui/top2_collect.png" name="Image">
 
                                           </Property>
                                           <Property value="0.5" name="PivotX">
@@ -1757,7 +1757,7 @@
                                           <Property value="Stretched" name="vertFormatting">
 
                                           </Property>
-                                          <Property value="gameres|asset/Texture/Gui/top3 thu thập.png" name="Image">
+                                          <Property value="gameres|asset/Texture/Gui/top3_collect.png" name="Image">
 
                                           </Property>
                                           <Property value="0.5" name="PivotX">
@@ -27873,7 +27873,7 @@
                                           <Property value="Stretched" name="vertFormatting">
 
                                           </Property>
-                                          <Property value="gameres|asset/Texture/Gui/top1 level.png" name="Image">
+                                          <Property value="gameres|asset/Texture/Gui/top1_level.png" name="Image">
 
                                           </Property>
                                           <Property value="0.5" name="PivotX">
@@ -54602,7 +54602,7 @@
                         <Property value="Stretched" name="vertFormatting">
 
                         </Property>
-                        <Property value="gameres|asset/Texture/Gui/Nút-Back(C).png" name="Image">
+                        <Property value="gameres|asset/Texture/Gui/button_backc.png" name="Image">
 
                         </Property>
                         <Property value="0.5" name="PivotX">

@@ -58,7 +58,7 @@
                 <Property value="4" name="ImageDstBlend">
 
                 </Property>
-                <Property value="gameres|asset/Texture/Gui/Khung Item Mờ(1500).png" name="Image">
+                <Property value="gameres|asset/Texture/Gui/item_frame_block_1500.png" name="Image">
 
                 </Property>
                 <Property value="2" name="ImageSrcBlend">
@@ -100,7 +100,7 @@
                     <Property value="false" name="MousePassThroughEnabled">
 
                     </Property>
-                    <Property value="gameres|asset/Texture/Gui/NO(C).png" name="PushedImage">
+                    <Property value="gameres|asset/Texture/Gui/no_c.png" name="PushedImage">
 
                     </Property>
                     <Property value="false" name="TextWordBreak">
@@ -219,7 +219,7 @@
                     <Property value="false" name="MousePassThroughEnabled">
 
                     </Property>
-                    <Property value="gameres|asset/Texture/Gui/YES(C).png" name="PushedImage">
+                    <Property value="gameres|asset/Texture/Gui/yes_c.png" name="PushedImage">
 
                     </Property>
                     <Property value="false" name="TextWordBreak">
@@ -549,7 +549,7 @@
                     <Property value="4" name="ImageDstBlend">
 
                     </Property>
-                    <Property value="gameres|asset/Texture/Gui/Nút-Back(C).png" name="Image">
+                    <Property value="gameres|asset/Texture/Gui/button_backc.png" name="Image">
 
                     </Property>
                     <Property value="2" name="ImageSrcBlend">
@@ -628,7 +628,7 @@
                   <Property value="4" name="ImageDstBlend">
 
                   </Property>
-                  <Property value="gameres|asset/Texture/Gui/Bang thông báo2(C).png" name="Image">
+                  <Property value="gameres|asset/Texture/Gui/notification2c.png" name="Image">
 
                   </Property>
                   <Property value="2" name="ImageSrcBlend">

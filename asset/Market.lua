@@ -9,9 +9,9 @@ function self:onOpen(p)
     --     end
     -- end)
     local BUS_Market = require "script_client.Bus.Market"
-    local tableFeal = "gameres|asset/Texture/Gui/Bảng trống1(2000).png"
-    local tableBlack = "gameres|asset/Texture/Gui/Bảng trống2(2000).png"
-    local tableTrade = "gameres|asset/Texture/Gui/Bảng trống4(2000).png"
+    local tableFeal = "gameres|asset/Texture/Gui/table1_2000.png"
+    local tableBlack = "gameres|asset/Texture/Gui/table2_2000.png"
+    local tableTrade = "gameres|asset/Texture/Gui/table4_2000.png"
     local Context = require "script_common.lbr.Context"
     local market = {}
     local typeMk = 1
@@ -128,7 +128,7 @@ function self:onOpen(p)
     end
     local function createProduct(key)
         local product = UI:createStaticImage("Product" .. key)
-        product:setImage("gameres|asset/Texture/Gui/Khung item (1500).png")
+        product:setImage("gameres|asset/Texture/Gui/item_frame_1500.png")
         product:setProperty("Size", "{{0,278.76},{0,109.55}}")
         local item = UI:createStaticImage("item")
         item:setProperty("Position", "{{0,13.05},{0,10.89}}")
@@ -155,7 +155,7 @@ function self:onOpen(p)
         num:setTextColours(Color3.new(0, 0, 0))
         product:addChild(num)
         local block = UI:createStaticImage("block")
-        block:setImage("gameres|asset/Texture/Gui/Khung Item Mờ(1500).png")
+        block:setImage("gameres|asset/Texture/Gui/item_frame_block_1500.png")
         block:setProperty("Size", "{{120,0},{120,0}}")
         product:addChild(block)
         product.onMouseClick = function() ProductClick(key) end

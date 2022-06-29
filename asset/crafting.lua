@@ -4,8 +4,8 @@ function self:onOpen(p)
     local Context = require "script_common.lbr.Context"
     local recId = {}
     local Backpack
-    local btnCrafEn = "gameres|asset/Texture/Gui/NutCraft2(C).png"
-    local btnCrafdis = "gameres|asset/Texture/Gui/NutCraft1(C.png"
+    local btnCrafEn = "gameres|asset/Texture/Gui/button_craft2c.png"
+    local btnCrafdis = "gameres|asset/Texture/Gui/button_craft1c.png"
     local postion = 0
     local createItem
     local selectClick
@@ -14,7 +14,7 @@ function self:onOpen(p)
     end
     createItem = function (key)
       local item = UI:createStaticImage("item" .. key)
-      item:setImage("gameres|asset/Texture/Gui/Bảng Item craft1.png")
+      item:setImage("gameres|asset/Texture/Gui/itemcraft1.png")
       item:setSize(UDim2.new(0, 183.56, 0, 183.56))
       local name = UI:createStaticImage("name")
       name:setProperty("MousePassThroughEnabled", "true")
@@ -27,7 +27,7 @@ function self:onOpen(p)
       icon:setSize(UDim2.new(0, 86.01, 0, 86.01))    
       item:addChild(icon)
       local blur = UI:createStaticImage("blur")
-      blur:setImage("gameres|asset/Texture/Gui/Làm mờ(C).png")
+      blur:setImage("gameres|asset/Texture/Gui/blur_c.png")
       blur:setPosition(UDim2.new(0, 45.91, 0, 53.48))
       blur:setSize(UDim2.new(0, 91.73, 0, 96.17))
       blur:setProperty("MousePassThroughEnabled", "true")
@@ -54,8 +54,8 @@ function self:onOpen(p)
       self.select:setVisible(false)
       self.crafting:setVisible(true)
       local deCraf,item = BUS_crafting:getDetailCraft(recId[i].recId,Backpack)
-      local img = self.select.ScrollableView.GridView["item"..i].icon:getProperty("Image")
-      self.crafting.ItemCf:setImage(img)
+      -- local img = self.select.ScrollableView.GridView["item"..i].icon:getProperty("Image")      
+      self.crafting.ItemCf:setImage(recId[i].icon)
       local btnEn = true
       for key, value in ipairs(deCraf) do
         self.crafting["item"..key]:setVisible(true)
@@ -119,6 +119,7 @@ function self:onOpen(p)
           recId[key] = {}
           recId[key].recId = value.recipe
           recId[key].show = value.show      
+          recId[key].icon = value.icon
           createItem(key)
           self.select.ScrollableView.GridView["item"..key].icon:setImage("gameres|"..value.icon)
           self.select.ScrollableView.GridView["item"..key].name:setImage("gameres|asset/Texture/Gui/name"..value.level..".png")
@@ -130,6 +131,7 @@ function self:onOpen(p)
           recId[key] = {}
           recId[key].recId = value.recipe
           recId[key].show = value.show      
+          recId[key].icon = value.icon
           createItem(key)
           self.select.ScrollableView.GridView["item"..key].icon:setImage("gameres|"..value.icon)
           self.select.ScrollableView.GridView["item"..key].name:setImage("gameres|asset/Texture/Gui/name"..value.level..".png")

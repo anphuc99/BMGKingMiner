@@ -109,7 +109,7 @@
                   <Property value="Centre" name="HorizontalAlignment">
 
                   </Property>
-                  <Property value="gameres|asset/Texture/Gui/Khung Item Mờ(1500).png" name="Image">
+                  <Property value="gameres|asset/Texture/Gui/item_frame_block_1500.png" name="Image">
 
                   </Property>
                   <Property value="1" name="Alpha">
@@ -189,7 +189,7 @@
                   <Property value="Centre" name="HorizontalAlignment">
 
                   </Property>
-                  <Property value="gameres|asset/Texture/Gui/Xác nhận trade item.png" name="Image">
+                  <Property value="gameres|asset/Texture/Gui/done_trade_item.png" name="Image">
 
                   </Property>
                   <Property value="1" name="Alpha">
@@ -268,7 +268,7 @@
                         <Property value="Left" name="HorizontalAlignment">
 
                         </Property>
-                        <Property value="gameres|asset/Texture/Gui/YES(C).png" name="Image">
+                        <Property value="gameres|asset/Texture/Gui/yes_c.png" name="Image">
 
                         </Property>
                         <Property value="1" name="Alpha">
@@ -348,7 +348,7 @@
                         <Property value="Left" name="HorizontalAlignment">
 
                         </Property>
-                        <Property value="gameres|asset/Texture/Gui/NO(C).png" name="Image">
+                        <Property value="gameres|asset/Texture/Gui/no_c.png" name="Image">
 
                         </Property>
                         <Property value="1" name="Alpha">
@@ -757,7 +757,7 @@
                         <Property value="Left" name="HorizontalAlignment">
 
                         </Property>
-                        <Property value="gameres|asset/Texture/Gui/Nút-Back(C).png" name="Image">
+                        <Property value="gameres|asset/Texture/Gui/button_backc.png" name="Image">
 
                         </Property>
                         <Property value="1" name="Alpha">
