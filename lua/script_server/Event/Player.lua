@@ -738,46 +738,57 @@ PackageHandlers.registerServerHandler("getRank", function(player, packet)
     overrideRank(RankMineData)
     local valuePlayer = Gol.Player[player.platformUserId]
     RankMineData:RequestData(tostring(player.platformUserId), function(mine, rank)
-        MyRank.Mine = rank
-        RankMineData:RequestRangeData(1, 50, function(DataMine)
-            local RankLvData = Engine.DataService:GetRankDataStore("Lv")
-            overrideRank(RankLvData)
-            RankLvData:RequestData(tostring(player.platformUserId), function(lv, rank)
-                MyRank.Lv = rank
-                RankLvData:RequestRangeData(1, 50, function(DataLv)
-                    local baseUrl = Server.CurServer:getDataServiceURL()
-                    if baseUrl:sub(1, 6) == "local:" then
-                        local id = {}
-                        local UesrId = {}
-                        for i = 1, #DataMine, 1 do
-                            id[DataMine[i].key] = true
-                            id[DataLv[i].key] = true
-                        end
-                        for key, value in pairs(id) do
-                            UesrId[#UesrId + 1] = math.floor(tonumber(key))
-                        end
-                        local infoUserId = {}
-                        local function user(i)
-                            if UesrId[i] == nil then
-                                PackageHandlers.sendServerHandler(player, "getRank",
-                                    { DataMine = DataMine, DataLv = DataLv, valuePlayer = valuePlayer:toTable(),
-                                        MyRank = MyRank, Local = infoUserId })
-                            else
-                                DBHandler:getDataByUserId(UesrId[i], Gol.dataKey.Player, function(u, jdata)
-                                    local data = cjson.decode(jdata)
-                                    infoUserId[math.floor(tonumber(u))] = data
-                                    user(i + 1)
-                                end)
-                            end
-                        end
-
-                        user(1)
-                    else
-                        PackageHandlers.sendServerHandler(player, "getRank",
-                            { DataMine = DataMine, DataLv = DataLv, valuePlayer = valuePlayer:toTable(), MyRank = MyRank })
-                    end
-                end)
-            end)
-        end)
+        print("get my rank mine finish")
+        PackageHandlers.sendServerHandler(player, "getRank", {
+            name = "getMyRankMine",
+            mine = mine,
+            rank = rank
+        })
+        MyRank[#MyRank+1] = {
+            name = "getMyRankMine",
+            mine = mine,
+            rank = rank
+        }
+        player:setValue("Rank",MyRank)
+    end)
+    RankMineData:RequestRangeData(1,50,function (DataMine)
+        print("get rank mine finish")
+        PackageHandlers.sendServerHandler(player, "getRank", {
+            name = "getRankMine",
+            data = DataMine
+        })
+        MyRank[#MyRank+1]= {
+            name = "getRankMine",
+            data = DataMine
+        }
+        player:setValue("Rank",MyRank)
+    end)
+    local RankLvData = Engine.DataService:GetRankDataStore("Lv")
+    overrideRank(RankLvData)
+    RankLvData:RequestData(tostring(player.platformUserId), function(lv, rank)
+        print("get my rank lv finish")
+        PackageHandlers.sendServerHandler(player, "getRank", {
+            name = "getMyRankLv",
+            lv = lv,
+            rank = rank
+        })
+        MyRank[#MyRank+1]= {
+            name = "getMyRankLv",
+            lv = lv,
+            rank = rank
+        }
+        player:setValue("Rank",MyRank)
+    end)    
+    RankLvData:RequestRangeData(1,50,function (Data)
+        print("get rank lv finish")
+        PackageHandlers.sendServerHandler(player, "getRank", {
+            name = "getRankLv",
+            data = Data
+        })
+        MyRank[#MyRank+1]= {
+            name = "getRankLv",
+            data = Data
+        }
+        player:setValue("Rank",MyRank)
     end)
 end)

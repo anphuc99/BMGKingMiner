@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Imageset version="2" nativeHorzRes="2048" autoScaled="vertical" name="Tutorial" nativeVertRes="2048" imagefile="Tutorial.png">
-    <Image height="675" name="button_backc" yPos="0" width="675" xPos="0"/>
-    <Image height="393" name="yes_c" yPos="675" width="686" xPos="0"/>
-    <Image height="47" name="right_arrow" yPos="1068" width="47" xPos="0"/>
-    <Image height="47" name="left_arrow" yPos="1115" width="47" xPos="0"/>
+<Imageset imagefile="Tutorial.png" version="2" nativeHorzRes="2048" autoScaled="vertical" name="Tutorial" nativeVertRes="2048">
+    <Image yPos="0" width="675" xPos="0" height="675" name="button_backc"/>
+    <Image yPos="675" width="686" xPos="0" height="393" name="yes_c"/>
+    <Image yPos="1068" width="47" xPos="0" height="47" name="right_arrow"/>
+    <Image yPos="1115" width="47" xPos="0" height="47" name="left_arrow"/>
 </Imageset>
